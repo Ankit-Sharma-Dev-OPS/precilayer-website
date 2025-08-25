@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award, Globe } from "lucide-react";
-import roshanPhoto from "@assets/fotor_2023-5-12_13_18_37_1756161247581.png";
-import priyeshPhoto from "@assets/Priyesh Mehta_1756161247583.png";
+import roshanPhoto from "@assets/Roshan Kolhe- Precilayer_1756162128162.png";
+import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
 
 export default function AboutSection() {
   return (
@@ -15,11 +15,11 @@ export default function AboutSection() {
           className="text-center mb-16 scroll-reveal"
         >
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="about-title">
-            About <span className="gradient-text">Precilayer</span>
+            About <span className="gradient-text">Us</span>
           </h2>
           <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-            With a combined 23+ years of industry experience, Roshan and Priyesh bring unmatched expertise 
-            in CNC machining and 3D printing, positioning Precilayer at the cutting edge of manufacturing.
+            Led by a dynamic co-founder duo with over 23 years of combined experience, Precilayer fuses global expertise 
+            in CNC machining and additive manufacturing to redefine precision production.
           </p>
         </motion.div>
 
@@ -44,19 +44,19 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyber-400">Roshan Kolhe</h3>
-                  <p className="text-gray-400">Co-Founder & CNC Expert</p>
+                  <p className="text-gray-400">Co-Founder & CNC Machining Expert</p>
                 </div>
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                CNC machining expert with extensive MedTech background spanning industry leaders 
-                including Johnson & Johnson, Cook Medical, Merit Medical, Medtronic, and Boston Scientific.
+                Precision CNC machining specialist with deep roots in MedTech, having engineered solutions 
+                for Johnson & Johnson, Cook Medical, Merit Medical, Medtronic, and Boston Scientific.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Award className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Masters in Mechanical Engineering</span>
+                  <span className="text-gray-300">Master's in Mechanical Engineering</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Globe className="text-cyber-400 h-5 w-5" />
@@ -70,7 +70,7 @@ export default function AboutSection() {
               
               <div className="mt-6 pt-6 border-t border-gray-700">
                 <p className="text-sm text-cyber-400 font-semibold">
-                  Catalyst in cost-efficient high-end manufacturing
+                  Proven track record in delivering cost-efficient, high-end subtractive solutions
                 </p>
               </div>
             </div>
@@ -91,28 +91,28 @@ export default function AboutSection() {
                   <img 
                     src={priyeshPhoto} 
                     alt="Priyesh Mehta - Co-Founder" 
-                    className="w-full h-full object-cover transform scale-x-[-1]"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyber-400">Priyesh Mehta</h3>
-                  <p className="text-gray-400">Co-Founder & 3D Printing Expert</p>
+                  <p className="text-gray-400">Co-Founder & 3D Printing Specialist</p>
                 </div>
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Expert in advanced 3D printing with extensive experience at Ford, GM, GE, 
-                and serving 100+ clients globally across US, EU, and Gulf regions.
+                Expert in advanced additive manufacturing, with extensive global engagements at Ford, GM, GE, 
+                and over 100 clients across the US, EU, and Gulf regions.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Award className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Masters in Additive Manufacturing</span>
+                  <span className="text-gray-300">Master's in Additive Manufacturing and Design</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Globe className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Penn State University Program</span>
+                  <span className="text-gray-300">The Pennsylvania State University</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Globe className="text-cyber-400 h-5 w-5" />
@@ -122,7 +122,7 @@ export default function AboutSection() {
               
               <div className="mt-6 pt-6 border-t border-gray-700">
                 <p className="text-sm text-cyber-400 font-semibold">
-                  Published researcher in additive manufacturing
+                  Published researcher in additive technologies with deep practical understanding of MJF, SLS, SLA, and FDM systems
                 </p>
               </div>
             </div>
