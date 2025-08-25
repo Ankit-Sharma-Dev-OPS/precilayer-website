@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Youtube } from "lucide-react";
+import { Linkedin, Twitter, Youtube, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,6 +13,21 @@ export default function Footer() {
               Redefining Indian manufacturing for the future through precision, 
               innovation, and world-class quality.
             </p>
+            
+            <div className="mb-6" data-testid="factory-address">
+              <div className="flex items-start space-x-3">
+                <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-white mb-1">Factory Address</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Unit 1, Bhakti Platina, Sky Industrial Estate,<br />
+                    Opp: Apple Industrial Estate, NH48,<br />
+                    Pelhar, Nallasopara (E), Palghar 401208
+                  </p>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors" data-testid="social-linkedin">
                 <Linkedin className="h-6 w-6" />
