@@ -5,8 +5,8 @@ export default function IndustriesSection() {
     {
       title: "Aerospace",
       subtitle: "Precision components for aviation",
-      image: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Aerospace manufacturing components"
+      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
+      alt: "Aircraft engine and aerospace manufacturing"
     },
     {
       title: "Drones",
@@ -47,8 +47,8 @@ export default function IndustriesSection() {
     {
       title: "Electric Mobility",
       subtitle: "EV components & systems",
-      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Electric vehicle manufacturing"
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
+      alt: "Electric vehicle battery pack and drivetrain manufacturing"
     }
   ];
 

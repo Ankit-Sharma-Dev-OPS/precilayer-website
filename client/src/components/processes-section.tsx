@@ -147,7 +147,7 @@ export default function ProcessesSection() {
                 </div>
                 
                 <p className="text-gray-300 mb-6">
-                  Advanced additive manufacturing technologies including SLA, SLS, FDM, and metal 
+                  Advanced additive manufacturing technologies including SLA, SLS, FDM, MJF, and metal 
                   printing for rapid prototyping and production of complex geometries.
                 </p>
                 
@@ -163,7 +163,7 @@ export default function ProcessesSection() {
                 </div>
                 
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> SLA/SLS/FDM Technologies</li>
+                  <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> SLA/SLS/FDM/MJF Technologies</li>
                   <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Metal 3D Printing</li>
                   <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Multi-Material Printing</li>
                   <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Post-Processing</li>

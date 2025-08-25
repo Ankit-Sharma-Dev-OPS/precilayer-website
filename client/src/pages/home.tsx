@@ -6,6 +6,7 @@ import WhySection from "@/components/why-section";
 import HowSection from "@/components/how-section";
 import WhatSection from "@/components/what-section";
 import IndustriesSection from "@/components/industries-section";
+import AboutSection from "@/components/about-section";
 import ProcessesSection from "@/components/processes-section";
 import CaseStudiesSection from "@/components/case-studies-section";
 import ContactSection from "@/components/contact-section";
@@ -44,6 +45,7 @@ export default function Home() {
       <HowSection />
       <WhatSection />
       <IndustriesSection />
+      <AboutSection />
       <ProcessesSection />
       <CaseStudiesSection />
       <ContactSection />

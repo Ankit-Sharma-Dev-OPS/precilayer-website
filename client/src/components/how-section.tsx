@@ -74,10 +74,118 @@ export default function HowSection() {
           </motion.div>
         </div>
         
+        {/* Manufacturing Method Comparison Table */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-16 scroll-reveal"
+          data-testid="comparison-table"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Manufacturing Method Comparison</h3>
+          <div className="overflow-x-auto">
+            <div className="grid lg:grid-cols-3 gap-6 min-w-full">
+              {/* CNC Machining */}
+              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
+                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use CNC</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    High-volume production (100+ units)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Tight tolerances (±0.001")
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Hard materials (metals, ceramics)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Superior surface finish required
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Large part sizes
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Structural components
+                  </li>
+                </ul>
+              </div>
+
+              {/* 3D Printing */}
+              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
+                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use 3DP (SLS, SLA, FDM, MJF)</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Rapid prototyping (24-48 hours)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Complex internal geometries
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Low-volume production (1-100 units)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Lightweight structures
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Design validation
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Custom fit applications
+                  </li>
+                </ul>
+              </div>
+
+              {/* Hybrid Manufacturing */}
+              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
+                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use Hybrid</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Complex geometry + precision features
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Multi-material components
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Integrated assemblies
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Reduced assembly operations
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Optimized material usage
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyber-400 mr-2">•</span>
+                    Medium-volume production
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className="mt-16 text-center scroll-reveal"
         >

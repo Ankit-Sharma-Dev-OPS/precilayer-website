@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [videoError, setVideoError] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,15 +12,35 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center tech-grid">
-      <div className="absolute inset-0 bg-gradient-to-br from-space-900 via-space-800 to-space-900 opacity-90"></div>
+    <section className="relative min-h-screen flex items-center justify-center">
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <img 
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
-          alt="Modern manufacturing facility with advanced machinery" 
-          className="w-full h-full object-cover opacity-30"
-          loading="lazy"
-        />
+        {!videoError ? (
+          <>
+            <video 
+              className="w-full h-full object-cover"
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              poster="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380"
+              onError={() => setVideoError(true)}
+            >
+              <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+          </>
+        ) : (
+          <>
+            <img 
+              src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
+              alt="CNC machining manufacturing process" 
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+          </>
+        )}
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
@@ -39,9 +62,8 @@ export default function HeroSection() {
           className="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed"
           data-testid="hero-description"
         >
-          Positioning India as a global leader in precision manufacturing through cutting-edge 
-          additive and subtractive technologies. World-class quality, innovative solutions, 
-          competitive costs.
+          Precision CNC & Additive Manufacturing for global-quality, custom-batch production.
+          World-class components delivered with unmatched speed and cost efficiency.
         </motion.p>
         
         <motion.div 
@@ -58,11 +80,11 @@ export default function HeroSection() {
             Partner with Precilayer
           </button>
           <button 
-            onClick={() => scrollToSection('why')}
+            onClick={() => scrollToSection('contact')}
             className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
-            data-testid="cta-discover"
+            data-testid="cta-contact"
           >
-            Discover How
+            Contact Us
           </button>
         </motion.div>
         

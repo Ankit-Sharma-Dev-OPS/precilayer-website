@@ -1,0 +1,40 @@
+Update the existing Precilayer website codebase with these refinements:
+
+1. Hero Section
+   - Replace current banner with a **futuristic CNC machining video overlay** as the background (autoplay, loop, muted, playsInline, dark gradient overlay for text).
+   - Headline: “Redefining Indian Manufacturing for the Future.”
+   - Subtext: “Precision CNC & Additive Manufacturing for global-quality, custom-batch production.”
+   - CTA buttons: “Partner with Precilayer” + “Contact Us”.
+
+2. Why / How / What Sections
+   - Properly link the sections in navigation so “Why / How / What” scroll correctly.
+   - Restore the **comparison table for CNC, 3DP, and Hybrid Manufacturing**:
+     - Columns: “When to Use CNC”, “When to Use 3DP (SLS, SLA, FDM, MJF)”, “When to Use Hybrid”.
+     - Keep it sleek and modern.
+
+3. Manufacturing Processes
+   - Replace unrelated photos with **authentic CNC machining** and **3D printing process images**.
+   - For 3DP, add **MJF** alongside SLS, SLA, and FDM.
+   - Each process should have its own relevant video/image section (no fillers).
+
+4. Industries Served
+   - Replace **Aerospace** photo with a better aerospace/aircraft manufacturing image.
+   - Replace **Electric Mobility** photo with a more relevant EV / battery pack / drivetrain image.
+   - Ensure all industry photos are specific and not generic stock.
+   - Use consistent aspect ratios.
+
+5. About Us Section
+   - Add a new “About Us” section after Industries.
+   - Include two **photo placeholders** (to be replaced later) for the founders:
+     - **Roshan Kolhe** – CNC machining expert, MedTech background (J&J, Cook Medical, Merit Medical, Medtronic, Boston Scientific). Catalyst in cost-efficient high-end manufacturing. Masters in Mechanical Engineering, Dublin Institute of Technology. EU experience.
+     - **Priyesh Mehta** – Expert in advanced 3D printing. Masters in additive manufacturing (Penn State program, update course name). Experience at Ford, GM, GE, and 100+ clients globally (US, EU, Gulf). Research publications in additive manufacturing. US + global exposure.
+   - Add short intro text: “With a combined 23+ years of industry experience, Roshan and Priyesh bring unmatched expertise in CNC machining and 3D printing, positioning Precilayer at the cutting edge of manufacturing.”
+
+6. Visual Identity
+   - Remove the “light bulb” graphic in Why Precilayer — replace with a **visual that matches the persona of futuristic manufacturing** (e.g., abstract machine schematics, CNC toolpath visualization, or precision-engineered component macro).
+   - Ensure consistency of image/video styling with overlays, not generic clip art.
+
+7. Contact Section
+   - Keep the **contact form + mailto:support@precilayer.com** exactly as last refined.
+
+Keep SEO implementation, JSON-LD schema, robots.txt, sitemap.xml, lazy loading, ARIA labels, and semantic HTML intact from the last iteration.

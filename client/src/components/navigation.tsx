@@ -27,6 +27,7 @@ export default function Navigation() {
     { label: "How", id: "how" },
     { label: "What", id: "what" },
     { label: "Industries", id: "industries" },
+    { label: "About", id: "about" },
     { label: "Processes", id: "processes" },
     { label: "Contact", id: "contact" }
   ];
