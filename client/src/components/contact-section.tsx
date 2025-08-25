@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,9 +17,12 @@ export default function ContactSection() {
     message: ''
   });
   
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const turnstileRef = useRef<any>(null);
+  
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.company || !formData.message) {
@@ -31,26 +34,61 @@ export default function ContactSection() {
       return;
     }
 
-    // Create mailto link
-    const subject = encodeURIComponent(`Manufacturing Partnership Inquiry from ${formData.name} - ${formData.company}`);
-    const body = encodeURIComponent(`
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with better formatting
+      const subject = encodeURIComponent(`New Manufacturing Partnership Inquiry - ${formData.company}`);
+      const body = encodeURIComponent(`Dear Precilayer Team,
+
+I am reaching out regarding manufacturing partnership opportunities.
+
+=== CONTACT DETAILS ===
 Name: ${formData.name}
 Email: ${formData.email}
 Company: ${formData.company}
 Phone: ${formData.phone || 'Not provided'}
 Role: ${formData.role || 'Not specified'}
 
-Message:
+=== PROJECT DETAILS ===
 ${formData.message}
-    `);
-    
-    const mailtoLink = `mailto:support@precilayer.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
-    toast({
-      title: "Email Client Opening",
-      description: "Your default email client will open with the message. Please send it to complete your inquiry."
-    });
+
+---
+This inquiry was submitted via the Precilayer website contact form.
+
+Best regards,
+${formData.name}`);
+      
+      const mailtoLink = `mailto:support@precilayer.com?subject=${subject}&body=${body}`;
+      
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
+      // Clear form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        role: '',
+        message: ''
+      });
+      
+      toast({
+        title: "Email Client Opened",
+        description: "Your email client has opened with the message. Please send it to complete your inquiry.",
+        variant: "default"
+      });
+      
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue opening your email client. Please try emailing support@precilayer.com directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -188,9 +226,18 @@ ${formData.message}
                     </SelectTrigger>
                     <SelectContent className="bg-space-800 border-gray-600">
                       <SelectItem value="founder">Founder/CEO</SelectItem>
+                      <SelectItem value="cto">CTO/Head of Engineering</SelectItem>
                       <SelectItem value="engineer">Design Engineer</SelectItem>
+                      <SelectItem value="mechanical">Mechanical Engineer</SelectItem>
+                      <SelectItem value="product">Product Manager</SelectItem>
                       <SelectItem value="procurement">Procurement/Sourcing</SelectItem>
-                      <SelectItem value="operations">Operations</SelectItem>
+                      <SelectItem value="operations">Operations Manager</SelectItem>
+                      <SelectItem value="manufacturing">Manufacturing Engineer</SelectItem>
+                      <SelectItem value="quality">Quality Assurance</SelectItem>
+                      <SelectItem value="rd">R&D Manager</SelectItem>
+                      <SelectItem value="business">Business Development</SelectItem>
+                      <SelectItem value="startup">Startup</SelectItem>
+                      <SelectItem value="consultant">Consultant</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -210,12 +257,23 @@ ${formData.message}
                   />
                 </div>
                 
+                {/* Cloudflare Turnstile */}
+                <div className="flex justify-center">
+                  <div 
+                    className="cf-turnstile" 
+                    data-sitekey="0x4AAAAAAABkMYinukE_rfUn"
+                    data-theme="dark"
+                    data-size="normal"
+                  ></div>
+                </div>
+                
                 <Button 
                   type="submit"
-                  className="w-full bg-cyber-400 text-space-900 py-4 hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl font-semibold"
+                  disabled={isSubmitting}
+                  className="w-full bg-cyber-400 text-space-900 py-4 hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   data-testid="button-submit"
                 >
-                  Send Message
+                  {isSubmitting ? 'Opening Email...' : 'Send Message'}
                 </Button>
               </form>
             </div>
