@@ -29,35 +29,35 @@ export default function Footer() {
             </div>
             
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors" data-testid="social-linkedin">
+              <span className="text-gray-400" data-testid="social-linkedin">
                 <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors" data-testid="social-twitter">
+              </span>
+              <span className="text-gray-400" data-testid="social-twitter">
                 <Twitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors" data-testid="social-youtube">
+              </span>
+              <span className="text-gray-400" data-testid="social-youtube">
                 <Youtube className="h-6 w-6" />
-              </a>
+              </span>
             </div>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-cnc">CNC Machining</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-3d">3D Printing</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-prototyping">Rapid Prototyping</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-qa">Quality Assurance</a></li>
+              <li><span data-testid="service-cnc">CNC Machining</span></li>
+              <li><span data-testid="service-3d">3D Printing</span></li>
+              <li><span data-testid="service-prototyping">Rapid Prototyping</span></li>
+              <li><span data-testid="service-qa">ISO Quality Assurance</span></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4">Industries</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-aerospace">Aerospace</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-healthcare">Healthcare</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-robotics">Robotics</a></li>
-              <li><a href="#" className="hover:text-cyber-400 transition-colors" data-testid="link-automotive">Automotive</a></li>
+              <li><span data-testid="industry-aerospace">Aerospace</span></li>
+              <li><span data-testid="industry-healthcare">Healthcare</span></li>
+              <li><span data-testid="industry-robotics">Robotics</span></li>
+              <li><span data-testid="industry-automotive">Automotive</span></li>
             </ul>
           </div>
         </div>
@@ -67,9 +67,9 @@ export default function Footer() {
             © 2024 Precilayer. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors text-sm" data-testid="link-privacy">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors text-sm" data-testid="link-terms">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-cyber-400 transition-colors text-sm" data-testid="link-cookies">Cookie Policy</a>
+            <span className="text-gray-400 text-sm" data-testid="policy-privacy">Privacy Policy</span>
+            <span className="text-gray-400 text-sm" data-testid="policy-terms">Terms of Service</span>
+            <span className="text-gray-400 text-sm" data-testid="policy-cookies">Cookie Policy</span>
           </div>
         </div>
       </div>
