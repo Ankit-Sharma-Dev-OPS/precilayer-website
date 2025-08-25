@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { Factory, Box, Check } from "lucide-react";
 
 export default function ProcessesSection() {
-  const [cncVideoError, setCncVideoError] = useState(false);
-  const [printingVideoError, setPrintingVideoError] = useState(false);
 
   return (
     <section id="processes" className="py-20 bg-space-800">
@@ -37,32 +34,13 @@ export default function ProcessesSection() {
           >
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
-                {!cncVideoError ? (
-                  <>
-                    <video 
-                      className="w-full h-full object-cover"
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline
-                      poster="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                      onError={() => setCncVideoError(true)}
-                    >
-                      <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
-                  </>
-                ) : (
-                  <>
-                    <img 
-                      src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                      alt="CNC machining manufacturing process" 
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
-                  </>
-                )}
+                <img 
+                  src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  alt="CNC machining manufacturing process" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
               </div>
               
               <div className="p-8">
@@ -110,32 +88,13 @@ export default function ProcessesSection() {
           >
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
-                {!printingVideoError ? (
-                  <>
-                    <video 
-                      className="w-full h-full object-cover"
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline
-                      poster="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                      onError={() => setPrintingVideoError(true)}
-                    >
-                      <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                    </video>
-                    <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
-                  </>
-                ) : (
-                  <>
-                    <img 
-                      src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                      alt="3D printing additive manufacturing process" 
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
-                  </>
-                )}
+                <img 
+                  src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  alt="3D printing additive manufacturing process" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
               </div>
               
               <div className="p-8">

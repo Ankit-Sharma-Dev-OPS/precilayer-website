@@ -26,7 +26,7 @@ export default function HeroSection() {
               poster="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380"
               onError={() => setVideoError(true)}
             >
-              <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_25fps.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
           </>
