@@ -98,16 +98,16 @@ export default function HeroSection() {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           <div className="scroll-reveal" data-testid="stat-quality">
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron">99.9%</div>
-            <div className="text-gray-400">Quality Precision</div>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>99.9%</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Quality Precision</div>
           </div>
           <div className="scroll-reveal" data-testid="stat-cost">
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron">50%</div>
-            <div className="text-gray-400">Cost Reduction</div>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>50%</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Cost Reduction</div>
           </div>
           <div className="scroll-reveal" data-testid="stat-speed">
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron">3x</div>
-            <div className="text-gray-400">Faster Turnaround</div>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>3x</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Faster Turnaround</div>
           </div>
         </motion.div>
       </div>

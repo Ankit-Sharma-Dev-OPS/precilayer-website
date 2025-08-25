@@ -33,9 +33,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 backdrop-blur-sm border-b border-gray-800 transition-all duration-300 ${
-      isScrolled ? 'bg-space-900' : 'bg-space-900/95'
-    }`}>
+    <nav className={`fixed top-0 w-full z-50 backdrop-blur-sm border-b border-gray-800 transition-all duration-300 bg-space-900`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="font-orbitron text-2xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} data-testid="logo">
