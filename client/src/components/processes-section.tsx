@@ -58,7 +58,7 @@ export default function ProcessesSection() {
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="cnc-tolerance">
-                    <div className="text-xl font-bold text-cyber-400">±0.001"</div>
+                    <div className="text-xl font-bold text-cyber-400">±0.0001"</div>
                     <div className="text-sm text-gray-400">Tolerance</div>
                   </div>
                   <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="cnc-axis">
