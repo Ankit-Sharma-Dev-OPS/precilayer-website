@@ -1,0 +1,39 @@
+You are a professional web developer and designer tasked with creating a futuristic website for **Precilayer**, a next-generation Indian manufacturing company. The goal is to make manufacturing look "cool" and aspirational, while communicating trust, innovation, and global competitiveness.  
+
+### Brand & Vision
+- Precilayer aims to position India as a global leader in precision manufacturing and engineering.  
+- Vision: "Serve the best of Indian manufacturing by challenging the status quo and positioning India as a hardware leader globally."  
+- Mission: "Redefine Indian manufacturing by uniting precision machining and additive technologies to deliver world-class components that drive innovation in aerospace, healthcare, mobility, and automation."  
+
+### Core Messages
+1. Manufacturing products in India at global quality is now possible, accessible, and affordable.  
+2. The future of manufacturing is **custom batch production** — high variety, low to mid-volume — and Precilayer is ready to enable that.  
+
+### Target Users
+- Founders, sourcing/purchase engineers, and design engineers.  
+- They must leave with the impression that Precilayer reduces nonproductive time, lowers costs, and improves product quality.  
+
+### Desired Website Attributes
+The site should feel:  
+- Futuristic, Cutting Edge, Modern, Powerful, Accessible, Smart, Creative, Stable, and Trustworthy.  
+- Inspired by SpaceX, Protolabs, and Path Robotics.  
+
+### Design Guidelines
+- Sleek, modern design with futuristic typography and high-contrast visuals (black/white + accent neon/tech colors).  
+- Hero section with strong tagline: **“Redefining Indian Manufacturing for the Future.”**  
+- Sections:  
+  1. **Why** – Changing the perception of Indian manufacturing.  
+  2. **How** – Blending additive + subtractive manufacturing.  
+  3. **What** – High quality, lowest cost, fastest turnaround.  
+  4. **Industries Served** – Aerospace, Drones, Robotics & Automation, Healthcare, Climate Tech, Energy, Satellite & Space, Advanced Air Mobility, Medical Devices, Electric Ground Mobility, Oil & Gas.  
+  5. **Processes** – CNC Machining and 3D Printing (Additive Manufacturing).  
+  6. Case studies / proofs of quality.  
+  7. CTA: "Partner with Precilayer."  
+
+### Technical
+- Build using React + Tailwind CSS.  
+- Responsive, animated, futuristic UI (Framer Motion preferred).  
+- Include video embedding support (for future marketing videos).  
+- Optimized for performance and SEO.  
+
+Now, generate the full React + Tailwind codebase for this website, with clean modular components and futuristic styling.
