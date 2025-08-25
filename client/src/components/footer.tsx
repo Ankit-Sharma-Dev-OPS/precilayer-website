@@ -47,6 +47,8 @@ export default function Footer() {
               <li><span data-testid="service-cnc">CNC Machining</span></li>
               <li><span data-testid="service-3d">3D Printing</span></li>
               <li><span data-testid="service-prototyping">Rapid Prototyping</span></li>
+              <li><span data-testid="service-batch">Batch Production</span></li>
+              <li><span data-testid="service-volume">High Volume Production</span></li>
               <li><span data-testid="service-qa">ISO Quality Assurance</span></li>
             </ul>
           </div>
