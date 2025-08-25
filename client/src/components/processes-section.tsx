@@ -32,12 +32,12 @@ export default function ProcessesSection() {
             className="scroll-reveal"
             data-testid="cnc-machining-process"
           >
-            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
+            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  src="https://sybridge.com/wp-content/uploads/2023/09/shutterstock_644383741-1-1536x1025.jpg" 
                   alt="CNC machine cutting metal part" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
@@ -86,12 +86,12 @@ export default function ProcessesSection() {
             className="scroll-reveal"
             data-testid="3d-printing-process"
           >
-            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
+            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                  src="https://www.3dnatives.com/en/wp-content/uploads/sites/2/2022/12/MJF_cover.jpg" 
                   alt="3D printer printing a part in action" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
