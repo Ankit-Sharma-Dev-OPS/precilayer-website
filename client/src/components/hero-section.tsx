@@ -31,7 +31,7 @@ export default function HeroSection() {
               <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
               <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/70 via-space-800/60 to-space-900/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85"></div>
           </>
         ) : (
           <>
@@ -41,17 +41,17 @@ export default function HeroSection() {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/70 via-space-800/60 to-space-900/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85"></div>
           </>
         )}
       </div>
       
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+          className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
           data-testid="hero-title"
         >
           Redefining <span className="gradient-text">Indian Manufacturing</span><br/>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl mb-8 text-white max-w-3xl mx-auto leading-relaxed" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
           data-testid="hero-description"
         >
           Precision CNC & Additive Manufacturing for global-quality, custom-batch production.
