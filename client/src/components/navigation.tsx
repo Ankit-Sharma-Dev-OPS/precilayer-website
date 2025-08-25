@@ -38,7 +38,7 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-orbitron text-2xl font-bold gradient-text" data-testid="logo">
+          <div className="font-orbitron text-2xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} data-testid="logo">
             PRECILAYER
           </div>
           
@@ -47,7 +47,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-cyber-400 transition-colors"
+                className="text-white hover:text-cyber-400 transition-colors" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
                 data-testid={`nav-${item.id}`}
               >
                 {item.label}
@@ -72,7 +72,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-white hover:text-cyber-400 transition-colors"
+                  className="block w-full text-left text-white hover:text-cyber-400 transition-colors" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.label}

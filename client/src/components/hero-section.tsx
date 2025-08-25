@@ -54,7 +54,7 @@ export default function HeroSection() {
           className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
           data-testid="hero-title"
         >
-          Redefining <span className="gradient-text">Indian Manufacturing</span><br/>
+          Redefining <span className="text-white">Indian Manufacturing</span><br/>
           for the <span className="text-cyber-400">Future</span>
         </motion.h1>
         
