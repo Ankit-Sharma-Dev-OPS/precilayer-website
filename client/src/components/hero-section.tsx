@@ -31,7 +31,7 @@ export default function HeroSection() {
               <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
               <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/95 via-space-800/90 to-space-900/95"></div>
           </>
         ) : (
           <>
@@ -41,7 +41,7 @@ export default function HeroSection() {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/95 via-space-800/90 to-space-900/95"></div>
           </>
         )}
       </div>
