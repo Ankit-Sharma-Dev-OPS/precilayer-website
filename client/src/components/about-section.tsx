@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Award, Globe, Users } from "lucide-react";
+import { Award, Globe } from "lucide-react";
+import roshanPhoto from "@assets/fotor_2023-5-12_13_18_37_1756161247581.png";
+import priyeshPhoto from "@assets/Priyesh Mehta_1756161247583.png";
 
 export default function AboutSection() {
   return (
@@ -33,8 +35,12 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all hover-scale">
               <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-cyber-400/20 to-cyber-600/20 rounded-full flex items-center justify-center border-2 border-cyber-400/30">
-                  <Users className="text-cyber-400 h-12 w-12" />
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-cyber-400/50">
+                  <img 
+                    src={roshanPhoto} 
+                    alt="Roshan Kolhe - Co-Founder" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyber-400">Roshan Kolhe</h3>
@@ -81,8 +87,12 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all hover-scale">
               <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-cyber-400/20 to-cyber-600/20 rounded-full flex items-center justify-center border-2 border-cyber-400/30">
-                  <Users className="text-cyber-400 h-12 w-12" />
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-cyber-400/50">
+                  <img 
+                    src={priyeshPhoto} 
+                    alt="Priyesh Mehta - Co-Founder" 
+                    className="w-full h-full object-cover transform scale-x-[-1]"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyber-400">Priyesh Mehta</h3>
