@@ -47,7 +47,7 @@ export default function IndustriesSection() {
     {
       title: "Electric Mobility",
       subtitle: "EV components & systems",
-      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+      image: "https://images.hindustantimes.com/auto/img/2024/06/20/400x225/Ola_Electric_mototrcycle_7_1692092355009_1718886687509.png",
       alt: "Futuristic electric vehicle design"
     }
   ];
