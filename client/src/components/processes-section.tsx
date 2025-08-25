@@ -35,7 +35,7 @@ export default function ProcessesSection() {
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://cdn.pixabay.com/photo/2018/01/04/12/34/lathe-3061137_1280.jpg" 
+                  src="https://images.unsplash.com/photo-1631634148854-ca8d4e1b8ee6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
                   alt="CNC machine cutting metal part" 
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -89,7 +89,7 @@ export default function ProcessesSection() {
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://cdn.pixabay.com/photo/2017/05/10/19/29/printer-2301916_1280.jpg" 
+                  src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600" 
                   alt="3D printer printing a part in action" 
                   className="w-full h-full object-cover"
                   loading="lazy"
