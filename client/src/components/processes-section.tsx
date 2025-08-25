@@ -35,8 +35,8 @@ export default function ProcessesSection() {
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                  alt="CNC machining manufacturing process" 
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  alt="CNC machine cutting metal part" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -89,8 +89,8 @@ export default function ProcessesSection() {
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700">
               <div className="relative h-64 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                  alt="3D printing additive manufacturing process" 
+                  src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  alt="3D printer printing a part in action" 
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
