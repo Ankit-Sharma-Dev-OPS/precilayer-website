@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [videoError, setVideoError] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,15 +13,37 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center">
-      {/* Video Background */}
+      {/* CNC Machining Video Background */}
       <div className="absolute inset-0">
-        <img 
-          src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
-          alt="CNC machining manufacturing process" 
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+        {!videoError ? (
+          <>
+            <video 
+              className="w-full h-full object-cover"
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              poster="https://images.pexels.com/videos/7480065/pexels-photo-7480065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              onError={() => setVideoError(true)}
+            >
+              <source src="https://videos.pexels.com/video-files/7480065/7480065-uhd_1440_2732_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/19791092/19791092-uhd_2560_1440_60fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/4941468/4941468-hd_1920_1080_25fps.mp4" type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/6017439/6017439-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+          </>
+        ) : (
+          <>
+            <img 
+              src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
+              alt="CNC machining manufacturing process" 
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
+          </>
+        )}
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
