@@ -13,7 +13,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center">
-      {/* CNC Machining Video Background */}
+      {/* Futuristic Robotic CNC Manufacturing Video Background */}
       <div className="absolute inset-0">
         {!videoError ? (
           <>
@@ -23,13 +23,13 @@ export default function HeroSection() {
               loop 
               muted 
               playsInline
-              poster="https://images.pexels.com/videos/7480065/pexels-photo-7480065.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              poster="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_tiny.jpg"
               onError={() => setVideoError(true)}
             >
-              <source src="https://videos.pexels.com/video-files/7480065/7480065-uhd_1440_2732_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/19791092/19791092-uhd_2560_1440_60fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/4941468/4941468-hd_1920_1080_25fps.mp4" type="video/mp4" />
-              <source src="https://videos.pexels.com/video-files/6017439/6017439-hd_1920_1080_30fps.mp4" type="video/mp4" />
+              <source src="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_large.mp4" type="video/mp4" />
+              <source src="https://cdn.pixabay.com/video/2021/07/12/81241-576082910_large.mp4" type="video/mp4" />
+              <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
+              <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/90 via-space-800/80 to-space-900/90"></div>
           </>
