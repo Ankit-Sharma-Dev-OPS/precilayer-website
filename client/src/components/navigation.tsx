@@ -47,7 +47,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="hover:text-cyber-400 transition-colors"
+                className="text-white hover:text-cyber-400 transition-colors"
                 data-testid={`nav-${item.id}`}
               >
                 {item.label}
@@ -72,7 +72,7 @@ export default function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left hover:text-cyber-400 transition-colors"
+                  className="block w-full text-left text-white hover:text-cyber-400 transition-colors"
                   data-testid={`mobile-nav-${item.id}`}
                 >
                   {item.label}
