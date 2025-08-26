@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://Ankit-Sharma-Dev-OPS.github.io/precilayer-website",
+  "homepage": "https://ankit-sharma-dev-ops.github.io/precilayer-website",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
