@@ -305,6 +305,25 @@
   transition: box-shadow 0.3s ease;
 }
 
+/* Custom glow effects for cards */
+.glow-card {
+  transition: all 0.3s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.25), 0 0 40px rgba(6, 182, 212, 0.15);
+  transform: scale(1.05);
+}
+
+.glow-card-subtle {
+  transition: all 0.3s ease;
+}
+
+.glow-card-subtle:hover {
+  box-shadow: 0 20px 40px -12px rgba(6, 182, 212, 0.20), 0 0 30px rgba(6, 182, 212, 0.12);
+  transform: scale(1.02);
+}
+
 /* Proven Excellence card glow effects */
 .card-glow {
   transition: all 0.3s ease;

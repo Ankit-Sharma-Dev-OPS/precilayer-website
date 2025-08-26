@@ -71,7 +71,7 @@ export default function ManufacturingMomentSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-space-700/50 to-space-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyber-400/70 hover:shadow-xl hover:shadow-cyber-400/25 hover:scale-105 transition-all duration-300 group relative overflow-hidden"
+              className="bg-gradient-to-br from-space-700/50 to-space-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-cyber-400/70 glow-card group relative overflow-hidden"
               data-testid={`stat-card-${index}`}
             >
               <div className="flex items-center mb-4">
@@ -94,7 +94,7 @@ export default function ManufacturingMomentSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-space-700/30 to-space-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 hover:border-cyber-400/60 hover:shadow-lg hover:shadow-cyber-400/20 hover:scale-102 transition-all duration-300 group relative overflow-hidden"
+              className="bg-gradient-to-br from-space-700/30 to-space-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 hover:border-cyber-400/60 glow-card-subtle group relative overflow-hidden"
               data-testid={`feature-card-${index}`}
             >
               <div className="flex items-center mb-4">
