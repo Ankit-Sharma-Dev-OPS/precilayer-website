@@ -41,7 +41,7 @@ export default function CaseStudiesSection() {
       {/* Engineering Excellence Background */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 opacity-50"
+          className="absolute inset-0 opacity-25"
           style={{
             backgroundImage: `url(${provenExcellenceImage})`,
             backgroundSize: 'cover',
