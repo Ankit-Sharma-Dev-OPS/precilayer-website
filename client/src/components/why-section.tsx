@@ -97,8 +97,8 @@ export default function WhySection() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-xl font-bold text-cyber-400">±0.001"</div>
-                    <div className="text-sm text-gray-400">Tolerance</div>
+                    <div className="text-xl font-bold text-cyber-400">±0.0001"</div>
+                    <div className="text-sm text-gray-400">2 Microns</div>
                   </div>
                   <div>
                     <div className="text-xl font-bold text-cyber-400">ISO 9001</div>
