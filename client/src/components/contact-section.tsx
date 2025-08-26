@@ -224,21 +224,21 @@ ${formData.name}`);
                     <SelectTrigger className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white" data-testid="select-role">
                       <SelectValue placeholder="Select your role" />
                     </SelectTrigger>
-                    <SelectContent className="bg-space-800 border-gray-600">
-                      <SelectItem value="founder">Founder/CEO</SelectItem>
-                      <SelectItem value="cto">CTO/Head of Engineering</SelectItem>
-                      <SelectItem value="engineer">Design Engineer</SelectItem>
-                      <SelectItem value="mechanical">Mechanical Engineer</SelectItem>
-                      <SelectItem value="product">Product Manager</SelectItem>
-                      <SelectItem value="procurement">Procurement/Sourcing</SelectItem>
-                      <SelectItem value="operations">Operations Manager</SelectItem>
-                      <SelectItem value="manufacturing">Manufacturing Engineer</SelectItem>
-                      <SelectItem value="quality">Quality Assurance</SelectItem>
-                      <SelectItem value="rd">R&D Manager</SelectItem>
-                      <SelectItem value="business">Business Development</SelectItem>
-                      <SelectItem value="startup">Startup</SelectItem>
-                      <SelectItem value="consultant">Consultant</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                    <SelectContent className="bg-space-800 border-gray-600 text-white">
+                      <SelectItem value="founder" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Founder/CEO</SelectItem>
+                      <SelectItem value="cto" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">CTO/Head of Engineering</SelectItem>
+                      <SelectItem value="engineer" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Design Engineer</SelectItem>
+                      <SelectItem value="mechanical" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Mechanical Engineer</SelectItem>
+                      <SelectItem value="product" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Product Manager</SelectItem>
+                      <SelectItem value="procurement" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Procurement/Sourcing</SelectItem>
+                      <SelectItem value="operations" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Operations Manager</SelectItem>
+                      <SelectItem value="manufacturing" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Manufacturing Engineer</SelectItem>
+                      <SelectItem value="quality" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Quality Assurance</SelectItem>
+                      <SelectItem value="rd" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">R&D Manager</SelectItem>
+                      <SelectItem value="business" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Business Development</SelectItem>
+                      <SelectItem value="startup" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Startup</SelectItem>
+                      <SelectItem value="consultant" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Consultant</SelectItem>
+                      <SelectItem value="other" className="text-white hover:bg-cyber-400 hover:text-black data-[highlighted]:bg-cyber-400 data-[highlighted]:text-black focus:bg-cyber-400 focus:text-black">Other</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
