@@ -136,8 +136,8 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Optimized dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/45" style={{ transform: 'translateZ(0)' }}></div>
+        {/* Lighter overlay for better video visibility while maintaining text readability */}
+        <div className="absolute inset-0 bg-black/25" style={{ transform: 'translateZ(0)' }}></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
