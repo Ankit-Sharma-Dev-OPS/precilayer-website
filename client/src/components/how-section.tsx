@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { 
   Cpu, 
@@ -103,18 +104,18 @@ export default function HowSection() {
           <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Where Automation Meets Expertise</h3>
         </motion.div>
 
-        {/* Core Points Grid - Balanced Layout */}
+        {/* Core Points Grid - 2x2 + 1 Layout */}
         <div className="space-y-8 mb-16">
-          {/* First Row - 2 Cards */}
+          {/* First Two Rows - 2x2 Grid */}
           <div className="grid lg:grid-cols-2 gap-8">
-            {corePoints.slice(0, 2).map((point, index) => (
+            {corePoints.slice(0, 4).map((point, index) => (
               <motion.div
                 key={point.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.8, 
-                  delay: index * 0.2 
+                  delay: index * 0.15 
                 }}
                 viewport={{ once: true }}
                 className="scroll-reveal"
@@ -122,7 +123,7 @@ export default function HowSection() {
               >
                 <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
                   <div className="flex items-start space-x-6 mb-6">
-                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-hover">
+                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
                       <point.icon className="text-cyber-400 h-8 w-8" />
                     </div>
                     <div>
@@ -139,36 +140,37 @@ export default function HowSection() {
             ))}
           </div>
           
-          {/* Second Row - 3 Cards */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {corePoints.slice(2, 5).map((point, index) => (
+          {/* Bottom Row - Single Card Centered */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
               <motion.div
-                key={point.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.8, 
-                  delay: (index + 2) * 0.2 
+                  delay: 0.6 
                 }}
                 viewport={{ once: true }}
                 className="scroll-reveal"
-                data-testid={`core-point-${index + 2}`}
+                data-testid="core-point-4"
               >
                 <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
-                  <div className="flex flex-col items-center text-center space-y-4 mb-6">
-                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center border border-cyber-400/30 icon-hover">
-                      <point.icon className="text-cyber-400 h-8 w-8" />
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
+                      <Layers className="text-cyber-400 h-8 w-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-white leading-tight">
-                      {point.title}
-                    </h3>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                        Hybrid Manufacturing Advantage
+                      </h3>
+                    </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-sm text-center">
-                    {point.description}
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability.
                   </p>
                 </div>
               </motion.div>
-            ))}
+            </div>
           </div>
         </div>
 

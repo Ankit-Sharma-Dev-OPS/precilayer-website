@@ -36,7 +36,7 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section className="py-20 bg-space-900 relative overflow-hidden">
+    <section className="py-20 bg-space-900 relative overflow-hidden factory-bg">
       {/* Creative background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -82,7 +82,7 @@ export default function CaseStudiesSection() {
                 data-testid={`case-study-${index + 1}`}
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-hover">
+                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                     <IconComponent className="text-cyber-400 h-6 w-6" />
                   </div>
                   <div>

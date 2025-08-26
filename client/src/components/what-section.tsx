@@ -3,7 +3,7 @@ import { Award, DollarSign, Clock } from "lucide-react";
 
 export default function WhatSection() {
   return (
-    <section id="what" className="py-20 bg-space-800 relative overflow-hidden">
+    <section id="what" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
       {/* Creative background elements */}
       <div className="absolute inset-0 opacity-5">
         <div 
@@ -40,7 +40,7 @@ export default function WhatSection() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="w-20 h-20 bg-gradient-to-br from-cyber-400 to-cyber-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-hover gentle-glow"
+              className="w-20 h-20 bg-gradient-to-br from-cyber-400 to-cyber-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-glow"
             >
               <Award className="text-white h-10 w-10" />
             </motion.div>
@@ -68,7 +68,7 @@ export default function WhatSection() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-hover gentle-glow"
+              className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-glow"
             >
               <DollarSign className="text-white h-10 w-10" />
             </motion.div>
@@ -96,7 +96,7 @@ export default function WhatSection() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-hover gentle-glow"
+              className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6 icon-glow"
             >
               <Clock className="text-white h-10 w-10" />
             </motion.div>

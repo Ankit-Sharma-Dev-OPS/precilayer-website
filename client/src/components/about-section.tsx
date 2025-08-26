@@ -5,7 +5,7 @@ import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-space-800">
+    <section id="about" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover gentle-glow">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
                   <img 
                     src={roshanPhoto} 
                     alt="Roshan Kolhe - Co-Founder" 
@@ -67,7 +67,7 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover gentle-glow">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
                   <img 
                     src={priyeshPhoto} 
                     alt="Priyesh Mehta - Co-Founder" 
