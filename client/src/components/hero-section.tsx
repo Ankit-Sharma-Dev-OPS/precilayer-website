@@ -161,20 +161,17 @@ export default function HeroSection() {
             loop 
             muted 
             playsInline
-            preload="metadata"
-            disablePictureInPicture
-            controlsList="nodownload nofullscreen noremoteplayback"
+            controls
             className="w-full h-full object-cover"
-            style={{ 
-              objectFit: 'cover',
-              objectPosition: 'center',
-              minHeight: '100%',
-              minWidth: '100%'
-            }}
             aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities"
-            onError={() => setVideoError(true)}
+            onError={(e) => {
+              console.error('Video error:', e);
+              setVideoError(true);
+            }}
             onLoadStart={() => console.log('Video loading started')}
             onCanPlay={() => console.log('Video can play')}
+            onPlay={() => console.log('Video is playing')}
+            onPause={() => console.log('Video paused')}
             src={precilayerVideo}
           />
           {videoError && (
@@ -185,9 +182,7 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
-        <div className="absolute inset-0 bg-space-900/30"></div>
+        {/* Temporary: No overlay to check video visibility */}
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
