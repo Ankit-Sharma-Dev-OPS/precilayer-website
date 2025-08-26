@@ -1,4 +1,4 @@
-name: Build & Deploy to GitHub Pages
+name: Build & Deploy Frontend to GitHub Pages
 
 on:
   push:
@@ -25,8 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
-        run: npm run build
+      # 👉 Only run frontend build (does not affect backend build script)
+      - name: Build frontend
+        run: npm run build:frontend
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
