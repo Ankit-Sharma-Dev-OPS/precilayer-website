@@ -71,12 +71,12 @@ export default function HeroSection() {
         try {
           video.muted = true;
           video.playsInline = true;
-          video.playbackRate = 0.25; // 25% speed for ultra-cinematic effect
+          video.playbackRate = 0.3; // 30% speed for balanced cinematic effect
           await video.play();
         } catch (error) {
           // Retry on user interaction
           const handleInteraction = () => {
-            video.playbackRate = 0.25; // Ensure ultra-slow speed on retry
+            video.playbackRate = 0.3; // Ensure balanced slow speed on retry
             video.play().catch(() => {});
             document.removeEventListener('click', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
