@@ -62,23 +62,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         {!videoError ? (
           <>
-            <motion.div
-              className="absolute inset-0"
-              animate={{
-                scale: [1, 1.35, 1],
-                opacity: [0.8, 1.0, 0.8],
-                filter: [
-                  'brightness(0.7) contrast(1.1) saturate(1.0)',
-                  'brightness(1.0) contrast(1.3) saturate(1.2)',
-                  'brightness(0.7) contrast(1.1) saturate(1.0)'
-                ]
-              }}
-              transition={{
-                duration: 85,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
+            <div className="absolute inset-0">
               <video 
                 ref={videoRef}
                 className="w-full h-full object-cover"
@@ -101,7 +85,7 @@ export default function HeroSection() {
                 <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
                 <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
               </video>
-            </motion.div>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
               {/* Creative overlay patterns */}
               <motion.div 
@@ -124,30 +108,14 @@ export default function HeroSection() {
           </>
         ) : (
           <>
-            <motion.div
-              className="absolute inset-0"
-              animate={{
-                scale: [1, 1.35, 1],
-                opacity: [0.8, 1.0, 0.8],
-                filter: [
-                  'brightness(0.7) contrast(1.1) saturate(1.0)',
-                  'brightness(1.0) contrast(1.3) saturate(1.2)',
-                  'brightness(0.7) contrast(1.1) saturate(1.0)'
-                ]
-              }}
-              transition={{
-                duration: 85,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
+            <div className="absolute inset-0">
               <img 
                 src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
                 alt="CNC machining manufacturing process" 
                 className="w-full h-full object-cover"
                 loading="eager"
               />
-            </motion.div>
+            </div>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
               {/* Creative overlay patterns */}
               <motion.div 
