@@ -75,30 +75,30 @@ export default function HowSection() {
           <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Smart Tech + Human Touch = Magic</h3>
         </motion.div>
 
-        {/* Core Points Grid - 2x2 + 1 Layout */}
-        <div className="space-y-8 mb-16">
-          {/* First Two Rows - 2x2 Grid */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {corePoints.slice(0, 4).map((point, index) => (
+        {/* Core Points Grid - 3x2 Layout */}
+        <div className="space-y-6 mb-12">
+          {/* First Row - 3 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {corePoints.slice(0, 3).map((point, index) => (
               <motion.div
                 key={point.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.8, 
-                  delay: index * 0.15 
+                  delay: index * 0.1 
                 }}
                 viewport={{ once: true }}
                 className="scroll-reveal"
                 data-testid={`core-point-${index}`}
               >
-                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
-                      <point.icon className="text-cyber-400 h-8 w-8" />
+                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
+                      <point.icon className="text-cyber-400 h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                      <h3 className="text-lg font-bold text-white mb-2 leading-tight">
                         {point.title}
                       </h3>
                     </div>
@@ -111,37 +111,38 @@ export default function HowSection() {
             ))}
           </div>
           
-          {/* Bottom Row - Single Card Centered */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-2xl">
+          {/* Second Row - 2 Columns Centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {corePoints.slice(3, 5).map((point, index) => (
               <motion.div
+                key={point.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ 
                   duration: 0.8, 
-                  delay: 0.6 
+                  delay: (index + 3) * 0.1 
                 }}
                 viewport={{ once: true }}
                 className="scroll-reveal"
-                data-testid="core-point-4"
+                data-testid={`core-point-${index + 3}`}
               >
-                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
-                  <div className="flex items-start space-x-6 mb-6">
-                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
-                      <Layers className="text-cyber-400 h-8 w-8" />
+                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-glow">
+                      <point.icon className="text-cyber-400 h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
-                        Hybrid Manufacturing Advantage
+                      <h3 className="text-lg font-bold text-white mb-2 leading-tight">
+                        {point.title}
                       </h3>
                     </div>
                   </div>
                   <p className="text-white leading-relaxed text-sm">
-                    CNC meets 3D printing. Complex geometries, less waste, faster iteration—without compromising reliability.
+                    {point.description}
                   </p>
                 </div>
               </motion.div>
-            </div>
+            ))}
           </div>
         </div>
 
