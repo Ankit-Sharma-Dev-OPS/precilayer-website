@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import FloatingShapes from "./floating-shapes";
+import SubtleBackground from "./subtle-background";
 
 export default function HeroSection() {
   const [videoError, setVideoError] = useState(false);
@@ -14,7 +14,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <FloatingShapes />
+      <SubtleBackground />
       {/* Futuristic Robotic CNC Manufacturing Video Background */}
       <div className="absolute inset-0">
         {!videoError ? (
@@ -48,16 +48,16 @@ export default function HeroSection() {
         )}
       </div>
       
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12 hover-glow">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white float" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
+          className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
           data-testid="hero-title"
         >
           Redefining <span className="text-white">Indian Manufacturing</span><br/>
-          for the <span className="shimmer-text">Future</span>
+          for the <span className="text-cyber-400">Future</span>
         </motion.h1>
         
         <motion.p 
@@ -79,14 +79,14 @@ export default function HeroSection() {
         >
           <button 
             onClick={() => scrollToSection('contact')}
-            className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl morph-button pulse-glow"
+            className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
             data-testid="cta-partner"
           >
             Partner with Precilayer
           </button>
           <button 
             onClick={() => scrollToSection('contact')}
-            className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all hover-glow"
+            className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
             data-testid="cta-contact"
           >
             Contact Us

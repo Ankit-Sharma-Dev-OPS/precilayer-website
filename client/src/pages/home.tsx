@@ -11,7 +11,6 @@ import ProcessesSection from "@/components/processes-section";
 import CaseStudiesSection from "@/components/case-studies-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
-import ParallaxBackground from "@/components/parallax-background";
 
 export default function Home() {
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-space-900 text-white font-inter overflow-x-hidden relative">      <ParallaxBackground />
+    <div className="bg-space-900 text-white font-inter overflow-x-hidden">
       <SEOHead />
       <Navigation />
       <HeroSection />

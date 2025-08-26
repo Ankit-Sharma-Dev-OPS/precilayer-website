@@ -30,9 +30,9 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-roshan"
           >
-            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale hover-glow morph-button">
+            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 pulse-glow">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
                   <img 
                     src={roshanPhoto} 
                     alt="Roshan Kolhe - Co-Founder" 
@@ -40,7 +40,7 @@ export default function AboutSection() {
                   />
                 </div>
                 <div className="text-center mt-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 shimmer-text">Roshan Kolhe</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Roshan Kolhe</h3>
                   <p className="text-cyber-400 font-semibold">Co-Founder & CNC Expert</p>
                 </div>
               </div>
@@ -65,9 +65,9 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-priyesh"
           >
-            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale hover-glow morph-button">
+            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 pulse-glow">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
                   <img 
                     src={priyeshPhoto} 
                     alt="Priyesh Mehta - Co-Founder" 
@@ -75,7 +75,7 @@ export default function AboutSection() {
                   />
                 </div>
                 <div className="text-center mt-6">
-                  <h3 className="text-2xl font-bold text-white mb-2 shimmer-text">Priyesh Mehta</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Priyesh Mehta</h3>
                   <p className="text-cyber-400 font-semibold">Co-Founder & Additive Manufacturing Expert</p>
                 </div>
               </div>
