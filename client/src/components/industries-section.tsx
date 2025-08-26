@@ -111,7 +111,7 @@ export default function IndustriesSection() {
               className="group cursor-pointer scroll-reveal"
               data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="bg-space-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all hover-scale">
+              <div className="bg-space-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all hover-scale shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
                 <img 
                   src={industry.image}
                   alt={industry.alt}

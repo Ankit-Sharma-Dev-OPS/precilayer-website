@@ -157,7 +157,7 @@ ${formData.name}`);
             viewport={{ once: true }}
             className="scroll-reveal"
           >
-            <div className="bg-space-900 p-8 rounded-xl border border-gray-700" data-testid="contact-form">
+            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl" data-testid="contact-form">
               <h3 className="text-2xl font-bold mb-6">Get Started Today</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">

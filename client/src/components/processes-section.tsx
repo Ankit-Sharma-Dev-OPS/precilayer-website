@@ -57,11 +57,11 @@ export default function ProcessesSection() {
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="cnc-tolerance">
+                  <div className="text-center p-4 bg-space-700 rounded-lg hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl border border-transparent" data-testid="cnc-tolerance">
                     <div className="text-xl font-bold text-cyber-400">±0.0001"</div>
                     <div className="text-sm text-gray-400">Tolerance</div>
                   </div>
-                  <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="cnc-axis">
+                  <div className="text-center p-4 bg-space-700 rounded-lg hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl border border-transparent" data-testid="cnc-axis">
                     <div className="text-xl font-bold text-cyber-400">5-Axis</div>
                     <div className="text-sm text-gray-400">Machining</div>
                   </div>
@@ -111,11 +111,11 @@ export default function ProcessesSection() {
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="3d-prototypes">
+                  <div className="text-center p-4 bg-space-700 rounded-lg hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl border border-transparent" data-testid="3d-prototypes">
                     <div className="text-xl font-bold text-cyber-400">24Hr</div>
                     <div className="text-sm text-gray-400">Prototypes</div>
                   </div>
-                  <div className="text-center p-4 bg-space-700 rounded-lg" data-testid="3d-materials">
+                  <div className="text-center p-4 bg-space-700 rounded-lg hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl border border-transparent" data-testid="3d-materials">
                     <div className="text-xl font-bold text-cyber-400">50+</div>
                     <div className="text-sm text-gray-400">Materials</div>
                   </div>
