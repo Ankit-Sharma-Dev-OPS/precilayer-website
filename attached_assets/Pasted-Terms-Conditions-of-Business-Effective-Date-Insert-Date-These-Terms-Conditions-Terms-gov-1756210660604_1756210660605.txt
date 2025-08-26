@@ -1,0 +1,85 @@
+Terms & Conditions of Business
+Effective Date: [Insert Date]
+
+These Terms & Conditions (“Terms”) govern the provision of services and supply of components by Precilayer India Private Limited (“Precilayer”, “we”, “our”, “us”) to its customers (“Client”, “you”, “your”). By engaging with Precilayer, you agree to these Terms.
+
+1. Scope of Services
+
+Precilayer provides precision manufacturing services including CNC machining, additive manufacturing (3D printing including MJF, SLS, SLA, FDM, DMLS), and hybrid solutions.
+
+All services are provided in accordance with industry standards and client specifications.
+
+2. Quotations & Orders
+
+Quotations are valid for 30 days unless otherwise stated.
+
+Orders are confirmed only upon written acceptance by Precilayer.
+
+Any changes to design files or specifications after order confirmation may result in revised pricing and delivery schedules.
+
+3. Intellectual Property
+
+All intellectual property rights in client-supplied CAD files, drawings, and designs remain the property of the client.
+
+Precilayer does not claim ownership of client IP.
+
+Any manufacturing methods, process optimizations, or tooling developed by Precilayer remain Precilayer’s IP.
+
+4. Confidentiality
+
+Both parties agree to maintain confidentiality of all non-public business, technical, and financial information.
+
+Confidentiality obligations survive termination of the business relationship.
+
+5. Pricing & Payment
+
+All prices are exclusive of GST and applicable taxes.
+
+Payment terms: [Insert standard terms, e.g., 50% advance, balance upon delivery, or net 30 days].
+
+Late payments may attract interest as per applicable law.
+
+6. Delivery & Risk
+
+Delivery timelines are estimates; Precilayer will use reasonable efforts to meet them.
+
+Risk in goods transfers to the client upon delivery.
+
+Precilayer is not liable for delays caused by force majeure events.
+
+7. Quality & Warranty
+
+Components will be manufactured to agreed specifications, tolerances, and quality standards.
+
+Precilayer warrants workmanship and materials for [X] months from delivery.
+
+Warranty excludes misuse, design flaws provided by the client, or modifications post-delivery.
+
+8. Compliance
+
+Precilayer complies with applicable Indian and international regulations, including those specific to MedTech, Aerospace, and Defense industries.
+
+Clients are responsible for ensuring their designs comply with export control laws and do not infringe third-party IP.
+
+9. Limitation of Liability
+
+Precilayer’s liability is limited to the invoiced value of the order.
+
+Precilayer is not liable for indirect, incidental, or consequential damages, including loss of profit, downtime, or business interruption.
+
+10. Termination
+
+Either party may terminate with written notice for breach of these Terms.
+
+Outstanding obligations, including payment, survive termination.
+
+11. Governing Law & Dispute Resolution
+
+These Terms are governed by the laws of India.
+
+Disputes shall be subject to arbitration in Hyderabad, India, in accordance with the Arbitration and Conciliation Act, 1996.
+
+Contact Us
+Email: support@precilayer.com
+
+Address: Precilayer India Private Limited, [Insert Registered Address]

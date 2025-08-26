@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
             <div className="space-y-4 text-gray-300">
               <div>
                 <h3 className="font-semibold text-cyber-400 mb-2">Business Information:</h3>
-                <p>Company name, billing address, GST details, and purchase order information.</p>
+                <p>Company name, billing address, GST or any tax identification number details, and purchase order information.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-cyber-400 mb-2">Personal Information:</h3>
