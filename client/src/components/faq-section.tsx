@@ -85,7 +85,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900 relative overflow-hidden">
+    <section id="faq" className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

@@ -30,6 +30,7 @@ export default function Navigation() {
     { label: "Industries", id: "industries" },
     { label: "About", id: "about" },
     { label: "Processes", id: "processes" },
+    { label: "FAQ", id: "faq" },
     { label: "Contact", id: "contact" }
   ];
 
