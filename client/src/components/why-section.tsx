@@ -3,8 +3,22 @@ import { Rocket, Settings, TrendingUp } from "lucide-react";
 
 export default function WhySection() {
   return (
-    <section id="why" className="py-20 bg-space-800">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="why" className="py-20 bg-space-800 relative overflow-hidden">
+      {/* Engineering CAD Drawing Background */}
+      <div 
+        className="absolute inset-0 opacity-8"
+        style={{
+          backgroundImage: `url('https://thumbs.dreamstime.com/b/hand-drawing-d-engineering-model-digital-screen-cad-technology-sketching-mechanical-part-concept-design-379485087.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          filter: 'grayscale(100%) brightness(0.2) contrast(0.7)',
+          mixBlendMode: 'overlay'
+        }}
+      />
+      {/* Dark overlay to ensure readability */}
+      <div className="absolute inset-0 bg-space-800/90" />
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -26,7 +40,7 @@ export default function WhySection() {
             
             <div className="space-y-4">
               <div className="flex items-center space-x-4" data-testid="feature-quality">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <Rocket className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>
@@ -36,7 +50,7 @@ export default function WhySection() {
               </div>
               
               <div className="flex items-center space-x-4" data-testid="feature-technology">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <Settings className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>
@@ -46,7 +60,7 @@ export default function WhySection() {
               </div>
               
               <div className="flex items-center space-x-4" data-testid="feature-advantage">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <TrendingUp className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>
