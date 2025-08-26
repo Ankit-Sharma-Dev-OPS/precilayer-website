@@ -34,20 +34,13 @@ export default function ProcessesSection() {
           >
             <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               <div className="relative h-64 overflow-hidden">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
+                <img 
+                  src="https://sybridge.com/wp-content/uploads/2023/09/shutterstock_644383741-1-1536x1025.jpg" 
+                  alt="CNC machine cutting metal part" 
                   className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
-                  aria-label="High-precision CNC machine cutting complex metal geometry with coolant spray in modern manufacturing facility"
-                >
-                  <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
-                  <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  <source src="https://videos.pexels.com/video-files/8828256/8828256-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                  <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-space-900/80 via-space-900/30 to-transparent"></div>
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-space-900 via-transparent to-transparent opacity-70"></div>
               </div>
               
               <div className="p-8">
