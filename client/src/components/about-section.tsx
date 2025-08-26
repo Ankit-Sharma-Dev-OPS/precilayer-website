@@ -57,24 +57,29 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div className="relative">
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
-                  <div className="pl-6">
-                    <h4 className="text-cyber-400 font-semibold text-base mb-3">CNC Manufacturing Excellence</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                      Roshan brings critical component expertise from <span className="text-white font-medium">Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</span>, and <span className="text-white font-medium">Intel, Analog Devices</span>. His experience spans high-stakes environments where precision tolerances and zero-defect manufacturing are non-negotiable.
-                    </p>
-                    
-                    <div className="bg-space-700/20 rounded-lg p-3 border-l-2 border-cyber-400/40 mb-4">
-                      <p className="text-gray-200 text-xs">
-                        Master's in Mechanical Engineering (Dublin Institute of Technology) • European manufacturing standards • Cost-optimization strategies
-                      </p>
+              <div className="space-y-5">
+                <div className="space-y-3">
+                  <h4 className="text-cyber-400 font-semibold text-lg mb-1">CNC Manufacturing Expert</h4>
+                  <p className="text-gray-300 text-sm">
+                    Precision machining specialist with proven track record at global leaders.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="bg-space-700/15 rounded-lg p-4">
+                    <h5 className="text-white font-medium text-sm mb-2">Industry Experience</h5>
+                    <div className="text-gray-400 text-xs space-y-1">
+                      <div>• MedTech: Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</div>
+                      <div>• Semiconductors: Intel, Analog Devices</div>
                     </div>
-                    
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      At Precilayer, Roshan applies <span className="text-cyber-400 font-medium">global-standard processes</span> to deliver precision manufacturing at scale, establishing new benchmarks for quality and reliability in Indian manufacturing.
-                    </p>
+                  </div>
+                  
+                  <div className="bg-space-700/15 rounded-lg p-4">
+                    <h5 className="text-white font-medium text-sm mb-2">Education & Focus</h5>
+                    <div className="text-gray-400 text-xs space-y-1">
+                      <div>• Master's in Mechanical Engineering (Dublin Institute of Technology)</div>
+                      <div>• Global precision standards implementation in India</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,24 +114,29 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-6">
-                <div className="relative">
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
-                  <div className="pl-6">
-                    <h4 className="text-cyber-400 font-semibold text-base mb-3">Additive Manufacturing Innovation</h4>
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                      Priyesh has collaborated with <span className="text-white font-medium">Ford, GM, GE</span> and served over 100 clients across US, EU, and Gulf regions. His portfolio spans aerospace, automotive, and industrial applications with focus on production-ready additive solutions.
-                    </p>
-                    
-                    <div className="bg-space-700/20 rounded-lg p-3 border-l-2 border-cyber-400/40 mb-4">
-                      <p className="text-gray-200 text-xs">
-                        Master's in Additive Manufacturing (Penn State) • Published researcher • Academic-to-production methodology
-                      </p>
+              <div className="space-y-5">
+                <div className="space-y-3">
+                  <h4 className="text-cyber-400 font-semibold text-lg mb-1">Additive Manufacturing Expert</h4>
+                  <p className="text-gray-300 text-sm">
+                    Advanced 3D printing specialist with global client portfolio across industries.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="bg-space-700/15 rounded-lg p-4">
+                    <h5 className="text-white font-medium text-sm mb-2">Global Collaborations</h5>
+                    <div className="text-gray-400 text-xs space-y-1">
+                      <div>• Automotive: Ford, GM, GE</div>
+                      <div>• 100+ clients across US, EU, Gulf regions</div>
                     </div>
-                    
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      At Precilayer, Priyesh integrates <span className="text-cyber-400 font-medium">additive and traditional manufacturing</span> to enable complex geometries and rapid prototyping while maintaining cost efficiency and quality standards.
-                    </p>
+                  </div>
+                  
+                  <div className="bg-space-700/15 rounded-lg p-4">
+                    <h5 className="text-white font-medium text-sm mb-2">Research & Development</h5>
+                    <div className="text-gray-400 text-xs space-y-1">
+                      <div>• Master's in Additive Manufacturing (Penn State)</div>
+                      <div>• Published researcher in 3D printing technologies</div>
+                    </div>
                   </div>
                 </div>
               </div>
