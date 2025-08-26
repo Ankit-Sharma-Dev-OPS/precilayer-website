@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
-import precilayerVideo from "@assets/Precilayer CNC machining video_1756244073895.mp4";
+import precilayerVideo from "@assets/Precilayer CNC machining video_1756244731089.mp4";
 
 const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -67,31 +67,31 @@ export default function HeroSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (video && !videoError) {
-      // Simplified approach - let the browser handle it
-      video.load(); // Force reload to ensure fresh start
-      
-      const handleError = (e: Event) => {
-        console.error('Video playback error:', e);
-        setVideoError(true);
+      const playVideo = async () => {
+        try {
+          video.muted = true;
+          video.playsInline = true;
+          await video.play();
+        } catch (error) {
+          // Retry on user interaction
+          const handleInteraction = () => {
+            video.play().catch(() => {});
+            document.removeEventListener('click', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+          };
+          document.addEventListener('click', handleInteraction, { once: true });
+          document.addEventListener('touchstart', handleInteraction, { once: true });
+        }
       };
       
-      const handleStalled = () => {
-        console.log('Video stalled, attempting restart');
-        video.load();
-      };
-      
-      const handleWaiting = () => {
-        console.log('Video waiting for data');
-      };
-      
-      video.addEventListener('error', handleError);
-      video.addEventListener('stalled', handleStalled);
-      video.addEventListener('waiting', handleWaiting);
+      if (video.readyState >= 3) {
+        playVideo();
+      } else {
+        video.addEventListener('loadeddata', playVideo, { once: true });
+      }
       
       return () => {
-        video.removeEventListener('error', handleError);
-        video.removeEventListener('stalled', handleStalled);
-        video.removeEventListener('waiting', handleWaiting);
+        video.removeEventListener('loadeddata', playVideo);
       };
     }
   }, [videoError]);
@@ -109,13 +109,32 @@ export default function HeroSection() {
       {/* High-Quality CNC Machining Video Background */}
       <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
         <div className="absolute inset-0" style={{ willChange: 'auto' }}>
-          {/* Professional CNC machining image - temporary while fixing video encoding */}
-          <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
-            alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility showcasing Precilayer's capabilities"
+          <video 
+            ref={videoRef}
+            autoPlay
+            muted 
+            loop
+            playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
-            loading="eager"
-          />
+            onError={(e) => {
+              console.error('Video error:', e);
+              setVideoError(true);
+            }}
+            onLoadedData={() => console.log('Video loaded successfully')}
+            onPlay={() => console.log('Video playing')}
+            onStalled={() => console.log('Video stalled')}
+            aria-label="Precilayer CNC machining video showcasing precision manufacturing capabilities"
+          >
+            <source src={precilayerVideo} type="video/mp4" />
+          </video>
+          {videoError && (
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
+              alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility"
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
         {/* Optimized dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/45" style={{ transform: 'translateZ(0)' }}></div>
