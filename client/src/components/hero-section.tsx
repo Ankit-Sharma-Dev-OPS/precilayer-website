@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
 
-const AnimatedCounter = ({ target, suffix = "", duration = 2000 }) => {
+const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -27,8 +27,8 @@ const AnimatedCounter = ({ target, suffix = "", duration = 2000 }) => {
   useEffect(() => {
     if (!isVisible) return;
 
-    let startTime;
-    const animate = (currentTime) => {
+    let startTime: number;
+    const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -216,7 +216,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           <div className="scroll-reveal float" data-testid="stat-delivery" style={{animationDelay: '0s'}}>
             <div>
@@ -230,7 +230,11 @@ export default function HeroSection() {
             </div>
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Minimum Order</div>
           </div>
-          <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '2s'}}>
+          <div className="scroll-reveal float" data-testid="stat-precision" style={{animationDelay: '2s'}}>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>±0.01mm</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Precision</div>
+          </div>
+          <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '3s'}}>
             <div>
               <AnimatedCounter target="50+" />
             </div>
