@@ -118,8 +118,8 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <SubtleBackground />
       {/* High-Quality CNC Machining Video Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
+        <div className="absolute inset-0" style={{ willChange: 'auto' }}>
           <video 
             ref={videoRef}
             autoPlay
@@ -129,12 +129,14 @@ export default function HeroSection() {
             preload="auto"
             disablePictureInPicture
             disableRemotePlayback
-            className="w-full h-full object-cover"
+            className="w-full h-full"
             style={{ 
               objectFit: 'cover',
               objectPosition: 'center',
-              minHeight: '100vh',
-              minWidth: '100%'
+              width: '100%',
+              height: '100%',
+              transform: 'translateZ(0)',
+              willChange: 'auto'
             }}
             onError={(e) => {
               console.error('Video error:', e);
@@ -153,9 +155,8 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Dark overlay for excellent text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/35 to-black/55"></div>
-        <div className="absolute inset-0 bg-space-900/25"></div>
+        {/* Optimized dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/45" style={{ transform: 'translateZ(0)' }}></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
