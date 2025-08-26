@@ -156,10 +156,10 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group cursor-default scroll-reveal"
+              className="group cursor-default scroll-reveal h-full"
               data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="bg-gradient-to-br from-space-800/80 to-space-700/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyber-400/20 group">
+              <div className="bg-gradient-to-br from-space-800/80 to-space-700/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyber-400/20 group h-full flex flex-col">
                 <div className="relative">
                   <img 
                     src={industry.image}
@@ -174,14 +174,14 @@ export default function IndustriesSection() {
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-cyber-400 mb-3 group-hover:text-cyan-300 transition-colors">
                     {industry.title}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {industry.description}
                   </p>
-                  <div className="space-y-2">
+                  <div className="space-y-2 mt-auto">
                     {industry.components.map((component, componentIndex) => (
                       <div key={componentIndex} className="flex items-center text-gray-400 text-sm">
                         <div className="w-1.5 h-1.5 bg-cyber-400 rounded-full mr-3 flex-shrink-0"></div>
