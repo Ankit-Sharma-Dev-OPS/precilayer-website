@@ -1,9 +1,52 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
 
 export default function HeroSection() {
   const [videoError, setVideoError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const playVideo = async () => {
+        try {
+          await video.play();
+        } catch (error) {
+          console.log('Video autoplay failed:', error);
+          // Try to play again after a short delay
+          setTimeout(() => {
+            video.play().catch(() => {
+              console.log('Video play retry failed');
+            });
+          }, 1000);
+        }
+      };
+      
+      // Ensure video plays when loaded
+      if (video.readyState >= 2) {
+        playVideo();
+      } else {
+        video.addEventListener('loadeddata', playVideo);
+      }
+
+      // Try to play when user interacts with the page
+      const handleUserInteraction = () => {
+        playVideo();
+        document.removeEventListener('click', handleUserInteraction);
+        document.removeEventListener('touchstart', handleUserInteraction);
+      };
+
+      document.addEventListener('click', handleUserInteraction);
+      document.addEventListener('touchstart', handleUserInteraction);
+
+      return () => {
+        video.removeEventListener('loadeddata', playVideo);
+        document.removeEventListener('click', handleUserInteraction);
+        document.removeEventListener('touchstart', handleUserInteraction);
+      };
+    }
+  }, [videoError]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -37,13 +80,21 @@ export default function HeroSection() {
               }}
             >
               <video 
+                ref={videoRef}
                 className="w-full h-full object-cover"
                 autoPlay 
                 loop 
                 muted 
                 playsInline
+                preload="auto"
                 poster="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_tiny.jpg"
                 onError={() => setVideoError(true)}
+                onLoadedData={(e) => {
+                  const video = e.target as HTMLVideoElement;
+                  video.play().catch(() => {
+                    console.log('Video autoplay blocked');
+                  });
+                }}
               >
                 <source src="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_large.mp4" type="video/mp4" />
                 <source src="https://cdn.pixabay.com/video/2021/07/12/81241-576082910_large.mp4" type="video/mp4" />
