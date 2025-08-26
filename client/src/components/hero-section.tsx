@@ -68,7 +68,9 @@ export default function HeroSection() {
     if (video) {
       const playVideo = async () => {
         try {
+          video.currentTime = 0; // Reset to beginning
           await video.play();
+          console.log('Video playing successfully');
         } catch (error) {
           console.log('Video autoplay failed:', error);
           // Try to play again after a short delay
@@ -76,15 +78,19 @@ export default function HeroSection() {
             video.play().catch(() => {
               console.log('Video play retry failed');
             });
-          }, 1000);
+          }, 500);
         }
       };
+      
+      // Try to play immediately
+      playVideo();
       
       // Ensure video plays when loaded
       if (video.readyState >= 2) {
         playVideo();
       } else {
         video.addEventListener('loadeddata', playVideo);
+        video.addEventListener('canplay', playVideo);
       }
 
       // Try to play when user interacts with the page
@@ -92,15 +98,19 @@ export default function HeroSection() {
         playVideo();
         document.removeEventListener('click', handleUserInteraction);
         document.removeEventListener('touchstart', handleUserInteraction);
+        document.removeEventListener('keydown', handleUserInteraction);
       };
 
       document.addEventListener('click', handleUserInteraction);
       document.addEventListener('touchstart', handleUserInteraction);
+      document.addEventListener('keydown', handleUserInteraction);
 
       return () => {
         video.removeEventListener('loadeddata', playVideo);
+        video.removeEventListener('canplay', playVideo);
         document.removeEventListener('click', handleUserInteraction);
         document.removeEventListener('touchstart', handleUserInteraction);
+        document.removeEventListener('keydown', handleUserInteraction);
       };
     }
   }, [videoError]);
