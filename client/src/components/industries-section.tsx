@@ -59,7 +59,7 @@ export default function IndustriesSection() {
       icon: Shield,
       title: "Aerospace & Defense",
       description: "AS9100D certified precision components for aerospace OEMs and defense contractors with full material traceability.",
-      image: "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
       alt: "Fighter jet taking off",
       components: [
         "Aircraft fuselage components",
@@ -72,8 +72,8 @@ export default function IndustriesSection() {
       icon: Car,
       title: "Automotive",
       description: "High-precision automotive components manufactured with advanced CNC machining and quality control processes.",
-      image: "https://images.unsplash.com/photo-1617886322207-babaff78abf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Precision automotive parts manufacturing",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Automobile manufacturing assembly facility",
       components: [
         "Engine components",
         "Transmission parts",
@@ -85,8 +85,8 @@ export default function IndustriesSection() {
       icon: Zap,
       title: "Electric Mobility",
       description: "Next-generation components for electric vehicles, charging infrastructure, and sustainable transportation solutions.",
-      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Electric vehicle charging infrastructure",
+      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Futuristic electric vehicle",
       components: [
         "Battery housing systems",
         "Motor components",
@@ -111,8 +111,8 @@ export default function IndustriesSection() {
       icon: Cpu,
       title: "IoT & Electronics",
       description: "Smart connected devices and electronic components for Internet of Things applications and modern electronics.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "IoT devices and electronic components",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Component assembly line in electronics manufacturing",
       components: [
         "Sensor housings",
         "Circuit board enclosures",
