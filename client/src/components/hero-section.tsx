@@ -174,8 +174,8 @@ export default function HeroSection() {
           className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
           data-testid="hero-title"
         >
-          PRECISION CNC MACHINING<br/>
-          <span className="text-cyber-400">& 3D PRINTING SERVICES</span>
+          THE FUTURE OF<br/>
+          <span className="text-cyber-400">MANUFACTURING</span>
         </motion.h1>
         
         <motion.p 
@@ -185,9 +185,9 @@ export default function HeroSection() {
           className="text-lg md:text-xl mb-8 text-white max-w-4xl mx-auto leading-relaxed" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
           data-testid="hero-description"
         >
-          Custom CNC machining, 3D printing & rapid prototyping for aerospace, automotive & medical industries. 
-          <span className="text-cyber-400 font-semibold">Fast quotes, global quality standards.</span> Upload CAD files 
-          for instant manufacturing pricing from India's leading precision manufacturer.
+          Best-in-class precision machined and additive parts at scale, from India to the world. 
+          <span className="text-cyber-400 font-semibold"> No MOQs. No inventory.</span> Just speed, flexibility, 
+          and the future of making.
         </motion.p>
         
         <motion.div 
