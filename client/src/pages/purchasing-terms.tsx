@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, ShoppingCart, DollarSign, Truck, Shield, Clock, AlertTriangle, Scale, Users, Mail } from "lucide-react";
+import { ArrowLeft, ShoppingCart, DollarSign, Truck, Shield, Clock, AlertTriangle, Scale, Users, Mail, Award, Settings, Zap, FileText, BookOpen } from "lucide-react";
 
 export default function PurchasingTerms() {
   useEffect(() => {
@@ -53,9 +53,9 @@ export default function PurchasingTerms() {
             <ShoppingCart className="text-cyber-400 h-8 w-8" />
           </div>
           <h1 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-white">
-            Purchasing <span className="gradient-text">Terms</span>
+            Purchasing <span className="gradient-text">Terms</span><br />
+            <span className="gradient-text">& Conditions</span>
           </h1>
-          <h2 className="text-2xl font-semibold text-gray-300 mb-4">& Conditions</h2>
           <p className="text-gray-400 text-lg">
             Effective Date: 15th August 2025
           </p>
@@ -196,6 +196,26 @@ export default function PurchasingTerms() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Award className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">7. Warranty</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Supplier warrants goods for 30 days from delivery against defects in material, workmanship, and conformity.</p>
+              <p>• Non-conforming goods shall be promptly repaired, replaced, or refunded at Supplier's expense.</p>
+              <p>• Warranty obligations extend to any repaired or replaced items.</p>
+            </div>
+          </motion.div>
+
+          {/* Compliance & Ethics */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Users className="text-cyber-400 h-6 w-6" />
               </div>
               <h2 className="text-2xl font-bold text-white">8. Compliance & Ethics</h2>
@@ -229,7 +249,7 @@ export default function PurchasingTerms() {
             </div>
           </motion.div>
 
-          {/* Termination & Dispute Resolution */}
+          {/* Intellectual Property */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -238,21 +258,125 @@ export default function PurchasingTerms() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <FileText className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">10. Intellectual Property</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Any Precilayer drawings, specifications, or confidential information remain Precilayer property.</p>
+              <p>• Supplier shall not use or disclose such information except to fulfill the PO.</p>
+              <p>• Any inventions, improvements, or works developed for Precilayer under the PO shall vest in Precilayer unless otherwise agreed in writing.</p>
+            </div>
+          </motion.div>
+
+          {/* Change Management */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Settings className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">11. Change Management</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Precilayer reserves the right to modify or cancel a PO at any time before shipment, with equitable adjustment for completed work.</p>
+              <p>• Supplier shall not make changes to materials, processes, or designs without Precilayer's prior written approval.</p>
+            </div>
+          </motion.div>
+
+          {/* Force Majeure */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Zap className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">12. Force Majeure</h2>
+            </div>
+            <div className="text-gray-300">
+              <p>Neither party shall be liable for delays beyond reasonable control (e.g., natural disasters, war, government restrictions). Supplier must notify Precilayer within 5 business days of such events. Precilayer may cancel the PO without liability if delays exceed 15 days.</p>
+            </div>
+          </motion.div>
+
+          {/* Indemnity */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Shield className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">13. Indemnity</h2>
+            </div>
+            <div className="text-gray-300">
+              <p>Supplier shall indemnify, defend, and hold harmless Precilayer from all claims, damages, losses, or expenses arising from Supplier's breach, negligence, defective goods, IP infringement, or regulatory non-compliance.</p>
+            </div>
+          </motion.div>
+
+          {/* Termination */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <AlertTriangle className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">14. Termination</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Precilayer may terminate for convenience upon notice, compensating only for conforming goods already delivered.</p>
+              <p>• Precilayer may terminate for cause (e.g., breach, insolvency, repeated delays) without liability beyond conforming goods accepted.</p>
+            </div>
+          </motion.div>
+
+          {/* Dispute Resolution */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Scale className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">14. Termination & 15. Dispute Resolution</h2>
+              <h2 className="text-2xl font-bold text-white">15. Dispute Resolution</h2>
             </div>
-            <div className="text-gray-300 space-y-6">
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Termination</h3>
-                <p>• Precilayer may terminate for convenience upon notice, compensating only for conforming goods already delivered.</p>
-                <p>• Precilayer may terminate for cause (e.g., breach, insolvency, repeated delays) without liability beyond conforming goods accepted.</p>
+            <div className="text-gray-300 space-y-4">
+              <p>• Any disputes shall be resolved under Indian law, with jurisdiction vested exclusively in Mumbai courts.</p>
+              <p>• Parties shall first attempt good-faith resolution before litigation.</p>
+            </div>
+          </motion.div>
+
+          {/* Entire Agreement */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <BookOpen className="text-cyber-400 h-6 w-6" />
               </div>
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Dispute Resolution</h3>
-                <p>• Any disputes shall be resolved under Indian law, with jurisdiction vested exclusively in Mumbai courts.</p>
-                <p>• Parties shall first attempt good-faith resolution before litigation.</p>
-              </div>
+              <h2 className="text-2xl font-bold text-white">16. Entire Agreement</h2>
+            </div>
+            <div className="text-gray-300">
+              <p>This document and the PO constitute the complete agreement between the parties. Any conflicting Supplier terms are expressly rejected.</p>
             </div>
           </motion.div>
 
@@ -260,7 +384,7 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+            transition={{ duration: 0.8, delay: 1.7 }}
             className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
           >
             <div className="flex items-center space-x-4 mb-6">
