@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
-import precilayerVideo from "@assets/Precilayer CNC machining video_1756243684014.mp4";
+import precilayerVideo from "@assets/Precilayer CNC machining video_1756243918795.mp4";
 
 const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -121,7 +121,9 @@ export default function HeroSection() {
             className="w-full h-full object-cover"
             style={{ 
               objectFit: 'cover',
-              objectPosition: 'center'
+              objectPosition: 'center',
+              minHeight: '100%',
+              minWidth: '100%'
             }}
             onError={(e) => {
               console.error('Video error:', e);
@@ -131,12 +133,13 @@ export default function HeroSection() {
           >
             <source src={precilayerVideo} type="video/mp4" />
           </video>
-          {/* Fallback to static image due to large video file size */}
-          <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
-            alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility"
-            className="w-full h-full object-cover"
-          />
+          {videoError && (
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
+              alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility"
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50"></div>
