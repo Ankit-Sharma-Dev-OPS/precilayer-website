@@ -17,22 +17,22 @@ export default function HowSection() {
     {
       icon: Cpu,
       title: "Automated CAM Programming",
-      description: "Our CAM systems generate optimized toolpaths in minutes instead of hours — accelerating setup while improving repeatability. Every program is then validated by CNC experts with decades of MedTech and Aerospace experience, ensuring automation works as a force multiplier, not a risk. The result: speed without sacrificing precision or compliance."
+      description: "Automated toolpaths in minutes, not hours. Expert-validated for MedTech precision."
     },
     {
       icon: Wifi,
       title: "IoT-Enabled Smart Manufacturing",
-      description: "Every machine on our floor is connected. IoT sensors stream real-time data for predictive maintenance, process control, and quality assurance. This means fewer breakdowns, zero guesswork, and production that's transparent down to the micron."
+      description: "Connected machines talk to us 24/7. Real-time data means zero surprises, pure precision."
     },
     {
       icon: Database,
       title: "Digital Manufacturing Backbone",
-      description: "From quoting to scheduling to live tracking, our digital platforms automate what others still manage manually. This reduces overheads, keeps delivery timelines predictable, and gives customers visibility into every stage of their build."
+      description: "Digital platforms handle the boring stuff automatically. You get predictable timelines and live project visibility."
     },
     {
       icon: Shield,
       title: "Compliance Built-In",
-      description: "For industries like MedTech and Aerospace, \"almost right\" isn't good enough. Our systems integrate automated checks and traceability at every step, guaranteeing parts that are audit-ready, certified, and error-free."
+      description: "MedTech and Aerospace demand perfection. Built-in checks ensure every part is audit-ready, error-free."
     },
     {
       icon: Layers,
@@ -72,7 +72,7 @@ export default function HowSection() {
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="how-title">
             How We <span className="gradient-text">Do It</span>
           </h2>
-          <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Where Automation Meets Expertise</h3>
+          <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Smart Tech + Human Touch = Magic</h3>
         </motion.div>
 
         {/* Core Points Grid - 2x2 + 1 Layout */}
@@ -137,7 +137,7 @@ export default function HowSection() {
                     </div>
                   </div>
                   <p className="text-white leading-relaxed text-sm">
-                    By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability.
+                    CNC meets 3D printing. Complex geometries, less waste, faster iteration—without compromising reliability.
                   </p>
                 </div>
               </motion.div>
@@ -177,9 +177,7 @@ export default function HowSection() {
               
               <h3 className="text-2xl font-bold mb-6 text-white">Our Foundation</h3>
               <p className="text-gray-300 leading-relaxed max-w-4xl mx-auto text-lg">
-                "At Precilayer, technology is not just a tool — it's our foundation. By fusing automation, 
-                connectivity, and human expertise, we deliver efficiency, repeatability, and world-class 
-                quality at a scale India has never seen before."
+                "Technology isn't just our tool—it's our DNA. Automation + human expertise = world-class quality at unprecedented scale."
               </p>
             </div>
           </div>
