@@ -62,58 +62,6 @@ export default function WhySection() {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="scroll-reveal"
-          >
-            <div className="relative bg-space-900 rounded-xl p-8 border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
-              <div className="absolute inset-0 opacity-10">
-                <svg viewBox="0 0 400 300" className="w-full h-full">
-                  <defs>
-                    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="var(--cyber-400)" />
-                      <stop offset="100%" stopColor="white" />
-                    </linearGradient>
-                  </defs>
-                  {/* CNC Toolpath Visualization */}
-                  <path d="M50 50 L350 50 L350 250 L50 250 Z" stroke="url(#techGradient)" strokeWidth="2" fill="none" />
-                  <path d="M80 80 Q200 80 320 150 T320 220" stroke="url(#techGradient)" strokeWidth="1" fill="none" />
-                  <path d="M80 120 L150 120 L150 180 L220 180 L220 220 L290 220" stroke="url(#techGradient)" strokeWidth="1" fill="none" />
-                  <circle cx="80" cy="80" r="3" fill="var(--cyber-400)" />
-                  <circle cx="320" cy="150" r="3" fill="var(--cyber-400)" />
-                  <circle cx="290" cy="220" r="3" fill="var(--cyber-400)" />
-                  {/* Grid pattern */}
-                  <defs>
-                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="url(#techGradient)" strokeWidth="0.5" opacity="0.3"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-cyber-400 mb-4">Precision Engineering</h3>
-                <p className="text-gray-300 mb-4">
-                  Advanced manufacturing processes with tolerances measured in micrometers,
-                  quality systems that exceed international standards.
-                </p>
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div>
-                    <div className="text-xl font-bold text-cyber-400">±0.0001"</div>
-                    <div className="text-sm text-gray-400">2 Microns</div>
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-cyber-400">ISO 9001</div>
-                    <div className="text-sm text-gray-400">Certified</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
