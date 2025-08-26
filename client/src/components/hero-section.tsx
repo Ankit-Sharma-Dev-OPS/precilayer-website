@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
+import precilayerVideo from "@assets/Precilayer CNC machining video_1756243113087.mp4";
 
 const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -136,13 +137,10 @@ export default function HeroSection() {
             playsInline
             preload="auto"
             className="w-full h-full object-cover"
-            aria-label="Professional CNC machine with high-RPM spindle cutting complex metal geometry with coolant spray in clean modern manufacturing facility"
+            aria-label="Precilayer CNC machining video showcasing precision manufacturing capabilities"
             onError={() => setVideoError(true)}
-          >
-            <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/8828256/8828256-hd_1920_1080_25fps.mp4" type="video/mp4" />
-          </video>
+            src={precilayerVideo}
+          />
           {videoError && (
             <img 
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
