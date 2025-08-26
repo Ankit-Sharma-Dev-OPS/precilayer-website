@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Clock, Shield } from "lucide-react";
+import { Mail, Phone, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -124,6 +124,18 @@ ${formData.name}`);
                   <h3 className="font-semibold">Email Us</h3>
                   <a href="mailto:support@precilayer.com" className="text-cyber-400 hover:text-cyber-300 transition-colors">
                     support@precilayer.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4" data-testid="contact-phone">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
+                  <Phone className="text-cyber-400 h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Call Us</h3>
+                  <a href="tel:+919930903006" className="text-cyber-400 hover:text-cyber-300 transition-colors">
+                    +91 99309 03006
                   </a>
                 </div>
               </div>
