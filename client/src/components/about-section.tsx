@@ -57,13 +57,48 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-4 text-white leading-relaxed">
-                <p>
-                  Roshan is a precision CNC machining specialist with proven impact in two of the most demanding sectors — MedTech and Semiconductors. He has engineered critical components for global leaders including Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic, where flawless accuracy is non-negotiable. His semiconductor experience spans Analog Devices and Intel, delivering parts that meet the extreme tolerances of advanced electronics.
+              <div className="space-y-6">
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Precision CNC machining specialist with proven impact in the most demanding sectors.
                 </p>
-                <p>
-                  With a Master's in Mechanical Engineering from Dublin Institute of Technology and hands-on European manufacturing expertise, Roshan combines technical mastery with cost-efficient strategies. At Precilayer, he drives the mission to bring global-standard manufacturing to India, making precision accessible and reliable at scale.
-                </p>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      Industry Experience
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• MedTech: Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</li>
+                      <li>• Semiconductors: Analog Devices, Intel</li>
+                      <li>• Critical components with extreme tolerances</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      Education & Expertise
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• Master's in Mechanical Engineering (Dublin Institute of Technology)</li>
+                      <li>• European manufacturing expertise</li>
+                      <li>• Cost-efficient precision strategies</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      At Precilayer
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• Drives global-standard manufacturing in India</li>
+                      <li>• Makes precision accessible at scale</li>
+                      <li>• Technical mastery with reliability</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               </div>
             </div>
@@ -96,13 +131,48 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-4 text-white leading-relaxed">
-                <p>
-                  Priyesh is a specialist in advanced additive manufacturing with a global track record of delivering innovation at scale. His expertise spans collaborations with Ford, GM, and GE, along with over 100 clients across the US, EU, and Gulf regions, where he has implemented cutting-edge 3D printing solutions for aerospace, mobility, and industrial applications.
+              <div className="space-y-6">
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Advanced additive manufacturing specialist with global innovation track record.
                 </p>
-                <p>
-                  Holding a Master's in Additive Manufacturing from The Pennsylvania State University, Priyesh combines academic depth with practical execution. As a published researcher in 3D printing, he has contributed to advancing the field while solving real-world challenges. At Precilayer, he leads the charge in redefining how additive technologies integrate with precision manufacturing to unlock design freedom, accelerate production, and lower costs.
-                </p>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      Global Collaborations
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• Automotive: Ford, GM, GE</li>
+                      <li>• 100+ clients across US, EU, Gulf regions</li>
+                      <li>• Aerospace, mobility, industrial applications</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      Academic & Research
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• Master's in Additive Manufacturing (Penn State)</li>
+                      <li>• Published researcher in 3D printing</li>
+                      <li>• Academic depth with practical execution</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
+                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
+                      At Precilayer
+                    </h4>
+                    <ul className="text-white text-sm space-y-2 ml-5">
+                      <li>• Integrates additive with precision manufacturing</li>
+                      <li>• Unlocks design freedom & accelerates production</li>
+                      <li>• Reduces costs while maintaining quality</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               </div>
             </div>
