@@ -56,6 +56,9 @@ export default function SupplierIntegrityGuide() {
             Supplier & Agent <span className="gradient-text">Integrity Guide</span>
           </h1>
           <p className="text-gray-400 text-lg">
+            Effective Date: 15th August 2025
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
             Ethical, legal, and compliance standards for global partners
           </p>
         </motion.div>

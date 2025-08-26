@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-space-900 border-t border-gray-800 py-12">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="font-orbitron text-2xl font-bold gradient-text mb-4" data-testid="footer-logo">
               PRECILAYER
@@ -63,32 +63,48 @@ export default function Footer() {
               <li><span data-testid="industry-automotive">Automotive</span></li>
             </ul>
           </div>
+          
+          <div>
+            <h3 className="font-semibold text-white mb-4">Precilayer Policies</h3>
+            <ul className="space-y-3 text-gray-400">
+              <li>
+                <Link href="/privacy-policy">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-privacy">Privacy Policy</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-conditions">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-terms">Terms of Service</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/responsible-sourcing">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-sourcing">Responsible Sourcing</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/purchasing-terms">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-purchasing">Purchasing Terms</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/supplier-integrity-guide">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-supplier-integrity">Supplier Integrity Guide</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/esg-csr-policy">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-esg-csr">ESG & CSR Policy</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm" data-testid="copyright">
-            © 2024 Precilayer. All rights reserved.
+            © {new Date().getFullYear()} Precilayer. All rights reserved.
           </p>
-          <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-privacy">Privacy Policy</span>
-            </Link>
-            <Link href="/terms-conditions">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-terms">Terms of Service</span>
-            </Link>
-            <Link href="/responsible-sourcing">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-sourcing">Responsible Sourcing</span>
-            </Link>
-            <Link href="/purchasing-terms">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-purchasing">Purchasing Terms</span>
-            </Link>
-            <Link href="/supplier-integrity-guide">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-supplier-integrity">Supplier Integrity Guide</span>
-            </Link>
-            <Link href="/esg-csr-policy">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-esg-csr">ESG & CSR Policy</span>
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

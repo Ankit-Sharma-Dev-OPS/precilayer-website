@@ -57,6 +57,9 @@ export default function ResponsibleSourcing() {
           </h1>
           <h2 className="text-2xl font-semibold text-gray-300 mb-4">& Compliance Policy</h2>
           <p className="text-gray-400 text-lg">
+            Effective Date: 15th August 2025
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
             Building ethical supply chains for global manufacturing
           </p>
         </motion.div>

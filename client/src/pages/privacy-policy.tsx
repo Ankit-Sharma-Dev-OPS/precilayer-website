@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
             Privacy <span className="gradient-text">Policy</span>
           </h1>
           <p className="text-gray-400 text-lg">
-            Effective Date: January 26, 2025
+            Effective Date: 15th August 2025
           </p>
         </motion.div>
 
