@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
-import precilayerVideo from "@assets/Precilayer CNC machining video_1756243918795.mp4";
+import precilayerVideo from "@assets/Precilayer CNC machining video_1756244073895.mp4";
 
 const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -69,30 +69,40 @@ export default function HeroSection() {
     if (video && !videoError) {
       const playVideo = async () => {
         try {
+          // Ensure video attributes are set
           video.muted = true;
           video.playsInline = true;
           video.loop = true;
+          video.autoplay = true;
+          
           await video.play();
         } catch (error) {
-          // Retry on user interaction
-          const handleInteraction = () => {
+          // Graceful fallback for autoplay restrictions
+          const handleUserInteraction = () => {
             video.play().catch(() => {});
-            document.removeEventListener('click', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
           };
-          document.addEventListener('click', handleInteraction, { once: true });
-          document.addEventListener('touchstart', handleInteraction, { once: true });
+          
+          document.addEventListener('click', handleUserInteraction, { once: true });
+          document.addEventListener('touchstart', handleUserInteraction, { once: true });
+          document.addEventListener('scroll', handleUserInteraction, { once: true });
         }
       };
       
+      // Multiple loading event handlers for better compatibility
+      const handleCanPlay = () => playVideo();
+      const handleLoadedData = () => playVideo();
+      
+      video.addEventListener('canplay', handleCanPlay);
+      video.addEventListener('loadeddata', handleLoadedData);
+      
+      // Try immediate play if already loaded
       if (video.readyState >= 3) {
         playVideo();
-      } else {
-        video.addEventListener('loadeddata', playVideo, { once: true });
       }
       
       return () => {
-        video.removeEventListener('loadeddata', playVideo);
+        video.removeEventListener('canplay', handleCanPlay);
+        video.removeEventListener('loadeddata', handleLoadedData);
       };
     }
   }, [videoError]);
@@ -116,20 +126,22 @@ export default function HeroSection() {
             muted 
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             disablePictureInPicture
+            disableRemotePlayback
             className="w-full h-full object-cover"
             style={{ 
               objectFit: 'cover',
               objectPosition: 'center',
-              minHeight: '100%',
+              minHeight: '100vh',
               minWidth: '100%'
             }}
             onError={(e) => {
               console.error('Video error:', e);
               setVideoError(true);
             }}
-            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities"
+            onLoadedData={() => console.log('Video ready for playback')}
+            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities with coolant spray in modern facility"
           >
             <source src={precilayerVideo} type="video/mp4" />
           </video>
@@ -141,9 +153,9 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50"></div>
-        <div className="absolute inset-0 bg-space-900/20"></div>
+        {/* Dark overlay for excellent text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/35 to-black/55"></div>
+        <div className="absolute inset-0 bg-space-900/25"></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
