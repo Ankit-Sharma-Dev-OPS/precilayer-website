@@ -170,7 +170,7 @@ ${formData.name}`);
                       required
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white"
+                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400"
                       placeholder="Your full name"
                       data-testid="input-name"
                     />
@@ -183,7 +183,7 @@ ${formData.name}`);
                       required
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white"
+                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400"
                       placeholder="you@company.com"
                       data-testid="input-email"
                     />
@@ -199,7 +199,7 @@ ${formData.name}`);
                       required
                       value={formData.company}
                       onChange={(e) => handleInputChange('company', e.target.value)}
-                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white"
+                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400"
                       placeholder="Company name"
                       data-testid="input-company"
                     />
@@ -211,7 +211,7 @@ ${formData.name}`);
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white"
+                      className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400"
                       placeholder="+91 XXXXX XXXXX"
                       data-testid="input-phone"
                     />
@@ -221,7 +221,7 @@ ${formData.name}`);
                 <div>
                   <label className="block text-sm font-medium mb-2" htmlFor="role">Role</label>
                   <Select value={formData.role} onValueChange={(value) => handleInputChange('role', value)}>
-                    <SelectTrigger className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white" data-testid="select-role">
+                    <SelectTrigger className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400" data-testid="select-role">
                       <SelectValue placeholder="Select your role" />
                     </SelectTrigger>
                     <SelectContent className="bg-space-800 border-gray-600 text-white">
@@ -251,7 +251,7 @@ ${formData.name}`);
                     rows={4}
                     value={formData.message}
                     onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white resize-none"
+                    className="bg-space-800 border-gray-600 focus:border-cyber-400 text-white placeholder:text-gray-400 resize-none"
                     placeholder="Tell us about your project requirements..."
                     data-testid="textarea-message"
                   />
