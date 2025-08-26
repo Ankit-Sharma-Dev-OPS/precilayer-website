@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Award, Globe } from "lucide-react";
+import { Award, Globe, Leaf } from "lucide-react";
+import { Link } from "wouter";
 import roshanPhoto from "@assets/Roshan Kolhe- Precilayer_1756162128162.png";
 import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
 import globalNetworkImage from "@assets/global-network-connection_41981-527_1756206836623.jpg";
@@ -156,6 +157,39 @@ export default function AboutSection() {
                 <div className="text-3xl font-bold text-cyber-400 font-orbitron">8+</div>
                 <div className="text-gray-400">Industry Verticals</div>
               </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Responsible Sourcing CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-12 scroll-reveal"
+        >
+          <div className="bg-space-700/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-full flex items-center justify-center">
+                  <Leaf className="text-cyber-400 h-6 w-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Ethical Manufacturing</h3>
+              </div>
+              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
+                At Precilayer, we're committed to responsible sourcing and global compliance standards. 
+                Our supply chain practices align with international regulations including conflict minerals compliance, 
+                REACH, and RoHS directives.
+              </p>
+              <Link href="/responsible-sourcing">
+                <button 
+                  className="bg-cyber-400/10 hover:bg-cyber-400/20 border border-cyber-400/50 hover:border-cyber-400 text-cyber-400 px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-400/20" 
+                  data-testid="responsible-sourcing-link"
+                >
+                  Learn About Our Responsible Sourcing Policy
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>

@@ -1,0 +1,84 @@
+Precilayer Responsible Sourcing & Compliance Policy
+1. Introduction
+
+At Precilayer India Private Limited, we recognize that our role as a next-generation manufacturing partner extends far beyond engineering precision. Our clients—whether in MedTech, Aerospace, Mobility, Energy, or Automation—demand not only best-in-class components but also confidence that these products are sourced, manufactured, and delivered in line with global ethical and regulatory expectations.
+
+This Responsible Sourcing & Compliance Policy articulates our approach to ensuring that our materials and processes align with international standards, including:
+
+The U.S. Dodd-Frank Act, Section 1502 on conflict minerals
+
+The EU Conflict Minerals Regulation (EU 2017/821)
+
+The OECD Due Diligence Guidance for Responsible Supply Chains
+
+Environmental directives such as REACH (Registration, Evaluation, Authorisation, and Restriction of Chemicals) and RoHS (Restriction of Hazardous Substances)
+
+By embedding these frameworks into our supplier expectations and client commitments, we aim to strengthen the global perception of Indian manufacturing as innovative, reliable, and responsible.
+
+2. Conflict Minerals Policy
+2.1 Our Position
+
+Precilayer does not source tin, tantalum, tungsten, or gold (“3TG”) directly from mines or smelters. Instead, we procure metals and raw materials exclusively from established suppliers with proven compliance practices.
+
+2.2 Commitment to Conflict-Free Supply Chains
+
+Precilayer expects all suppliers to avoid sourcing 3TG from conflict-affected and high-risk areas, unless they are certified as conflict-free by internationally recognized audit schemes.
+
+Where suppliers utilize 3TG, they should maintain traceability and transparency consistent with OECD guidelines.
+
+Precilayer will respond in good faith to reasonable customer requests for conflict mineral declarations, including CMRT (Conflict Minerals Reporting Template) or equivalent documentation.
+
+2.3 Alignment with Global Regulations
+
+U.S. Dodd-Frank Act, Section 1502: While Precilayer is not a direct filer, we support the Act’s objective to prevent financing of armed groups and cooperate with clients requiring declarations.
+
+EU Regulation (EU 2017/821): Though Precilayer does not import raw minerals into the EU, our policies support the intent of the regulation and hold suppliers accountable for compliance.
+
+3. Environmental & Chemical Compliance
+3.1 REACH (EU Regulation 1907/2006)
+
+We expect our suppliers to ensure materials supplied to Precilayer comply with REACH requirements, particularly in relation to Substances of Very High Concern (SVHCs).
+
+3.2 RoHS (EU Directive 2011/65/EU and amendments)
+
+Where applicable, components delivered by Precilayer will comply with RoHS restrictions on hazardous substances in electrical and electronic equipment.
+
+3.3 Continuous Vigilance
+
+Precilayer continuously monitors updates to international regulatory frameworks and encourages its suppliers to do the same. Our aim is to deliver components that can seamlessly integrate into regulated markets worldwide without compliance risks.
+
+4. Supplier Expectations
+
+Suppliers are critical partners in our compliance journey. Precilayer expects suppliers to:
+
+Align with the OECD Due Diligence Guidance.
+
+Provide transparency regarding the origin of raw materials upon reasonable request.
+
+Support Precilayer and our customers in fulfilling their regulatory obligations, without imposing unnecessary bureaucracy.
+
+Proactively communicate any potential risks of non-compliance.
+
+5. Sustainability & Governance
+
+Precilayer views responsible sourcing as a core element of sustainable manufacturing. Our commitment extends beyond avoiding conflict minerals—it is about building supply chains that:
+
+Respect human rights and environmental safety.
+
+Reinforce transparency and accountability.
+
+Contribute to India’s global positioning as a hub for advanced and ethical manufacturing.
+
+6. Client Assurance
+
+By working with Precilayer, clients gain:
+
+Regulatory confidence: Our practices are designed to integrate with both U.S. and EU compliance regimes.
+
+Transparency: We provide declarations and confirmations as required, tailored to client needs.
+
+Reliability: Our sourcing practices reduce risk, ensuring consistent quality and integrity of supply.
+
+7. Disclaimer
+
+This policy reflects Precilayer’s principles and approach to responsible sourcing. It does not constitute a certification, legal filing, or contractual obligation, except where explicitly agreed in writing with a client.

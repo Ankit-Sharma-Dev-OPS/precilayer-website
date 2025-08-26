@@ -76,6 +76,9 @@ export default function Footer() {
             <Link href="/terms-conditions">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-terms">Terms of Service</span>
             </Link>
+            <Link href="/responsible-sourcing">
+              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-sourcing">Responsible Sourcing</span>
+            </Link>
             <span className="text-gray-400 text-sm" data-testid="policy-cookies">Cookie Policy</span>
           </div>
         </div>
