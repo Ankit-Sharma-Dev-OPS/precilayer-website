@@ -13,8 +13,8 @@ export default function AboutSection() {
           className="absolute inset-0 opacity-25"
           style={{
             backgroundImage: `url(${globalNetworkImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
+            backgroundSize: '120% auto',
+            backgroundPosition: 'center 40%',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.8) contrast(1.2)'
           }}
