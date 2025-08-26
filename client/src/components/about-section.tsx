@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Award, Globe } from "lucide-react";
 import roshanPhoto from "@assets/Roshan Kolhe- Precilayer_1756162128162.png";
 import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
+import globalNetworkImage from "@assets/global-network-connection_41981-527_1756206836623.jpg";
 
 export default function AboutSection() {
   return (
@@ -9,13 +10,13 @@ export default function AboutSection() {
       {/* Manufacturing Background */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-25"
           style={{
-            backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJK32cXxCOyFwZpEWXXpKTuzUsnoJqpLUkMe_4EC6GBr3_LOf2L27pUba2Zr6jptwU6yk&usqp=CAU')`,
+            backgroundImage: `url(${globalNetworkImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.9) contrast(1.1)'
+            filter: 'brightness(0.8) contrast(1.2)'
           }}
         />
         {/* 75% Dark Overlay for readability */}
