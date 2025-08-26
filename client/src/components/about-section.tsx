@@ -62,7 +62,7 @@ export default function AboutSection() {
           >
             <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden">
               {/* Black overlay with 80% opacity */}
-              <div className="absolute inset-0 bg-black/80 rounded-xl"></div>
+              <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
               <div className="relative z-10 p-8">
               <div className="mb-8">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
@@ -101,7 +101,7 @@ export default function AboutSection() {
           >
             <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden">
               {/* Black overlay with 80% opacity */}
-              <div className="absolute inset-0 bg-black/80 rounded-xl"></div>
+              <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
               <div className="relative z-10 p-8">
               <div className="mb-8">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
