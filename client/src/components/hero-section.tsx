@@ -66,52 +66,78 @@ export default function HeroSection() {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
+    if (video && !videoError) {
+      let retryCount = 0;
+      const maxRetries = 5;
+      
       const playVideo = async () => {
         try {
-          video.currentTime = 0; // Reset to beginning
+          // Ensure video is muted and has proper attributes
+          video.muted = true;
+          video.playsInline = true;
+          video.loop = true;
+          
+          // Reset and play
+          video.currentTime = 0;
           await video.play();
-          console.log('Video playing successfully');
+          retryCount = 0; // Reset retry count on success
         } catch (error) {
-          console.log('Video autoplay failed:', error);
-          // Try to play again after a short delay
-          setTimeout(() => {
-            video.play().catch(() => {
-              console.log('Video play retry failed');
-            });
-          }, 500);
+          retryCount++;
+          if (retryCount < maxRetries) {
+            // Exponential backoff retry
+            setTimeout(() => {
+              playVideo();
+            }, Math.pow(2, retryCount) * 100);
+          }
         }
       };
       
-      // Try to play immediately
-      playVideo();
+      // Multiple event listeners for better compatibility
+      const handleCanPlay = () => playVideo();
+      const handleLoadedData = () => playVideo();
+      const handleLoadedMetadata = () => playVideo();
       
-      // Ensure video plays when loaded
-      if (video.readyState >= 2) {
+      // Add event listeners
+      video.addEventListener('canplay', handleCanPlay);
+      video.addEventListener('loadeddata', handleLoadedData);
+      video.addEventListener('loadedmetadata', handleLoadedMetadata);
+      
+      // Try immediate play if video is already loaded
+      if (video.readyState >= 3) {
         playVideo();
-      } else {
-        video.addEventListener('loadeddata', playVideo);
-        video.addEventListener('canplay', playVideo);
       }
+      
+      // Intersection Observer for mobile optimization
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && video.paused) {
+            playVideo();
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(video);
 
-      // Try to play when user interacts with the page
+      // User interaction handlers
       const handleUserInteraction = () => {
         playVideo();
         document.removeEventListener('click', handleUserInteraction);
         document.removeEventListener('touchstart', handleUserInteraction);
-        document.removeEventListener('keydown', handleUserInteraction);
+        document.removeEventListener('scroll', handleUserInteraction);
       };
 
-      document.addEventListener('click', handleUserInteraction);
-      document.addEventListener('touchstart', handleUserInteraction);
-      document.addEventListener('keydown', handleUserInteraction);
+      document.addEventListener('click', handleUserInteraction, { once: true });
+      document.addEventListener('touchstart', handleUserInteraction, { once: true });
+      document.addEventListener('scroll', handleUserInteraction, { once: true });
 
       return () => {
-        video.removeEventListener('loadeddata', playVideo);
-        video.removeEventListener('canplay', playVideo);
+        video.removeEventListener('canplay', handleCanPlay);
+        video.removeEventListener('loadeddata', handleLoadedData);
+        video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+        observer.disconnect();
         document.removeEventListener('click', handleUserInteraction);
         document.removeEventListener('touchstart', handleUserInteraction);
-        document.removeEventListener('keydown', handleUserInteraction);
+        document.removeEventListener('scroll', handleUserInteraction);
       };
     }
   }, [videoError]);
@@ -135,10 +161,20 @@ export default function HeroSection() {
             loop 
             muted 
             playsInline
-            preload="auto"
+            preload="metadata"
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
             className="w-full h-full object-cover"
-            aria-label="Precilayer CNC machining video showcasing precision manufacturing capabilities"
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: 'center',
+              minHeight: '100%',
+              minWidth: '100%'
+            }}
+            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities"
             onError={() => setVideoError(true)}
+            onLoadStart={() => console.log('Video loading started')}
+            onCanPlay={() => console.log('Video can play')}
             src={precilayerVideo}
           />
           {videoError && (
@@ -149,8 +185,9 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Subtle overlay for text readability while keeping video visible */}
-        <div className="absolute inset-0 bg-gradient-to-br from-space-900/30 via-transparent to-space-900/40"></div>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-space-900/30"></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
