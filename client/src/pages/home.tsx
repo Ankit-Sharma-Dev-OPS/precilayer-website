@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import SEOHead from "@/components/seo-head";
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
+import ManufacturingMomentSection from "@/components/manufacturing-moment-section";
 import WhySection from "@/components/why-section";
 import HowSection from "@/components/how-section";
 import WhatSection from "@/components/what-section";
@@ -41,6 +42,7 @@ export default function Home() {
       <SEOHead />
       <Navigation />
       <HeroSection />
+      <ManufacturingMomentSection />
       <WhySection />
       <HowSection />
       <WhatSection />
