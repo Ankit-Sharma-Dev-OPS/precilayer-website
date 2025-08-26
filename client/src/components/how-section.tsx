@@ -255,7 +255,7 @@ export default function HowSection() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50 icon-hover icon-glow"
               >
-                <Zap className="text-cyber-400/40 h-8 w-8 blur-[0.5px]" />
+                <Zap className="text-cyber-400 h-8 w-8" />
               </motion.div>
               
               <h3 className="text-2xl font-bold mb-6 text-white">Our Foundation</h3>
