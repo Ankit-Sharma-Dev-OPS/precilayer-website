@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, UserCheck, Users, Shield, AlertTriangle, Scale, Globe, Gavel, FileCheck, Mail } from "lucide-react";
+import { ArrowLeft, UserCheck, Users, Shield, AlertTriangle, Scale, Globe, Gavel, FileCheck, Mail, DollarSign, Truck, CheckCircle } from "lucide-react";
 
 export default function SupplierIntegrityGuide() {
   useEffect(() => {
@@ -188,7 +188,7 @@ export default function SupplierIntegrityGuide() {
             </div>
           </motion.div>
 
-          {/* Fair Competition & IP */}
+          {/* Fair Competition */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -199,29 +199,18 @@ export default function SupplierIntegrityGuide() {
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Scale className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">5. Fair Competition & Intellectual Property</h2>
+              <h2 className="text-2xl font-bold text-white">5. Fair Competition</h2>
             </div>
-            <div className="space-y-6 text-gray-300">
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Fair Competition</h3>
-                <p className="mb-2">Suppliers may not engage in:</p>
-                <ul className="space-y-2">
-                  <li>• Price fixing, bid rigging, or collusion</li>
-                  <li>• Misuse of sensitive or confidential information in tenders</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Intellectual Property & Confidentiality</h3>
-                <ul className="space-y-2">
-                  <li>• Suppliers must respect intellectual property rights belonging to Precilayer and its partners</li>
-                  <li>• Confidential data must be protected against misuse, theft, or unauthorized disclosure</li>
-                  <li>• Data handling must comply with global privacy regulations</li>
-                </ul>
-              </div>
+            <div className="text-gray-300">
+              <p className="mb-2">Suppliers may not engage in:</p>
+              <ul className="space-y-2">
+                <li>• Price fixing, bid rigging, or collusion</li>
+                <li>• Misuse of sensitive or confidential information in tenders</li>
+              </ul>
             </div>
           </motion.div>
 
-          {/* Responsible Sourcing & Trade */}
+          {/* Intellectual Property & Confidentiality */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -230,32 +219,18 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Globe className="text-cyber-400 h-6 w-6" />
+                <FileCheck className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">7. Responsible Sourcing & Trade Controls</h2>
+              <h2 className="text-2xl font-bold text-white">6. Intellectual Property & Confidentiality</h2>
             </div>
-            <div className="space-y-6 text-gray-300">
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Responsible Sourcing</h3>
-                <ul className="space-y-2">
-                  <li>• Avoid sourcing of conflict minerals (e.g., tantalum, tin, tungsten, gold) from non-certified or unethical sources</li>
-                  <li>• Provide transparency in material sourcing if requested by Precilayer</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Trade Controls & Export Compliance</h3>
-                <p className="mb-2">Suppliers must comply with all applicable:</p>
-                <ul className="space-y-2">
-                  <li>• Import/export controls</li>
-                  <li>• Customs laws</li>
-                  <li>• Technology transfer restrictions</li>
-                </ul>
-                <p className="mt-3 text-amber-400">Unauthorized disclosure of export-controlled technical information is prohibited.</p>
-              </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Suppliers must respect intellectual property rights belonging to Precilayer and its partners.</p>
+              <p>• Confidential data must be protected against misuse, theft, or unauthorized disclosure.</p>
+              <p>• Data handling must comply with global privacy regulations.</p>
             </div>
           </motion.div>
 
-          {/* Financial Integrity & Reporting */}
+          {/* Responsible Sourcing */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -264,37 +239,83 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <FileCheck className="text-cyber-400 h-6 w-6" />
+                <Globe className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">9. Financial Integrity & Reporting</h2>
+              <h2 className="text-2xl font-bold text-white">7. Responsible Sourcing</h2>
             </div>
-            <div className="space-y-6 text-gray-300">
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Financial Integrity</h3>
-                <ul className="space-y-2">
-                  <li>• All invoices, shipping records, and financial documents must be accurate and complete</li>
-                  <li>• Currency fluctuations are beyond Precilayer's control; quotations may be subject to revision in international transactions</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-cyber-400 mb-3">Reporting & Enforcement</h3>
-                <div className="bg-cyber-400/10 p-4 rounded-lg border border-cyber-400/20">
-                  <p className="mb-2">Any suspected violation of this Guide must be reported to:</p>
-                  <p className="font-semibold text-cyber-400">support@precilayer.com</p>
-                </div>
-                <ul className="space-y-2 mt-4">
-                  <li>• Suppliers must cooperate with Precilayer investigations into breaches</li>
-                  <li>• Violations may result in corrective actions, suspension of business, or termination of contracts</li>
-                </ul>
-              </div>
+            <div className="text-gray-300 space-y-4">
+              <p>Suppliers are expected to:</p>
+              <p>• Avoid sourcing of conflict minerals (e.g., tantalum, tin, tungsten, gold) from non-certified or unethical sources.</p>
+              <p>• Provide transparency in material sourcing if requested by Precilayer.</p>
             </div>
           </motion.div>
 
-          {/* Governing Law */}
+          {/* Trade Controls & Export Compliance */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Truck className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">8. Trade Controls & Export Compliance</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>Suppliers must comply with all applicable:</p>
+              <p>• Import/export controls</p>
+              <p>• Customs laws</p>
+              <p>• Technology transfer restrictions</p>
+              <p className="text-amber-400">Unauthorized disclosure of export-controlled technical information is prohibited.</p>
+            </div>
+          </motion.div>
+
+          {/* Financial Integrity */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <DollarSign className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">9. Financial Integrity</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• All invoices, shipping records, and financial documents must be accurate and complete.</p>
+              <p>• Currency fluctuations are beyond Precilayer's control; quotations may be subject to revision in international transactions.</p>
+            </div>
+          </motion.div>
+
+          {/* Reporting & Enforcement */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <AlertTriangle className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">10. Reporting & Enforcement</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Any suspected violation of this Guide must be reported to support@precilayer.com</p>
+              <p>• Suppliers must cooperate with Precilayer investigations into breaches.</p>
+              <p>• Violations may result in corrective actions, suspension of business, or termination of contracts.</p>
+            </div>
+          </motion.div>
+
+          {/* Governing Law & Jurisdiction */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
@@ -304,12 +325,26 @@ export default function SupplierIntegrityGuide() {
               <h2 className="text-2xl font-bold text-white">11. Governing Law & Jurisdiction</h2>
             </div>
             <div className="text-gray-300 space-y-4">
-              <p>Unless otherwise agreed, this Guide is governed by the laws of India, with courts in Mumbai holding jurisdiction.</p>
-              <p>For suppliers, representatives, or agents operating under Singapore contracts, Singapore courts shall have exclusive jurisdiction.</p>
-              <div className="bg-cyber-400/10 p-4 rounded-lg border border-cyber-400/20 mt-6">
-                <h3 className="font-semibold text-cyber-400 mb-2">Acknowledgment</h3>
-                <p>By supplying to or engaging with Precilayer, you confirm acknowledgment and compliance with this Supplier Integrity Guide.</p>
+              <p>• Unless otherwise agreed, this Guide is governed by the laws of India, with courts in Mumbai holding jurisdiction.</p>
+              <p>• For suppliers, representatives, or agents operating under Singapore contracts, Singapore courts shall have exclusive jurisdiction.</p>
+            </div>
+          </motion.div>
+
+          {/* Acknowledgment */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <CheckCircle className="text-cyber-400 h-6 w-6" />
               </div>
+              <h2 className="text-2xl font-bold text-white">12. Acknowledgment</h2>
+            </div>
+            <div className="text-gray-300">
+              <p>By supplying to or engaging with Precilayer, you confirm acknowledgment and compliance with this Supplier Integrity Guide.</p>
             </div>
           </motion.div>
 
@@ -317,7 +352,7 @@ export default function SupplierIntegrityGuide() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
             className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
           >
             <div className="flex items-center space-x-4 mb-6">

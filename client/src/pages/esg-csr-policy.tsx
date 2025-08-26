@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, Gavel, Users, Shield, DollarSign, Eye, Globe, Truck, FileText, AlertTriangle, Scale, CheckCircle, Mail } from "lucide-react";
+import { ArrowLeft, Leaf, Users, Shield, Heart, Globe, Target, BarChart3, Mail } from "lucide-react";
 
-export default function SupplierIntegrityGuide() {
+export default function ESGCSRPolicy() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -50,16 +50,17 @@ export default function SupplierIntegrityGuide() {
           className="text-center mb-12"
         >
           <div className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50">
-            <Gavel className="text-cyber-400 h-8 w-8" />
+            <Leaf className="text-cyber-400 h-8 w-8" />
           </div>
           <h1 className="font-orbitron text-4xl md:text-5xl font-bold mb-6 text-white">
-            Supplier & Agent <span className="gradient-text">Integrity Guide</span>
+            ESG & <span className="gradient-text">CSR Policy</span>
           </h1>
+          <h2 className="text-2xl font-semibold text-gray-300 mb-4">Environmental, Social & Governance</h2>
           <p className="text-gray-400 text-lg">
             Effective Date: 15th August 2025
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Applies to: All suppliers, agents, contractors, consultants, and business partners engaged with Precilayer India Private Limited
+            Building better futures through responsible manufacturing
           </p>
         </motion.div>
 
@@ -70,29 +71,25 @@ export default function SupplierIntegrityGuide() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="bg-space-700/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 mb-8"
         >
-          <div className="flex items-start space-x-4 mb-6">
-            <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <Shield className="text-cyber-400 h-6 w-6" />
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-4">1. Introduction & Scope</h2>
-              <div className="text-gray-300 leading-relaxed space-y-4">
-                <p>
-                  Precilayer operates at the intersection of advanced precision engineering and responsible business practices. 
-                  This Integrity Guide outlines the ethical, legal, and compliance standards expected of all Suppliers worldwide.
-                </p>
-                <p>
-                  By engaging with Precilayer, you agree to conduct business aligned with these principles, whether governed 
-                  by Indian law, Singapore jurisdiction, or applicable international regulations.
-                </p>
-              </div>
-            </div>
+          <div className="text-gray-300 leading-relaxed space-y-4">
+            <p>
+              At Precilayer, our purpose is to help people build better futures. We are committed to managing 
+              our environmental impact, making decisions that strengthen communities, and following sustainable 
+              practices and governance. With our extensive knowledge and capabilities in precision machining, 
+              additive manufacturing, custom automation, and value-added services, we address the sophisticated 
+              manufacturing needs of global customers.
+            </p>
+            <p>
+              Furthermore, Precilayer actively incorporates sustainability elements, such as reduced waste, 
+              energy efficiency, and sustainability metrics, into our design, manufacturing, and supply chain 
+              processes to assist our customers in meeting their sustainability goals.
+            </p>
           </div>
         </motion.div>
 
         {/* Policy Sections */}
         <div className="space-y-8">
-          {/* Ethical Conduct & Labor Practices */}
+          {/* Environment */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,19 +98,31 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Users className="text-cyber-400 h-6 w-6" />
+                <Leaf className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">2. Ethical Conduct & Labor Practices</h2>
+              <h2 className="text-2xl font-bold text-white">Environment</h2>
             </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• Suppliers must uphold human dignity, fair treatment, and respect for diversity.</p>
-              <p>• <strong className="text-cyber-400">No forced labor:</strong> Workers must retain personal documents and freedom of movement.</p>
-              <p>• <strong className="text-cyber-400">No child labor:</strong> No employment under 16 years of age (or higher if local law requires).</p>
-              <p>• <strong className="text-cyber-400">Fair wages and hours:</strong> Compensation must meet or exceed legal minimums; working hours must comply with applicable law.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer recognizes its responsibility to protect the environment and reduce its ecological footprint. We are dedicated to:</p>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Environmental Stewardship</h3>
+                  <p>Implementing practices that minimize our impact on the environment, including reducing waste generation, conserving resources, and promoting recycling and reuse initiatives.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Energy Efficiency</h3>
+                  <p>Embracing energy-efficient technologies and practices to reduce energy consumption and greenhouse gas emissions in our operations.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Sustainable Design and Manufacturing</h3>
+                  <p>Integrating sustainability principles into our product design and manufacturing processes, striving for resource efficiency, and considering the entire product lifecycle.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Health, Safety & Environment */}
+          {/* Governance */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,17 +133,29 @@ export default function SupplierIntegrityGuide() {
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Shield className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">3. Health, Safety & Environment</h2>
+              <h2 className="text-2xl font-bold text-white">Governance</h2>
             </div>
-            <div className="space-y-4 text-gray-300">
-              <p>Suppliers must:</p>
-              <p>• Maintain safe, hygienic, and hazard-free workplaces.</p>
-              <p>• Provide safe housing if offered.</p>
-              <p>• Commit to environmental responsibility by complying with relevant sustainability, waste management, RoHS and REACH directives, and local environmental laws.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer emphasizes strong governance across all aspects of its operations, including supply chain management. We commit to:</p>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Supply Chain Responsibility</h3>
+                  <p>Collaborating with our suppliers to ensure ethical practices, fair labor conditions, and compliance with relevant regulations. We engage in responsible sourcing and strive for transparency and accountability throughout our supply chain.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Ethical Conduct</h3>
+                  <p>Maintaining the highest standards of integrity, honesty, and ethical behavior in all interactions, both within the organization and with external stakeholders.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Risk Management</h3>
+                  <p>Identifying and managing risks related to sustainability, including environmental, social, and governance (ESG) factors, to minimize potential adverse impacts on stakeholders and the organization.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Anti-Corruption & Conflicts of Interest */}
+          {/* People, Inclusion, and Well-being */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,18 +164,31 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <DollarSign className="text-cyber-400 h-6 w-6" />
+                <Users className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">4. Anti-Corruption & Conflicts of Interest</h2>
+              <h2 className="text-2xl font-bold text-white">People, Inclusion, and Well-being</h2>
             </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• Bribery, facilitation payments, and kickbacks are strictly prohibited.</p>
-              <p>• Gifts or hospitality that could influence decisions must not be offered.</p>
-              <p>• Suppliers must disclose any conflict of interest that may compromise objectivity.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer values its employees and recognizes their importance in driving our success. We are committed to:</p>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Inclusion and Diversity</h3>
+                  <p>Fostering an inclusive and diverse workplace that promotes equal opportunities, embraces different perspectives, and values individuals' unique contributions.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Employee Well-being</h3>
+                  <p>Providing a safe, healthy, and supportive work environment that prioritizes employee well-being and encourages work-life balance.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Talent Development</h3>
+                  <p>Investing in the growth and development of our employees, offering training and career advancement opportunities to foster their professional and personal growth.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Fair Competition */}
+          {/* Corporate Social Responsibility */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -163,18 +197,31 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Eye className="text-cyber-400 h-6 w-6" />
+                <Heart className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">5. Fair Competition</h2>
+              <h2 className="text-2xl font-bold text-white">Corporate Social Responsibility (CSR)</h2>
             </div>
-            <div className="text-gray-300">
-              <p className="mb-4">Suppliers may not engage in:</p>
-              <p>• Price fixing, bid rigging, or collusion.</p>
-              <p>• Misuse of sensitive or confidential information in tenders.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer upholds ethical practices and social responsibility as fundamental principles of our business conduct. We strive to:</p>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Compliance</h3>
+                  <p>Comply with all applicable laws, regulations, and industry standards, ensuring our operations meet the highest ethical and legal standards in India and internationally.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Social Impact</h3>
+                  <p>Engage in initiatives that make a positive social impact, such as supporting education, community development, and sustainable initiatives across India.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Human Rights</h3>
+                  <p>Respect and promote human rights, both within our organization and across our supply chain, ensuring that all individuals are treated with dignity and respect.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Intellectual Property & Confidentiality */}
+          {/* Community Engagement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -183,18 +230,27 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <FileText className="text-cyber-400 h-6 w-6" />
+                <Globe className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">6. Intellectual Property & Confidentiality</h2>
+              <h2 className="text-2xl font-bold text-white">Community Engagement and Social Impact</h2>
             </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• Suppliers must respect intellectual property rights belonging to Precilayer and its partners.</p>
-              <p>• Confidential data must be protected against misuse, theft, or unauthorized disclosure.</p>
-              <p>• Data handling must comply with global privacy regulations.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer actively engages with communities to contribute to their well-being and sustainable development. We:</p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Community Partnerships</h3>
+                  <p>Collaborate with local organizations and stakeholders to support initiatives that address social needs, improve livelihoods, and enhance community resilience across India.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Volunteering and Employee Engagement</h3>
+                  <p>Encourage and support our employees' participation in community service activities and volunteering efforts, fostering a culture of social responsibility and active citizenship.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Responsible Sourcing */}
+          {/* Continuous Improvement */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -203,121 +259,65 @@ export default function SupplierIntegrityGuide() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Globe className="text-cyber-400 h-6 w-6" />
+                <BarChart3 className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">7. Responsible Sourcing</h2>
+              <h2 className="text-2xl font-bold text-white">Continuous Improvement and Reporting</h2>
             </div>
-            <div className="space-y-4 text-gray-300">
-              <p>Suppliers are expected to:</p>
-              <p>• Avoid sourcing of conflict minerals (e.g., tantalum, tin, tungsten, gold) from non-certified or unethical sources.</p>
-              <p>• Provide transparency in material sourcing if requested by Precilayer.</p>
+            <div className="space-y-6 text-gray-300">
+              <p>Precilayer is committed to continuously improving its sustainability and social responsibility practices. We:</p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Performance Measurement</h3>
+                  <p>Regularly measure and assess our sustainability performance, using key metrics and indicators, to identify areas for improvement and set targets.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-cyber-400 mb-3">Transparent Reporting</h3>
+                  <p>Provide transparent and accurate reporting on our sustainability efforts, progress, and achievements to stakeholders, promoting accountability and facilitating informed decision-making.</p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Trade Controls & Export Compliance */}
+          {/* Our Commitment */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
-          >
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Truck className="text-cyber-400 h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">8. Trade Controls & Export Compliance</h2>
-            </div>
-            <div className="space-y-4 text-gray-300">
-              <p>Suppliers must comply with all applicable:</p>
-              <p>• Import/export controls</p>
-              <p>• Customs laws</p>
-              <p>• Technology transfer restrictions</p>
-              <p>• Unauthorized disclosure of export-controlled technical information is prohibited.</p>
-            </div>
-          </motion.div>
-
-          {/* Financial Integrity */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
-          >
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <DollarSign className="text-cyber-400 h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">9. Financial Integrity</h2>
-            </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• All invoices, shipping records, and financial documents must be accurate and complete.</p>
-              <p>• Currency fluctuations are beyond Precilayer's control; quotations may be subject to revision in international transactions.</p>
-            </div>
-          </motion.div>
-
-          {/* Reporting & Enforcement */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
-          >
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <AlertTriangle className="text-cyber-400 h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">10. Reporting & Enforcement</h2>
-            </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• Any suspected violation of this Guide must be reported to support@precilayer.com</p>
-              <p>• Suppliers must cooperate with Precilayer investigations into breaches.</p>
-              <p>• Violations may result in corrective actions, suspension of business, or termination of contracts.</p>
-            </div>
-          </motion.div>
-
-          {/* Governing Law & Jurisdiction */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
-          >
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <Scale className="text-cyber-400 h-6 w-6" />
-              </div>
-              <h2 className="text-2xl font-bold text-white">11. Governing Law & Jurisdiction</h2>
-            </div>
-            <div className="space-y-4 text-gray-300">
-              <p>• Unless otherwise agreed, this Guide is governed by the laws of India, with courts in Mumbai holding jurisdiction.</p>
-              <p>• For suppliers, representatives, or agents operating under Singapore contracts, Singapore courts shall have exclusive jurisdiction.</p>
-            </div>
-          </motion.div>
-
-          {/* Acknowledgment */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
             className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
-                <CheckCircle className="text-cyber-400 h-6 w-6" />
+                <Target className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">12. Acknowledgment</h2>
+              <h2 className="text-2xl font-bold text-white">Our Commitment</h2>
             </div>
-            <div className="text-gray-300">
-              <p>By supplying to or engaging with Precilayer, you confirm acknowledgment and compliance with this Supplier Integrity Guide.</p>
+            <div className="text-gray-300 space-y-4">
+              <p>
+                By adhering to this ESG & Corporate Social Responsibility Policy, Precilayer aims to create 
+                positive social and environmental impacts while upholding the highest ethical standards. 
+                We remain dedicated to continuous improvement and innovation to drive positive change in 
+                our organization, communities, and the world at large.
+              </p>
+              <div className="bg-cyber-400/10 p-4 rounded-lg border border-cyber-400/20">
+                <p className="font-semibold text-cyber-400">
+                  Through responsible manufacturing, we are contributing to India's position as a global 
+                  leader in sustainable precision engineering and advanced manufacturing technologies.
+                </p>
+              </div>
             </div>
           </motion.div>
+
+
+
+
 
 
           {/* Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
             className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
           >
             <div className="flex items-center space-x-4 mb-6">
