@@ -4,15 +4,20 @@ import { Award, DollarSign, Clock } from "lucide-react";
 export default function WhatSection() {
   return (
     <section id="what" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
-      {/* Creative background elements */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Space Shuttle Launch Background */}
+      <div className="absolute inset-0">
         <div 
-          className="absolute top-0 left-0 w-full h-full"
+          className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: `radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 70%),
-                             radial-gradient(circle at 80% 70%, rgba(34, 197, 94, 0.1) 0%, transparent 70%)`
+            backgroundImage: `url('https://media.istockphoto.com/id/1344443930/photo/space-shuttle-rocket-launch-in-the-sky-and-clouds-to-outer-space-sky-and-clouds-spacecraft.jpg?s=612x612&w=0&k=20&c=lYoFwMF9Sc6q07skiz6WaVovoseHk6M1tDr5qeecRjI=')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'brightness(0.7) contrast(1.3)'
           }}
         />
+        {/* 75% Dark Overlay for readability */}
+        <div className="absolute inset-0 bg-space-800/75" />
       </div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
