@@ -7,17 +7,17 @@ export default function WhatSection() {
       {/* Space Shuttle Launch Background */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `url('https://media.istockphoto.com/id/1344443930/photo/space-shuttle-rocket-launch-in-the-sky-and-clouds-to-outer-space-sky-and-clouds-spacecraft.jpg?s=612x612&w=0&k=20&c=lYoFwMF9Sc6q07skiz6WaVovoseHk6M1tDr5qeecRjI=')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.7) contrast(1.3)'
+            filter: 'brightness(0.5) contrast(1.0) saturate(0.8)'
           }}
         />
-        {/* 75% Dark Overlay for readability */}
-        <div className="absolute inset-0 bg-space-800/75" />
+        {/* 85% Dark Overlay for better readability */}
+        <div className="absolute inset-0 bg-space-800/85" />
       </div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
