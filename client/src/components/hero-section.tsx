@@ -125,62 +125,31 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <SubtleBackground />
-      {/* Futuristic Robotic CNC Manufacturing Video Background */}
+      {/* Animated Manufacturing Background */}
       <div className="absolute inset-0">
-        {!videoError ? (
-          <>
-            <div className="absolute inset-0">
-              <video 
-                ref={videoRef}
-                className="w-full h-full object-cover"
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                preload="metadata"
-                controls={false}
-                onError={(e) => {
-                  console.log('Video error:', e);
-                  setVideoError(true);
-                }}
-                onLoadedData={(e) => {
-                  const video = e.target as HTMLVideoElement;
-                  console.log('Video loaded, duration:', video.duration);
-                  video.play().catch(() => {
-                    console.log('Video autoplay blocked');
-                  });
-                }}
-                onTimeUpdate={(e) => {
-                  const video = e.target as HTMLVideoElement;
-                  console.log('Video time:', video.currentTime);
-                }}
-              >
-                <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-                <source src="https://videos.pexels.com/video-files/3191556/3191556-uhd_2560_1440_25fps.mp4" type="video/mp4" />
-                <source src="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_large.mp4" type="video/mp4" />
-              </video>
+        <div className="absolute inset-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3191556/3191556-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3195343/3195343-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-space-900/50 via-space-800/40 to-space-900/50">
+          {/* Animated overlay patterns */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute animate-pulse bg-cyber-400/10 rounded-full w-96 h-96 top-10 left-10"></div>
+              <div className="absolute animate-pulse bg-cyber-600/10 rounded-full w-64 h-64 bottom-20 right-20 animation-delay-2000"></div>
+              <div className="absolute animate-pulse bg-cyber-500/10 rounded-full w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animation-delay-4000"></div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/40 via-space-800/30 to-space-900/40">
-              {/* Creative overlay patterns */}
-              {/* Background patterns removed */}
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="absolute inset-0">
-              <img 
-                src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&h=1380" 
-                alt="CNC machining manufacturing process" 
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
-              {/* Creative overlay patterns */}
-              {/* Background patterns removed */}
-            </div>
-          </>
-        )}
+          </div>
+        </div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
