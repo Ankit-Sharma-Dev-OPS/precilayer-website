@@ -49,8 +49,9 @@ export default function AboutSection() {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Precision CNC machining specialist with deep roots in MedTech, having engineered solutions 
-                for Johnson & Johnson, Cook Medical, Merit Medical, Medtronic, and Boston Scientific.
+                Precision CNC machining specialist with deep expertise in both MedTech and semiconductor domains. 
+                In MedTech, has engineered solutions for Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic. 
+                In semiconductors, has delivered precision components for Analog Devices and Intel.
               </p>
               
               <div className="space-y-4">
