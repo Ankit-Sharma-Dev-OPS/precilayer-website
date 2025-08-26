@@ -59,21 +59,21 @@ export default function AboutSection() {
               
               <div className="space-y-6">
                 <div className="relative">
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-neon-400 rounded-full"></div>
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
                   <div className="pl-6">
-                    <h4 className="text-cyber-400 font-bold text-lg mb-4 font-orbitron">The Precision Master</h4>
+                    <h4 className="text-cyber-400 font-semibold text-base mb-3">CNC Manufacturing Excellence</h4>
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                      When global giants like <span className="text-cyber-400 font-semibold">Johnson & Johnson</span> and <span className="text-cyber-400 font-semibold">Intel</span> need components that can't afford to fail, they turn to expertise like Roshan's. His journey through the halls of <span className="text-white font-semibold">Cook Medical, Merit Medical, Medtronic</span>, and <span className="text-white font-semibold">Analog Devices</span> wasn't just about making parts—it was about mastering the art of impossibly tight tolerances where microns matter more than minutes.
+                      Roshan brings critical component expertise from <span className="text-white font-medium">Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</span>, and <span className="text-white font-medium">Intel, Analog Devices</span>. His experience spans high-stakes environments where precision tolerances and zero-defect manufacturing are non-negotiable.
                     </p>
                     
-                    <div className="bg-space-700/30 rounded-lg p-4 border-l-4 border-cyber-400/50 mb-4">
-                      <p className="text-gray-200 text-sm italic">
-                        "From Dublin's engineering excellence to India's manufacturing revolution—Roshan bridges two worlds with a Master's from Dublin Institute of Technology and European precision standards that he's now scaling across continents."
+                    <div className="bg-space-700/20 rounded-lg p-3 border-l-2 border-cyber-400/40 mb-4">
+                      <p className="text-gray-200 text-xs">
+                        Master's in Mechanical Engineering (Dublin Institute of Technology) • European manufacturing standards • Cost-optimization strategies
                       </p>
                     </div>
                     
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      At Precilayer, he's not just applying his expertise—he's <span className="text-cyber-400 font-semibold">redefining what Indian manufacturing can achieve</span>. Every component that leaves their facility carries the DNA of global excellence, proving that world-class precision isn't geography-dependent, it's expertise-driven.
+                      At Precilayer, Roshan applies <span className="text-cyber-400 font-medium">global-standard processes</span> to deliver precision manufacturing at scale, establishing new benchmarks for quality and reliability in Indian manufacturing.
                     </p>
                   </div>
                 </div>
@@ -111,21 +111,21 @@ export default function AboutSection() {
               
               <div className="space-y-6">
                 <div className="relative">
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-neon-400 to-cyber-400 rounded-full"></div>
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
                   <div className="pl-6">
-                    <h4 className="text-neon-400 font-bold text-lg mb-4 font-orbitron">The Innovation Architect</h4>
+                    <h4 className="text-cyber-400 font-semibold text-base mb-3">Additive Manufacturing Innovation</h4>
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                      While others see limitations, Priyesh sees possibilities. His collaboration canvas spans automotive titans <span className="text-neon-400 font-semibold">Ford and GM</span>, industrial powerhouse <span className="text-neon-400 font-semibold">GE</span>, and over <span className="text-white font-semibold">100 clients across three continents</span>. But numbers only tell part of his story—each partnership represents a breakthrough in what's manufacturable.
+                      Priyesh has collaborated with <span className="text-white font-medium">Ford, GM, GE</span> and served over 100 clients across US, EU, and Gulf regions. His portfolio spans aerospace, automotive, and industrial applications with focus on production-ready additive solutions.
                     </p>
                     
-                    <div className="bg-space-700/30 rounded-lg p-4 border-l-4 border-neon-400/50 mb-4">
-                      <p className="text-gray-200 text-sm italic">
-                        "From Penn State's research labs to global manufacturing floors—Priyesh transforms academic theories into production realities. His published research doesn't just advance knowledge; it revolutionizes how things get made."
+                    <div className="bg-space-700/20 rounded-lg p-3 border-l-2 border-cyber-400/40 mb-4">
+                      <p className="text-gray-200 text-xs">
+                        Master's in Additive Manufacturing (Penn State) • Published researcher • Academic-to-production methodology
                       </p>
                     </div>
                     
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      At Precilayer, he's the bridge between <span className="text-neon-400 font-semibold">what's possible and what's practical</span>. By seamlessly integrating additive manufacturing with traditional precision methods, he's unlocking design freedoms that were once pure imagination—while keeping costs grounded in reality and quality uncompromised.
+                      At Precilayer, Priyesh integrates <span className="text-cyber-400 font-medium">additive and traditional manufacturing</span> to enable complex geometries and rapid prototyping while maintaining cost efficiency and quality standards.
                     </p>
                   </div>
                 </div>
