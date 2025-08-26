@@ -141,7 +141,7 @@ export default function HeroSection() {
         {/* No global overlay - video shows clearly */}
       </div>
       
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/60 backdrop-blur-md rounded-lg py-12 shadow-2xl border border-white/10">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/40 backdrop-blur-md rounded-lg py-12 shadow-2xl border border-white/10">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
