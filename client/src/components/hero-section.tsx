@@ -142,16 +142,6 @@ export default function HeroSection() {
             <source src="https://videos.pexels.com/video-files/7693786/7693786-hd_1920_1080_25fps.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-space-900/50 via-space-800/40 to-space-900/50">
-          {/* Animated overlay patterns */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 left-0 w-full h-full">
-              <div className="absolute animate-pulse bg-cyber-400/10 rounded-full w-96 h-96 top-10 left-10"></div>
-              <div className="absolute animate-pulse bg-cyber-600/10 rounded-full w-64 h-64 bottom-20 right-20 animation-delay-2000"></div>
-              <div className="absolute animate-pulse bg-cyber-500/10 rounded-full w-48 h-48 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animation-delay-4000"></div>
-            </div>
-          </div>
-        </div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
