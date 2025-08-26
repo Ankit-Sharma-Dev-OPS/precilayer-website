@@ -88,22 +88,7 @@ export default function HeroSection() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
               {/* Creative overlay patterns */}
-              <motion.div 
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.1, 0.15, 0.1]
-                }}
-                transition={{
-                  duration: 60,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
-                                   radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)`
-                }}
-              />
+              {/* Background patterns removed */}
             </div>
           </>
         ) : (
@@ -118,22 +103,7 @@ export default function HeroSection() {
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
               {/* Creative overlay patterns */}
-              <motion.div 
-                animate={{
-                  scale: [1, 1.2, 1],
-                  opacity: [0.1, 0.15, 0.1]
-                }}
-                transition={{
-                  duration: 60,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
-                                   radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)`
-                }}
-              />
+              {/* Background patterns removed */}
             </div>
           </>
         )}

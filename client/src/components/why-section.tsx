@@ -6,29 +6,7 @@ export default function WhySection() {
     <section id="why" className="py-20 bg-space-800 relative overflow-hidden">
       {/* Engineering Technical Drawing Background */}
       <div className="absolute inset-0">
-        <motion.div 
-          className="absolute inset-0"
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.25, 0.40, 0.25],
-            backgroundPosition: ['center center', 'center top', 'center center'],
-            filter: [
-              'grayscale(100%) brightness(0.6) contrast(1.2) drop-shadow(0 0 40px rgba(6,182,212,0.3))',
-              'grayscale(80%) brightness(1.0) contrast(1.5) drop-shadow(0 0 70px rgba(6,182,212,0.5))',
-              'grayscale(100%) brightness(0.6) contrast(1.2) drop-shadow(0 0 40px rgba(6,182,212,0.3))'
-            ]
-          }}
-          transition={{
-            duration: 95,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1598368195835-91e67f80c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
+        {/* Technical drawing background image removed */}
       </div>
       {/* Overlay for perfect readability */}
       <div className="absolute inset-0 bg-space-800/50" />

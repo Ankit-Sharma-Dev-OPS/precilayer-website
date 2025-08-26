@@ -40,29 +40,7 @@ export default function CaseStudiesSection() {
     <section className="py-20 bg-space-900 relative overflow-hidden factory-bg">
       {/* Engineering Excellence Background */}
       <div className="absolute inset-0">
-        <motion.div 
-          className="absolute inset-0"
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.15, 0.25, 0.15],
-            backgroundPosition: ['center center', 'center top', 'center center'],
-            filter: [
-              'grayscale(100%) brightness(0.8) contrast(1.1)',
-              'grayscale(70%) brightness(1.2) contrast(1.4) saturate(1.2)',
-              'grayscale(100%) brightness(0.8) contrast(1.1)'
-            ]
-          }}
-          transition={{
-            duration: 110,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            backgroundImage: `url(${provenExcellenceImage})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
+        {/* Background image removed */}
         {/* 80% Dark Overlay */}
         <div className="absolute inset-0 bg-space-900/80" />
       </div>

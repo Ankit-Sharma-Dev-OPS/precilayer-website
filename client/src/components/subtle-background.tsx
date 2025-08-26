@@ -68,26 +68,7 @@ export default function SubtleBackground() {
         />
       </div>
 
-      {/* Animated grid overlay - very subtle */}
-      <motion.div 
-        className="absolute inset-0 opacity-15"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px)
-          `,
-          backgroundSize: "120px 120px"
-        }}
-        animate={{
-          backgroundPosition: ["0% 0%", "100% 100%"]
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "linear"
-        }}
-      />
+      {/* Grid overlay background image removed */}
     </div>
   );
 }

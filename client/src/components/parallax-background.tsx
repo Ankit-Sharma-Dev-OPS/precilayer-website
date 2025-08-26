@@ -157,18 +157,7 @@ export default function ParallaxBackground() {
         </motion.div>
       ))}
       
-      {/* Animated grid overlay */}
-      <motion.div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(6, 182, 212, 0.25) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(6, 182, 212, 0.25) 1px, transparent 1px)
-          `,
-          backgroundSize: "100px 100px",
-          y: useTransform(scrollYProgress, [0, 1], ['0%', '10%'])
-        }}
-      />
+      {/* Grid overlay background image removed */}
     </div>
   );
 }

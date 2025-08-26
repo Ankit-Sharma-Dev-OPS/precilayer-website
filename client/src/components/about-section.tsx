@@ -10,29 +10,7 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
       {/* Manufacturing Background */}
       <div className="absolute inset-0">
-        <motion.div 
-          className="absolute inset-0"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.25, 0.35, 0.25],
-            filter: [
-              'brightness(0.8) contrast(1.2) drop-shadow(0 0 30px rgba(6,182,212,0.4))',
-              'brightness(1.0) contrast(1.4) drop-shadow(0 0 50px rgba(6,182,212,0.6))',
-              'brightness(0.8) contrast(1.2) drop-shadow(0 0 30px rgba(6,182,212,0.4))'
-            ]
-          }}
-          transition={{
-            duration: 80,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            backgroundImage: `url(${globalNetworkImage})`,
-            backgroundSize: '130% auto',
-            backgroundPosition: 'center 40%',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
+        {/* Background image removed */}
         {/* 75% Dark Overlay for readability */}
         <div className="absolute inset-0 bg-space-800/75" />
       </div>

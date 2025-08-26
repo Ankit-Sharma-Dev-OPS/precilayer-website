@@ -46,75 +46,13 @@ export default function HowSection() {
       {/* Creative Dual Background Overlay */}
       <div className="absolute inset-0">
         {/* Advanced Manufacturing Background - Now Left Side */}
-        <motion.div 
-          className="absolute inset-0"
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.35, 0.45, 0.35],
-            backgroundPosition: ['left center', 'left top', 'left center']
-          }}
-          transition={{
-            duration: 90,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            backgroundImage: `url('https://www.optiproerp.com/wp-content/uploads/Emerging-global-trends-in-advanced-manufacturing.jpg')`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(1.1) contrast(1.2)',
-            maskImage: 'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
-            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)'
-          }}
-        />
+        {/* Manufacturing background image removed */}
         
         {/* 3D CAD Engineering Design Background - Now Right Side */}
-        <motion.div 
-          className="absolute inset-0"
-          animate={{
-            scale: [1, 1.35, 1],
-            opacity: [0.35, 0.25, 0.35],
-            filter: [
-              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 40px rgba(59,130,246,0.5))',
-              'grayscale(60%) brightness(1.3) contrast(1.5) drop-shadow(0 0 70px rgba(59,130,246,0.7))',
-              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 40px rgba(59,130,246,0.5))'
-            ]
-          }}
-          transition={{
-            duration: 100,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            backgroundImage: `url(${engineeringCadImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'right center',
-            backgroundRepeat: 'no-repeat',
-            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
-            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)'
-          }}
-        />
+        {/* CAD design background image removed */}
         
         {/* Subtle grid overlay */}
-        <motion.div
-          animate={{ 
-            backgroundPosition: ["0% 0%", "100% 100%"] 
-          }}
-          transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
-            repeatType: "reverse",
-            ease: "linear"
-          }}
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: "80px 80px"
-          }}
-        />
+        {/* Grid overlay background removed */}
         
         {/* Central blend overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-space-900/35 via-space-900/55 to-space-900/35" />
