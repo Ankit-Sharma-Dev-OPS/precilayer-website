@@ -58,45 +58,23 @@ export default function AboutSection() {
               </div>
               
               <div className="space-y-6">
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Precision CNC machining specialist with proven impact in the most demanding sectors.
-                </p>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      Industry Experience
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• MedTech: Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</li>
-                      <li>• Semiconductors: Analog Devices, Intel</li>
-                      <li>• Critical components with extreme tolerances</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      Education & Expertise
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• Master's in Mechanical Engineering (Dublin Institute of Technology)</li>
-                      <li>• European manufacturing expertise</li>
-                      <li>• Cost-efficient precision strategies</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      At Precilayer
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• Drives global-standard manufacturing in India</li>
-                      <li>• Makes precision accessible at scale</li>
-                      <li>• Technical mastery with reliability</li>
-                    </ul>
+                <div className="relative">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-neon-400 rounded-full"></div>
+                  <div className="pl-6">
+                    <h4 className="text-cyber-400 font-bold text-lg mb-4 font-orbitron">The Precision Master</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      When global giants like <span className="text-cyber-400 font-semibold">Johnson & Johnson</span> and <span className="text-cyber-400 font-semibold">Intel</span> need components that can't afford to fail, they turn to expertise like Roshan's. His journey through the halls of <span className="text-white font-semibold">Cook Medical, Merit Medical, Medtronic</span>, and <span className="text-white font-semibold">Analog Devices</span> wasn't just about making parts—it was about mastering the art of impossibly tight tolerances where microns matter more than minutes.
+                    </p>
+                    
+                    <div className="bg-space-700/30 rounded-lg p-4 border-l-4 border-cyber-400/50 mb-4">
+                      <p className="text-gray-200 text-sm italic">
+                        "From Dublin's engineering excellence to India's manufacturing revolution—Roshan bridges two worlds with a Master's from Dublin Institute of Technology and European precision standards that he's now scaling across continents."
+                      </p>
+                    </div>
+                    
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      At Precilayer, he's not just applying his expertise—he's <span className="text-cyber-400 font-semibold">redefining what Indian manufacturing can achieve</span>. Every component that leaves their facility carries the DNA of global excellence, proving that world-class precision isn't geography-dependent, it's expertise-driven.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -132,45 +110,23 @@ export default function AboutSection() {
               </div>
               
               <div className="space-y-6">
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Advanced additive manufacturing specialist with global innovation track record.
-                </p>
-                
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      Global Collaborations
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• Automotive: Ford, GM, GE</li>
-                      <li>• 100+ clients across US, EU, Gulf regions</li>
-                      <li>• Aerospace, mobility, industrial applications</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      Academic & Research
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• Master's in Additive Manufacturing (Penn State)</li>
-                      <li>• Published researcher in 3D printing</li>
-                      <li>• Academic depth with practical execution</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-cyber-400 font-semibold mb-2 flex items-center">
-                      <div className="w-2 h-2 bg-cyber-400 rounded-full mr-3"></div>
-                      At Precilayer
-                    </h4>
-                    <ul className="text-white text-sm space-y-2 ml-5">
-                      <li>• Integrates additive with precision manufacturing</li>
-                      <li>• Unlocks design freedom & accelerates production</li>
-                      <li>• Reduces costs while maintaining quality</li>
-                    </ul>
+                <div className="relative">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-neon-400 to-cyber-400 rounded-full"></div>
+                  <div className="pl-6">
+                    <h4 className="text-neon-400 font-bold text-lg mb-4 font-orbitron">The Innovation Architect</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                      While others see limitations, Priyesh sees possibilities. His collaboration canvas spans automotive titans <span className="text-neon-400 font-semibold">Ford and GM</span>, industrial powerhouse <span className="text-neon-400 font-semibold">GE</span>, and over <span className="text-white font-semibold">100 clients across three continents</span>. But numbers only tell part of his story—each partnership represents a breakthrough in what's manufacturable.
+                    </p>
+                    
+                    <div className="bg-space-700/30 rounded-lg p-4 border-l-4 border-neon-400/50 mb-4">
+                      <p className="text-gray-200 text-sm italic">
+                        "From Penn State's research labs to global manufacturing floors—Priyesh transforms academic theories into production realities. His published research doesn't just advance knowledge; it revolutionizes how things get made."
+                      </p>
+                    </div>
+                    
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      At Precilayer, he's the bridge between <span className="text-neon-400 font-semibold">what's possible and what's practical</span>. By seamlessly integrating additive manufacturing with traditional precision methods, he's unlocking design freedoms that were once pure imagination—while keeping costs grounded in reality and quality uncompromised.
+                    </p>
                   </div>
                 </div>
               </div>
