@@ -49,13 +49,13 @@ export default function HowSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.25, 1.1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.2, 0.45, 0.3],
-            backgroundPosition: ['left center', 'left top', 'left bottom', 'left center']
+            scale: [1, 1.4, 1],
+            opacity: [0.35, 0.45, 0.35],
+            backgroundPosition: ['left center', 'left top', 'left center']
           }}
           transition={{
-            duration: 12,
-            repeat: Infinity,
+            duration: 30,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{
@@ -72,19 +72,17 @@ export default function HowSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.2, 1.05, 1.18, 1],
-            opacity: [0.3, 0.15, 0.4, 0.25, 0.3],
+            scale: [1, 1.35, 1],
+            opacity: [0.35, 0.25, 0.35],
             filter: [
-              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 30px rgba(59,130,246,0.4))',
-              'grayscale(50%) brightness(1.4) contrast(1.6) drop-shadow(0 0 60px rgba(59,130,246,0.7))',
-              'grayscale(80%) brightness(1.2) contrast(1.3) drop-shadow(0 0 45px rgba(59,130,246,0.5))',
-              'grayscale(30%) brightness(1.3) contrast(1.5) drop-shadow(0 0 70px rgba(59,130,246,0.8))',
-              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 30px rgba(59,130,246,0.4))'
+              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 40px rgba(59,130,246,0.5))',
+              'grayscale(60%) brightness(1.3) contrast(1.5) drop-shadow(0 0 70px rgba(59,130,246,0.7))',
+              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 40px rgba(59,130,246,0.5))'
             ]
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
+            duration: 35,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{

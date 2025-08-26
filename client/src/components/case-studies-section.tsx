@@ -43,20 +43,18 @@ export default function CaseStudiesSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.3, 1.15, 1.35, 1],
-            opacity: [0.12, 0.25, 0.08, 0.22, 0.12],
-            backgroundPosition: ['center center', 'center top', 'center bottom', 'center center'],
+            scale: [1, 1.4, 1],
+            opacity: [0.15, 0.25, 0.15],
+            backgroundPosition: ['center center', 'center top', 'center center'],
             filter: [
               'grayscale(100%) brightness(0.8) contrast(1.1)',
-              'grayscale(70%) brightness(1.2) contrast(1.4) saturate(1.3)',
-              'grayscale(90%) brightness(1.0) contrast(1.2) saturate(1.1)',
-              'grayscale(60%) brightness(1.3) contrast(1.5) saturate(1.4)',
+              'grayscale(70%) brightness(1.2) contrast(1.4) saturate(1.2)',
               'grayscale(100%) brightness(0.8) contrast(1.1)'
             ]
           }}
           transition={{
-            duration: 15,
-            repeat: Infinity,
+            duration: 40,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{

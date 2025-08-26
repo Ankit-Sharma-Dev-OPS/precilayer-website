@@ -10,20 +10,18 @@ export default function WhatSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.4, 1.2, 1.5, 1],
-            opacity: [0.15, 0.4, 0.1, 0.45, 0.15],
-            backgroundPosition: ['center center', 'center top', 'center bottom', 'center center'],
+            scale: [1, 1.6, 1],
+            opacity: [0.20, 0.35, 0.20],
+            backgroundPosition: ['center center', 'center bottom', 'center center'],
             filter: [
-              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 50px rgba(249,115,22,0.4))',
-              'brightness(1.0) contrast(1.5) saturate(1.4) drop-shadow(0 0 100px rgba(249,115,22,0.8)) hue-rotate(20deg)',
-              'brightness(0.7) contrast(1.2) saturate(1.0) drop-shadow(0 0 75px rgba(249,115,22,0.5))',
-              'brightness(1.1) contrast(1.6) saturate(1.5) drop-shadow(0 0 120px rgba(249,115,22,0.9)) hue-rotate(30deg)',
-              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 50px rgba(249,115,22,0.4))'
+              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 60px rgba(249,115,22,0.5))',
+              'brightness(1.0) contrast(1.4) saturate(1.3) drop-shadow(0 0 110px rgba(249,115,22,0.8)) hue-rotate(25deg)',
+              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 60px rgba(249,115,22,0.5))'
             ]
           }}
           transition={{
-            duration: 16,
-            repeat: Infinity,
+            duration: 50,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{

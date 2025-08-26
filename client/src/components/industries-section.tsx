@@ -59,19 +59,17 @@ export default function IndustriesSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.25, 1.1, 1.28, 1],
-            opacity: [0.15, 0.35, 0.1, 0.4, 0.15],
+            scale: [1, 1.45, 1],
+            opacity: [0.20, 0.30, 0.20],
             filter: [
-              'brightness(0.7) contrast(1.2) drop-shadow(0 0 40px rgba(251,191,36,0.3))',
-              'brightness(1.1) contrast(1.6) drop-shadow(0 0 80px rgba(251,191,36,0.6)) hue-rotate(10deg)',
-              'brightness(0.8) contrast(1.3) drop-shadow(0 0 60px rgba(251,191,36,0.4))',
-              'brightness(1.2) contrast(1.7) drop-shadow(0 0 100px rgba(251,191,36,0.7)) hue-rotate(15deg)',
-              'brightness(0.7) contrast(1.2) drop-shadow(0 0 40px rgba(251,191,36,0.3))'
+              'brightness(0.7) contrast(1.2) drop-shadow(0 0 50px rgba(251,191,36,0.4))',
+              'brightness(1.1) contrast(1.5) drop-shadow(0 0 90px rgba(251,191,36,0.7)) hue-rotate(12deg)',
+              'brightness(0.7) contrast(1.2) drop-shadow(0 0 50px rgba(251,191,36,0.4))'
             ]
           }}
           transition={{
-            duration: 14,
-            repeat: Infinity,
+            duration: 45,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{

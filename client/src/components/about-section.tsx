@@ -12,19 +12,17 @@ export default function AboutSection() {
         <motion.div 
           className="absolute inset-0"
           animate={{
-            scale: [1, 1.15, 1.05, 1.2, 1],
-            opacity: [0.2, 0.4, 0.15, 0.35, 0.2],
+            scale: [1, 1.3, 1],
+            opacity: [0.25, 0.35, 0.25],
             filter: [
-              'brightness(0.8) contrast(1.2) drop-shadow(0 0 20px rgba(6,182,212,0.3))',
-              'brightness(1.1) contrast(1.5) drop-shadow(0 0 40px rgba(6,182,212,0.6))',
-              'brightness(0.9) contrast(1.3) drop-shadow(0 0 60px rgba(6,182,212,0.4))',
-              'brightness(1.0) contrast(1.4) drop-shadow(0 0 80px rgba(6,182,212,0.7))',
-              'brightness(0.8) contrast(1.2) drop-shadow(0 0 20px rgba(6,182,212,0.3))'
+              'brightness(0.8) contrast(1.2) drop-shadow(0 0 30px rgba(6,182,212,0.4))',
+              'brightness(1.0) contrast(1.4) drop-shadow(0 0 50px rgba(6,182,212,0.6))',
+              'brightness(0.8) contrast(1.2) drop-shadow(0 0 30px rgba(6,182,212,0.4))'
             ]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
+            duration: 25,
+            repeat: 2,
             ease: "easeInOut"
           }}
           style={{
