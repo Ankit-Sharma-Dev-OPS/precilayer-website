@@ -58,27 +58,30 @@ export default function AboutSection() {
               </div>
               
               <div className="space-y-5">
-                <div className="space-y-3">
-                  <h4 className="text-cyber-400 font-semibold text-lg mb-1">CNC Manufacturing Expert</h4>
-                  <p className="text-gray-300 text-sm">
-                    Precision machining specialist with proven track record at global leaders.
-                  </p>
+                <div className="relative">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
+                  <div className="pl-6">
+                    <h4 className="text-cyber-400 font-semibold text-lg mb-2">Precision Engineering Excellence</h4>
+                    <p className="text-gray-300 text-sm mb-4">
+                      When global giants need components that can't afford to fail, they rely on expertise like Roshan's. 
+                      His track record spans critical applications where micron-level precision is non-negotiable.
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-space-700/15 rounded-lg p-4">
-                    <h5 className="text-white font-medium text-sm mb-2">Industry Experience</h5>
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="bg-space-700/15 rounded-lg p-4 border-l-2 border-cyber-400/30">
+                    <h5 className="text-white font-medium text-sm mb-2">Global Industry Impact</h5>
                     <div className="text-gray-400 text-xs space-y-1">
-                      <div>• MedTech: Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</div>
-                      <div>• Semiconductors: Intel, Analog Devices</div>
+                      <div>• <span className="text-white">MedTech Leaders:</span> Johnson & Johnson, Cook Medical, Merit Medical, Medtronic</div>
+                      <div>• <span className="text-white">Semiconductor Giants:</span> Intel, Analog Devices</div>
                     </div>
                   </div>
                   
-                  <div className="bg-space-700/15 rounded-lg p-4">
-                    <h5 className="text-white font-medium text-sm mb-2">Education & Focus</h5>
-                    <div className="text-gray-400 text-xs space-y-1">
-                      <div>• Master's in Mechanical Engineering (Dublin Institute of Technology)</div>
-                      <div>• Global precision standards implementation in India</div>
+                  <div className="bg-space-700/15 rounded-lg p-4 border-l-2 border-cyber-400/30">
+                    <h5 className="text-white font-medium text-sm mb-2">European Excellence to India</h5>
+                    <div className="text-gray-400 text-xs">
+                      Master's from Dublin Institute of Technology • Bringing European precision standards to scale Indian manufacturing
                     </div>
                   </div>
                 </div>
@@ -115,27 +118,30 @@ export default function AboutSection() {
               </div>
               
               <div className="space-y-5">
-                <div className="space-y-3">
-                  <h4 className="text-cyber-400 font-semibold text-lg mb-1">Additive Manufacturing Expert</h4>
-                  <p className="text-gray-300 text-sm">
-                    Advanced 3D printing specialist with global client portfolio across industries.
-                  </p>
+                <div className="relative">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-cyber-400 to-cyber-600 rounded-full"></div>
+                  <div className="pl-6">
+                    <h4 className="text-cyber-400 font-semibold text-lg mb-2">Innovation Architecture</h4>
+                    <p className="text-gray-300 text-sm mb-4">
+                      Where others see limitations, Priyesh sees possibilities. His collaboration portfolio spans three continents, 
+                      transforming how automotive and aerospace leaders approach additive manufacturing.
+                    </p>
+                  </div>
                 </div>
                 
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-space-700/15 rounded-lg p-4">
-                    <h5 className="text-white font-medium text-sm mb-2">Global Collaborations</h5>
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="bg-space-700/15 rounded-lg p-4 border-l-2 border-cyber-400/30">
+                    <h5 className="text-white font-medium text-sm mb-2">Global Manufacturing Network</h5>
                     <div className="text-gray-400 text-xs space-y-1">
-                      <div>• Automotive: Ford, GM, GE</div>
-                      <div>• 100+ clients across US, EU, Gulf regions</div>
+                      <div>• <span className="text-white">Automotive Titans:</span> Ford, GM, GE</div>
+                      <div>• <span className="text-white">Client Reach:</span> 100+ clients across US, EU, Gulf regions</div>
                     </div>
                   </div>
                   
-                  <div className="bg-space-700/15 rounded-lg p-4">
-                    <h5 className="text-white font-medium text-sm mb-2">Research & Development</h5>
-                    <div className="text-gray-400 text-xs space-y-1">
-                      <div>• Master's in Additive Manufacturing (Penn State)</div>
-                      <div>• Published researcher in 3D printing technologies</div>
+                  <div className="bg-space-700/15 rounded-lg p-4 border-l-2 border-cyber-400/30">
+                    <h5 className="text-white font-medium text-sm mb-2">Academic to Production Bridge</h5>
+                    <div className="text-gray-400 text-xs">
+                      Master's from Penn State • Published researcher • Turning 3D printing theory into manufacturing reality
                     </div>
                   </div>
                 </div>
