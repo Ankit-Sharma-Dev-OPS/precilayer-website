@@ -53,7 +53,7 @@ export default function AboutSection() {
                 </div>
                 <div className="text-center mt-6">
                   <h3 className="text-2xl font-bold text-white mb-2">Roshan Kolhe</h3>
-                  <p className="text-cyber-400 font-semibold">Cofounder & Subtractive Manufacturing Expert</p>
+                  <p className="text-cyber-400 font-semibold">Co-Founder & Subtractive Manufacturing Expert</p>
                 </div>
               </div>
               
