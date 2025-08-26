@@ -21,7 +21,7 @@ export default function WhatSection() {
           }}
           transition={{
             duration: 130,
-            repeat: 1,
+            repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{

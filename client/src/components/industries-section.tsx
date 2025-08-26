@@ -69,7 +69,7 @@ export default function IndustriesSection() {
           }}
           transition={{
             duration: 120,
-            repeat: 1,
+            repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{

@@ -55,7 +55,7 @@ export default function HowSection() {
           }}
           transition={{
             duration: 90,
-            repeat: 1,
+            repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{
@@ -82,7 +82,7 @@ export default function HowSection() {
           }}
           transition={{
             duration: 100,
-            repeat: 1,
+            repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{

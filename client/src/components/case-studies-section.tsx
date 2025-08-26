@@ -54,7 +54,7 @@ export default function CaseStudiesSection() {
           }}
           transition={{
             duration: 110,
-            repeat: 1,
+            repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{
