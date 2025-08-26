@@ -77,7 +77,7 @@ export default function WhySection() {
                     <feature.icon className="h-10 w-10 text-cyber-400 group-hover:text-cyan-300 transition-colors duration-300" />
                     {/* Pulsing Ring */}
                     <div className="absolute inset-0 rounded-xl border border-cyber-400/30 group-hover:border-cyber-400/60 transition-colors duration-500"></div>
-                    <div className="absolute inset-0 rounded-xl border border-cyber-400/10 animate-ping group-hover:border-cyber-400/30"></div>
+                    <div className="absolute inset-0 rounded-xl border border-cyber-400/10 group-hover:border-cyber-400/30 transition-colors duration-500"></div>
                   </div>
                 </div>
                 
