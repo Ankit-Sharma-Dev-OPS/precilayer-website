@@ -133,7 +133,7 @@ export default function HowSection() {
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
-        <Grid3X3 className="w-full h-full text-cyber-400" />
+        <Grid3X3 className="w-full h-full text-cyber-400/30 blur-sm" />
       </motion.div>
       <motion.div 
         className="absolute top-1/2 right-1/4 w-20 h-20 opacity-8"
