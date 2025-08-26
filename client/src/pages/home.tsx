@@ -13,6 +13,7 @@ import ProcessesSection from "@/components/processes-section";
 import CaseStudiesSection from "@/components/case-studies-section";
 import ContactSection from "@/components/contact-section";
 import FAQSection from "@/components/faq-section";
+import VisionSection from "@/components/vision-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
       <WhySection />
       <HowSection />
       <WhatSection />
+      <VisionSection />
       <IndustriesSection />
       <AboutSection />
       <ProcessesSection />
