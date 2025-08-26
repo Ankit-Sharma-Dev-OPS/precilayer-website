@@ -53,7 +53,7 @@ const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: num
     : `${count}${suffix}`;
 
   return (
-    <span ref={ref} className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+    <span ref={ref} className="text-3xl font-bold text-cyber-400 font-numbers shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
       {displayValue}
     </span>
   );
@@ -231,7 +231,7 @@ export default function HeroSection() {
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Minimum Order</div>
           </div>
           <div className="scroll-reveal float" data-testid="stat-precision" style={{animationDelay: '2s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>±0.01mm</div>
+            <div className="text-3xl font-bold text-cyber-400 font-numbers shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>±0.01mm</div>
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Precision</div>
           </div>
           <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '3s'}}>
