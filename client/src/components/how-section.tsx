@@ -50,12 +50,12 @@ export default function HowSection() {
           className="absolute inset-0 opacity-35"
           style={{
             backgroundImage: `url('https://www.optiproerp.com/wp-content/uploads/Emerging-global-trends-in-advanced-manufacturing.jpg')`,
-            backgroundSize: '70%',
+            backgroundSize: 'cover',
             backgroundPosition: 'left center',
             backgroundRepeat: 'no-repeat',
             filter: 'grayscale(100%) brightness(1.1) contrast(1.2)',
-            maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
-            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
+            maskImage: 'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)'
           }}
         />
         
@@ -64,12 +64,12 @@ export default function HowSection() {
           className="absolute inset-0 opacity-35"
           style={{
             backgroundImage: `url(${engineeringCadImage})`,
-            backgroundSize: '70%',
+            backgroundSize: 'cover',
             backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
             filter: 'grayscale(100%) brightness(1.1) contrast(1.2)',
-            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
-            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
+            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
+            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)'
           }}
         />
         
