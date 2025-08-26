@@ -106,11 +106,11 @@ export default function HowSection() {
             repeatType: "reverse",
             ease: "linear"
           }}
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.06) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.06) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px)
             `,
             backgroundSize: "80px 80px"
           }}
