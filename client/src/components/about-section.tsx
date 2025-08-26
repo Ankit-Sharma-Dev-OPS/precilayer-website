@@ -47,7 +47,7 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-roshan"
           >
-            <div className="bg-space-900/98 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
+            <div className="bg-gradient-to-br from-space-900/98 via-gray-800/95 to-space-900/98 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
                   <img 
@@ -82,7 +82,7 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-priyesh"
           >
-            <div className="bg-space-900/98 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
+            <div className="bg-gradient-to-br from-space-900/98 via-gray-800/95 to-space-900/98 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
                 <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover icon-glow">
                   <img 
