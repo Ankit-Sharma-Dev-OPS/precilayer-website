@@ -108,7 +108,7 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group cursor-pointer scroll-reveal"
+              className="group cursor-default scroll-reveal"
               data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="bg-space-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all hover-scale shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
