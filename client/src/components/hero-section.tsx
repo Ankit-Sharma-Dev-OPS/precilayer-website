@@ -136,11 +136,10 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Lighter overlay for better video visibility while maintaining text readability */}
-        <div className="absolute inset-0 bg-black/25" style={{ transform: 'translateZ(0)' }}></div>
+        {/* No global overlay - video shows clearly */}
       </div>
       
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/60 backdrop-blur-md rounded-lg py-12 shadow-2xl border border-white/10">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
