@@ -32,7 +32,7 @@ export default function ProcessesSection() {
             className="scroll-reveal"
             data-testid="cnc-machining-process"
           >
-            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20">
+            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://sybridge.com/wp-content/uploads/2023/09/shutterstock_644383741-1-1536x1025.jpg" 
@@ -86,7 +86,7 @@ export default function ProcessesSection() {
             className="scroll-reveal"
             data-testid="3d-printing-process"
           >
-            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20">
+            <div className="relative bg-space-900 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src="https://www.3dnatives.com/en/wp-content/uploads/sites/2/2022/12/MJF_cover.jpg" 

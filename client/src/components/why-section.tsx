@@ -78,7 +78,7 @@ export default function WhySection() {
             viewport={{ once: true }}
             className="scroll-reveal"
           >
-            <div className="relative bg-space-900 rounded-xl p-8 border border-gray-700">
+            <div className="relative bg-space-900 rounded-xl p-8 border border-gray-700 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               <div className="absolute inset-0 opacity-10">
                 <svg viewBox="0 0 400 300" className="w-full h-full">
                   <defs>

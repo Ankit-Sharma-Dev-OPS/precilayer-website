@@ -60,7 +60,7 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-roshan"
           >
-            <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/30">
+            <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               {/* Black overlay with 80% opacity */}
               <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
               <div className="relative z-10 p-8">
@@ -99,7 +99,7 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-priyesh"
           >
-            <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/30">
+            <div className="relative bg-gradient-to-br from-space-900/96 via-gray-800/94 to-space-900/96 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale overflow-hidden shadow-xl shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
               {/* Black overlay with 80% opacity */}
               <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
               <div className="relative z-10 p-8">
