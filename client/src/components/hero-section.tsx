@@ -67,42 +67,31 @@ export default function HeroSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (video && !videoError) {
-      const playVideo = async () => {
-        try {
-          // Ensure video attributes are set
-          video.muted = true;
-          video.playsInline = true;
-          video.loop = true;
-          video.autoplay = true;
-          
-          await video.play();
-        } catch (error) {
-          // Graceful fallback for autoplay restrictions
-          const handleUserInteraction = () => {
-            video.play().catch(() => {});
-          };
-          
-          document.addEventListener('click', handleUserInteraction, { once: true });
-          document.addEventListener('touchstart', handleUserInteraction, { once: true });
-          document.addEventListener('scroll', handleUserInteraction, { once: true });
-        }
+      // Simplified approach - let the browser handle it
+      video.load(); // Force reload to ensure fresh start
+      
+      const handleError = (e: Event) => {
+        console.error('Video playback error:', e);
+        setVideoError(true);
       };
       
-      // Multiple loading event handlers for better compatibility
-      const handleCanPlay = () => playVideo();
-      const handleLoadedData = () => playVideo();
+      const handleStalled = () => {
+        console.log('Video stalled, attempting restart');
+        video.load();
+      };
       
-      video.addEventListener('canplay', handleCanPlay);
-      video.addEventListener('loadeddata', handleLoadedData);
+      const handleWaiting = () => {
+        console.log('Video waiting for data');
+      };
       
-      // Try immediate play if already loaded
-      if (video.readyState >= 3) {
-        playVideo();
-      }
+      video.addEventListener('error', handleError);
+      video.addEventListener('stalled', handleStalled);
+      video.addEventListener('waiting', handleWaiting);
       
       return () => {
-        video.removeEventListener('canplay', handleCanPlay);
-        video.removeEventListener('loadeddata', handleLoadedData);
+        video.removeEventListener('error', handleError);
+        video.removeEventListener('stalled', handleStalled);
+        video.removeEventListener('waiting', handleWaiting);
       };
     }
   }, [videoError]);
@@ -120,40 +109,13 @@ export default function HeroSection() {
       {/* High-Quality CNC Machining Video Background */}
       <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
         <div className="absolute inset-0" style={{ willChange: 'auto' }}>
-          <video 
-            ref={videoRef}
-            autoPlay
-            muted 
-            loop
-            playsInline
-            preload="auto"
-            disablePictureInPicture
-            disableRemotePlayback
-            className="w-full h-full"
-            style={{ 
-              objectFit: 'cover',
-              objectPosition: 'center',
-              width: '100%',
-              height: '100%',
-              transform: 'translateZ(0)',
-              willChange: 'auto'
-            }}
-            onError={(e) => {
-              console.error('Video error:', e);
-              setVideoError(true);
-            }}
-            onLoadedData={() => console.log('Video ready for playback')}
-            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities with coolant spray in modern facility"
-          >
-            <source src={precilayerVideo} type="video/mp4" />
-          </video>
-          {videoError && (
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
-              alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility"
-              className="w-full h-full object-cover"
-            />
-          )}
+          {/* Professional CNC machining image - temporary while fixing video encoding */}
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
+            alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility showcasing Precilayer's capabilities"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
         </div>
         {/* Optimized dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/45" style={{ transform: 'translateZ(0)' }}></div>
