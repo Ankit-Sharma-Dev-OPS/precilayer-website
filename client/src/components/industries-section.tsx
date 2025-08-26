@@ -59,8 +59,8 @@ export default function IndustriesSection() {
       icon: Shield,
       title: "Aerospace & Defense",
       description: "AS9100D certified precision components for aerospace OEMs and defense contractors with full material traceability.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Fighter jet taking off",
+      image: "https://www.geaerospace.com/sites/default/files/Defense_1920x1080.jpg",
+      alt: "Aerospace and defense manufacturing",
       components: [
         "Aircraft fuselage components",
         "Landing gear systems",
@@ -72,8 +72,8 @@ export default function IndustriesSection() {
       icon: Car,
       title: "Automotive",
       description: "High-precision automotive components manufactured with advanced CNC machining and quality control processes.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Automobile manufacturing assembly facility",
+      image: "https://media.arcadis.com/-/media/project/arcadiscom/com/blogs/global/david-aimable-lina/2022/how-to-deliver-automotive-manufacturing-for-the-future/how-to-deliver-automotive-manufacturing-for-the-future-header.png?rev=-1",
+      alt: "Automotive manufacturing for the future",
       components: [
         "Engine components",
         "Transmission parts",
@@ -85,8 +85,8 @@ export default function IndustriesSection() {
       icon: Zap,
       title: "Electric Mobility",
       description: "Next-generation components for electric vehicles, charging infrastructure, and sustainable transportation solutions.",
-      image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Futuristic electric vehicle",
+      image: "https://media.istockphoto.com/id/1404252573/vector/isometric-car-charger-electromobile-charging-station-car-bus-truck-van-motorcycle-on.jpg?s=612x612&w=0&k=20&c=VE8M7ZJZlMgWkkPK09FvnmUTuTu2CrEIHNpmO2t8VRU=",
+      alt: "Electric vehicle charging station infrastructure",
       components: [
         "Battery housing systems",
         "Motor components",
@@ -98,8 +98,8 @@ export default function IndustriesSection() {
       icon: Fuel,
       title: "Oil & Gas / Clean Tech Energy",
       description: "Critical components for energy sector applications, from upstream exploration to downstream processing and clean technology solutions.",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Clean energy and wind turbines",
+      image: "https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/9d498117-3179-4718-81f4-f1c7fe8e892b/Pillar%201%20Energy%20Transition%20wind%20energy%20solar%20panels%20dreamstime.png?auto=compress%2Cformat&w=1440",
+      alt: "Energy transition with wind and solar power",
       components: [
         "Valve components",
         "Pipeline fittings",
