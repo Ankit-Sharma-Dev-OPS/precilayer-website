@@ -106,13 +106,13 @@ export default function HowSection() {
               className="scroll-reveal"
               data-testid={`core-point-${index}`}
             >
-              <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale">
+              <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale hover-glow morph-button">
                 <div className="flex items-start space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30">
+                  <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 pulse-glow">
                     <point.icon className="text-cyber-400 h-8 w-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                    <h3 className="text-xl font-bold text-white mb-3 leading-tight shimmer-text">
                       {point.title}
                     </h3>
                   </div>
