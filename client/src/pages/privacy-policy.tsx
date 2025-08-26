@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, Shield, Eye, Lock, Users, FileText, Settings, Mail } from "lucide-react";
+import { ArrowLeft, Shield, Eye, Lock, Users, FileText, Settings, Mail, UserCheck, Globe, RefreshCw } from "lucide-react";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
@@ -194,11 +194,72 @@ export default function PrivacyPolicy() {
             </div>
           </motion.div>
 
-          {/* Contact Section */}
+          {/* Section 6 */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <UserCheck className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">6. Your Rights</h2>
+            </div>
+            <div className="text-gray-300">
+              <p className="mb-4">You have the following rights regarding your personal data:</p>
+              <ul className="space-y-2">
+                <li>• Access to personal data we hold about you.</li>
+                <li>• Correction or update of inaccurate information.</li>
+                <li>• Request deletion of data, subject to regulatory obligations.</li>
+                <li>• Opt-out of marketing communication.</li>
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Section 7 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Globe className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">7. Cookies & Website Usage</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>• Our website uses cookies for functionality and analytics.</p>
+              <p>• Visitors may disable cookies in browser settings, but some features may not function correctly.</p>
+            </div>
+          </motion.div>
+
+          {/* Section 8 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <RefreshCw className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">8. Policy Updates</h2>
+            </div>
+            <div className="text-gray-300">
+              <p>We may update this Privacy Policy periodically. Updates will be posted on our website with a revised "Effective Date".</p>
+            </div>
+          </motion.div>
+
+          {/* Contact Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
             className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
           >
             <div className="flex items-center space-x-4 mb-6">
@@ -222,7 +283,7 @@ export default function PrivacyPolicy() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
           className="text-center mt-16"
         >
           <Link href="/">

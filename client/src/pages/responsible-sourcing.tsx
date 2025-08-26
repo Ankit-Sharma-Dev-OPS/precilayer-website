@@ -122,10 +122,17 @@ export default function ResponsibleSourcing() {
               <div>
                 <h3 className="font-semibold text-cyber-400 mb-3">2.2 Commitment to Conflict-Free Supply Chains</h3>
                 <ul className="space-y-2">
-                  <li>• Precilayer expects all suppliers to avoid sourcing 3TG from conflict-affected and high-risk areas</li>
-                  <li>• Suppliers utilizing 3TG must maintain traceability consistent with OECD guidelines</li>
-                  <li>• We respond to customer requests for conflict mineral declarations, including CMRT documentation</li>
+                  <li>• Precilayer expects all suppliers to avoid sourcing 3TG from conflict-affected and high-risk areas, unless they are certified as conflict-free by internationally recognized audit schemes</li>
+                  <li>• Where suppliers utilize 3TG, they should maintain traceability and transparency consistent with OECD guidelines</li>
+                  <li>• Precilayer will respond in good faith to reasonable customer requests for conflict mineral declarations, including CMRT (Conflict Minerals Reporting Template) or equivalent documentation</li>
                 </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-cyber-400 mb-3">2.3 Alignment with Global Regulations</h3>
+                <div className="bg-cyber-400/10 p-4 rounded-lg border border-cyber-400/20">
+                  <p className="mb-2"><strong className="text-cyber-400">U.S. Dodd-Frank Act, Section 1502:</strong> While Precilayer is not a direct filer, we support the Act's objective to prevent financing of armed groups and cooperate with clients requiring declarations.</p>
+                  <p><strong className="text-cyber-400">EU Regulation (EU 2017/821):</strong> Though Precilayer does not import raw minerals into the EU, our policies support the intent of the regulation and hold suppliers accountable for compliance.</p>
+                </div>
               </div>
             </div>
           </motion.div>
