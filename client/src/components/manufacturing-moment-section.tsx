@@ -61,8 +61,8 @@ export default function ManufacturingMomentSection() {
             INDIA'S MANUFACTURING MOMENT
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" data-testid="manufacturing-moment-subtitle">
-            India is pioneering the future of IP-driven manufacturing, building what matters
-            from India to the world.
+            India is pioneering the future of IP-driven manufacturing, building what matters.
+            From India to the world.
           </p>
         </div>
 
