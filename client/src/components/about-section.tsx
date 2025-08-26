@@ -6,7 +6,23 @@ import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Manufacturing Background */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJK32cXxCOyFwZpEWXXpKTuzUsnoJqpLUkMe_4EC6GBr3_LOf2L27pUba2Zr6jptwU6yk&usqp=CAU')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%) brightness(0.9) contrast(1.1)'
+          }}
+        />
+        {/* 75% Dark Overlay for readability */}
+        <div className="absolute inset-0 bg-space-800/75" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
