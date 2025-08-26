@@ -44,7 +44,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className="text-center mb-16 scroll-reveal"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="about-title">
+          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="about-title">
             About <span className="gradient-text">Us</span>
           </h2>
           <h3 className="text-xl text-cyber-400 mb-4 font-semibold">The Minds Behind Precilayer</h3>
@@ -75,7 +75,7 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   Roshan is a precision CNC machining specialist with proven impact in two of the most demanding sectors — MedTech and Semiconductors. He has engineered critical components for global leaders including Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic, where flawless accuracy is non-negotiable. His semiconductor experience spans Analog Devices and Intel, delivering parts that meet the extreme tolerances of advanced electronics.
                 </p>
@@ -110,7 +110,7 @@ export default function AboutSection() {
                 </div>
               </div>
               
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-white leading-relaxed">
                 <p>
                   Priyesh is a specialist in advanced additive manufacturing with a global track record of delivering innovation at scale. His expertise spans collaborations with Ford, GM, and GE, along with over 100 clients across the US, EU, and Gulf regions, where he has implemented cutting-edge 3D printing solutions for aerospace, mobility, and industrial applications.
                 </p>

@@ -91,10 +91,10 @@ export default function IndustriesSection() {
           viewport={{ once: true }}
           className="text-center mb-16 scroll-reveal"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="industries-title">
+          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="industries-title">
             Industries We <span className="gradient-text">Serve</span>
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-white max-w-3xl mx-auto">
             From aerospace to healthcare, we deliver precision components that power 
             innovation across critical industries.
           </p>
@@ -120,7 +120,7 @@ export default function IndustriesSection() {
                 />
                 <div className="p-4">
                   <h3 className="font-semibold text-cyber-400">{industry.title}</h3>
-                  <p className="text-sm text-gray-400">{industry.subtitle}</p>
+                  <p className="text-sm text-gray-200">{industry.subtitle}</p>
                 </div>
               </div>
             </motion.div>

@@ -63,12 +63,12 @@ export default function WhatSection() {
             >
               <Award className="text-white h-10 w-10" />
             </motion.div>
-            <h3 className="text-2xl font-bold mb-4">Uncompromising Quality</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-white">Uncompromising Quality</h3>
+            <p className="text-white mb-6">
               ISO-certified processes, rigorous quality control, and advanced inspection 
               technologies ensure every component meets global standards.
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+            <ul className="text-sm text-gray-200 space-y-2">
               <li>• ISO 9001:2015 Certified</li>
               <li>• Advanced Metrology</li>
               <li>• Statistical Process Control</li>
@@ -91,12 +91,12 @@ export default function WhatSection() {
             >
               <DollarSign className="text-white h-10 w-10" />
             </motion.div>
-            <h3 className="text-2xl font-bold mb-4">Competitive Costs</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-white">Competitive Costs</h3>
+            <p className="text-white mb-6">
               Leveraging India's manufacturing advantages, optimized processes, and 
               smart automation to deliver the lowest total cost of ownership.
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+            <ul className="text-sm text-gray-200 space-y-2">
               <li>• 30-50% Cost Savings</li>
               <li>• No Hidden Fees</li>
               <li>• Transparent Pricing</li>
@@ -119,12 +119,12 @@ export default function WhatSection() {
             >
               <Clock className="text-white h-10 w-10" />
             </motion.div>
-            <h3 className="text-2xl font-bold mb-4">Rapid Delivery</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4 text-white">Rapid Delivery</h3>
+            <p className="text-white mb-6">
               Streamlined workflows, automated scheduling, and strategic partnerships 
               enable industry-leading turnaround times without quality compromise.
             </p>
-            <ul className="text-sm text-gray-400 space-y-2">
+            <ul className="text-sm text-gray-200 space-y-2">
               <li>• 24-48 Hour Quotes</li>
               <li>• 3-7 Day Prototypes</li>
               <li>• Real-time Tracking</li>

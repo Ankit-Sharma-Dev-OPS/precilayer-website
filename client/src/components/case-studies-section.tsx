@@ -74,10 +74,10 @@ export default function CaseStudiesSection() {
           viewport={{ once: true }}
           className="text-center mb-16 scroll-reveal"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="case-studies-title">
+          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="case-studies-title">
             Proven <span className="gradient-text">Excellence</span>
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-white max-w-3xl mx-auto">
             Real results from real partnerships. See how we've helped companies 
             achieve their manufacturing goals with precision and innovation.
           </p>
@@ -101,18 +101,18 @@ export default function CaseStudiesSection() {
                     <IconComponent className="text-cyber-400 h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-bold">{study.title}</h3>
-                    <p className="text-sm text-gray-400">{study.subtitle}</p>
+                    <h3 className="font-bold text-white">{study.title}</h3>
+                    <p className="text-sm text-gray-200">{study.subtitle}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-white mb-6">
                   {study.description}
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   {study.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} data-testid={`metric-${index}-${metricIndex}`}>
                       <div className="text-lg font-bold text-cyber-400">{metric.value}</div>
-                      <div className="text-xs text-gray-400">{metric.label}</div>
+                      <div className="text-xs text-gray-200">{metric.label}</div>
                     </div>
                   ))}
                 </div>

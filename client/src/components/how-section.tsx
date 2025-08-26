@@ -152,7 +152,7 @@ export default function HowSection() {
           viewport={{ once: true }}
           className="text-center mb-16 scroll-reveal"
         >
-          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="how-title">
+          <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="how-title">
             How We <span className="gradient-text">Do It</span>
           </h2>
           <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Where Automation Meets Expertise</h3>
@@ -186,7 +186,7 @@ export default function HowSection() {
                       </h3>
                     </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-sm">
+                  <p className="text-white leading-relaxed text-sm">
                     {point.description}
                   </p>
                 </div>
@@ -219,7 +219,7 @@ export default function HowSection() {
                       </h3>
                     </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-sm">
+                  <p className="text-white leading-relaxed text-sm">
                     By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability.
                   </p>
                 </div>
