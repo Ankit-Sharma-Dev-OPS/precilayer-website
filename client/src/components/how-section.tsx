@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import engineeringCadImage from "@assets/engineering-designer-design-3d-cad-260nw-2182781589_1756206040954.jpg";
 import { 
   Cpu, 
   Wifi, 
@@ -46,28 +47,27 @@ export default function HowSection() {
       <div className="absolute inset-0">
         {/* 3D CAD Engineering Design Background - Left Side */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `url('https://www.shutterstock.com/image-illustration/engineering-designer-design-3d-cad-260nw-2182781589.jpg')`,
+            backgroundImage: `url(${engineeringCadImage})`,
             backgroundSize: '65%',
-            backgroundPosition: 'left top',
+            backgroundPosition: 'left center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.7) contrast(1.1)',
+            filter: 'grayscale(100%) brightness(1.2) contrast(1.3)',
             maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
-            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
-            transform: 'translateY(-10%)'
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
           }}
         />
         
         {/* Advanced Manufacturing Background - Right Side */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: `url('https://www.optiproerp.com/wp-content/uploads/Emerging-global-trends-in-advanced-manufacturing.jpg')`,
             backgroundSize: '65%',
             backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.7) contrast(1.1)',
+            filter: 'grayscale(100%) brightness(1.2) contrast(1.3)',
             maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
             WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
           }}
@@ -95,7 +95,7 @@ export default function HowSection() {
         />
         
         {/* Central blend overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-space-900/40 via-space-900/70 to-space-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-space-900/25 via-space-900/45 to-space-900/25" />
       </div>
         
       {/* Floating Technical Icons */}
