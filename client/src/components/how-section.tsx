@@ -58,28 +58,7 @@ export default function HowSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-space-900/35 via-space-900/55 to-space-900/35" />
       </div>
         
-      {/* Floating Technical Icons */}
-      <motion.div 
-        className="absolute top-10 left-10 w-32 h-32 opacity-15"
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      >
-        <CircuitBoard className="w-full h-full text-cyber-400 subtle-pulse" />
-      </motion.div>
-      <motion.div 
-        className="absolute bottom-20 right-20 w-24 h-24 opacity-12"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <Grid3X3 className="w-full h-full text-cyber-400/30 blur-sm" />
-      </motion.div>
-      <motion.div 
-        className="absolute top-1/2 right-1/4 w-20 h-20 opacity-8"
-        animate={{ opacity: [0.08, 0.2, 0.08], rotate: [0, 180, 360] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <Zap className="w-full h-full text-cyber-400" />
-      </motion.div>
+      {/* Floating background icons removed */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
