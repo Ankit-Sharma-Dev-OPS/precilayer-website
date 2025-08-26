@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
-import precilayerVideo from "@assets/Precilayer CNC machining video_1756243113087.mp4";
+import precilayerVideo from "@assets/Precilayer CNC machining video_1756243684014.mp4";
 
 const AnimatedCounter = ({ target, suffix = "", duration = 2000 }: { target: number | string; suffix?: string; duration?: number }) => {
   const [count, setCount] = useState(0);
@@ -64,7 +64,38 @@ export default function HeroSection() {
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Simplified - no complex event handlers that might interfere with controls
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video && !videoError) {
+      const playVideo = async () => {
+        try {
+          video.muted = true;
+          video.playsInline = true;
+          video.loop = true;
+          await video.play();
+        } catch (error) {
+          // Retry on user interaction
+          const handleInteraction = () => {
+            video.play().catch(() => {});
+            document.removeEventListener('click', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+          };
+          document.addEventListener('click', handleInteraction, { once: true });
+          document.addEventListener('touchstart', handleInteraction, { once: true });
+        }
+      };
+      
+      if (video.readyState >= 3) {
+        playVideo();
+      } else {
+        video.addEventListener('loadeddata', playVideo, { once: true });
+      }
+      
+      return () => {
+        video.removeEventListener('loadeddata', playVideo);
+      };
+    }
+  }, [videoError]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -81,22 +112,24 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <video 
             ref={videoRef}
-            controls
+            autoPlay
             muted 
             loop
-            className="w-full h-full object-cover bg-black"
+            playsInline
+            preload="metadata"
+            disablePictureInPicture
+            className="w-full h-full object-cover"
             style={{ 
-              minHeight: '100vh',
-              width: '100%'
+              objectFit: 'cover',
+              objectPosition: 'center'
             }}
             onError={(e) => {
               console.error('Video error:', e);
               setVideoError(true);
             }}
-            onLoadedData={() => console.log('Video loaded successfully')}
+            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities"
           >
             <source src={precilayerVideo} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           {videoError && (
             <img 
@@ -106,7 +139,9 @@ export default function HeroSection() {
             />
           )}
         </div>
-        {/* Temporary: No overlay to check video visibility */}
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50"></div>
+        <div className="absolute inset-0 bg-space-900/20"></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
