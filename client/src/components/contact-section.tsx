@@ -117,7 +117,7 @@ ${formData.name}`);
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <Mail className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>
@@ -129,7 +129,7 @@ ${formData.name}`);
               </div>
               
               <div className="flex items-center space-x-4" data-testid="response-time">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <Clock className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>
@@ -139,7 +139,7 @@ ${formData.name}`);
               </div>
               
               <div className="flex items-center space-x-4" data-testid="confidentiality">
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                   <Shield className="text-cyber-400 h-6 w-6" />
                 </div>
                 <div>

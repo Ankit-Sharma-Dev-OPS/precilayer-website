@@ -253,7 +253,7 @@ export default function HowSection() {
               <motion.div 
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50 icon-hover"
+                className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50 icon-hover icon-glow"
               >
                 <Zap className="text-cyber-400 h-8 w-8" />
               </motion.div>

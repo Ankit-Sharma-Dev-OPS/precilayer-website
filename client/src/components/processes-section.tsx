@@ -45,7 +45,7 @@ export default function ProcessesSection() {
               
               <div className="p-8">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                     <Factory className="text-cyber-400 h-6 w-6" />
                   </div>
                   <h3 className="text-2xl font-bold">CNC Machining</h3>
@@ -99,7 +99,7 @@ export default function ProcessesSection() {
               
               <div className="p-8">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-glow">
                     <Box className="text-cyber-400 h-6 w-6" />
                   </div>
                   <h3 className="text-2xl font-bold">3D Printing</h3>
