@@ -29,6 +29,7 @@ export default function Footer() {
               </div>
             </div>
             
+            {/* Social Media Icons - Commented out
             <div className="flex space-x-4">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer" data-testid="social-linkedin">
                 <Linkedin className="h-6 w-6" />
@@ -40,6 +41,7 @@ export default function Footer() {
                 <Youtube className="h-6 w-6" />
               </span>
             </div>
+            */}
           </div>
           
           <div>
