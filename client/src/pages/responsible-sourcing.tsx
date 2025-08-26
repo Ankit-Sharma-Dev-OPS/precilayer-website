@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowLeft, Leaf, Globe, Shield, CheckCircle, Users, Target, AlertCircle, Mail } from "lucide-react";
 
 export default function ResponsibleSourcing() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-space-900 relative overflow-hidden">
       {/* Animated Background */}
