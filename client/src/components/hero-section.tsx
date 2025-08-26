@@ -135,9 +135,10 @@ export default function HeroSection() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
             <source src="https://videos.pexels.com/video-files/3191556/3191556-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/3195343/3195343-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-space-900/50 via-space-800/40 to-space-900/50">
