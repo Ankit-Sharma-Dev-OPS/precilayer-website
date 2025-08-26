@@ -9,8 +9,17 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
       {/* Manufacturing Background */}
       <div className="absolute inset-0">
-        <div 
+        <motion.div 
           className="absolute inset-0 opacity-25"
+          animate={{
+            scale: [1, 1.05, 1],
+            opacity: [0.25, 0.3, 0.25]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           style={{
             backgroundImage: `url(${globalNetworkImage})`,
             backgroundSize: '120% auto',

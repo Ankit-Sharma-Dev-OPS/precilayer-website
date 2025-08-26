@@ -46,12 +46,19 @@ export default function HowSection() {
       {/* Creative Dual Background Overlay */}
       <div className="absolute inset-0">
         {/* Advanced Manufacturing Background - Now Left Side */}
-        <div 
+        <motion.div 
           className="absolute inset-0 opacity-35"
+          animate={{
+            backgroundPosition: ['left center', 'left top', 'left center']
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           style={{
             backgroundImage: `url('https://www.optiproerp.com/wp-content/uploads/Emerging-global-trends-in-advanced-manufacturing.jpg')`,
             backgroundSize: 'cover',
-            backgroundPosition: 'left center',
             backgroundRepeat: 'no-repeat',
             filter: 'grayscale(100%) brightness(1.1) contrast(1.2)',
             maskImage: 'linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
@@ -60,8 +67,16 @@ export default function HowSection() {
         />
         
         {/* 3D CAD Engineering Design Background - Now Right Side */}
-        <div 
+        <motion.div 
           className="absolute inset-0 opacity-35"
+          animate={{
+            scale: [1, 1.03, 1]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           style={{
             backgroundImage: `url(${engineeringCadImage})`,
             backgroundSize: 'cover',

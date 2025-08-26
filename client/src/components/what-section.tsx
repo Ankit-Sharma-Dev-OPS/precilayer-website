@@ -7,12 +7,20 @@ export default function WhatSection() {
     <section id="what" className="py-20 bg-space-800 relative overflow-hidden engineering-bg">
       {/* Space Shuttle Launch Background */}
       <div className="absolute inset-0">
-        <div 
+        <motion.div 
           className="absolute inset-0 opacity-20"
+          animate={{
+            scale: [1, 1.08, 1],
+            backgroundPosition: ['center center', 'center bottom', 'center center']
+          }}
+          transition={{
+            duration: 40,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           style={{
             backgroundImage: `url(${spaceRocketImage})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.5) contrast(1.0) saturate(0.8)'
           }}

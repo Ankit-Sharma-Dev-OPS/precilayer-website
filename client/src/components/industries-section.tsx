@@ -56,8 +56,16 @@ export default function IndustriesSection() {
     <section id="industries" className="py-20 bg-space-900 relative overflow-hidden">
       {/* Industrial Night Scene Background */}
       <div className="absolute inset-0">
-        <div 
+        <motion.div 
           className="absolute inset-0 opacity-20"
+          animate={{
+            scale: [1.05, 1, 1.05]
+          }}
+          transition={{
+            duration: 35,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
           style={{
             backgroundImage: `url('https://www.everllence.com/images/default-source/energy/industry_at-night.jpg?sfvrsn=a76314af_1')`,
             backgroundSize: 'cover',
