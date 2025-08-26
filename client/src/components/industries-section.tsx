@@ -53,8 +53,24 @@ export default function IndustriesSection() {
   ];
 
   return (
-    <section id="industries" className="py-20 bg-space-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="industries" className="py-20 bg-space-900 relative overflow-hidden">
+      {/* Industrial Night Scene Background */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url('https://www.everllence.com/images/default-source/energy/industry_at-night.jpg?sfvrsn=a76314af_1')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'brightness(0.7) contrast(1.2)'
+          }}
+        />
+        {/* 80% Dark Overlay for readability */}
+        <div className="absolute inset-0 bg-space-900/80" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
