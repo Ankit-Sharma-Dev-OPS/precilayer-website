@@ -2,6 +2,63 @@ import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
 
+const AnimatedCounter = ({ target, suffix = "", duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime;
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      if (typeof target === 'string') {
+        // For string targets like "50+", extract the number
+        const numericTarget = parseInt(target.replace(/\D/g, ''));
+        setCount(Math.floor(progress * numericTarget));
+      } else {
+        setCount(Math.floor(progress * target));
+      }
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    
+    requestAnimationFrame(animate);
+  }, [isVisible, target, duration]);
+
+  const displayValue = typeof target === 'string' && target.includes('+') 
+    ? `${count}+` 
+    : `${count}${suffix}`;
+
+  return (
+    <span ref={ref} className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+      {displayValue}
+    </span>
+  );
+};
+
 export default function HeroSection() {
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -159,22 +216,24 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           <div className="scroll-reveal float" data-testid="stat-delivery" style={{animationDelay: '0s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>7</div>
+            <div>
+              <AnimatedCounter target={7} />
+            </div>
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Days Delivery</div>
           </div>
           <div className="scroll-reveal float" data-testid="stat-minimum-order" style={{animationDelay: '1s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>1</div>
+            <div>
+              <AnimatedCounter target={1} />
+            </div>
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Minimum Order</div>
           </div>
-          <div className="scroll-reveal float" data-testid="stat-precision" style={{animationDelay: '2s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>±0.01mm</div>
-            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Precision</div>
-          </div>
-          <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '3s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>50+</div>
+          <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '2s'}}>
+            <div>
+              <AnimatedCounter target="50+" />
+            </div>
             <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Countries</div>
           </div>
         </motion.div>
