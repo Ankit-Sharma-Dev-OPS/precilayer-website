@@ -37,7 +37,7 @@ export default function HowSection() {
     {
       icon: Layers,
       title: "Hybrid Manufacturing Advantage",
-      description: "By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability."
+      description: "Combining CNC machining with 3D printing (SLS, SLA, FDM, MJF) unlocks complex geometries and rapid iteration while maintaining industrial reliability."
     }
   ];
 
