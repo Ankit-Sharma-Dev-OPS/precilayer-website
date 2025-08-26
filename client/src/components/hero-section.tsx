@@ -33,7 +33,16 @@ export default function HeroSection() {
               <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
               <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
+              {/* Creative overlay patterns */}
+              <div 
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+                                   radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)`
+                }}
+              />
+            </div>
           </>
         ) : (
           <>
@@ -43,7 +52,16 @@ export default function HeroSection() {
               className="w-full h-full object-cover"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
+              {/* Creative overlay patterns */}
+              <div 
+                className="absolute inset-0 opacity-10"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 25% 25%, rgba(6, 182, 212, 0.2) 0%, transparent 50%),
+                                   radial-gradient(circle at 75% 75%, rgba(6, 182, 212, 0.15) 0%, transparent 50%)`
+                }}
+              />
+            </div>
           </>
         )}
       </div>

@@ -36,7 +36,21 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section className="py-20 bg-space-900">
+    <section className="py-20 bg-space-900 relative overflow-hidden">
+      {/* Creative background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(45deg, rgba(6, 182, 212, 0.1) 25%, transparent 25%), 
+                             linear-gradient(-45deg, rgba(6, 182, 212, 0.1) 25%, transparent 25%), 
+                             linear-gradient(45deg, transparent 75%, rgba(6, 182, 212, 0.1) 75%), 
+                             linear-gradient(-45deg, transparent 75%, rgba(6, 182, 212, 0.1) 75%)`,
+            backgroundSize: '60px 60px',
+            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -64,11 +78,11 @@ export default function CaseStudiesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-space-800 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all scroll-reveal hover-scale"
+                className="bg-space-800 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all scroll-reveal hover-scale gentle-glow"
                 data-testid={`case-study-${index + 1}`}
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center icon-hover">
                     <IconComponent className="text-cyber-400 h-6 w-6" />
                   </div>
                   <div>

@@ -13,7 +13,9 @@ export default function SubtleBackground() {
           }}
           animate={{
             scale: [1, 1.1, 1],
-            opacity: [0.03, 0.08, 0.03]
+            opacity: [0.03, 0.08, 0.03],
+            x: [0, 50, 0],
+            y: [0, 30, 0]
           }}
           transition={{
             duration: 12,
@@ -32,7 +34,9 @@ export default function SubtleBackground() {
           }}
           animate={{
             scale: [1, 0.9, 1.2, 1],
-            opacity: [0.02, 0.06, 0.02]
+            opacity: [0.02, 0.06, 0.02],
+            x: [0, -40, 0],
+            y: [0, -20, 0]
           }}
           transition={{
             duration: 18,
@@ -43,15 +47,45 @@ export default function SubtleBackground() {
         />
       </div>
 
-      {/* Minimal grid overlay - very subtle */}
-      <div 
-        className="absolute inset-0 opacity-5"
+      {/* Additional creative elements */}
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 opacity-4">
+        <motion.div
+          className="w-full h-full rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 60%)',
+            filter: 'blur(40px)'
+          }}
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.1, 0.8],
+            opacity: [0.02, 0.05, 0.02]
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
+
+      {/* Animated grid overlay - very subtle */}
+      <motion.div 
+        className="absolute inset-0 opacity-3"
         style={{
           backgroundImage: `
             linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px)
           `,
           backgroundSize: "120px 120px"
+        }}
+        animate={{
+          backgroundPosition: ["0% 0%", "100% 100%"]
+        }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "linear"
         }}
       />
     </div>

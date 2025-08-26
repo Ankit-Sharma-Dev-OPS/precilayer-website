@@ -65,15 +65,27 @@ export default function HowSection() {
         />
         
         {/* Circuit board pattern overlay */}
-        <div className="absolute top-10 left-10 w-32 h-32 opacity-20">
-          <CircuitBoard className="w-full h-full text-cyber-400" />
-        </div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 opacity-15">
+        <motion.div 
+          className="absolute top-10 left-10 w-32 h-32 opacity-20"
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        >
+          <CircuitBoard className="w-full h-full text-cyber-400 subtle-pulse" />
+        </motion.div>
+        <motion.div 
+          className="absolute bottom-20 right-20 w-24 h-24 opacity-15"
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        >
           <Grid3X3 className="w-full h-full text-cyber-400" />
-        </div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 opacity-10">
+        </motion.div>
+        <motion.div 
+          className="absolute top-1/2 left-1/4 w-16 h-16 opacity-10"
+          animate={{ opacity: [0.1, 0.3, 0.1] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
           <Zap className="w-full h-full text-cyber-400" />
-        </div>
+        </motion.div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -91,38 +103,73 @@ export default function HowSection() {
           <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Where Automation Meets Expertise</h3>
         </motion.div>
 
-        {/* Core Points Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {corePoints.map((point, index) => (
-            <motion.div
-              key={point.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8, 
-                delay: index * 0.2 
-              }}
-              viewport={{ once: true }}
-              className="scroll-reveal"
-              data-testid={`core-point-${index}`}
-            >
-              <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale">
-                <div className="flex items-start space-x-6 mb-6">
-                  <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30">
-                    <point.icon className="text-cyber-400 h-8 w-8" />
+        {/* Core Points Grid - Balanced Layout */}
+        <div className="space-y-8 mb-16">
+          {/* First Row - 2 Cards */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {corePoints.slice(0, 2).map((point, index) => (
+              <motion.div
+                key={point.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.2 
+                }}
+                viewport={{ once: true }}
+                className="scroll-reveal"
+                data-testid={`core-point-${index}`}
+              >
+                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
+                  <div className="flex items-start space-x-6 mb-6">
+                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30 icon-hover">
+                      <point.icon className="text-cyber-400 h-8 w-8" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                        {point.title}
+                      </h3>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                  <p className="text-gray-300 leading-relaxed text-sm">
+                    {point.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Second Row - 3 Cards */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {corePoints.slice(2, 5).map((point, index) => (
+              <motion.div
+                key={point.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: (index + 2) * 0.2 
+                }}
+                viewport={{ once: true }}
+                className="scroll-reveal"
+                data-testid={`core-point-${index + 2}`}
+              >
+                <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale gentle-glow h-full">
+                  <div className="flex flex-col items-center text-center space-y-4 mb-6">
+                    <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center border border-cyber-400/30 icon-hover">
+                      <point.icon className="text-cyber-400 h-8 w-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white leading-tight">
                       {point.title}
                     </h3>
                   </div>
+                  <p className="text-gray-300 leading-relaxed text-sm text-center">
+                    {point.description}
+                  </p>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  {point.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Closing Statement */}
@@ -150,7 +197,7 @@ export default function HowSection() {
               <motion.div 
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50"
+                className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50 icon-hover"
               >
                 <Zap className="text-cyber-400 h-8 w-8" />
               </motion.div>

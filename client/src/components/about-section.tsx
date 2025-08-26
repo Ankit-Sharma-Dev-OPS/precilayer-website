@@ -32,7 +32,7 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover gentle-glow">
                   <img 
                     src={roshanPhoto} 
                     alt="Roshan Kolhe - Co-Founder" 
@@ -67,7 +67,7 @@ export default function AboutSection() {
           >
             <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
               <div className="mb-8">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105 image-hover gentle-glow">
                   <img 
                     src={priyeshPhoto} 
                     alt="Priyesh Mehta - Co-Founder" 
