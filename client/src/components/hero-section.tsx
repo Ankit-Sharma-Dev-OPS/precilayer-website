@@ -129,19 +129,27 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0">
           <video 
+            ref={videoRef}
             autoPlay 
             loop 
             muted 
             playsInline
-            preload="metadata"
+            preload="auto"
             className="w-full h-full object-cover"
             aria-label="Professional CNC machine with high-RPM spindle cutting complex metal geometry with coolant spray in clean modern manufacturing facility"
+            onError={() => setVideoError(true)}
           >
-            <source src="https://videos.pexels.com/video-files/8828256/8828256-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/7693786/7693786-hd_1920_1080_25fps.mp4" type="video/mp4" />
             <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/8828256/8828256-hd_1920_1080_25fps.mp4" type="video/mp4" />
           </video>
+          {videoError && (
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
+              alt="CNC machine cutting metal part in modern manufacturing facility"
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
         {/* Subtle overlay for text readability while keeping video visible */}
         <div className="absolute inset-0 bg-gradient-to-br from-space-900/30 via-transparent to-space-900/40"></div>
