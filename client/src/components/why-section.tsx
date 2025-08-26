@@ -4,20 +4,20 @@ import { Rocket, Settings, TrendingUp } from "lucide-react";
 export default function WhySection() {
   return (
     <section id="why" className="py-20 bg-space-800 relative overflow-hidden">
-      {/* Engineering CAD Drawing Background */}
+      {/* Engineering CAD Drawing Background - Very Visible */}
       <div 
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0"
         style={{
           backgroundImage: `url('https://thumbs.dreamstime.com/b/hand-drawing-d-engineering-model-digital-screen-cad-technology-sketching-mechanical-part-concept-design-379485087.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          filter: 'grayscale(100%) brightness(0.8) sepia(20%) hue-rotate(180deg)',
-          mixBlendMode: 'multiply'
+          filter: 'grayscale(100%) brightness(0.6)',
+          opacity: 0.9
         }}
       />
-      {/* Light overlay for readability */}
-      <div className="absolute inset-0 bg-space-800/40" />
+      {/* Very light overlay for text readability only */}
+      <div className="absolute inset-0 bg-space-800/20" />
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div 
