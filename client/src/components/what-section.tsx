@@ -10,8 +10,8 @@ export default function WhatSection() {
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `url('https://media.istockphoto.com/id/1344443930/photo/space-shuttle-rocket-launch-in-the-sky-and-clouds-to-outer-space-sky-and-clouds-spacecraft.jpg?s=612x612&w=0&k=20&c=lYoFwMF9Sc6q07skiz6WaVovoseHk6M1tDr5qeecRjI=')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
+            backgroundSize: '120%',
+            backgroundPosition: 'center 30%',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.5) contrast(1.0) saturate(0.8)'
           }}
