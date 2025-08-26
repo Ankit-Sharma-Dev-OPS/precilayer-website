@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane, Heart, Bot } from "lucide-react";
+import provenExcellenceImage from "@assets/engineering-designer-design-3d-cad-260nw-2182781589_1756206261353.jpg";
 
 export default function CaseStudiesSection() {
   const caseStudies = [
@@ -37,19 +38,20 @@ export default function CaseStudiesSection() {
 
   return (
     <section className="py-20 bg-space-900 relative overflow-hidden factory-bg">
-      {/* Creative background pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Engineering Excellence Background */}
+      <div className="absolute inset-0">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-50"
           style={{
-            backgroundImage: `linear-gradient(45deg, rgba(6, 182, 212, 0.1) 25%, transparent 25%), 
-                             linear-gradient(-45deg, rgba(6, 182, 212, 0.1) 25%, transparent 25%), 
-                             linear-gradient(45deg, transparent 75%, rgba(6, 182, 212, 0.1) 75%), 
-                             linear-gradient(-45deg, transparent 75%, rgba(6, 182, 212, 0.1) 75%)`,
-            backgroundSize: '60px 60px',
-            backgroundPosition: '0 0, 0 30px, 30px -30px, -30px 0px'
+            backgroundImage: `url(${provenExcellenceImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%) brightness(0.8) contrast(1.1)'
           }}
         />
+        {/* 70% Dark Overlay */}
+        <div className="absolute inset-0 bg-space-900/70" />
       </div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
