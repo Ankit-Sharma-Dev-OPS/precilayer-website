@@ -47,12 +47,14 @@ export default function HowSection() {
       <div className="absolute inset-0">
         {/* Advanced Manufacturing Background - Now Left Side */}
         <motion.div 
-          className="absolute inset-0 opacity-35"
+          className="absolute inset-0"
           animate={{
-            backgroundPosition: ['left center', 'left top', 'left center']
+            scale: [1, 1.25, 1.1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.2, 0.45, 0.3],
+            backgroundPosition: ['left center', 'left top', 'left bottom', 'left center']
           }}
           transition={{
-            duration: 25,
+            duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -68,12 +70,20 @@ export default function HowSection() {
         
         {/* 3D CAD Engineering Design Background - Now Right Side */}
         <motion.div 
-          className="absolute inset-0 opacity-35"
+          className="absolute inset-0"
           animate={{
-            scale: [1, 1.03, 1]
+            scale: [1, 1.2, 1.05, 1.18, 1],
+            opacity: [0.3, 0.15, 0.4, 0.25, 0.3],
+            filter: [
+              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 30px rgba(59,130,246,0.4))',
+              'grayscale(50%) brightness(1.4) contrast(1.6) drop-shadow(0 0 60px rgba(59,130,246,0.7))',
+              'grayscale(80%) brightness(1.2) contrast(1.3) drop-shadow(0 0 45px rgba(59,130,246,0.5))',
+              'grayscale(30%) brightness(1.3) contrast(1.5) drop-shadow(0 0 70px rgba(59,130,246,0.8))',
+              'grayscale(100%) brightness(1.1) contrast(1.2) drop-shadow(0 0 30px rgba(59,130,246,0.4))'
+            ]
           }}
           transition={{
-            duration: 18,
+            duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
           }}
@@ -82,7 +92,6 @@ export default function HowSection() {
             backgroundSize: 'cover',
             backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(1.1) contrast(1.2)',
             maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)',
             WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 80%)'
           }}

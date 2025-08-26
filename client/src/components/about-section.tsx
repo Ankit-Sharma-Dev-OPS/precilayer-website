@@ -10,22 +10,28 @@ export default function AboutSection() {
       {/* Manufacturing Background */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0"
           animate={{
-            scale: [1, 1.05, 1],
-            opacity: [0.25, 0.3, 0.25]
+            scale: [1, 1.15, 1.05, 1.2, 1],
+            opacity: [0.2, 0.4, 0.15, 0.35, 0.2],
+            filter: [
+              'brightness(0.8) contrast(1.2) drop-shadow(0 0 20px rgba(6,182,212,0.3))',
+              'brightness(1.1) contrast(1.5) drop-shadow(0 0 40px rgba(6,182,212,0.6))',
+              'brightness(0.9) contrast(1.3) drop-shadow(0 0 60px rgba(6,182,212,0.4))',
+              'brightness(1.0) contrast(1.4) drop-shadow(0 0 80px rgba(6,182,212,0.7))',
+              'brightness(0.8) contrast(1.2) drop-shadow(0 0 20px rgba(6,182,212,0.3))'
+            ]
           }}
           transition={{
-            duration: 20,
+            duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{
             backgroundImage: `url(${globalNetworkImage})`,
-            backgroundSize: '120% auto',
+            backgroundSize: '130% auto',
             backgroundPosition: 'center 40%',
-            backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.8) contrast(1.2)'
+            backgroundRepeat: 'no-repeat'
           }}
         />
         {/* 75% Dark Overlay for readability */}

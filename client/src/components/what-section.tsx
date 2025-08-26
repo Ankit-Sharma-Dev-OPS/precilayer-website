@@ -8,21 +8,28 @@ export default function WhatSection() {
       {/* Space Shuttle Launch Background */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0"
           animate={{
-            scale: [1, 1.08, 1],
-            backgroundPosition: ['center center', 'center bottom', 'center center']
+            scale: [1, 1.4, 1.2, 1.5, 1],
+            opacity: [0.15, 0.4, 0.1, 0.45, 0.15],
+            backgroundPosition: ['center center', 'center top', 'center bottom', 'center center'],
+            filter: [
+              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 50px rgba(249,115,22,0.4))',
+              'brightness(1.0) contrast(1.5) saturate(1.4) drop-shadow(0 0 100px rgba(249,115,22,0.8)) hue-rotate(20deg)',
+              'brightness(0.7) contrast(1.2) saturate(1.0) drop-shadow(0 0 75px rgba(249,115,22,0.5))',
+              'brightness(1.1) contrast(1.6) saturate(1.5) drop-shadow(0 0 120px rgba(249,115,22,0.9)) hue-rotate(30deg)',
+              'brightness(0.5) contrast(1.0) saturate(0.8) drop-shadow(0 0 50px rgba(249,115,22,0.4))'
+            ]
           }}
           transition={{
-            duration: 40,
+            duration: 16,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{
             backgroundImage: `url(${spaceRocketImage})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.5) contrast(1.0) saturate(0.8)'
+            backgroundRepeat: 'no-repeat'
           }}
         />
         {/* 85% Dark Overlay for better readability */}

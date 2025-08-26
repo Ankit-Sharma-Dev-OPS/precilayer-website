@@ -41,20 +41,28 @@ export default function CaseStudiesSection() {
       {/* Engineering Excellence Background */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0"
           animate={{
-            backgroundPosition: ['center center', 'center top', 'center center']
+            scale: [1, 1.3, 1.15, 1.35, 1],
+            opacity: [0.12, 0.25, 0.08, 0.22, 0.12],
+            backgroundPosition: ['center center', 'center top', 'center bottom', 'center center'],
+            filter: [
+              'grayscale(100%) brightness(0.8) contrast(1.1)',
+              'grayscale(70%) brightness(1.2) contrast(1.4) saturate(1.3)',
+              'grayscale(90%) brightness(1.0) contrast(1.2) saturate(1.1)',
+              'grayscale(60%) brightness(1.3) contrast(1.5) saturate(1.4)',
+              'grayscale(100%) brightness(0.8) contrast(1.1)'
+            ]
           }}
           transition={{
-            duration: 30,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           style={{
             backgroundImage: `url(${provenExcellenceImage})`,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.8) contrast(1.1)'
+            backgroundRepeat: 'no-repeat'
           }}
         />
         {/* 80% Dark Overlay */}
