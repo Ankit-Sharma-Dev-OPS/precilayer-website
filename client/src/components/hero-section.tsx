@@ -117,19 +117,20 @@ export default function HeroSection() {
           className="font-orbitron text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)'}}
           data-testid="hero-title"
         >
-          Redefining <span className="text-white">Indian Manufacturing</span><br/>
-          for the <span className="text-cyber-400">Future</span>
+          THE FUTURE OF<br/>
+          <span className="text-cyber-400">MANUFACTURING</span>
         </motion.h1>
         
         <motion.p 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl mb-8 text-white max-w-3xl mx-auto leading-relaxed" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
+          className="text-lg md:text-xl mb-8 text-white max-w-4xl mx-auto leading-relaxed" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
           data-testid="hero-description"
         >
-          Precision CNC & Additive Manufacturing for global-quality, custom-batch production.
-          World-class components delivered with unmatched speed and cost efficiency.
+          Best-in-class precision machined and additive parts at scale, from India to the world. 
+          <span className="text-cyber-400 font-semibold"> No MOQs. No inventory.</span> Just speed, flexibility, 
+          and the future of making.
         </motion.p>
         
         <motion.div 
@@ -141,16 +142,16 @@ export default function HeroSection() {
           <button 
             onClick={() => scrollToSection('contact')}
             className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
-            data-testid="cta-partner"
+            data-testid="cta-start-manufacturing"
           >
-            Partner with Precilayer
+            Start Manufacturing
           </button>
           <button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => scrollToSection('about')}
             className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
-            data-testid="cta-contact"
+            data-testid="cta-explore-capabilities"
           >
-            Contact Us
+            Explore Capabilities
           </button>
         </motion.div>
         
@@ -158,19 +159,23 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
-          <div className="scroll-reveal float" data-testid="stat-quality" style={{animationDelay: '0s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>99.9%</div>
-            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Quality Precision</div>
+          <div className="scroll-reveal float" data-testid="stat-delivery" style={{animationDelay: '0s'}}>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>7</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Days Delivery</div>
           </div>
-          <div className="scroll-reveal float" data-testid="stat-cost" style={{animationDelay: '1s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>50%</div>
-            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Cost Reduction</div>
+          <div className="scroll-reveal float" data-testid="stat-minimum-order" style={{animationDelay: '1s'}}>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>1</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Minimum Order</div>
           </div>
-          <div className="scroll-reveal float" data-testid="stat-speed" style={{animationDelay: '2s'}}>
-            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>3x</div>
-            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Faster Turnaround</div>
+          <div className="scroll-reveal float" data-testid="stat-precision" style={{animationDelay: '2s'}}>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>±0.01mm</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Precision</div>
+          </div>
+          <div className="scroll-reveal float" data-testid="stat-countries" style={{animationDelay: '3s'}}>
+            <div className="text-3xl font-bold text-cyber-400 font-orbitron shimmer-text" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>50+</div>
+            <div className="text-white" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>Countries</div>
           </div>
         </motion.div>
       </div>
