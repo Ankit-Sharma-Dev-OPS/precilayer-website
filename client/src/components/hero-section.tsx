@@ -71,10 +71,12 @@ export default function HeroSection() {
         try {
           video.muted = true;
           video.playsInline = true;
+          video.playbackRate = 0.5; // 50% speed for cinematic effect
           await video.play();
         } catch (error) {
           // Retry on user interaction
           const handleInteraction = () => {
+            video.playbackRate = 0.5; // Ensure slow speed on retry
             video.play().catch(() => {});
             document.removeEventListener('click', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
