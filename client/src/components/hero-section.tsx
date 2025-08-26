@@ -137,20 +137,27 @@ export default function HeroSection() {
                 loop 
                 muted 
                 playsInline
-                preload="auto"
-                poster="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_tiny.jpg"
-                onError={() => setVideoError(true)}
+                preload="metadata"
+                controls={false}
+                onError={(e) => {
+                  console.log('Video error:', e);
+                  setVideoError(true);
+                }}
                 onLoadedData={(e) => {
                   const video = e.target as HTMLVideoElement;
+                  console.log('Video loaded, duration:', video.duration);
                   video.play().catch(() => {
                     console.log('Video autoplay blocked');
                   });
                 }}
+                onTimeUpdate={(e) => {
+                  const video = e.target as HTMLVideoElement;
+                  console.log('Video time:', video.currentTime);
+                }}
               >
+                <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+                <source src="https://videos.pexels.com/video-files/3191556/3191556-uhd_2560_1440_25fps.mp4" type="video/mp4" />
                 <source src="https://cdn.pixabay.com/video/2021/09/11/88223-606079076_large.mp4" type="video/mp4" />
-                <source src="https://cdn.pixabay.com/video/2021/07/12/81241-576082910_large.mp4" type="video/mp4" />
-                <source src="https://cdn.pixabay.com/video/2020/05/24/40054-424371552_large.mp4" type="video/mp4" />
-                <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
               </video>
             </div>
             <div className="absolute inset-0 bg-gradient-to-br from-space-900/40 via-space-800/30 to-space-900/40">
