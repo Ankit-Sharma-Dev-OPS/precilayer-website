@@ -204,7 +204,7 @@ export default function HeroSection() {
             Start Manufacturing
           </button>
           <button 
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection('processes')}
             className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
             data-testid="cta-explore-capabilities"
           >
