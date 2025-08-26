@@ -153,7 +153,7 @@ export default function HeroSection() {
                 <source src="https://cdn.pixabay.com/video/2016/06/02/3372-169168117_medium.mp4" type="video/mp4" />
               </video>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-space-900/85 via-space-800/75 to-space-900/85">
+            <div className="absolute inset-0 bg-gradient-to-br from-space-900/40 via-space-800/30 to-space-900/40">
               {/* Creative overlay patterns */}
               {/* Background patterns removed */}
             </div>
