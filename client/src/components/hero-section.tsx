@@ -125,7 +125,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <SubtleBackground />
-      {/* Animated Manufacturing Background */}
+      {/* High-Quality CNC Machining Video Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0">
           <video 
@@ -133,15 +133,18 @@ export default function HeroSection() {
             loop 
             muted 
             playsInline
+            preload="metadata"
             className="w-full h-full object-cover"
-            aria-label="High-precision CNC machine cutting complex metal geometry with coolant spray in modern manufacturing facility"
+            aria-label="Professional CNC machine with high-RPM spindle cutting complex metal geometry with coolant spray in clean modern manufacturing facility"
           >
-            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
             <source src="https://videos.pexels.com/video-files/8828256/8828256-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/6195043/6195043-hd_1920_1080_30fps.mp4" type="video/mp4" />
             <source src="https://videos.pexels.com/video-files/7693786/7693786-hd_1920_1080_25fps.mp4" type="video/mp4" />
+            <source src="https://videos.pexels.com/video-files/3191008/3191008-hd_1920_1080_25fps.mp4" type="video/mp4" />
           </video>
         </div>
+        {/* Subtle overlay for text readability while keeping video visible */}
+        <div className="absolute inset-0 bg-gradient-to-br from-space-900/30 via-transparent to-space-900/40"></div>
       </div>
       
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 bg-black/20 backdrop-blur-sm rounded-lg py-12">
