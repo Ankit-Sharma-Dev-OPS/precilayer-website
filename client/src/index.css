@@ -164,6 +164,13 @@
   transform: translateY(0);
 }
 
+/* Number styling for better readability */
+.font-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
 /* Custom color utilities */
 .bg-space-900 {
   background-color: var(--space-900);

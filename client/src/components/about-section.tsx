@@ -190,19 +190,19 @@ export default function AboutSection() {
           <div className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 p-8 rounded-xl border border-cyber-400/30">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div data-testid="stat-experience">
-                <div className="text-3xl font-bold text-cyber-400 font-orbitron">23+</div>
+                <div className="text-3xl font-bold text-cyber-400 font-numbers">23+</div>
                 <div className="text-gray-400">Years Combined Experience</div>
               </div>
               <div data-testid="stat-clients">
-                <div className="text-3xl font-bold text-cyber-400 font-orbitron">100+</div>
+                <div className="text-3xl font-bold text-cyber-400 font-numbers">100+</div>
                 <div className="text-gray-400">Global Clients Served</div>
               </div>
               <div data-testid="stat-regions">
-                <div className="text-3xl font-bold text-cyber-400 font-orbitron">3</div>
+                <div className="text-3xl font-bold text-cyber-400 font-numbers">3</div>
                 <div className="text-gray-400">Continents Served</div>
               </div>
               <div data-testid="stat-industries">
-                <div className="text-3xl font-bold text-cyber-400 font-orbitron">8+</div>
+                <div className="text-3xl font-bold text-cyber-400 font-numbers">8+</div>
                 <div className="text-gray-400">Industry Verticals</div>
               </div>
             </div>

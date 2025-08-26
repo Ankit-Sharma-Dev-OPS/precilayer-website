@@ -79,7 +79,7 @@ export default function ManufacturingMomentSection() {
                   <stat.icon className="h-6 w-6 text-cyber-400" />
                 </div>
               </div>
-              <div className="text-3xl lg:text-4xl font-orbitron font-bold gradient-text mb-2" data-testid={`stat-value-${index}`}>
+              <div className="text-3xl lg:text-4xl font-numbers font-bold gradient-text mb-2" data-testid={`stat-value-${index}`}>
                 {stat.value}
               </div>
               <p className="text-gray-400 text-sm leading-relaxed" data-testid={`stat-label-${index}`}>
