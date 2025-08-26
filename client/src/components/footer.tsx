@@ -82,6 +82,9 @@ export default function Footer() {
             <Link href="/purchasing-terms">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-purchasing">Purchasing Terms</span>
             </Link>
+            <Link href="/supplier-integrity-guide">
+              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-supplier-integrity">Supplier Integrity Guide</span>
+            </Link>
             <span className="text-gray-400 text-sm" data-testid="policy-cookies">Cookie Policy</span>
           </div>
         </div>
