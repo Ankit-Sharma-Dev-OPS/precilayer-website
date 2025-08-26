@@ -42,52 +42,83 @@ export default function HowSection() {
 
   return (
     <section id="how" className="py-20 bg-space-900 relative overflow-hidden">
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyber-400/5 to-cyber-600/5"></div>
+      {/* Creative Dual Background Overlay */}
+      <div className="absolute inset-0">
+        {/* 3D CAD Engineering Design Background - Left Side */}
+        <div 
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: `url('https://www.shutterstock.com/image-illustration/engineering-designer-design-3d-cad-260nw-2182781589.jpg')`,
+            backgroundSize: '60%',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%) brightness(0.4) contrast(1.2)',
+            maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
+          }}
+        />
+        
+        {/* Advanced Manufacturing Background - Right Side */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url('https://www.optiproerp.com/wp-content/uploads/Emerging-global-trends-in-advanced-manufacturing.jpg')`,
+            backgroundSize: '65%',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%) brightness(0.5) contrast(1.1) sepia(10%)',
+            maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
+            WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
+          }}
+        />
+        
+        {/* Subtle grid overlay */}
         <motion.div
           animate={{ 
             backgroundPosition: ["0% 0%", "100% 100%"] 
           }}
           transition={{ 
-            duration: 20, 
+            duration: 25, 
             repeat: Infinity, 
             repeatType: "reverse",
             ease: "linear"
           }}
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(6, 182, 212, 0.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.06) 1px, transparent 1px)
             `,
-            backgroundSize: "60px 60px"
+            backgroundSize: "80px 80px"
           }}
         />
         
-        {/* Circuit board pattern overlay */}
-        <motion.div 
-          className="absolute top-10 left-10 w-32 h-32 opacity-20"
-          animate={{ rotate: [0, 360] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        >
-          <CircuitBoard className="w-full h-full text-cyber-400 subtle-pulse" />
-        </motion.div>
-        <motion.div 
-          className="absolute bottom-20 right-20 w-24 h-24 opacity-15"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Grid3X3 className="w-full h-full text-cyber-400" />
-        </motion.div>
-        <motion.div 
-          className="absolute top-1/2 left-1/4 w-16 h-16 opacity-10"
-          animate={{ opacity: [0.1, 0.3, 0.1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Zap className="w-full h-full text-cyber-400" />
-        </motion.div>
+        {/* Central blend overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-space-900/30 via-space-900/60 to-space-900/30" />
       </div>
+        
+      {/* Floating Technical Icons */}
+      <motion.div 
+        className="absolute top-10 left-10 w-32 h-32 opacity-15"
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      >
+        <CircuitBoard className="w-full h-full text-cyber-400 subtle-pulse" />
+      </motion.div>
+      <motion.div 
+        className="absolute bottom-20 right-20 w-24 h-24 opacity-12"
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Grid3X3 className="w-full h-full text-cyber-400" />
+      </motion.div>
+      <motion.div 
+        className="absolute top-1/2 right-1/4 w-20 h-20 opacity-8"
+        animate={{ opacity: [0.08, 0.2, 0.08], rotate: [0, 180, 360] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <Zap className="w-full h-full text-cyber-400" />
+      </motion.div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
