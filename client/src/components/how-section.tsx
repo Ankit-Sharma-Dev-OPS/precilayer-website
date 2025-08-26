@@ -54,7 +54,7 @@ export default function HowSection() {
             backgroundPosition: ['left center', 'left top', 'left center']
           }}
           transition={{
-            duration: 30,
+            duration: 90,
             repeat: 1,
             ease: "easeInOut"
           }}
@@ -81,7 +81,7 @@ export default function HowSection() {
             ]
           }}
           transition={{
-            duration: 35,
+            duration: 100,
             repeat: 1,
             ease: "easeInOut"
           }}

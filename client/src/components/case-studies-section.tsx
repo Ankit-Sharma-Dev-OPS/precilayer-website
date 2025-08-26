@@ -53,7 +53,7 @@ export default function CaseStudiesSection() {
             ]
           }}
           transition={{
-            duration: 40,
+            duration: 110,
             repeat: 1,
             ease: "easeInOut"
           }}

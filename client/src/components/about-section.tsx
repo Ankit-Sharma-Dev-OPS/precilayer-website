@@ -21,8 +21,8 @@ export default function AboutSection() {
             ]
           }}
           transition={{
-            duration: 25,
-            repeat: 2,
+            duration: 80,
+            repeat: 1,
             ease: "easeInOut"
           }}
           style={{

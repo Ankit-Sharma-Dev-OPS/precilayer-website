@@ -68,7 +68,7 @@ export default function IndustriesSection() {
             ]
           }}
           transition={{
-            duration: 45,
+            duration: 120,
             repeat: 1,
             ease: "easeInOut"
           }}

@@ -20,7 +20,7 @@ export default function WhatSection() {
             ]
           }}
           transition={{
-            duration: 50,
+            duration: 130,
             repeat: 1,
             ease: "easeInOut"
           }}
