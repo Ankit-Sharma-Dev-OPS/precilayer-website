@@ -93,7 +93,7 @@ export default function CaseStudiesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-space-700/95 p-8 rounded-xl border border-gray-700 hover:border-cyan-400 hover:border-2 transition-all scroll-reveal hover-scale shadow-2xl shadow-cyan-500/30 hover:shadow-cyan-400/100 hover:shadow-[0_0_60px_theme(colors.cyan.400),0_0_120px_theme(colors.cyan.400/50)] hover:bg-space-700/100"
+                className="bg-space-700/95 p-8 rounded-xl border border-gray-700 scroll-reveal hover-scale card-glow"
                 data-testid={`case-study-${index + 1}`}
               >
                 <div className="flex items-center space-x-4 mb-6">
