@@ -1,0 +1,22 @@
+Update the **About Us** section with professional, compelling founder bios. Use a modern two-column layout with image placeholders for each founder. Keep the style clean, futuristic, and credible.  
+
+**Heading:** About Us  
+**Subheading:** The Minds Behind Precilayer  
+
+**Content:**  
+
+- **Roshan Kolhe — Co-Founder & CNC Expert**  
+  Roshan is a precision CNC machining specialist with proven impact in two of the most demanding sectors — MedTech and Semiconductors. He has engineered critical components for global leaders including Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic, where flawless accuracy is non-negotiable. His semiconductor experience spans Analog Devices and Intel, delivering parts that meet the extreme tolerances of advanced electronics.  
+
+  With a Master’s in Mechanical Engineering from Dublin Institute of Technology and hands-on European manufacturing expertise, Roshan combines technical mastery with cost-efficient strategies. At Precilayer, he drives the mission to bring global-standard manufacturing to India, making precision accessible and reliable at scale.  
+
+- **Priyesh Mehta — Co-Founder & Additive Manufacturing Expert**  
+  Priyesh is a specialist in advanced additive manufacturing with a global track record of delivering innovation at scale. His expertise spans collaborations with Ford, GM, and GE, along with over 100 clients across the US, EU, and Gulf regions, where he has implemented cutting-edge 3D printing solutions for aerospace, mobility, and industrial applications.  
+
+  Holding a Master’s in Additive Manufacturing from The Pennsylvania State University, Priyesh combines academic depth with practical execution. As a published researcher in 3D printing, he has contributed to advancing the field while solving real-world challenges. At Precilayer, he leads the charge in redefining how additive technologies integrate with precision manufacturing to unlock design freedom, accelerate production, and lower costs.  
+
+**Design Notes:**  
+- Use two equal-width columns (Roshan left, Priyesh right).  
+- Add placeholder images above each bio with futuristic hover effects.  
+- Ensure bios are styled with balanced line length (not too wide).  
+- Keep typography modern and professional — bold names, clear hierarchy.  

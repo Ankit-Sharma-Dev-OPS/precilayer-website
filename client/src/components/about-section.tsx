@@ -17,10 +17,7 @@ export default function AboutSection() {
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="about-title">
             About <span className="gradient-text">Us</span>
           </h2>
-          <p className="text-gray-300 max-w-4xl mx-auto text-lg leading-relaxed">
-            Led by a dynamic co-founder duo with over 23 years of combined experience, Precilayer fuses global expertise 
-            in CNC machining and additive manufacturing to redefine precision production.
-          </p>
+          <h3 className="text-xl text-cyber-400 mb-4 font-semibold">The Minds Behind Precilayer</h3>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -33,45 +30,27 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-roshan"
           >
-            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all hover-scale">
-              <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-cyber-400/50">
+            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
+              <div className="mb-8">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-3 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
                   <img 
                     src={roshanPhoto} 
                     alt="Roshan Kolhe - Co-Founder" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-cyber-400">Roshan Kolhe</h3>
-                  <p className="text-gray-400">Co-Founder & CNC Machining Expert</p>
+                <div className="text-center mt-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Roshan Kolhe</h3>
+                  <p className="text-cyber-400 font-semibold">Co-Founder & CNC Expert</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Precision CNC machining specialist with deep expertise in both MedTech and semiconductor domains. 
-                In MedTech, has engineered solutions for Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic. 
-                In semiconductors, has delivered precision components for Analog Devices and Intel.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Award className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Master's in Mechanical Engineering</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Globe className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Dublin Institute of Technology</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Globe className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">European Manufacturing Experience</span>
-                </div>
-              </div>
-              
-              <div className="mt-6 pt-6 border-t border-gray-700">
-                <p className="text-sm text-cyber-400 font-semibold">
-                  Proven track record in delivering cost-efficient, high-end subtractive solutions
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  Roshan is a precision CNC machining specialist with proven impact in two of the most demanding sectors — MedTech and Semiconductors. He has engineered critical components for global leaders including Johnson & Johnson, Cook Medical, Merit Medical, and Medtronic, where flawless accuracy is non-negotiable. His semiconductor experience spans Analog Devices and Intel, delivering parts that meet the extreme tolerances of advanced electronics.
+                </p>
+                <p>
+                  With a Master's in Mechanical Engineering from Dublin Institute of Technology and hands-on European manufacturing expertise, Roshan combines technical mastery with cost-efficient strategies. At Precilayer, he drives the mission to bring global-standard manufacturing to India, making precision accessible and reliable at scale.
                 </p>
               </div>
             </div>
@@ -86,44 +65,27 @@ export default function AboutSection() {
             className="scroll-reveal"
             data-testid="founder-priyesh"
           >
-            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all hover-scale">
-              <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-cyber-400/50">
+            <div className="bg-space-900 p-8 rounded-xl border border-gray-700 hover:border-cyber-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/20 hover-scale">
+              <div className="mb-8">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-3 border-cyber-400/50 hover:border-cyber-400 transition-all duration-300 hover:scale-105">
                   <img 
                     src={priyeshPhoto} 
                     alt="Priyesh Mehta - Co-Founder" 
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-cyber-400">Priyesh Mehta</h3>
-                  <p className="text-gray-400">Co-Founder & 3D Printing Specialist</p>
+                <div className="text-center mt-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">Priyesh Mehta</h3>
+                  <p className="text-cyber-400 font-semibold">Co-Founder & Additive Manufacturing Expert</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Expert in advanced additive manufacturing, with extensive global engagements at Ford, GM, GE, 
-                and over 100 clients across the US, EU, and Gulf regions.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Award className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Master's in Additive Manufacturing and Design</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Globe className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">The Pennsylvania State University</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Globe className="text-cyber-400 h-5 w-5" />
-                  <span className="text-gray-300">Global Client Base (US, EU, Gulf)</span>
-                </div>
-              </div>
-              
-              <div className="mt-6 pt-6 border-t border-gray-700">
-                <p className="text-sm text-cyber-400 font-semibold">
-                  Published researcher in additive technologies with deep practical understanding of MJF, SLS, SLA, and FDM systems
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  Priyesh is a specialist in advanced additive manufacturing with a global track record of delivering innovation at scale. His expertise spans collaborations with Ford, GM, and GE, along with over 100 clients across the US, EU, and Gulf regions, where he has implemented cutting-edge 3D printing solutions for aerospace, mobility, and industrial applications.
+                </p>
+                <p>
+                  Holding a Master's in Additive Manufacturing from The Pennsylvania State University, Priyesh combines academic depth with practical execution. As a published researcher in 3D printing, he has contributed to advancing the field while solving real-world challenges. At Precilayer, he leads the charge in redefining how additive technologies integrate with precision manufacturing to unlock design freedom, accelerate production, and lower costs.
                 </p>
               </div>
             </div>
