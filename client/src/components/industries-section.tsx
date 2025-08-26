@@ -1,54 +1,59 @@
 import { motion } from "framer-motion";
+import { Satellite, Plane, Bot, Stethoscope } from "lucide-react";
 
 export default function IndustriesSection() {
   const industries = [
     {
-      title: "Aerospace",
-      subtitle: "Precision components for aviation",
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Commercial airplane taking off"
+      icon: Satellite,
+      title: "Space & Satellites",
+      description: "Precision components for satellites, space exploration, and aerospace applications. From ISRO to private space companies.",
+      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Satellite in space",
+      components: [
+        "Satellite structural components",
+        "Propulsion system parts", 
+        "Communication equipment",
+        "Solar panel mechanisms"
+      ]
     },
     {
-      title: "Drones",
-      subtitle: "UAV and drone technology",
-      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Drone technology manufacturing"
+      icon: Plane,
+      title: "Drones & UAV",
+      description: "Defense-grade and commercial drone components manufactured to aerospace standards.",
+      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Professional drone in flight",
+      components: [
+        "Carbon fiber frames",
+        "Precision motor mounts",
+        "Camera gimbal systems",
+        "Landing gear components"
+      ]
     },
     {
-      title: "Robotics",
-      subtitle: "Automation solutions",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Robotics and automation manufacturing"
+      icon: Bot,
+      title: "Robotics & Automation",
+      description: "High-precision mechanical components for industrial robots and automation systems.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Industrial robot in manufacturing",
+      components: [
+        "Servo motor housings",
+        "Precision gears",
+        "Robot arm joints",
+        "Sensor mounts"
+      ]
     },
     {
-      title: "Healthcare",
-      subtitle: "Medical devices & instruments",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Healthcare medical device manufacturing"
-    },
-    {
-      title: "Climate Tech",
-      subtitle: "Sustainable technology",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Climate technology manufacturing"
-    },
-    {
-      title: "Energy",
-      subtitle: "Power generation systems",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Energy sector manufacturing"
-    },
-    {
-      title: "Space",
-      subtitle: "Satellite & space technology",
-      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250",
-      alt: "Satellite and space manufacturing"
-    },
-    {
-      title: "Electric Mobility",
-      subtitle: "EV components & systems",
-      image: "https://images.hindustantimes.com/auto/img/2024/06/20/400x225/Ola_Electric_mototrcycle_7_1692092355009_1718886687509.png",
-      alt: "Futuristic electric vehicle design"
+      icon: Stethoscope,
+      title: "Healthcare & MedTech",
+      description: "FDA-compliant medical device components with biocompatible materials and strict quality standards.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Medical device manufacturing",
+      components: [
+        "Surgical instrument parts",
+        "Implant components",
+        "Diagnostic equipment housings",
+        "Sterilizable assemblies"
+      ]
     }
   ];
 
@@ -78,7 +83,7 @@ export default function IndustriesSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {industries.map((industry, index) => (
             <motion.div 
               key={industry.title}
@@ -89,16 +94,36 @@ export default function IndustriesSection() {
               className="group cursor-default scroll-reveal"
               data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="bg-space-800 rounded-xl overflow-hidden border border-gray-700 hover:border-cyber-400 transition-all hover-scale shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl">
-                <img 
-                  src={industry.image}
-                  alt={industry.alt}
-                  className="w-full h-40 object-cover group-hover:opacity-80 transition-opacity"
-                  loading="lazy"
-                />
-                <div className="p-4">
-                  <h3 className="font-semibold text-cyber-400">{industry.title}</h3>
-                  <p className="text-sm text-gray-200">{industry.subtitle}</p>
+              <div className="bg-gradient-to-br from-space-800/80 to-space-700/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyber-400/20 group">
+                <div className="relative">
+                  <img 
+                    src={industry.image}
+                    alt={industry.alt}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-space-900/60 via-transparent to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className="p-3 bg-cyber-400/20 backdrop-blur-sm rounded-xl border border-cyber-400/30">
+                      <industry.icon className="h-6 w-6 text-cyber-400" />
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-cyber-400 mb-3 group-hover:text-cyan-300 transition-colors">
+                    {industry.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                    {industry.description}
+                  </p>
+                  <div className="space-y-2">
+                    {industry.components.map((component, componentIndex) => (
+                      <div key={componentIndex} className="flex items-center text-gray-400 text-sm">
+                        <div className="w-1.5 h-1.5 bg-cyber-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <span>{component}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
