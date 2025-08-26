@@ -64,83 +64,7 @@ export default function HeroSection() {
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video && !videoError) {
-      let retryCount = 0;
-      const maxRetries = 5;
-      
-      const playVideo = async () => {
-        try {
-          // Ensure video is muted and has proper attributes
-          video.muted = true;
-          video.playsInline = true;
-          video.loop = true;
-          
-          // Reset and play
-          video.currentTime = 0;
-          await video.play();
-          retryCount = 0; // Reset retry count on success
-        } catch (error) {
-          retryCount++;
-          if (retryCount < maxRetries) {
-            // Exponential backoff retry
-            setTimeout(() => {
-              playVideo();
-            }, Math.pow(2, retryCount) * 100);
-          }
-        }
-      };
-      
-      // Multiple event listeners for better compatibility
-      const handleCanPlay = () => playVideo();
-      const handleLoadedData = () => playVideo();
-      const handleLoadedMetadata = () => playVideo();
-      
-      // Add event listeners
-      video.addEventListener('canplay', handleCanPlay);
-      video.addEventListener('loadeddata', handleLoadedData);
-      video.addEventListener('loadedmetadata', handleLoadedMetadata);
-      
-      // Try immediate play if video is already loaded
-      if (video.readyState >= 3) {
-        playVideo();
-      }
-      
-      // Intersection Observer for mobile optimization
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && video.paused) {
-            playVideo();
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      observer.observe(video);
-
-      // User interaction handlers
-      const handleUserInteraction = () => {
-        playVideo();
-        document.removeEventListener('click', handleUserInteraction);
-        document.removeEventListener('touchstart', handleUserInteraction);
-        document.removeEventListener('scroll', handleUserInteraction);
-      };
-
-      document.addEventListener('click', handleUserInteraction, { once: true });
-      document.addEventListener('touchstart', handleUserInteraction, { once: true });
-      document.addEventListener('scroll', handleUserInteraction, { once: true });
-
-      return () => {
-        video.removeEventListener('canplay', handleCanPlay);
-        video.removeEventListener('loadeddata', handleLoadedData);
-        video.removeEventListener('loadedmetadata', handleLoadedMetadata);
-        observer.disconnect();
-        document.removeEventListener('click', handleUserInteraction);
-        document.removeEventListener('touchstart', handleUserInteraction);
-        document.removeEventListener('scroll', handleUserInteraction);
-      };
-    }
-  }, [videoError]);
+  // Simplified - no complex event handlers that might interfere with controls
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -157,23 +81,23 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <video 
             ref={videoRef}
-            autoPlay 
-            loop 
-            muted 
-            playsInline
             controls
-            className="w-full h-full object-cover"
-            aria-label="Precilayer CNC machining video showcasing precision manufacturing and advanced machining capabilities"
+            muted 
+            loop
+            className="w-full h-full object-cover bg-black"
+            style={{ 
+              minHeight: '100vh',
+              width: '100%'
+            }}
             onError={(e) => {
               console.error('Video error:', e);
               setVideoError(true);
             }}
-            onLoadStart={() => console.log('Video loading started')}
-            onCanPlay={() => console.log('Video can play')}
-            onPlay={() => console.log('Video is playing')}
-            onPause={() => console.log('Video paused')}
-            src={precilayerVideo}
-          />
+            onLoadedData={() => console.log('Video loaded successfully')}
+          >
+            <source src={precilayerVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           {videoError && (
             <img 
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
