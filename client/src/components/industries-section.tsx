@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Satellite, Plane, Bot, Stethoscope, Car, Shield, Zap, Fuel } from "lucide-react";
+import { Satellite, Plane, Bot, Stethoscope, Car, Shield, Zap, Fuel, Cpu } from "lucide-react";
 
 export default function IndustriesSection() {
   const industries = [
@@ -106,6 +106,19 @@ export default function IndustriesSection() {
         "Pressure vessel parts",
         "Renewable energy hardware"
       ]
+    },
+    {
+      icon: Cpu,
+      title: "IoT & Electronics",
+      description: "Smart connected devices and electronic components for Internet of Things applications and modern electronics.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "IoT devices and electronic components",
+      components: [
+        "Sensor housings",
+        "Circuit board enclosures",
+        "IoT device casings",
+        "Smart device components"
+      ]
     }
   ];
 
@@ -135,7 +148,7 @@ export default function IndustriesSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <motion.div 
               key={industry.title}
