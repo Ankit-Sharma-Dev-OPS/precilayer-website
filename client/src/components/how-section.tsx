@@ -1,10 +1,83 @@
 import { motion } from "framer-motion";
-import { Box, Factory, Check } from "lucide-react";
+import { 
+  Cpu, 
+  Wifi, 
+  Database, 
+  Shield, 
+  Layers,
+  Grid3X3,
+  CircuitBoard,
+  Zap
+} from "lucide-react";
 
 export default function HowSection() {
+  const corePoints = [
+    {
+      icon: Cpu,
+      title: "Automated CAM Programming",
+      description: "Our CAM systems generate optimized toolpaths in minutes instead of hours — accelerating setup while improving repeatability. Every program is then validated by CNC experts with decades of MedTech and Aerospace experience, ensuring automation works as a force multiplier, not a risk. The result: speed without sacrificing precision or compliance."
+    },
+    {
+      icon: Wifi,
+      title: "IoT-Enabled Smart Manufacturing",
+      description: "Every machine on our floor is connected. IoT sensors stream real-time data for predictive maintenance, process control, and quality assurance. This means fewer breakdowns, zero guesswork, and production that's transparent down to the micron."
+    },
+    {
+      icon: Database,
+      title: "Digital Manufacturing Backbone",
+      description: "From quoting to scheduling to live tracking, our digital platforms automate what others still manage manually. This reduces overheads, keeps delivery timelines predictable, and gives customers visibility into every stage of their build."
+    },
+    {
+      icon: Shield,
+      title: "Compliance Built-In",
+      description: "For industries like MedTech and Aerospace, \"almost right\" isn't good enough. Our systems integrate automated checks and traceability at every step, guaranteeing parts that are audit-ready, certified, and error-free."
+    },
+    {
+      icon: Layers,
+      title: "Hybrid Manufacturing Advantage",
+      description: "By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability."
+    }
+  ];
+
   return (
-    <section id="how" className="py-20 bg-space-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="how" className="py-20 bg-space-900 relative overflow-hidden">
+      {/* Animated Grid Background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyber-400/5 to-cyber-600/5"></div>
+        <motion.div
+          animate={{ 
+            backgroundPosition: ["0% 0%", "100% 100%"] 
+          }}
+          transition={{ 
+            duration: 20, 
+            repeat: Infinity, 
+            repeatType: "reverse",
+            ease: "linear"
+          }}
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "60px 60px"
+          }}
+        />
+        
+        {/* Circuit board pattern overlay */}
+        <div className="absolute top-10 left-10 w-32 h-32 opacity-20">
+          <CircuitBoard className="w-full h-full text-cyber-400" />
+        </div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 opacity-15">
+          <Grid3X3 className="w-full h-full text-cyber-400" />
+        </div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 opacity-10">
+          <Zap className="w-full h-full text-cyber-400" />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -13,201 +86,81 @@ export default function HowSection() {
           className="text-center mb-16 scroll-reveal"
         >
           <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6" data-testid="how-title">
-            How We <span className="gradient-text">Innovate</span>
+            How We <span className="gradient-text">Do It</span>
           </h2>
-          <h3 className="text-xl text-cyber-400 mb-4">Blending Additive + Subtractive Manufacturing</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto">
-            Our hybrid approach combines the precision of CNC machining with the flexibility 
-            of 3D printing, enabling us to create complex geometries and deliver superior results.
-          </p>
+          <h3 className="text-xl text-cyber-400 mb-4 font-semibold">Where Automation Meets Expertise</h3>
         </motion.div>
-        
-        <div className="grid md:grid-cols-2 gap-12">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="scroll-reveal"
-          >
-            <div className="bg-gradient-to-br from-space-800 to-space-700 p-8 rounded-xl border border-gray-700 hover-scale" data-testid="additive-manufacturing">
-              <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center mb-6">
-                <Box className="text-cyber-400 h-8 w-8" />
+
+        {/* Core Points Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {corePoints.map((point, index) => (
+            <motion.div
+              key={point.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.2 
+              }}
+              viewport={{ once: true }}
+              className="scroll-reveal"
+              data-testid={`core-point-${index}`}
+            >
+              <div className="bg-gradient-to-br from-space-800/80 to-space-700/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyber-400/10 hover-scale">
+                <div className="flex items-start space-x-6 mb-6">
+                  <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-cyber-400/30">
+                    <point.icon className="text-cyber-400 h-8 w-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                      {point.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {point.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Additive Manufacturing</h3>
-              <p className="text-gray-300 mb-6">
-                Advanced 3D printing technologies for rapid prototyping, complex geometries, 
-                and low-volume production with unmatched design freedom.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Rapid Prototyping</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Complex Geometries</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Material Optimization</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Low-Volume Production</li>
-              </ul>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="scroll-reveal"
-          >
-            <div className="bg-gradient-to-br from-space-800 to-space-700 p-8 rounded-xl border border-gray-700 hover-scale" data-testid="subtractive-manufacturing">
-              <div className="w-16 h-16 bg-cyber-400/20 rounded-lg flex items-center justify-center mb-6">
-                <Factory className="text-cyber-400 h-8 w-8" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Subtractive Manufacturing</h3>
-              <p className="text-gray-300 mb-6">
-                Precision CNC machining for high-tolerance components, surface finishing, 
-                and large-scale production with exceptional accuracy.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> High Precision</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Superior Surface Finish</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Material Variety</li>
-                <li className="flex items-center"><Check className="text-cyber-400 mr-2 h-4 w-4" /> Scalable Production</li>
-              </ul>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
-        
-        {/* Manufacturing Method Comparison Table */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-16 scroll-reveal"
-          data-testid="comparison-table"
-        >
-          <h3 className="text-2xl font-bold text-center mb-8">Manufacturing Method Comparison</h3>
-          <div className="overflow-x-auto">
-            <div className="grid lg:grid-cols-3 gap-6 min-w-full">
-              {/* CNC Machining */}
-              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
-                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use CNC</h4>
-                <ul className="space-y-3 text-sm text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    High-volume production (100+ units)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Tight tolerances (±0.001")
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Hard materials (metals, ceramics)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Superior surface finish required
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Large part sizes
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Structural components
-                  </li>
-                </ul>
-              </div>
 
-              {/* 3D Printing */}
-              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
-                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use 3DP (SLS, SLA, FDM, MJF)</h4>
-                <ul className="space-y-3 text-sm text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Rapid prototyping (24-48 hours)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Complex internal geometries
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Low-volume production (1-100 units)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Lightweight structures
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Design validation
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Custom fit applications
-                  </li>
-                </ul>
-              </div>
-
-              {/* Hybrid Manufacturing */}
-              <div className="bg-gradient-to-br from-space-800 to-space-700 p-6 rounded-xl border border-gray-700">
-                <h4 className="text-xl font-bold text-cyber-400 mb-4">When to Use Hybrid</h4>
-                <ul className="space-y-3 text-sm text-gray-300">
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Complex geometry + precision features
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Multi-material components
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Integrated assemblies
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Reduced assembly operations
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Optimized material usage
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-cyber-400 mr-2">•</span>
-                    Medium-volume production
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
+        {/* Closing Statement */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 text-center scroll-reveal"
+          className="text-center scroll-reveal"
         >
-          <div className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 p-8 rounded-xl border border-cyber-400/30" data-testid="precilayer-advantage">
-            <h3 className="text-2xl font-bold mb-4">The Precilayer Advantage</h3>
-            <p className="text-gray-300 mb-6">
-              By integrating both technologies, we optimize each component for the best manufacturing method, 
-              reducing costs, improving quality, and accelerating time-to-market.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div data-testid="advantage-time">
-                <div className="text-2xl font-bold text-cyber-400 font-orbitron">↓ 40%</div>
-                <div className="text-sm text-gray-400">Production Time</div>
-              </div>
-              <div data-testid="advantage-flexibility">
-                <div className="text-2xl font-bold text-cyber-400 font-orbitron">↑ 60%</div>
-                <div className="text-sm text-gray-400">Design Flexibility</div>
-              </div>
-              <div data-testid="advantage-waste">
-                <div className="text-2xl font-bold text-cyber-400 font-orbitron">↓ 30%</div>
-                <div className="text-sm text-gray-400">Material Waste</div>
-              </div>
+          <div className="bg-gradient-to-r from-cyber-400/10 to-cyber-600/10 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30 relative overflow-hidden" data-testid="closing-statement">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div 
+                className="absolute inset-0"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+                                   radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
+                                   radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.3) 0%, transparent 50%)`
+                }}
+              />
+            </div>
+            
+            <div className="relative z-10">
+              <motion.div 
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="w-16 h-16 bg-cyber-400/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyber-400/50"
+              >
+                <Zap className="text-cyber-400 h-8 w-8" />
+              </motion.div>
+              
+              <h3 className="text-2xl font-bold mb-6 text-white">Our Foundation</h3>
+              <p className="text-gray-300 leading-relaxed max-w-4xl mx-auto text-lg">
+                "At Precilayer, technology is not just a tool — it's our foundation. By fusing automation, 
+                connectivity, and human expertise, we deliver efficiency, repeatability, and world-class 
+                quality at a scale India has never seen before."
+              </p>
             </div>
           </div>
         </motion.div>

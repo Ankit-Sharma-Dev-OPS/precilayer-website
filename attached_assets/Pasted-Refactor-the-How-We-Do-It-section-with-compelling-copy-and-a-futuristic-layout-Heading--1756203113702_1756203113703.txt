@@ -1,0 +1,30 @@
+Refactor the **How We Do It** section with compelling copy and a futuristic layout.  
+
+**Heading:** “How We Do It”  
+**Subheading:** “Where Automation Meets Expertise”  
+
+**Core Points (use sleek icons + animated reveal):**  
+
+- **Automated CAM Programming**  
+  Our CAM systems generate optimized toolpaths in minutes instead of hours — accelerating setup while improving repeatability.  
+  Every program is then validated by CNC experts with decades of MedTech and Aerospace experience, ensuring automation works as a force multiplier, not a risk. The result: speed without sacrificing precision or compliance.  
+
+- **IoT-Enabled Smart Manufacturing**  
+  Every machine on our floor is connected. IoT sensors stream real-time data for predictive maintenance, process control, and quality assurance. This means fewer breakdowns, zero guesswork, and production that’s transparent down to the micron.  
+
+- **Digital Manufacturing Backbone**  
+  From quoting to scheduling to live tracking, our digital platforms automate what others still manage manually. This reduces overheads, keeps delivery timelines predictable, and gives customers visibility into every stage of their build.  
+
+- **Compliance Built-In**  
+  For industries like MedTech and Aerospace, “almost right” isn’t good enough. Our systems integrate automated checks and traceability at every step, guaranteeing parts that are audit-ready, certified, and error-free.  
+
+- **Hybrid Manufacturing Advantage**  
+  By combining CNC machining with additive technologies (SLS, SLA, FDM, MJF), we unlock designs that push boundaries while keeping production practical. Complex geometries, reduced waste, and rapid iteration — all without compromising industrial reliability.  
+
+**Closing statement:**  
+“At Precilayer, technology is not just a tool — it’s our foundation. By fusing automation, connectivity, and human expertise, we deliver efficiency, repeatability, and world-class quality at a scale India has never seen before.”  
+
+Design notes for Replit:  
+- Section should have a futuristic background (schematics, toolpaths, or machine data overlay) with a subtle animated grid.  
+- Use Framer Motion to stagger-reveal each core point.  
+- Anchor link: `#how` in nav.  
