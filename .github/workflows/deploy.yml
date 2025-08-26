@@ -25,11 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 👇 Only build the frontend for GitHub Pages
-      - name: Build frontend
-        run: npm run build --if-present
+      - name: Build project
+        run: npm run build
 
-      # 👇 Deploy Vite output folder (default is "dist")
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
