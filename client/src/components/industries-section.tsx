@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Satellite, Plane, Bot, Stethoscope, Car, Shield } from "lucide-react";
+import { Satellite, Plane, Bot, Stethoscope, Car, Shield, Zap, Fuel } from "lucide-react";
 
 export default function IndustriesSection() {
   const industries = [
@@ -72,13 +72,39 @@ export default function IndustriesSection() {
       icon: Car,
       title: "Automotive",
       description: "High-precision automotive components manufactured with advanced CNC machining and quality control processes.",
-      image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Automotive manufacturing line",
+      image: "https://images.unsplash.com/photo-1617886322207-babaff78abf8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Precision automotive parts manufacturing",
       components: [
         "Engine components",
         "Transmission parts",
         "Suspension systems",
         "Electronic housings"
+      ]
+    },
+    {
+      icon: Zap,
+      title: "Electric Mobility",
+      description: "Next-generation components for electric vehicles, charging infrastructure, and sustainable transportation solutions.",
+      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Electric vehicle charging infrastructure",
+      components: [
+        "Battery housing systems",
+        "Motor components",
+        "Charging station parts",
+        "Power electronics housings"
+      ]
+    },
+    {
+      icon: Fuel,
+      title: "Oil & Gas / Energy",
+      description: "Critical components for energy sector applications, from upstream exploration to downstream processing and renewable energy.",
+      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Energy sector industrial facility",
+      components: [
+        "Valve components",
+        "Pipeline fittings",
+        "Pressure vessel parts",
+        "Renewable energy hardware"
       ]
     }
   ];
