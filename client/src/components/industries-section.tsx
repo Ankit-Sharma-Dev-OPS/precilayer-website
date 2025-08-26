@@ -59,8 +59,8 @@ export default function IndustriesSection() {
       icon: Shield,
       title: "Aerospace & Defense",
       description: "AS9100D certified precision components for aerospace OEMs and defense contractors with full material traceability.",
-      image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Aerospace manufacturing facility",
+      image: "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Fighter jet taking off",
       components: [
         "Aircraft fuselage components",
         "Landing gear systems",
@@ -96,10 +96,10 @@ export default function IndustriesSection() {
     },
     {
       icon: Fuel,
-      title: "Oil & Gas / Energy",
-      description: "Critical components for energy sector applications, from upstream exploration to downstream processing and renewable energy.",
-      image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Energy sector industrial facility",
+      title: "Oil & Gas / Clean Tech Energy",
+      description: "Critical components for energy sector applications, from upstream exploration to downstream processing and clean technology solutions.",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Clean energy and wind turbines",
       components: [
         "Valve components",
         "Pipeline fittings",
