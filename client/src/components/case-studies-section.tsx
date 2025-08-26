@@ -110,7 +110,7 @@ export default function CaseStudiesSection() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   {study.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} data-testid={`metric-${index}-${metricIndex}`}>
+                    <div key={metricIndex} className="p-3 bg-space-600/50 rounded-lg border border-gray-600/50 hover:border-cyber-400 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-400/60 hover:shadow-2xl" data-testid={`metric-${index}-${metricIndex}`}>
                       <div className="text-lg font-bold text-cyber-400">{metric.value}</div>
                       <div className="text-xs text-gray-200">{metric.label}</div>
                     </div>
