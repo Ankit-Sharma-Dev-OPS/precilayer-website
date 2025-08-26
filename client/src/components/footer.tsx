@@ -69,7 +69,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm" data-testid="copyright">
             © 2024 Precilayer. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 mt-4 md:mt-0">
             <Link href="/privacy-policy">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-privacy">Privacy Policy</span>
             </Link>
@@ -78,6 +78,9 @@ export default function Footer() {
             </Link>
             <Link href="/responsible-sourcing">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-sourcing">Responsible Sourcing</span>
+            </Link>
+            <Link href="/purchasing-terms">
+              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-purchasing">Purchasing Terms</span>
             </Link>
             <span className="text-gray-400 text-sm" data-testid="policy-cookies">Cookie Policy</span>
           </div>

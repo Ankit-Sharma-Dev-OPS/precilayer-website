@@ -1,0 +1,106 @@
+Precilayer India Private Limited — Purchasing Terms & Conditions
+
+Effective Date: [Insert Date]
+Governing Law: All transactions are governed by the laws of India, with exclusive jurisdiction of courts in Mumbai.
+
+1. Scope
+
+These Purchasing Terms & Conditions (“PTC”) apply to all purchase orders (“POs”) issued by Precilayer India Private Limited (“Buyer” or “Precilayer”) to any supplier (“Supplier”). They supersede all prior oral or written agreements unless specifically overridden in writing by Precilayer.
+
+2. Acceptance
+
+Supplier’s commencement of work, shipment, or acknowledgment of a PO shall constitute full acceptance of these PTC. Any deviations proposed by Supplier shall not bind Precilayer unless expressly agreed in writing.
+
+3. Price & Currency
+
+All prices are firm and fixed as stated in the PO, exclusive of applicable taxes unless otherwise specified.
+
+Prices are not subject to escalation, except for documented currency fluctuations on international purchases, if expressly agreed in writing.
+
+Supplier shall not impose surcharges, fees, or minimum order charges unless stated in the PO.
+
+4. Payment Terms
+
+Standard terms: Net 45 days from the later of (a) date of invoice, or (b) date of receipt of goods/services in acceptable condition.
+
+Invoices must reference the PO number.
+
+Payment does not constitute acceptance of goods or waiver of Precilayer’s rights.
+
+5. Delivery & Risk of Loss
+
+Delivery shall be strictly in accordance with PO terms. Time is of the essence.
+
+Title and risk of loss transfer to Precilayer upon delivery at the designated location.
+
+Precilayer reserves the right to reject partial or early shipments unless authorized in writing.
+
+6. Quality & Inspection
+
+Goods must conform to specifications, drawings, industry standards, and applicable regulatory requirements (e.g., aerospace, medtech).
+
+Precilayer may inspect at Supplier’s facility or after delivery. Rejected goods shall be returned at Supplier’s risk and expense.
+
+Supplier shall maintain adequate quality records for 7 years and provide them upon request.
+
+7. Warranty
+
+Supplier warrants goods for 30 days from delivery against defects in material, workmanship, and conformity.
+
+Non-conforming goods shall be promptly repaired, replaced, or refunded at Supplier’s expense.
+
+Warranty obligations extend to any repaired or replaced items.
+
+8. Compliance & Ethics
+
+Supplier shall comply with all applicable laws and regulations, including:
+
+Conflict Minerals (Dodd-Frank §1502, EU 2017/821) – responsible sourcing expectation.
+
+REACH & RoHS – where applicable.
+
+Export control laws (US, EU, India) – Supplier shall not deliver goods restricted under applicable export regimes without authorization.
+
+Supplier shall not use child labor, forced labor, or unsafe practices.
+
+9. Counterfeit Parts Prevention
+
+Supplier shall establish and maintain processes to ensure counterfeit, fraudulent, or suspect parts are not delivered. Suspected counterfeit parts will be quarantined, reported, and replaced at Supplier’s sole cost.
+
+10. Intellectual Property
+
+Any Precilayer drawings, specifications, or confidential information remain Precilayer property.
+
+Supplier shall not use or disclose such information except to fulfill the PO.
+
+Any inventions, improvements, or works developed for Precilayer under the PO shall vest in Precilayer unless otherwise agreed in writing.
+
+11. Change Management
+
+Precilayer reserves the right to modify or cancel a PO at any time before shipment, with equitable adjustment for completed work.
+
+Supplier shall not make changes to materials, processes, or designs without Precilayer’s prior written approval.
+
+12. Force Majeure
+
+Neither party shall be liable for delays beyond reasonable control (e.g., natural disasters, war, government restrictions). Supplier must notify Precilayer within 5 business days of such events. Precilayer may cancel the PO without liability if delays exceed 15 days.
+
+13. Indemnity
+
+Supplier shall indemnify, defend, and hold harmless Precilayer from all claims, damages, losses, or expenses arising from Supplier’s breach, negligence, defective goods, IP infringement, or regulatory non-compliance.
+
+14. Termination
+
+Precilayer may terminate for convenience upon notice, compensating only for conforming goods already delivered.
+
+Precilayer may terminate for cause (e.g., breach, insolvency, repeated delays) without liability beyond conforming goods accepted.
+
+15. Dispute Resolution
+
+Any disputes shall be resolved under Indian law, with jurisdiction vested exclusively in Mumbai courts.
+
+Parties shall first attempt good-faith resolution before litigation.
+
+16. Entire Agreement
+
+This document and the PO constitute the complete agreement between the parties. Any conflicting Supplier terms are expressly rejected.
