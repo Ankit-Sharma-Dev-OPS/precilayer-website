@@ -131,13 +131,12 @@ export default function HeroSection() {
           >
             <source src={precilayerVideo} type="video/mp4" />
           </video>
-          {videoError && (
-            <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
-              alt="CNC machine cutting metal part in modern manufacturing facility"
-              className="w-full h-full object-cover"
-            />
-          )}
+          {/* Fallback to static image due to large video file size */}
+          <img 
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop&crop=center" 
+            alt="Professional CNC machine cutting precision metal parts in modern manufacturing facility"
+            className="w-full h-full object-cover"
+          />
         </div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/50"></div>
