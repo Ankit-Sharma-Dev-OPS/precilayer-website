@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Satellite, Plane, Bot, Stethoscope } from "lucide-react";
+import { Satellite, Plane, Bot, Stethoscope, Car, Shield } from "lucide-react";
 
 export default function IndustriesSection() {
   const industries = [
@@ -53,6 +53,32 @@ export default function IndustriesSection() {
         "Implant components",
         "Diagnostic equipment housings",
         "Sterilizable assemblies"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Aerospace & Defense",
+      description: "AS9100D certified precision components for aerospace OEMs and defense contractors with full material traceability.",
+      image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Aerospace manufacturing facility",
+      components: [
+        "Aircraft fuselage components",
+        "Landing gear systems",
+        "Wing structural elements",
+        "Defense equipment housings"
+      ]
+    },
+    {
+      icon: Car,
+      title: "Automotive",
+      description: "High-precision automotive components manufactured with advanced CNC machining and quality control processes.",
+      image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      alt: "Automotive manufacturing line",
+      components: [
+        "Engine components",
+        "Transmission parts",
+        "Suspension systems",
+        "Electronic housings"
       ]
     }
   ];
