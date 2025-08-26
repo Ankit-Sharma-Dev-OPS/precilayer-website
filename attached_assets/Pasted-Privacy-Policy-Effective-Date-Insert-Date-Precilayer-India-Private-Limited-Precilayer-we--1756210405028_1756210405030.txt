@@ -1,0 +1,77 @@
+Privacy Policy
+Effective Date: [Insert Date]
+
+Precilayer India Private Limited (“Precilayer”, “we”, “our”, “us”) is committed to safeguarding the privacy of our clients, partners, and visitors to our website [www.precilayer.com
+]. This Privacy Policy explains how we collect, use, store, and protect your personal and business data in the course of providing advanced manufacturing services.
+
+1. Information We Collect
+
+Business Information: Company name, billing address, GST details, and purchase order information.
+
+Personal Information: Contact names, email addresses, phone numbers, job titles.
+
+Technical Information: CAD models, design files, specifications, and drawings shared with us for manufacturing.
+
+Website Data: Log files, cookies, browsing activity for website optimization and analytics.
+
+2. Use of Information
+
+We use your information for:
+
+Processing and fulfilling orders.
+
+Quotation, invoicing, and contractual obligations.
+
+Maintaining quality assurance and traceability.
+
+Customer communication and technical support.
+
+Improving services and complying with industry standards (ISO, AS, FDA where applicable).
+
+3. Protection of Confidential Data
+
+All CAD models, drawings, and specifications are treated as confidential intellectual property.
+
+Access to project files is restricted to authorized engineering staff only.
+
+Secure servers and encrypted communication channels are used for file transfer and storage.
+
+4. Sharing of Information
+
+We do not sell or rent your data to third parties.
+
+Data may be shared with trusted subcontractors, logistics partners, and IT providers under strict confidentiality agreements, only for the purpose of fulfilling your order.
+
+Regulatory disclosures will be made only if legally required.
+
+5. Data Retention
+
+Business and project data are retained for as long as necessary to fulfill obligations, comply with tax laws, or ensure product traceability.
+
+Customers may request deletion of personal data in line with applicable Indian and international data protection laws.
+
+6. Your Rights
+
+Access to personal data we hold about you.
+
+Correction or update of inaccurate information.
+
+Request deletion of data, subject to regulatory obligations.
+
+Opt-out of marketing communication.
+
+7. Cookies & Website Usage
+
+Our website uses cookies for functionality and analytics.
+
+Visitors may disable cookies in browser settings, but some features may not function correctly.
+
+8. Policy Updates
+
+We may update this Privacy Policy periodically. Updates will be posted on our website with a revised “Effective Date”.
+
+Contact Us
+For privacy concerns, please contact:
+Email: support@precilayer.com
+
+Address: Precilayer India Private Limited, [Insert Registered Address]

@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Youtube, MapPin } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -69,7 +70,9 @@ export default function Footer() {
             © 2024 Precilayer. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="text-gray-400 text-sm" data-testid="policy-privacy">Privacy Policy</span>
+            <Link href="/privacy-policy">
+              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-privacy">Privacy Policy</span>
+            </Link>
             <span className="text-gray-400 text-sm" data-testid="policy-terms">Terms of Service</span>
             <span className="text-gray-400 text-sm" data-testid="policy-cookies">Cookie Policy</span>
           </div>
