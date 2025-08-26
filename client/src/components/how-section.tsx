@@ -46,15 +46,16 @@ export default function HowSection() {
       <div className="absolute inset-0">
         {/* 3D CAD Engineering Design Background - Left Side */}
         <div 
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `url('https://www.shutterstock.com/image-illustration/engineering-designer-design-3d-cad-260nw-2182781589.jpg')`,
-            backgroundSize: '60%',
-            backgroundPosition: 'left center',
+            backgroundSize: '65%',
+            backgroundPosition: 'left top',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.4) contrast(1.2)',
+            filter: 'grayscale(100%) brightness(0.7) contrast(1.1)',
             maskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
-            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
+            transform: 'translateY(-10%)'
           }}
         />
         
@@ -66,7 +67,7 @@ export default function HowSection() {
             backgroundSize: '65%',
             backgroundPosition: 'right center',
             backgroundRepeat: 'no-repeat',
-            filter: 'grayscale(100%) brightness(0.5) contrast(1.1) sepia(10%)',
+            filter: 'grayscale(100%) brightness(0.7) contrast(1.1)',
             maskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)',
             WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 70%)'
           }}
@@ -94,7 +95,7 @@ export default function HowSection() {
         />
         
         {/* Central blend overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-space-900/30 via-space-900/60 to-space-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-space-900/40 via-space-900/70 to-space-900/40" />
       </div>
         
       {/* Floating Technical Icons */}
