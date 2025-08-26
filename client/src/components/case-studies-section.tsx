@@ -41,7 +41,7 @@ export default function CaseStudiesSection() {
       {/* Engineering Excellence Background */}
       <div className="absolute inset-0">
         <div 
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `url(${provenExcellenceImage})`,
             backgroundSize: 'cover',
@@ -50,8 +50,8 @@ export default function CaseStudiesSection() {
             filter: 'grayscale(100%) brightness(0.8) contrast(1.1)'
           }}
         />
-        {/* 70% Dark Overlay */}
-        <div className="absolute inset-0 bg-space-900/70" />
+        {/* 80% Dark Overlay */}
+        <div className="absolute inset-0 bg-space-900/80" />
       </div>
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
