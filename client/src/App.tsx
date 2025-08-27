@@ -11,31 +11,22 @@ import PurchasingTerms from "@/pages/purchasing-terms";
 import SupplierIntegrityGuide from "@/pages/supplier-integrity-guide";
 import ESGCSRPolicy from "@/pages/esg-csr-policy";
 import NotFound from "@/pages/not-found";
-import { Router as WouterRouter } from "wouter";
-
-const base = window.location.pathname.includes("/precilayer-website")
-  ? "/precilayer-website"
-  : "/";
-
-console.log("Base URL:", base);
 
 function Router() {
   return (
-    <WouterRouter base={base}>
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/privacy-policy" component={PrivacyPolicy} />
-        <Route path="/terms-conditions" component={TermsConditions} />
-        <Route path="/responsible-sourcing" component={ResponsibleSourcing} />
-        <Route path="/purchasing-terms" component={PurchasingTerms} />
-        <Route
-          path="/supplier-integrity-guide"
-          component={SupplierIntegrityGuide}
-        />
-        <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
-        <Route component={NotFound} />
-      </Switch>
-    </WouterRouter>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-conditions" component={TermsConditions} />
+      <Route path="/responsible-sourcing" component={ResponsibleSourcing} />
+      <Route path="/purchasing-terms" component={PurchasingTerms} />
+      <Route
+        path="/supplier-integrity-guide"
+        component={SupplierIntegrityGuide}
+      />
+      <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
