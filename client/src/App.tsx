@@ -13,9 +13,11 @@ import ESGCSRPolicy from "@/pages/esg-csr-policy";
 import NotFound from "@/pages/not-found";
 import { Router as WouterRouter } from "wouter";
 
-const base = window.location.pathname.includes("/preciplar-website")
-  ? "/preciplar-website"
+const base = window.location.pathname.includes("/precilayer-website")
+  ? "/precilayer-website"
   : "/";
+
+console.log("Base URL:", base);
 
 function Router() {
   return (
