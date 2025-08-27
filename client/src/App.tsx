@@ -13,9 +13,13 @@ import ESGCSRPolicy from "@/pages/esg-csr-policy";
 import NotFound from "@/pages/not-found";
 import { Router as WouterRouter } from "wouter";
 
+const base = window.location.pathname.includes("/preciplar-website")
+  ? "/preciplar-website"
+  : "/";
+
 function Router() {
   return (
-    <WouterRouter>
+    <WouterRouter base={base}>
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
