@@ -15,7 +15,7 @@ import { Router as WouterRouter } from "wouter";
 
 function Router() {
   return (
-    <WouterRouter base="/preciplar-website">
+    <WouterRouter>
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/privacy-policy" component={PrivacyPolicy} />
