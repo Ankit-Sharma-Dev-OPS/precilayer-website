@@ -28,6 +28,12 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
 
+import bracketsImg from "@assets/satellite-space-brackets_1762273257354.webp";
+import waveguideImg from "@assets/waveguide_1762273257344.webp";
+import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
+import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
+import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
+
 export default function SpaceSatellite() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
@@ -342,7 +348,7 @@ export default function SpaceSatellite() {
             >
               <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center p-8">
                 <img 
-                  src="/attached_assets/satellite-space-brackets_1762273257354.webp" 
+                  src={bracketsImg} 
                   alt="Structural Brackets & Frames"
                   className="w-full h-full object-contain"
                 />
@@ -367,7 +373,7 @@ export default function SpaceSatellite() {
             >
               <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center p-8">
                 <img 
-                  src="/attached_assets/waveguide_1762273257344.webp" 
+                  src={waveguideImg} 
                   alt="Waveguides & Antenna Components"
                   className="w-full h-full object-contain"
                 />
@@ -395,7 +401,7 @@ export default function SpaceSatellite() {
             >
               <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
                 <img 
-                  src="/attached_assets/satellite-space-propulsion-system-components_1762273257346.webp" 
+                  src={propulsionImg} 
                   alt="Propulsion System Components"
                   className="w-full h-full object-contain"
                 />
@@ -420,7 +426,7 @@ export default function SpaceSatellite() {
             >
               <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
                 <img 
-                  src="/attached_assets/satellite-space-thermal-management-system_1762273257350.webp" 
+                  src={thermalImg} 
                   alt="Thermal Management Systems"
                   className="w-full h-full object-contain"
                 />
@@ -445,7 +451,7 @@ export default function SpaceSatellite() {
             >
               <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
                 <img 
-                  src="/attached_assets/satelite-space-housing-and-shielding_1762273257338.webp" 
+                  src={housingImg} 
                   alt="Electronic Housings & Shielding"
                   className="w-full h-full object-contain"
                 />
