@@ -493,8 +493,41 @@ export default function SpaceSatellite() {
         </div>
       </section>
 
-      {/* Why Precilayer for Space */}
+      {/* Unique Advantage */}
       <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="max-w-4xl mx-auto">
+              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="advantage-title">
+                Precilayer's <span className="gradient-text">Unique Advantage</span>
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+                We combine the best of both <span className="text-cyber-400 font-semibold">additive and subtractive</span> metal and polymer solutions to make state-of-the-art components
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
+                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                  <span className="text-cyber-400 font-semibold">CNC Machining</span>
+                </div>
+                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                  <span className="text-cyber-400 font-semibold">3D Printing</span>
+                </div>
+                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                  <span className="text-cyber-400 font-semibold">Metal & Polymer</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Precilayer for Space */}
+      <section className="py-20 bg-space-800">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
