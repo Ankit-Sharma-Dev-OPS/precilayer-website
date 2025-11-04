@@ -11,6 +11,7 @@ import PurchasingTerms from "@/pages/purchasing-terms";
 import SupplierIntegrityGuide from "@/pages/supplier-integrity-guide";
 import ESGCSRPolicy from "@/pages/esg-csr-policy";
 import SpaceSatellite from "@/pages/industries/space-satellite";
+import MedTech from "@/pages/industries/medtech";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +28,7 @@ function Router() {
       />
       <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
       <Route path="/industries/space-satellite" component={SpaceSatellite} />
+      <Route path="/industries/medtech" component={MedTech} />
       <Route component={NotFound} />
     </Switch>
   );
