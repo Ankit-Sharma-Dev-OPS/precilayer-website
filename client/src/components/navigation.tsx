@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,10 +16,26 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (location === "/" && window.location.hash) {
+      const sectionId = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (location !== "/") {
+      setLocation(`/#${sectionId}`);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -38,9 +56,14 @@ export default function Navigation() {
     <nav className={`fixed top-0 w-full z-50 backdrop-blur-sm border-b border-gray-800 transition-all duration-300 bg-space-900`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-orbitron text-2xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} data-testid="logo">
+          <button 
+            onClick={() => setLocation("/")}
+            className="font-orbitron text-2xl font-bold text-white hover:text-cyber-400 transition-colors cursor-pointer" 
+            style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} 
+            data-testid="logo"
+          >
             PRECILAYER
-          </div>
+          </button>
           
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
