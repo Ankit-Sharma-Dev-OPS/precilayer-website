@@ -117,16 +117,16 @@ export default function ComparisonSlider({
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing border-4 border-cyber-400">
           <svg
-            className="w-6 h-6 text-cyber-400"
+            className="w-7 h-7 text-cyber-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            strokeWidth={3}
+            strokeWidth={2.5}
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M8 9l4-4 4 4M8 15l4 4 4-4"
+              d="M7 16l-4-4m0 0l4-4m-4 4h18m0 0l-4-4m4 4l-4 4"
             />
           </svg>
         </div>
