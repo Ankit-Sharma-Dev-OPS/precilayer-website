@@ -165,14 +165,15 @@ export default function SpaceSatellite() {
   ];
 
   const materials = [
-    "Aluminum 6061-T6: Industry standard for structural satellite components",
-    "Aluminum 7075-T6: High-strength aerospace-grade aluminum for critical applications",
-    "Stainless Steel 410: Corrosion-resistant steel for fasteners and mechanisms",
-    "Stainless Steel 416: Machinable stainless for complex geometries",
-    "17-4PH Stainless: Precipitation-hardened steel for high-strength requirements",
-    "4340 Steel at Rc 30-35: Heat-treated alloy steel when specified",
-    "Polymers (PA12, PC, PMMA): Functional prototypes and non-structural components"
+    "Aluminum: Industry standard for structural satellite components",
+    "Stainless Steel: Corrosion-resistant and machinable grades for fasteners and mechanisms",
+    "Titanium: High-strength, lightweight aerospace-grade material",
+    "Inconel: High-temperature and corrosion-resistant superalloy",
+    "Steel: Heat-treated alloy steel for high-strength requirements",
+    "High-Performance Polymers: Functional prototypes and non-structural components"
   ];
+
+  const materialGrades = "Common grades: 6061-T6, 7075-T6 (Aluminum) | 410, 416, 17-4PH (Stainless) | Ti-6Al-4V, Ti-6Al-2Sn-4Zr-2Mo (Titanium) | 625, 718 (Inconel) | 4340 (Steel) | PA12, PC, PMMA (Polymers)";
 
   const qualityPoints = [
     "ISO-aligned workflows with FAI on request",
@@ -623,8 +624,11 @@ export default function SpaceSatellite() {
             </div>
 
             <div className="mt-8 pt-8 border-t border-gray-700/30">
+              <p className="text-sm text-gray-400 mb-4">
+                {materialGrades}
+              </p>
               <p className="text-gray-300 leading-relaxed">
-                <span className="font-semibold text-white">Quality Note:</span> All materials come with complete certification and COC linkage to material heat lots, ensuring full traceability for compliance and audit requirements.
+                <span className="font-semibold text-white">AMS Certified Materials:</span> All materials come with complete certification and COC linkage to material heat lots, ensuring full traceability for compliance and audit requirements.
               </p>
             </div>
           </motion.div>
