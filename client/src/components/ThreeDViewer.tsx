@@ -14,6 +14,8 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
   const meshRef = useRef<THREE.Group | null>(null);
   const animationFrameRef = useRef<number | null>(null);
   const [isAutoRotating, setIsAutoRotating] = useState(autoRotate);
+  const isAutoRotatingRef = useRef(autoRotate);
+  const [webGLError, setWebGLError] = useState(false);
   const mouseDownRef = useRef(false);
   const previousMousePositionRef = useRef({ x: 0, y: 0 });
 
@@ -32,13 +34,20 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
     camera.position.set(0, 0, 5);
     cameraRef.current = camera;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(containerWidth, containerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    container.appendChild(renderer.domElement);
-    rendererRef.current = renderer;
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(containerWidth, containerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      container.appendChild(renderer.domElement);
+      rendererRef.current = renderer;
+    } catch (error) {
+      console.warn('WebGL not supported, showing fallback', error);
+      setWebGLError(true);
+      return;
+    }
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
@@ -178,8 +187,9 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
         y: event.clientY,
       };
 
-      if (isAutoRotating) {
+      if (isAutoRotatingRef.current) {
         setIsAutoRotating(false);
+        isAutoRotatingRef.current = false;
         onAutoRotateChange?.(false);
       }
     };
@@ -198,7 +208,7 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
     const animate = () => {
       animationFrameRef.current = requestAnimationFrame(animate);
 
-      if (isAutoRotating && meshRef.current) {
+      if (isAutoRotatingRef.current && meshRef.current) {
         meshRef.current.rotation.y += 0.005;
       }
 
@@ -242,7 +252,33 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
 
   useEffect(() => {
     setIsAutoRotating(autoRotate);
+    isAutoRotatingRef.current = autoRotate;
   }, [autoRotate]);
+
+  if (webGLError) {
+    return (
+      <div 
+        className="w-full h-full rounded-xl overflow-hidden bg-space-900 border border-gray-700/30 flex items-center justify-center"
+        data-testid="3d-viewer-fallback"
+        style={{ minHeight: '400px' }}
+      >
+        <div className="text-center p-8">
+          <div className="w-24 h-24 bg-cyber-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-12 h-12 text-cyber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">3D Viewer</h3>
+          <p className="text-gray-400 text-sm">
+            Interactive 3D component visualization
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Aerospace-grade lattice structure component
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 
