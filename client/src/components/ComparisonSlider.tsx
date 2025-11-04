@@ -73,7 +73,7 @@ export default function ComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[16/9] rounded-xl overflow-hidden select-none cursor-col-resize"
+      className="relative w-full aspect-[16/9] rounded-xl overflow-hidden select-none cursor-col-resize touch-none"
       onMouseDown={(e) => {
         handleMove(e.clientX);
         handleMouseDown();
@@ -135,7 +135,13 @@ export default function ComparisonSlider({
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+              d="M15 19l-7-7 7-7"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 19l7-7-7-7"
             />
           </svg>
         </div>
