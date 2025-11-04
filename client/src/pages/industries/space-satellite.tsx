@@ -40,12 +40,14 @@ export default function SpaceSatellite() {
       { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." }
     ];
 
+    const createdMetaTags: HTMLMetaElement[] = [];
     metaTags.forEach(({ name, property, content }) => {
       const meta = document.createElement("meta");
       if (name) meta.setAttribute("name", name);
       if (property) meta.setAttribute("property", property);
       meta.setAttribute("content", content);
       document.head.appendChild(meta);
+      createdMetaTags.push(meta);
     });
 
     const breadcrumbSchema = {
@@ -75,18 +77,13 @@ export default function SpaceSatellite() {
 
     const script = document.createElement("script");
     script.type = "application/ld+json";
+    script.setAttribute("data-page", "space-satellite");
     script.textContent = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(script);
 
     return () => {
-      metaTags.forEach(({ name, property }) => {
-        const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`;
-        const element = document.querySelector(selector);
-        if (element) element.remove();
-      });
-      
-      const scriptElement = document.querySelector('script[type="application/ld+json"]');
-      if (scriptElement) scriptElement.remove();
+      createdMetaTags.forEach(meta => meta.remove());
+      script.remove();
     };
   }, []);
 
