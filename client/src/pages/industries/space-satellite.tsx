@@ -33,7 +33,7 @@ import waveguideImg from "@assets/waveguide_1762273257344.webp";
 import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
 import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
-import traditionalImg from "@assets/generated_images/Aerospace_bracket_traditional_finish_219e8b1f.png";
+import traditionalImg from "@assets/generated_images/Machined_bracket_with_defects_565b3293.png";
 import precilayerImg from "@assets/generated_images/Aerospace_bracket_Ra_0.8_finish_1aebc83f.png";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
