@@ -36,7 +36,7 @@ import housingImg from "@assets/satelite-space-housing-and-shielding_17622732573
 import traditionalImg from "@assets/Traditional Machining_1762293149835.png";
 import precilayerImg from "@assets/Precilayer Finish_1762293149833.png";
 import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
-import actuatorShaftImg from "@assets/stock_images/precision_machined_m_f9360ddc.jpg";
+import actuatorShaftImg from "@assets/Precision-Ground-Machine-Electric-Motor-Long-304-Stainless-Steel-Spline-Shaft_1762295542107.avif";
 import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
