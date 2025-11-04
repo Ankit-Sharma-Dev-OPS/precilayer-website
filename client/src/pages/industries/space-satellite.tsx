@@ -251,7 +251,7 @@ export default function SpaceSatellite() {
           className="absolute inset-0 bg-cover"
           style={{ 
             backgroundImage: `url(${rocketLaunchImg})`,
-            backgroundPosition: 'center 40%'
+            backgroundPosition: 'center 25%'
           }}
         />
         {/* Radial gradient overlay focused on center text area */}
