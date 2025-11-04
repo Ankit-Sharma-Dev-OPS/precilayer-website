@@ -59,6 +59,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Industries</h3>
             <ul className="space-y-3 text-gray-400">
+              <li>
+                <Link href="/industries/space-satellite">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="industry-space-satellite">Space & Satellite</span>
+                </Link>
+              </li>
               <li><span data-testid="industry-aerospace">Aerospace</span></li>
               <li><span data-testid="industry-healthcare">Healthcare</span></li>
               <li><span data-testid="industry-robotics">Robotics</span></li>

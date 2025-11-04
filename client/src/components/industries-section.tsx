@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { Satellite, Plane, Bot, Stethoscope, Car, Shield, Zap, Fuel, Cpu } from "lucide-react";
 
 export default function IndustriesSection() {
@@ -9,6 +10,7 @@ export default function IndustriesSection() {
       description: "Precision components for satellites, space exploration, and aerospace applications. From ISRO to private space companies.",
       image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
       alt: "Satellite in space",
+      link: "/industries/space-satellite",
       components: [
         "Satellite structural components",
         "Propulsion system parts", 
@@ -149,16 +151,8 @@ export default function IndustriesSection() {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
-            <motion.div 
-              key={industry.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group cursor-default scroll-reveal h-full"
-              data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
-            >
+          {industries.map((industry, index) => {
+            const cardContent = (
               <div className="bg-gradient-to-br from-space-800/80 to-space-700/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-cyber-400/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyber-400/20 group h-full flex flex-col">
                 <div className="relative">
                   <img 
@@ -191,8 +185,28 @@ export default function IndustriesSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
+            );
+
+            return (
+              <motion.div 
+                key={industry.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`group scroll-reveal h-full ${industry.link ? 'cursor-pointer' : 'cursor-default'}`}
+                data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                {industry.link ? (
+                  <Link href={industry.link}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  cardContent
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
