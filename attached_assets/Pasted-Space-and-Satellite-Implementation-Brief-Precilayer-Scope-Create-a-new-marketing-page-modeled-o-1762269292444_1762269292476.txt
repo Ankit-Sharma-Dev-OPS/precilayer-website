@@ -1,0 +1,194 @@
+Space and Satellite — Implementation Brief (Precilayer)
+Scope
+
+Create a new marketing page modeled on the information architecture of the 8xparts reference, aligned to Precilayer’s current React + Vite front end, Express.js back end, and shared UI system. Reuse typography, spacing, color tokens, and components from the existing site to ensure pixel-level consistency.
+
+URL and Routing
+
+Public route: /industries/space-satellite
+
+Sitemap entry: include in sitemap generator the exact URL above
+
+Breadcrumbs: Home → Industries → Space and Satellite
+
+Navigation and Linking
+
+Homepage CTA: add a “Space and Satellite” card or link within the Industries section on precilarter.com home. Link to /industries/space-satellite.
+
+Header menu: if “Industries” is a dropdown, add “Space and Satellite.”
+
+Footer: add the link under “Industries.”
+
+Page Layout (sections in order)
+
+Hero
+
+H1: Space and Satellite Manufacturing
+
+Subcopy: Mission-critical components, high-reliability processes, flight-ready documentation.
+
+Primary CTA: “Talk to Engineering”
+
+Secondary CTA: “View Capabilities”
+
+Background: reuse existing hero pattern or gradient from the site.
+
+Why Precilayer for Space
+
+Three to four value tiles using existing IconCard component:
+
+Space-grade materials and traceability
+
+Tight tolerances and process capability
+
+PPAP, FAI, COC, material lot linkage
+
+Fast iteration with DFM feedback
+
+Capabilities Grid
+
+Reuse existing “Capabilities” cards. Suggested items:
+
+CNC Milling (3-axis, 4-axis), CNC Turning
+
+EDM and Wire EDM (if you advertise it), Surface Finishing
+
+Inspection on Mitutoyo M574 CMM
+
+Clean and pack to spec (bag-and-tag, moisture protection)
+
+Each card: short description and “Speak to Manufacturing” micro-link.
+
+Materials and Processes
+
+Bulleted list that matches your current style:
+
+Aluminum 6061-T6, 7075-T6
+
+Stainless 410, 416, 17-4PH
+
+4340 at Rc 30-35 when specified
+
+Polymers for functional prototypes (PA12, PC, PMMA if relevant)
+
+Note on certification and COC linkage to material heat lots.
+
+Quality and Documentation
+
+Reuse your site’s “Checklist” or “Pill” component:
+
+ISO-aligned workflows, FAI on request
+
+COC referencing PO and drawing revision
+
+Material certs attached and linked to part lots
+
+Measurement reports from CMM when scoped
+
+Case Snapshots
+
+Two or three brief, anonymized project blurbs using existing Card component:
+
+“Satellite bracket, 6061-T6, ±0.02 mm, bead blast + clear anodize”
+
+“Actuator shaft, 17-4PH H900, GD&T with multiple datums”
+
+“RF enclosure, 7075-T6, EMI-sensitive pocketing”
+
+DFM and Engagement Model
+
+Short explainer of your RFQ → DFM review → Pilot lot → Production run pipeline.
+
+CTA: “Submit RFQ” linking to your existing RFQ flow.
+
+FAQs
+
+Use your Accordion component. Suggested questions:
+
+What documentation do you provide by default
+
+How do you handle ITAR or export-controlled work (state policy clearly)
+
+Typical lead times by complexity
+
+Inspection levels available
+
+Contact Band
+
+Reuse global contact band with form CTA and email.
+
+Content Guidance (copy placeholders, non-final)
+
+Keep sentences short, outcomes-focused, and consistent with your site voice.
+
+Reference compliance and traceability without over-promising. If you do not support certain export-controlled work, state it plainly.
+
+Components to Reuse
+
+Hero, Section, Grid, Card, IconCard, Accordion, CTAButton, Breadcrumbs, ContactBand.
+
+Use existing tokens for spacing, radii, shadows, and typography.
+
+File and Folder Plan (no code, just structure)
+
+src/pages/industries/SpaceSatellite.jsx
+
+src/content/industries/spaceSatellite.json (if your site already uses JSON content blocks)
+
+src/routes/index.tsx or equivalent: register route
+
+src/components/industries/ (only if you already segment industry components)
+
+SEO and Metadata
+
+Title: “Space and Satellite Manufacturing | Precilayer”
+
+Meta description: “Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability.”
+
+Open Graph image: reuse hero image format
+
+Structured data: WebPage with breadcrumb if your SEO helper already supports it
+
+Performance and Accessibility
+
+Image assets: WebP, responsive sizes through your existing image utility
+
+Headings follow H1 → H2 hierarchy
+
+All CTAs have discernible labels and focus states
+
+Run Lighthouse to match the rest of the site’s scores
+
+Analytics
+
+Fire the same page-view event schema you already use for marketing pages
+
+Track CTA clicks: cta_space_contact, cta_space_capabilities, cta_space_rfq
+
+Deployment Steps (inside Replit)
+
+Create the page file and content JSON as above.
+
+Import existing atoms/molecules only. No new deps.
+
+Register route and sitemap.
+
+Add homepage “Space and Satellite” link or card.
+
+Add header and footer link entries.
+
+Validate build locally in Replit preview.
+
+Run your standard PR or main-branch deployment flow.
+
+QA Checklist
+
+Copy renders correctly on mobile, tablet, desktop breakpoints
+
+All links resolve, including the homepage link and header/footer items
+
+Breadcrumbs display correctly and match URL
+
+No layout shifts from oversized images
+
+Forms route to the same backend endpoints as other pages
