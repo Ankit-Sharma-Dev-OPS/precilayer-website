@@ -351,7 +351,10 @@ export default function SpaceSatellite() {
                   src={bracketsImg} 
                   alt="Structural Brackets & Frames"
                   className="w-full h-full object-contain"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -377,7 +380,10 @@ export default function SpaceSatellite() {
                   src={waveguideImg} 
                   alt="Waveguides & Antenna Components"
                   className="w-full h-full object-contain"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -406,7 +412,10 @@ export default function SpaceSatellite() {
                   src={propulsionImg} 
                   alt="Propulsion System Components"
                   className="w-full h-full object-contain"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -432,7 +441,10 @@ export default function SpaceSatellite() {
                   src={thermalImg} 
                   alt="Thermal Management Systems"
                   className="w-full h-full object-contain"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
               </div>
               <div className="p-6">
@@ -458,7 +470,10 @@ export default function SpaceSatellite() {
                   src={housingImg} 
                   alt="Electronic Housings & Shielding"
                   className="w-full h-full object-contain"
-                  style={{ imageRendering: 'crisp-edges' }}
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
                 />
               </div>
               <div className="p-6">
