@@ -38,6 +38,7 @@ import precilayerImg from "@assets/Precilayer Finish_1762293149833.png";
 import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
 import actuatorShaftImg from "@assets/Precision-Ground-Machine-Electric-Motor-Long-304-Stainless-Steel-Spline-Shaft_1762295542107.avif";
 import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
+import rocketLaunchImg from "@assets/stock_images/rocket_launch_spaces_b16c2286.jpg";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
 export default function SpaceSatellite() {
@@ -245,8 +246,12 @@ export default function SpaceSatellite() {
       
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        <SubtleBackground />
-        <div className="absolute inset-0 bg-gradient-to-b from-space-900/50 via-space-900/70 to-space-900" />
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${rocketLaunchImg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-space-900/70 via-space-900/80 to-space-900" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
           {/* Breadcrumbs */}
