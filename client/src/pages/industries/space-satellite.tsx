@@ -33,8 +33,8 @@ import waveguideImg from "@assets/waveguide_1762273257344.webp";
 import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
 import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
-import traditionalImg from "@assets/generated_images/Traditional_machined_aerospace_bracket_817d90f7.png";
-import precilayerImg from "@assets/generated_images/Precilayer_mirror-finish_bracket_6b711765.png";
+import traditionalImg from "@assets/generated_images/Traditional_machined_aerospace_bracket_worn_089025dc.png";
+import precilayerImg from "@assets/generated_images/Precilayer_Ra_0.8_finish_bracket_5d4fc9d3.png";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
 export default function SpaceSatellite() {
