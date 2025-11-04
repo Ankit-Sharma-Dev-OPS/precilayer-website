@@ -61,7 +61,7 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-400">
               <li>
                 <Link href="/industries/space-satellite">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="industry-space-satellite">Aerospace & Satellite</span>
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="industry-space-satellite">Space & Satellite</span>
                 </Link>
               </li>
               <li><span data-testid="industry-aerospace">Aerospace</span></li>

@@ -6,7 +6,7 @@ export default function IndustriesSection() {
   const industries = [
     {
       icon: Satellite,
-      title: "Aerospace & Satellites",
+      title: "Space & Satellites",
       description: "Precision components for satellites, space exploration, and aerospace applications. From ISRO to private space companies.",
       image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
       alt: "Satellite in space",

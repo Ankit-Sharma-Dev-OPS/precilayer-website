@@ -45,12 +45,12 @@ export default function SpaceSatellite() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Aerospace and Satellite Manufacturing | Precilayer";
+    document.title = "Space and Satellite Manufacturing | Precilayer";
     
     const metaTags = [
-      { name: "description", content: "Flight-ready CNC components, inspection, and documentation for satellite and aerospace programs. Tight tolerances, COC, and material traceability." },
-      { property: "og:title", content: "Aerospace and Satellite Manufacturing | Precilayer" },
-      { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and aerospace programs. Tight tolerances, COC, and material traceability." }
+      { name: "description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." },
+      { property: "og:title", content: "Space and Satellite Manufacturing | Precilayer" },
+      { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];
@@ -82,7 +82,7 @@ export default function SpaceSatellite() {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Aerospace and Satellite",
+          "name": "Space and Satellite",
           "item": "https://www.precilayer.com/industries/space-satellite"
         }
       ]
@@ -168,14 +168,14 @@ export default function SpaceSatellite() {
   ];
 
   const materials = [
-    "Aluminum Alloys: Industry standard for structural satellite components - AMS-QQ-A-250, AMS-QQ-A-225",
-    "Titanium Alloys: High-strength, lightweight aerospace material - AMS 4911, AMS 4928, AMS 4935",
-    "Stainless Steel: Corrosion-resistant and machinable grades - AMS 5504, AMS 5643, AMS 5604",
-    "Nickel Superalloys: High-temperature and corrosion-resistant - AMS 5596, AMS 5662, AMS 5383",
-    "Copper Alloys: RF/waveguide and electrical applications - AMS 4500, AMS 4640",
-    "Alloy Steel: Heat-treated high-strength applications - AMS 6414, AMS 6382",
-    "Magnesium Alloys: Ultra-lightweight structural components - AMS 4375, AMS 4377",
-    "High-Performance Polymers: Functional prototypes and non-structural - PEEK, ULTEM, PA12"
+    "Aluminum Alloys: Industry standard for structural satellite components - AMS-QQ-A-250/4 (6061), AMS-QQ-A-250/5 (6063), AMS-QQ-A-250/12 (7075), AMS-QQ-A-225/8 (2024), AMS 4027 (6061-T6), AMS 4037 (7075-T6), AMS 4049 (2024-T3)",
+    "Titanium Alloys: High-strength, lightweight aerospace material - AMS 4911 (Ti-6Al-4V Bar), AMS 4928 (Ti-6Al-4V Sheet), AMS 4935 (Ti-6Al-4V Wire), AMS 4967 (Ti-6Al-2Sn-4Zr-2Mo), AMS 4905 (CP Grade 2), AMS 4930 (Ti-3Al-2.5V), AMS 4919 (Ti-5Al-2.5Sn)",
+    "Stainless Steel: Corrosion-resistant and machinable grades - AMS 5504 (304), AMS 5513 (304L), AMS 5643 (316), AMS 5648 (316L), AMS 5604 (17-4PH), AMS 5659 (15-5PH), AMS 5510 (303), AMS 5640 (321)",
+    "Nickel Superalloys: High-temperature and corrosion-resistant - AMS 5596 (Inconel 718 Bar), AMS 5662 (Inconel 718 Sheet), AMS 5383 (Inconel 625 Bar), AMS 5599 (Inconel 625 Sheet), AMS 5387 (Inconel 600), AMS 5698 (Hastelloy X), AMS 5536 (Monel 400)",
+    "Copper Alloys: RF/waveguide and electrical applications - AMS 4500 (C10100 Oxygen-Free), AMS 4640 (C18000 Chromium Copper), AMS 4605 (C18200 Chromium Copper), AMS 4610 (C17200 Beryllium Copper), AMS 4725 (C17510 Beryllium Copper), AMS 4650 (C63000 Aluminum Bronze)",
+    "Alloy Steel: Heat-treated high-strength applications - AMS 6414 (4340), AMS 6382 (4130), AMS 6370 (4140), AMS 6381 (8630), AMS 6322 (9310), AMS 6265 (4330V), AMS 6427 (300M)",
+    "Magnesium Alloys: Ultra-lightweight structural components - AMS 4375 (AZ31B Sheet), AMS 4377 (AZ61A), AMS 4382 (ZK60A), AMS 4426 (WE43), AMS 4396 (ZE41A)",
+    "High-Performance Polymers: Functional prototypes and non-structural components - PEEK (Polyetheretherketone), ULTEM (PEI), PA12 (Nylon 12), PPSU (Polyphenylsulfone), PPS (Polyphenylene Sulfide), PEKK, Torlon (PAI)"
   ];
 
   const materialGrades = "Typical grades: 6061-T6, 7075-T6, 2024-T3 (Aluminum) | Ti-6Al-4V (Grade 5), Ti-6Al-2Sn-4Zr-2Mo (Titanium) | 304, 316, 17-4PH, 15-5PH (Stainless) | Inconel 625, 718 (Nickel) | C18000, C18200, C10100 (Copper) | 4340, 4130 (Steel) | AZ31B, ZK60A (Magnesium)";
@@ -234,8 +234,8 @@ export default function SpaceSatellite() {
       answer: "Absolutely. Our process begins with prototype runs where we validate designs, optimize manufacturing processes, and generate comprehensive FAI documentation. We then seamlessly transition to pilot runs and full production with consistent quality and traceability maintained throughout all phases."
     },
     {
-      question: "What quality standards do you follow for aerospace applications?",
-      answer: "We maintain ISO 9001:2015 certification and follow aerospace quality standards. Our processes include statistical process control, calibrated measurement equipment, environmental controls, and comprehensive documentation systems designed to meet the stringent requirements of aerospace and satellite manufacturing."
+      question: "What quality standards do you follow for space applications?",
+      answer: "We maintain ISO 9001:2015 certification and follow aerospace quality standards. Our processes include statistical process control, calibrated measurement equipment, environmental controls, and comprehensive documentation systems designed to meet the stringent requirements of space and satellite manufacturing."
     }
   ];
 
@@ -283,7 +283,7 @@ export default function SpaceSatellite() {
                 <BreadcrumbItem>
                   <BreadcrumbPage className="text-cyber-400 flex items-center gap-1" data-testid="breadcrumb-current">
                     <Satellite className="h-4 w-4" />
-                    Aerospace and Satellite
+                    Space and Satellite
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
@@ -303,7 +303,7 @@ export default function SpaceSatellite() {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white" data-testid="hero-title">
-              Aerospace and Satellite <span className="gradient-text">Manufacturing</span>
+              Space and Satellite <span className="gradient-text">Manufacturing</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed" data-testid="hero-description">
@@ -864,7 +864,7 @@ export default function SpaceSatellite() {
               Project <span className="gradient-text">Snapshots</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Representative examples of aerospace and satellite components we manufacture
+              Representative examples of space and satellite components we manufacture
             </p>
           </motion.div>
 
@@ -978,7 +978,7 @@ export default function SpaceSatellite() {
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Common questions about aerospace and satellite manufacturing
+              Common questions about space and satellite manufacturing
             </p>
           </motion.div>
 
