@@ -190,7 +190,7 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
     ];
 
     hotspotData.forEach((hotspot) => {
-      const hotspotMesh = new THREE.Mesh(hotspotGeometry, hotspotMaterial);
+      const hotspotMesh = new THREE.Mesh(hotspotGeometry, hotspotMaterial.clone());
       hotspotMesh.position.copy(hotspot.position);
       hotspotMesh.userData = { hotspotId: hotspot.id };
       latticeGroup.add(hotspotMesh);
@@ -287,10 +287,11 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
           const scale = hoveredHotspot?.id === hotspot.id ? 1.3 : 1.0;
           hotspot.mesh.scale.setScalar(scale);
           
+          const material = hotspot.mesh.material as THREE.MeshStandardMaterial;
           if (hoveredHotspot?.id === hotspot.id) {
-            hotspot.mesh.material.emissiveIntensity = 0.8;
+            material.emissiveIntensity = 0.8;
           } else {
-            (hotspot.mesh.material as THREE.MeshStandardMaterial).emissiveIntensity = 0.5;
+            material.emissiveIntensity = 0.5;
           }
         }
       });
