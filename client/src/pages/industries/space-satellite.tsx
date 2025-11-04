@@ -33,8 +33,8 @@ import waveguideImg from "@assets/waveguide_1762273257344.webp";
 import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
 import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
-import traditionalImg from "@assets/generated_images/Bracket_with_milling_finish_9f7214ec.png";
-import precilayerImg from "@assets/generated_images/Aerospace_bracket_Ra_0.8_finish_1aebc83f.png";
+import traditionalImg from "@assets/Traditional Machining_1762293149835.png";
+import precilayerImg from "@assets/Precilayer Finish_1762293149833.png";
 import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
 import actuatorShaftImg from "@assets/generated_images/Actuator_shaft_precision_component_fce381dc.png";
 import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
@@ -711,10 +711,10 @@ export default function SpaceSatellite() {
             <ComparisonSlider
               beforeImage={traditionalImg}
               afterImage={precilayerImg}
-              beforeLabel="Traditional"
-              afterLabel="Precilayer"
-              beforeSubtext="Higher defect rate"
-              afterSubtext="99.98% precision"
+              beforeLabel="Traditional Machining"
+              afterLabel="Precilayer Finish"
+              beforeSubtext="Rough surface finish, visible marks"
+              afterSubtext="Superior surface quality, Ra 0.8 μm"
             />
           </motion.div>
 
