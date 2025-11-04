@@ -6,6 +6,14 @@ interface ThreeDViewerProps {
   onAutoRotateChange?: (enabled: boolean) => void;
 }
 
+interface Hotspot {
+  id: number;
+  position: THREE.Vector3;
+  title: string;
+  details: string;
+  mesh?: THREE.Mesh;
+}
+
 export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }: ThreeDViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -13,9 +21,16 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const meshRef = useRef<THREE.Group | null>(null);
   const animationFrameRef = useRef<number | null>(null);
+  const raycasterRef = useRef<THREE.Raycaster>(new THREE.Raycaster());
+  const mouseRef = useRef<THREE.Vector2>(new THREE.Vector2());
+  const hotspotsRef = useRef<Hotspot[]>([]);
+  
   const [isAutoRotating, setIsAutoRotating] = useState(autoRotate);
   const isAutoRotatingRef = useRef(autoRotate);
   const [webGLError, setWebGLError] = useState(false);
+  const [hoveredHotspot, setHoveredHotspot] = useState<Hotspot | null>(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  
   const mouseDownRef = useRef(false);
   const previousMousePositionRef = useRef({ x: 0, y: 0 });
 
@@ -31,7 +46,7 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(50, containerWidth / containerHeight, 0.1, 1000);
-    camera.position.set(0, 0, 5);
+    camera.position.set(3, 2, 4);
     cameraRef.current = camera;
 
     let renderer: THREE.WebGLRenderer;
@@ -49,120 +64,145 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
       return;
     }
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
     scene.add(ambientLight);
 
-    const directionalLight1 = new THREE.DirectionalLight(0x06b6d4, 1);
-    directionalLight1.position.set(5, 5, 5);
+    const directionalLight1 = new THREE.DirectionalLight(0xffffff, 1.2);
+    directionalLight1.position.set(5, 8, 5);
     directionalLight1.castShadow = true;
     scene.add(directionalLight1);
 
-    const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5);
-    directionalLight2.position.set(-5, -5, -5);
+    const directionalLight2 = new THREE.DirectionalLight(0x06b6d4, 0.6);
+    directionalLight2.position.set(-5, 3, -5);
     scene.add(directionalLight2);
 
-    const pointLight = new THREE.PointLight(0x06b6d4, 0.5);
-    pointLight.position.set(0, 0, 3);
-    scene.add(pointLight);
+    const rimLight = new THREE.DirectionalLight(0x88ccff, 0.4);
+    rimLight.position.set(0, -5, -3);
+    scene.add(rimLight);
 
     const group = new THREE.Group();
     meshRef.current = group;
 
-    const outerRadius = 1;
-    const innerRadius = 0.7;
-    const componentHeight = 1.5;
-    const segments = 8;
-
-    const metalMaterial = new THREE.MeshStandardMaterial({
-      color: 0x888888,
-      metalness: 0.9,
-      roughness: 0.3,
-      emissive: 0x06b6d4,
-      emissiveIntensity: 0.1,
+    const titaniumMaterial = new THREE.MeshStandardMaterial({
+      color: 0xb8b8b8,
+      metalness: 0.95,
+      roughness: 0.15,
+      envMapIntensity: 1.0,
     });
-
-    const outerCylinderGeometry = new THREE.CylinderGeometry(outerRadius, outerRadius, componentHeight, 32);
-    const innerCylinderGeometry = new THREE.CylinderGeometry(innerRadius, innerRadius, componentHeight, 32);
-
-    const outerCSG = new THREE.Mesh(outerCylinderGeometry, metalMaterial);
-    const innerCSG = new THREE.Mesh(innerCylinderGeometry, metalMaterial);
 
     const latticeGroup = new THREE.Group();
 
-    const torusGeometry1 = new THREE.TorusGeometry(outerRadius - 0.05, 0.05, 16, 32);
-    const torus1 = new THREE.Mesh(torusGeometry1, metalMaterial);
-    torus1.rotation.x = Math.PI / 2;
-    torus1.position.y = componentHeight / 3;
-    latticeGroup.add(torus1);
+    const latticeHeight = 2.5;
+    const latticeRadius = 1.2;
+    const strutThickness = 0.04;
+    const layers = 6;
+    const ringsPerLayer = 12;
 
-    const torus2 = new THREE.Mesh(torusGeometry1, metalMaterial);
-    torus2.rotation.x = Math.PI / 2;
-    torus2.position.y = -componentHeight / 3;
-    latticeGroup.add(torus2);
+    for (let layer = 0; layer < layers; layer++) {
+      const y = (layer / (layers - 1)) * latticeHeight - latticeHeight / 2;
+      const currentRadius = latticeRadius * (1 - Math.abs(layer - layers / 2) * 0.1);
 
-    const torusGeometry2 = new THREE.TorusGeometry(innerRadius + 0.05, 0.05, 16, 32);
-    const torus3 = new THREE.Mesh(torusGeometry2, metalMaterial);
-    torus3.rotation.x = Math.PI / 2;
-    torus3.position.y = 0;
-    latticeGroup.add(torus3);
+      for (let ring = 0; ring < ringsPerLayer; ring++) {
+        const angle = (ring / ringsPerLayer) * Math.PI * 2;
+        const x = Math.cos(angle) * currentRadius;
+        const z = Math.sin(angle) * currentRadius;
 
-    for (let i = 0; i < segments; i++) {
-      const angle = (i / segments) * Math.PI * 2;
-      const x = Math.cos(angle) * ((outerRadius + innerRadius) / 2);
-      const z = Math.sin(angle) * ((outerRadius + innerRadius) / 2);
-      
-      const verticalBar = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.03, 0.03, componentHeight, 8),
-        metalMaterial
-      );
-      verticalBar.position.set(x, 0, z);
-      latticeGroup.add(verticalBar);
+        if (layer < layers - 1) {
+          const nextY = ((layer + 1) / (layers - 1)) * latticeHeight - latticeHeight / 2;
+          const nextRadius = latticeRadius * (1 - Math.abs((layer + 1) - layers / 2) * 0.1);
+          const nextAngle = ((ring + 0.5) / ringsPerLayer) * Math.PI * 2;
+          const nextX = Math.cos(nextAngle) * nextRadius;
+          const nextZ = Math.sin(nextAngle) * nextRadius;
 
-      const diagonalBar1 = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.025, 0.025, componentHeight * 0.7, 8),
-        metalMaterial
-      );
-      diagonalBar1.position.set(x * 0.85, componentHeight / 6, z * 0.85);
-      diagonalBar1.rotation.z = Math.PI / 6;
-      latticeGroup.add(diagonalBar1);
+          const dx = nextX - x;
+          const dy = nextY - y;
+          const dz = nextZ - z;
+          const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
-      const diagonalBar2 = new THREE.Mesh(
-        new THREE.CylinderGeometry(0.025, 0.025, componentHeight * 0.7, 8),
-        metalMaterial
-      );
-      diagonalBar2.position.set(x * 0.85, -componentHeight / 6, z * 0.85);
-      diagonalBar2.rotation.z = -Math.PI / 6;
-      latticeGroup.add(diagonalBar2);
+          const strutGeometry = new THREE.CylinderGeometry(strutThickness, strutThickness, distance, 8);
+          const strut = new THREE.Mesh(strutGeometry, titaniumMaterial);
+
+          strut.position.set((x + nextX) / 2, (y + nextY) / 2, (z + nextZ) / 2);
+
+          const axis = new THREE.Vector3(0, 1, 0);
+          const direction = new THREE.Vector3(dx, dy, dz).normalize();
+          const quaternion = new THREE.Quaternion().setFromUnitVectors(axis, direction);
+          strut.setRotationFromQuaternion(quaternion);
+
+          latticeGroup.add(strut);
+        }
+
+        if (layer === 0 || layer === layers - 1) {
+          const nodeGeometry = new THREE.SphereGeometry(strutThickness * 1.8, 16, 16);
+          const node = new THREE.Mesh(nodeGeometry, titaniumMaterial);
+          node.position.set(x, y, z);
+          latticeGroup.add(node);
+        }
+      }
     }
 
-    const endCapMaterial = new THREE.MeshStandardMaterial({
-      color: 0x666666,
-      metalness: 0.95,
+    const topCapGeometry = new THREE.CylinderGeometry(latticeRadius * 0.3, latticeRadius * 0.5, 0.15, 32);
+    const topCap = new THREE.Mesh(topCapGeometry, new THREE.MeshStandardMaterial({
+      color: 0x999999,
+      metalness: 0.98,
+      roughness: 0.1,
+    }));
+    topCap.position.y = latticeHeight / 2 + 0.08;
+    latticeGroup.add(topCap);
+
+    const bottomCap = new THREE.Mesh(topCapGeometry, new THREE.MeshStandardMaterial({
+      color: 0x999999,
+      metalness: 0.98,
+      roughness: 0.1,
+    }));
+    bottomCap.position.y = -latticeHeight / 2 - 0.08;
+    latticeGroup.add(bottomCap);
+
+    const hotspotMaterial = new THREE.MeshStandardMaterial({
+      color: 0x06b6d4,
+      metalness: 0.8,
       roughness: 0.2,
+      emissive: 0x06b6d4,
+      emissiveIntensity: 0.5,
     });
 
-    const endCapGeometry1 = new THREE.CylinderGeometry(outerRadius, outerRadius, 0.1, 32);
-    const endCap1 = new THREE.Mesh(endCapGeometry1, endCapMaterial);
-    endCap1.position.y = componentHeight / 2 + 0.05;
-    latticeGroup.add(endCap1);
+    const hotspotGeometry = new THREE.SphereGeometry(0.08, 16, 16);
 
-    const endCap2 = new THREE.Mesh(endCapGeometry1, endCapMaterial);
-    endCap2.position.y = -componentHeight / 2 - 0.05;
-    latticeGroup.add(endCap2);
+    const hotspotData: Hotspot[] = [
+      {
+        id: 1,
+        position: new THREE.Vector3(0.8, 0.8, 0.6),
+        title: 'Material',
+        details: 'Ti-6Al-4V (Grade 5) Titanium\nAerospace Grade Alloy',
+      },
+      {
+        id: 2,
+        position: new THREE.Vector3(-0.9, 0, 0.5),
+        title: 'Weight Reduction',
+        details: 'Lattice Structure\n67% Weight Reduction vs Solid',
+      },
+      {
+        id: 3,
+        position: new THREE.Vector3(0.6, -0.9, -0.4),
+        title: 'Surface Finish',
+        details: 'Post-Machined Surface\nRa <1.2 μm',
+      },
+    ];
 
-    const innerCapGeometry = new THREE.CylinderGeometry(innerRadius, innerRadius, 0.08, 32);
-    const innerCap1 = new THREE.Mesh(innerCapGeometry, endCapMaterial);
-    innerCap1.position.y = componentHeight / 2 + 0.04;
-    latticeGroup.add(innerCap1);
+    hotspotData.forEach((hotspot) => {
+      const hotspotMesh = new THREE.Mesh(hotspotGeometry, hotspotMaterial);
+      hotspotMesh.position.copy(hotspot.position);
+      hotspotMesh.userData = { hotspotId: hotspot.id };
+      latticeGroup.add(hotspotMesh);
+      hotspot.mesh = hotspotMesh;
+    });
 
-    const innerCap2 = new THREE.Mesh(innerCapGeometry, endCapMaterial);
-    innerCap2.position.y = -componentHeight / 2 - 0.04;
-    latticeGroup.add(innerCap2);
+    hotspotsRef.current = hotspotData;
 
     group.add(latticeGroup);
     scene.add(group);
 
-    group.rotation.x = 0.2;
+    group.rotation.x = 0.3;
     group.rotation.y = 0.5;
 
     const handleMouseDown = (event: MouseEvent) => {
@@ -174,28 +214,58 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
     };
 
     const handleMouseMove = (event: MouseEvent) => {
-      if (!mouseDownRef.current || !meshRef.current) return;
+      const rect = renderer.domElement.getBoundingClientRect();
+      mouseRef.current.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouseRef.current.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
 
-      const deltaX = event.clientX - previousMousePositionRef.current.x;
-      const deltaY = event.clientY - previousMousePositionRef.current.y;
+      setTooltipPosition({
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top,
+      });
 
-      meshRef.current.rotation.y += deltaX * 0.01;
-      meshRef.current.rotation.x += deltaY * 0.01;
+      if (mouseDownRef.current && meshRef.current) {
+        const deltaX = event.clientX - previousMousePositionRef.current.x;
+        const deltaY = event.clientY - previousMousePositionRef.current.y;
 
-      previousMousePositionRef.current = {
-        x: event.clientX,
-        y: event.clientY,
-      };
+        meshRef.current.rotation.y += deltaX * 0.01;
+        meshRef.current.rotation.x += deltaY * 0.01;
 
-      if (isAutoRotatingRef.current) {
-        setIsAutoRotating(false);
-        isAutoRotatingRef.current = false;
-        onAutoRotateChange?.(false);
+        previousMousePositionRef.current = {
+          x: event.clientX,
+          y: event.clientY,
+        };
+
+        if (isAutoRotatingRef.current) {
+          setIsAutoRotating(false);
+          isAutoRotatingRef.current = false;
+          onAutoRotateChange?.(false);
+        }
+      }
+
+      if (!mouseDownRef.current && cameraRef.current) {
+        raycasterRef.current.setFromCamera(mouseRef.current, cameraRef.current);
+        const hotspotMeshes = hotspotsRef.current.map(h => h.mesh).filter(Boolean) as THREE.Mesh[];
+        const intersects = raycasterRef.current.intersectObjects(hotspotMeshes);
+
+        if (intersects.length > 0) {
+          const hotspotId = intersects[0].object.userData.hotspotId;
+          const hotspot = hotspotsRef.current.find(h => h.id === hotspotId);
+          if (hotspot) {
+            setHoveredHotspot(hotspot);
+            renderer.domElement.style.cursor = 'pointer';
+          }
+        } else {
+          setHoveredHotspot(null);
+          renderer.domElement.style.cursor = mouseDownRef.current ? 'grabbing' : 'grab';
+        }
       }
     };
 
     const handleMouseUp = () => {
       mouseDownRef.current = false;
+      if (rendererRef.current) {
+        rendererRef.current.domElement.style.cursor = 'grab';
+      }
     };
 
     renderer.domElement.addEventListener('mousedown', handleMouseDown);
@@ -211,6 +281,19 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
       if (isAutoRotatingRef.current && meshRef.current) {
         meshRef.current.rotation.y += 0.005;
       }
+
+      hotspotsRef.current.forEach(hotspot => {
+        if (hotspot.mesh) {
+          const scale = hoveredHotspot?.id === hotspot.id ? 1.3 : 1.0;
+          hotspot.mesh.scale.setScalar(scale);
+          
+          if (hoveredHotspot?.id === hotspot.id) {
+            hotspot.mesh.material.emissiveIntensity = 0.8;
+          } else {
+            (hotspot.mesh.material as THREE.MeshStandardMaterial).emissiveIntensity = 0.5;
+          }
+        }
+      });
 
       renderer.render(scene, camera);
     };
@@ -283,9 +366,29 @@ export default function ThreeDViewer({ autoRotate = false, onAutoRotateChange }:
   return (
     <div 
       ref={containerRef} 
-      className="w-full h-full rounded-xl overflow-hidden bg-space-900 border border-gray-700/30"
+      className="w-full h-full rounded-xl overflow-hidden bg-space-900 border border-gray-700/30 relative"
       data-testid="3d-viewer"
       style={{ minHeight: '400px' }}
-    />
+    >
+      {hoveredHotspot && (
+        <div
+          className="absolute z-10 pointer-events-none"
+          style={{
+            left: tooltipPosition.x + 15,
+            top: tooltipPosition.y - 10,
+          }}
+          data-testid={`hotspot-tooltip-${hoveredHotspot.id}`}
+        >
+          <div className="bg-space-800/95 border border-cyber-400/50 rounded-lg p-3 backdrop-blur-sm shadow-xl">
+            <div className="text-cyber-400 text-xs font-mono font-bold mb-1 uppercase tracking-wider">
+              {hoveredHotspot.title}
+            </div>
+            <div className="text-white text-sm font-mono whitespace-pre-line">
+              {hoveredHotspot.details}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
