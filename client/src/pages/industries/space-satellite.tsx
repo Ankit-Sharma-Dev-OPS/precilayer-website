@@ -27,11 +27,15 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
+import ThreeDViewer from "@/components/ThreeDViewer";
+import { RotateCw, Maximize2 } from "lucide-react";
 
 export default function SpaceSatellite() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [autoRotate, setAutoRotate] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Space and Satellite Manufacturing | Precilayer";
     
     const metaTags = [
@@ -308,6 +312,123 @@ export default function SpaceSatellite() {
               </button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Interactive Component Showcase */}
+      <section className="py-20 bg-space-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="showcase-title">
+              Interactive Component <span className="gradient-text">Showcase</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our precision-engineered aerospace components in detail
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* 3D Viewer */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2"
+            >
+              <div className="bg-gradient-to-br from-space-900/80 to-space-700/60 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6 h-full">
+                <ThreeDViewer autoRotate={autoRotate} onAutoRotateChange={setAutoRotate} />
+                <div className="mt-4 text-sm text-gray-400 text-center">
+                  Drag to rotate • Scroll to zoom
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Controls and Info Panel */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              {/* Interactive Controls */}
+              <div className="bg-gradient-to-br from-space-900/80 to-space-700/60 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6">
+                <h3 className="font-bold text-white mb-4 text-lg">Interactive Controls</h3>
+                <div className="space-y-3">
+                  <button
+                    onClick={() => setAutoRotate(!autoRotate)}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg border transition-all ${
+                      autoRotate
+                        ? 'bg-cyber-400/20 border-cyber-400/50 text-cyber-400'
+                        : 'bg-space-800 border-gray-700 text-gray-300 hover:border-cyber-400/30'
+                    }`}
+                    data-testid="button-auto-rotate"
+                  >
+                    <span className="flex items-center gap-2">
+                      <RotateCw className="h-4 w-4" />
+                      Auto Rotate
+                    </span>
+                    <span className="text-sm">{autoRotate ? 'ON' : 'OFF'}</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      window.location.reload();
+                    }}
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-lg border bg-space-800 border-gray-700 text-gray-300 hover:border-cyber-400/30 transition-all"
+                    data-testid="button-reset-view"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Maximize2 className="h-4 w-4" />
+                      Reset View
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Material Capabilities */}
+              <div className="bg-gradient-to-br from-space-900/80 to-space-700/60 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6">
+                <h3 className="font-bold text-white mb-4 text-lg">MATERIAL CAPABILITIES</h3>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-sm text-gray-400 mb-2">Metals (DMLS/CNC)</h4>
+                    <div className="text-sm text-white font-mono bg-space-900/50 p-3 rounded border border-gray-700/30">
+                      <div className="mb-1"><span className="text-cyber-400">Ti6Al4V</span>, Inconel 718/625, SS316L, AlSi10Mg</div>
+                      <div className="text-gray-400 text-xs">Al 5083/6061/7068 series, Brass, Copper, Carbide</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm text-gray-400 mb-2">Polymers (Print/CNC)</h4>
+                    <div className="text-sm text-white font-mono bg-space-900/50 p-3 rounded border border-gray-700/30">
+                      <div><span className="text-cyber-400">PA12, PA12GB</span>, TPU, Nylon CF, PEEK, PTFE</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm text-gray-400 mb-2">Tolerances</h4>
+                    <div className="text-sm text-white font-mono bg-space-900/50 p-3 rounded border border-gray-700/30">
+                      <div className="text-cyber-400">±0.005mm CNC, ±0.2mm MJF, ±0.25mm DMLS</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Info */}
+              <div className="bg-gradient-to-br from-space-900/80 to-space-700/60 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  From rapid prototyping to production scale, our multi-process capabilities cover metals, polymers, and composites with precision finishing options including anodizing, electropolishing, and powder coating.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
