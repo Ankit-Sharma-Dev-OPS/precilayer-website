@@ -246,13 +246,19 @@ export default function SpaceSatellite() {
       
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Image */}
+        {/* Background Image - Full brightness */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${rocketLaunchImg})` }}
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-space-900/80 via-space-900/90 to-space-900" />
+        {/* Radial gradient overlay focused on center text area */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-space-900" />
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)' 
+          }}
+        />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
           {/* Breadcrumbs */}
@@ -308,11 +314,11 @@ export default function SpaceSatellite() {
               </div>
             </div>
             
-            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white" data-testid="hero-title">
+            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
               Space and Satellite <span className="gradient-text">Manufacturing</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed" data-testid="hero-description">
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
               Mission-critical components, high-reliability processes, flight-ready documentation
             </p>
             
