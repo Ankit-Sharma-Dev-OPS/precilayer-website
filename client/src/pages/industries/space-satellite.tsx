@@ -28,8 +28,8 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
 
-import bracketsImg from "@assets/satellite-space-brackets_1762273257354.webp";
-import waveguideImg from "@assets/waveguide_1762273257344.webp";
+import bracketsImg from "@assets/generated_images/Aluminum_aerospace_structural_bracket_fc5c18c2.png";
+import waveguideImg from "@assets/generated_images/RF_waveguide_antenna_component_4fdaecdc.png";
 import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
 import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
@@ -45,12 +45,12 @@ export default function SpaceSatellite() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Space and Satellite Manufacturing | Precilayer";
+    document.title = "Aerospace and Satellite Manufacturing | Precilayer";
     
     const metaTags = [
-      { name: "description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." },
-      { property: "og:title", content: "Space and Satellite Manufacturing | Precilayer" },
-      { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." }
+      { name: "description", content: "Flight-ready CNC components, inspection, and documentation for satellite and aerospace programs. Tight tolerances, COC, and material traceability." },
+      { property: "og:title", content: "Aerospace and Satellite Manufacturing | Precilayer" },
+      { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and aerospace programs. Tight tolerances, COC, and material traceability." }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];
@@ -82,7 +82,7 @@ export default function SpaceSatellite() {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Space and Satellite",
+          "name": "Aerospace and Satellite",
           "item": "https://www.precilayer.com/industries/space-satellite"
         }
       ]
@@ -234,8 +234,8 @@ export default function SpaceSatellite() {
       answer: "Absolutely. Our process begins with prototype runs where we validate designs, optimize manufacturing processes, and generate comprehensive FAI documentation. We then seamlessly transition to pilot runs and full production with consistent quality and traceability maintained throughout all phases."
     },
     {
-      question: "What quality standards do you follow for space applications?",
-      answer: "We maintain ISO 9001:2015 certification and follow aerospace quality standards. Our processes include statistical process control, calibrated measurement equipment, environmental controls, and comprehensive documentation systems designed to meet the stringent requirements of space and satellite manufacturing."
+      question: "What quality standards do you follow for aerospace applications?",
+      answer: "We maintain ISO 9001:2015 certification and follow aerospace quality standards. Our processes include statistical process control, calibrated measurement equipment, environmental controls, and comprehensive documentation systems designed to meet the stringent requirements of aerospace and satellite manufacturing."
     }
   ];
 
@@ -283,7 +283,7 @@ export default function SpaceSatellite() {
                 <BreadcrumbItem>
                   <BreadcrumbPage className="text-cyber-400 flex items-center gap-1" data-testid="breadcrumb-current">
                     <Satellite className="h-4 w-4" />
-                    Space and Satellite
+                    Aerospace and Satellite
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
@@ -303,7 +303,7 @@ export default function SpaceSatellite() {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white" data-testid="hero-title">
-              Space and Satellite <span className="gradient-text">Manufacturing</span>
+              Aerospace and Satellite <span className="gradient-text">Manufacturing</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed" data-testid="hero-description">
@@ -864,7 +864,7 @@ export default function SpaceSatellite() {
               Project <span className="gradient-text">Snapshots</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Representative examples of space and satellite components we manufacture
+              Representative examples of aerospace and satellite components we manufacture
             </p>
           </motion.div>
 
@@ -978,7 +978,7 @@ export default function SpaceSatellite() {
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Common questions about space and satellite manufacturing
+              Common questions about aerospace and satellite manufacturing
             </p>
           </motion.div>
 

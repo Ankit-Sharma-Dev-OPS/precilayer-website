@@ -156,7 +156,16 @@ export default function FAQSection() {
           <p className="text-gray-400 mb-6">
             Have a specific question about our manufacturing capabilities?
           </p>
-          <button className="bg-cyber-400/10 hover:bg-cyber-400/20 border border-cyber-400/50 hover:border-cyber-400 text-cyber-400 px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-400/20 font-semibold">
+          <button 
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="bg-cyber-400/10 hover:bg-cyber-400/20 border border-cyber-400/50 hover:border-cyber-400 text-cyber-400 px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-400/20 font-semibold"
+            data-testid="button-contact-engineering"
+          >
             Contact Our Engineering Team
           </button>
         </motion.div>
