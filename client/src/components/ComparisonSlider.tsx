@@ -83,10 +83,10 @@ export default function ComparisonSlider({
           className="w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
-        <div className="absolute bottom-6 right-6 bg-cyber-400/90 backdrop-blur-sm px-4 py-2 rounded-lg">
-          <div className="font-bold text-space-900 text-sm">{afterLabel}</div>
+        <div className="absolute bottom-6 right-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+          <div className="font-bold text-white text-sm">{afterLabel}</div>
           {afterSubtext && (
-            <div className="text-xs text-space-900/80">{afterSubtext}</div>
+            <div className="text-xs text-gray-300">{afterSubtext}</div>
           )}
         </div>
       </div>
