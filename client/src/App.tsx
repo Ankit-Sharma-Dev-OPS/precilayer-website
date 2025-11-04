@@ -10,6 +10,7 @@ import ResponsibleSourcing from "@/pages/responsible-sourcing";
 import PurchasingTerms from "@/pages/purchasing-terms";
 import SupplierIntegrityGuide from "@/pages/supplier-integrity-guide";
 import ESGCSRPolicy from "@/pages/esg-csr-policy";
+import SpaceSatellite from "@/pages/industries/space-satellite";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
         component={SupplierIntegrityGuide}
       />
       <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
+      <Route path="/industries/space-satellite" component={SpaceSatellite} />
       <Route component={NotFound} />
     </Switch>
   );
