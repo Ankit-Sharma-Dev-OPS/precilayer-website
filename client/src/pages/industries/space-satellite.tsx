@@ -488,38 +488,54 @@ export default function SpaceSatellite() {
       </section>
 
       {/* Unique Advantage */}
-      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
+        <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center space-y-12"
           >
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="advantage-title">
+            <div>
+              <h2 className="font-orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-white" data-testid="advantage-title">
                 Precilayer's <span className="gradient-text">Unique Advantage</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-6">
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
                 We combine the best of both <span className="text-cyber-400 font-semibold">additive and subtractive</span> metal and polymer solutions to make state-of-the-art components
               </p>
-              <p className="text-lg md:text-xl font-semibold text-white mb-4">
-                Zero Defects. Unmatched Precision & Reliability. <span className="text-cyber-400">5X Faster Production.</span>
-              </p>
-              <p className="text-lg text-gray-300">
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <div className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6">
+                <div className="text-4xl font-bold text-cyber-400 mb-2">Zero</div>
+                <div className="text-lg text-gray-300">Defects</div>
+              </div>
+              <div className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6">
+                <div className="text-4xl font-bold text-cyber-400 mb-2">Unmatched</div>
+                <div className="text-lg text-gray-300">Precision & Reliability</div>
+              </div>
+              <div className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6">
+                <div className="text-4xl font-bold text-cyber-400 mb-2">5X</div>
+                <div className="text-lg text-gray-300">Faster Production</div>
+              </div>
+            </div>
+
+            <div className="bg-space-800/50 border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto">
+              <p className="text-xl text-gray-200 leading-relaxed">
                 We don't just manufacture components—we provide design insights to make your parts <span className="font-semibold text-white">faster, lighter, and stronger</span>
               </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
-                  <span className="text-cyber-400 font-semibold">CNC Machining</span>
-                </div>
-                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
-                  <span className="text-cyber-400 font-semibold">3D Printing</span>
-                </div>
-                <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
-                  <span className="text-cyber-400 font-semibold">Metal & Polymer</span>
-                </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="px-8 py-4 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                <span className="text-cyber-400 font-semibold text-lg">CNC Machining</span>
+              </div>
+              <div className="px-8 py-4 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                <span className="text-cyber-400 font-semibold text-lg">3D Printing</span>
+              </div>
+              <div className="px-8 py-4 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
+                <span className="text-cyber-400 font-semibold text-lg">Metal & Polymer</span>
               </div>
             </div>
           </motion.div>
