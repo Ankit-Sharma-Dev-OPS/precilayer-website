@@ -261,47 +261,6 @@ export default function SpaceSatellite() {
         />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          {/* Breadcrumbs */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <Breadcrumb>
-              <BreadcrumbList className="text-gray-400">
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/">
-                      <span className="hover:text-cyber-400 transition-colors flex items-center gap-1" data-testid="breadcrumb-home">
-                        <Home className="h-4 w-4" />
-                        Home
-                      </span>
-                    </Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/#industries">
-                      <span className="hover:text-cyber-400 transition-colors flex items-center gap-1" data-testid="breadcrumb-industries">
-                        <Factory className="h-4 w-4" />
-                        Industries
-                      </span>
-                    </Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="text-cyber-400 flex items-center gap-1" data-testid="breadcrumb-current">
-                    <Satellite className="h-4 w-4" />
-                    Space and Satellite
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
