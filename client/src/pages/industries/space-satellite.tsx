@@ -251,7 +251,7 @@ export default function SpaceSatellite() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${rocketLaunchImg})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-space-900/70 via-space-900/80 to-space-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-space-900/90 via-space-900/95 to-space-900" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
           {/* Breadcrumbs */}
