@@ -33,6 +33,9 @@ import waveguideImg from "@assets/waveguide_1762273257344.webp";
 import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
 import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
+import traditionalImg from "@assets/generated_images/Traditional_machined_aerospace_bracket_817d90f7.png";
+import precilayerImg from "@assets/generated_images/Precilayer_mirror-finish_bracket_6b711765.png";
+import ComparisonSlider from "@/components/ComparisonSlider";
 
 export default function SpaceSatellite() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -625,6 +628,135 @@ export default function SpaceSatellite() {
               </p>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Traditional vs. Precilayer Manufacturing */}
+      <section className="py-20 bg-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="comparison-title">
+              Traditional vs. <span className="gradient-text">Precision Manufacturing</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the difference in quality and precision
+            </p>
+          </motion.div>
+
+          {/* Comparison Slider */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-12 max-w-5xl mx-auto"
+          >
+            <ComparisonSlider
+              beforeImage={traditionalImg}
+              afterImage={precilayerImg}
+              beforeLabel="Traditional"
+              afterLabel="Precilayer"
+              beforeSubtext="Higher defect rate"
+              afterSubtext="99.98% precision"
+            />
+          </motion.div>
+
+          {/* Challenge vs Solution */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* The Challenge */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50"
+              data-testid="challenge-box"
+            >
+              <h3 className="font-bold text-xl text-white mb-6">The Challenge</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Surface irregularities and tool marks compromise aerodynamics
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Longer production cycles delay critical launch schedules
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Higher defect rates increase mission risk factors
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Precilayer Solution */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-space-800/60 backdrop-blur-sm p-8 rounded-xl border border-cyber-400/30"
+              data-testid="solution-box"
+            >
+              <h3 className="font-bold text-xl text-white mb-6">Precilayer Solution</h3>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-cyber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Mirror-finish surfaces with sub-micron accuracy standards
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-cyber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    Automated workflows reduce lead time by 67% consistently
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg className="w-4 h-4 text-cyber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-300 text-sm">
+                    99.98% precision ensures mission-critical reliability
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
