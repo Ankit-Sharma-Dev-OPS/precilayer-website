@@ -35,6 +35,9 @@ import thermalImg from "@assets/satellite-space-thermal-management-system_176227
 import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
 import traditionalImg from "@assets/generated_images/Bracket_with_milling_finish_9f7214ec.png";
 import precilayerImg from "@assets/generated_images/Aerospace_bracket_Ra_0.8_finish_1aebc83f.png";
+import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
+import actuatorShaftImg from "@assets/generated_images/Actuator_shaft_precision_component_fce381dc.png";
+import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
 export default function SpaceSatellite() {
@@ -190,19 +193,22 @@ export default function SpaceSatellite() {
       title: "Satellite Structural Bracket",
       specs: "6061-T6 Aluminum, ±0.02mm tolerance",
       finish: "Bead blast + clear anodize",
-      application: "Satellite mounting system"
+      application: "Satellite mounting system",
+      image: satelliteBracketImg
     },
     {
       title: "Actuator Shaft",
       specs: "17-4PH H900, GD&T with multiple datums",
       finish: "Passivated",
-      application: "Precision positioning mechanism"
+      application: "Precision positioning mechanism",
+      image: actuatorShaftImg
     },
     {
       title: "RF Enclosure",
       specs: "7075-T6 Aluminum, EMI-sensitive pocketing",
       finish: "Chromate conversion coating",
-      application: "Communication equipment housing"
+      application: "Communication equipment housing",
+      image: rfEnclosureImg
     }
   ];
 
@@ -870,23 +876,29 @@ export default function SpaceSatellite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-space-700/40 to-space-800/40 backdrop-blur-sm p-6 rounded-xl border border-gray-700/30 hover:border-cyber-400/50 transition-all duration-300"
+                className="bg-gradient-to-br from-space-700/40 to-space-800/40 backdrop-blur-sm rounded-xl border border-gray-700/30 hover:border-cyber-400/50 transition-all duration-300 overflow-hidden"
                 data-testid={`case-${index}`}
               >
-                <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center mb-4 border border-cyber-400/30">
-                  <Cpu className="h-6 w-6 text-cyber-400" />
+                <div className="aspect-square bg-gray-900 flex items-center justify-center p-6">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{study.title}</h3>
-                <div className="space-y-2 text-sm">
-                  <p className="text-gray-300">
-                    <span className="text-cyber-400 font-semibold">Specs:</span> {study.specs}
-                  </p>
-                  <p className="text-gray-300">
-                    <span className="text-cyber-400 font-semibold">Finish:</span> {study.finish}
-                  </p>
-                  <p className="text-gray-300">
-                    <span className="text-cyber-400 font-semibold">Application:</span> {study.application}
-                  </p>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-3">{study.title}</h3>
+                  <div className="space-y-2 text-sm">
+                    <p className="text-gray-300">
+                      <span className="text-cyber-400 font-semibold">Specs:</span> {study.specs}
+                    </p>
+                    <p className="text-gray-300">
+                      <span className="text-cyber-400 font-semibold">Finish:</span> {study.finish}
+                    </p>
+                    <p className="text-gray-300">
+                      <span className="text-cyber-400 font-semibold">Application:</span> {study.application}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
