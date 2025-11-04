@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 interface ComparisonSliderProps {
   beforeImage: string;
@@ -21,7 +21,7 @@ export default function ComparisonSlider({
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (clientX: number) => {
+  const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     
     const rect = containerRef.current.getBoundingClientRect();
@@ -29,67 +29,58 @@ export default function ComparisonSlider({
     const percentage = (x / rect.width) * 100;
     
     setSliderPosition(percentage);
-  };
+  }, []);
 
-  const handleMouseDown = () => {
-    setIsDragging(true);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return;
+  const handlePointerMove = useCallback((e: PointerEvent) => {
+    e.preventDefault();
     handleMove(e.clientX);
-  };
+  }, [handleMove]);
 
-  const handleTouchMove = (e: TouchEvent) => {
-    if (!isDragging) return;
-    handleMove(e.touches[0].clientX);
-  };
+  const handlePointerUp = useCallback(() => {
+    setIsDragging(false);
+  }, []);
 
   useEffect(() => {
     if (isDragging) {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
-      window.addEventListener('touchmove', handleTouchMove);
-      window.addEventListener('touchend', handleMouseUp);
-    } else {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseUp);
+      window.addEventListener('pointermove', handlePointerMove);
+      window.addEventListener('pointerup', handlePointerUp);
+
+      return () => {
+        window.removeEventListener('pointermove', handlePointerMove);
+        window.removeEventListener('pointerup', handlePointerUp);
+      };
     }
+  }, [isDragging, handlePointerMove, handlePointerUp]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const handlePointerDown = (e: PointerEvent) => {
+      e.preventDefault();
+      handleMove(e.clientX);
+      setIsDragging(true);
+    };
+
+    container.addEventListener('pointerdown', handlePointerDown);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseUp);
+      container.removeEventListener('pointerdown', handlePointerDown);
     };
-  }, [isDragging]);
+  }, [handleMove]);
 
   return (
     <div
       ref={containerRef}
       className="relative w-full aspect-[16/9] rounded-xl overflow-hidden select-none cursor-col-resize touch-none"
-      onMouseDown={(e) => {
-        handleMove(e.clientX);
-        handleMouseDown();
-      }}
-      onTouchStart={(e) => {
-        handleMove(e.touches[0].clientX);
-        handleMouseDown();
-      }}
       data-testid="comparison-slider"
     >
       {/* After Image (Precilayer - Right side) */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <img
           src={afterImage}
           alt={afterLabel}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
         <div className="absolute bottom-6 right-6 bg-cyber-400/90 backdrop-blur-sm px-4 py-2 rounded-lg">
@@ -102,13 +93,13 @@ export default function ComparisonSlider({
 
       {/* Before Image (Traditional - Left side) with clip */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img
           src={beforeImage}
           alt={beforeLabel}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
           draggable={false}
         />
         <div className="absolute bottom-6 left-6 bg-gray-800/90 backdrop-blur-sm px-4 py-2 rounded-lg">
@@ -121,7 +112,7 @@ export default function ComparisonSlider({
 
       {/* Slider Line and Handle */}
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+        className="absolute top-0 bottom-0 w-1 bg-white shadow-lg pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-cyber-400 rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing border-4 border-white">
