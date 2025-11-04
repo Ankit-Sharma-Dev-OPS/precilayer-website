@@ -30,14 +30,12 @@ import SubtleBackground from "@/components/subtle-background";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
 import medicalHeroImg from "@assets/stock_images/surgical_robot_opera_49b0608d.jpg";
-import surgicalImg from "@assets/stock_images/modern_medical_devic_1328cee7.jpg";
-import implantImg from "@assets/stock_images/medical_implant_tita_988db213.jpg";
-import deviceImg from "@assets/stock_images/modern_medical_devic_5997127e.jpg";
-import printingImg from "@assets/stock_images/3d_printing_medical__8690d8c2.jpg";
-import injectionImg from "@assets/stock_images/injection_molding_me_e11ce5bc.jpg";
-import medicalParts1 from "@assets/stock_images/medical_device_compo_e5a57b23.jpg";
-import medicalParts2 from "@assets/stock_images/medical_device_compo_c6eddbcc.jpg";
-import medicalParts3 from "@assets/stock_images/medical_device_compo_14a1ba65.jpg";
+import surgicalImg from "@assets/stock_images/surgical_instruments_e6588ae7.jpg";
+import implantImg from "@assets/stock_images/medical_implant_tita_6c3f09fe.jpg";
+import deviceImg from "@assets/stock_images/diagnostic_medical_e_1b0ee435.jpg";
+import disposableImg from "@assets/stock_images/medical_catheter_tub_7ab5e4f3.jpg";
+import drugDeliveryImg from "@assets/stock_images/drug_delivery_system_7b7add01.jpg";
+import lifeSupportImg from "@assets/stock_images/medical_ventilator_r_7ab56de8.jpg";
 import teleflexLogo from "@assets/teleflex_1762299246744.png";
 import jnjVisionLogo from "@assets/Johnson_and_Johnson_Vision_Logo_1762299246747.jpg";
 import medtronicLogo from "@assets/Medtronic-Logo-Blue_1762299246746.jpg";
@@ -54,13 +52,13 @@ export default function MedTech() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Medical Device Manufacturing | Precilayer - Precision CNC & 3D Printing";
+    document.title = "Healthcare & MedTech Component Manufacturing | Precilayer - Precision CNC & 3D Printing";
     
     const metaTags = [
-      { name: "description", content: "Medical device manufacturing with biocompatible materials, regulatory-aligned processes, and full traceability. CNC machining, 3D printing, and injection molding for surgical instruments, implants, and diagnostic equipment." },
-      { property: "og:title", content: "Medical Device Manufacturing | Precilayer" },
-      { property: "og:description", content: "Medical device manufacturing with biocompatible materials, regulatory-aligned processes, and full traceability." },
-      { name: "keywords", content: "medical device manufacturing, CNC machining, 3D printing medical, biocompatible materials, surgical instruments, medical implants, titanium machining, stainless steel medical parts, PEEK medical components, injection molding medical" }
+      { name: "description", content: "Precision manufacturing of healthcare and medtech components with biocompatible materials, regulatory-aligned processes, and full traceability. CNC machining, 3D printing, and injection molding for surgical instruments, implants, and diagnostic equipment." },
+      { property: "og:title", content: "Healthcare & MedTech Component Manufacturing | Precilayer" },
+      { property: "og:description", content: "Precision manufacturing of healthcare and medtech components with biocompatible materials, regulatory-aligned processes, and full traceability." },
+      { name: "keywords", content: "healthcare component manufacturing, medtech parts, CNC machining, 3D printing medical, biocompatible materials, surgical instruments, medical implants, titanium machining, stainless steel medical parts, PEEK medical components, injection molding medical" }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];
@@ -92,7 +90,7 @@ export default function MedTech() {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Medical Device Manufacturing",
+          "name": "Healthcare & MedTech Components",
           "item": "https://www.precilayer.com/industries/medtech"
         }
       ]
@@ -125,7 +123,7 @@ export default function MedTech() {
     {
       icon: Shield,
       title: "Regulatory-Aligned Processes",
-      description: "Manufacturing processes designed to support FDA regulatory requirements and ISO 13485 quality management standards through our partner network, ensuring consistent, traceable production for medical device manufacturers."
+      description: "Manufacturing processes designed to support FDA regulatory requirements and ISO 13485 quality management standards through our partner network, ensuring consistent, traceable production for healthcare and medtech companies."
     },
     {
       icon: Microscope,
@@ -140,7 +138,7 @@ export default function MedTech() {
     {
       icon: Activity,
       title: "Precision for Critical Applications",
-      description: "Sub-micron tolerances and validated process capability for life-critical medical devices requiring absolute precision and reliability."
+      description: "Sub-micron tolerances and validated process capability for life-critical healthcare applications requiring absolute precision and reliability."
     },
     {
       icon: ClipboardCheck,
@@ -154,42 +152,42 @@ export default function MedTech() {
     }
   ];
 
-  const capabilities = [
+  const partsCategories = [
     {
-      title: "CNC Precision Machining",
-      description: "Multi-axis CNC machining for complex medical geometries",
-      features: ["5-axis simultaneous machining", "Micro-machining capabilities", "±0.001mm tolerances", "Mirror-finish surfaces"],
+      title: "Surgical Instruments",
+      description: "Precision-machined stainless steel surgical tools and components",
+      features: ["Forceps & clamps", "Scalpel handles & blades", "Retractors & spreaders", "Laparoscopic tool components"],
       image: surgicalImg
     },
     {
-      title: "3D Printing / Additive Manufacturing",
-      description: "Advanced 3D printing for medical prototypes and production",
-      features: ["SLS, SLA, FDM technologies", "Medical-grade resins & powders", "Titanium & biocompatible polymers", "Complex geometries & lattices"],
-      image: printingImg
-    },
-    {
-      title: "Injection Molding",
-      description: "High-volume medical device component production",
-      features: ["Medical-grade thermoplastics", "Class 7/8 cleanroom capability", "Tight tolerances & repeatability", "Insert molding & overmolding"],
-      image: injectionImg
-    },
-    {
-      title: "Vacuum Casting & Urethane Molding",
-      description: "Bridge production for medical device validation",
-      features: ["Medical-grade polyurethanes", "15-25 parts per mold", "Excellent surface finish", "Overmolding capabilities"],
-      image: deviceImg
-    },
-    {
-      title: "Medical-Grade Materials",
-      description: "Certified biocompatible and sterilizable materials",
-      features: ["Ti-6Al-4V ELI (Extra Low Interstitial)", "316L surgical stainless steel", "PEEK and medical polymers", "Cobalt-chrome alloys"],
+      title: "Implantable Components",
+      description: "Biocompatible orthopedic and dental implant parts",
+      features: ["Orthopedic implants", "Dental implants & abutments", "Spinal cages & rods", "Trauma plates & screws"],
       image: implantImg
     },
     {
-      title: "Surface Treatments & Finishing",
-      description: "Medical-specific finishing processes",
-      features: ["Electropolishing", "Passivation", "Anodizing (Type II & III)", "Plasma coating compatible"],
-      image: medicalParts1
+      title: "Diagnostic Equipment Parts",
+      description: "High-precision components for medical diagnostic devices",
+      features: ["Imaging device components", "Endoscope parts", "Sensor housings", "Fluid handling systems"],
+      image: deviceImg
+    },
+    {
+      title: "Disposable Components",
+      description: "Single-use healthcare component parts and assemblies",
+      features: ["Catheter components", "Syringe parts", "IV connectors", "Fluid delivery systems"],
+      image: disposableImg
+    },
+    {
+      title: "Drug Delivery Systems",
+      description: "Precision components for pharmaceutical delivery devices",
+      features: ["Injector components", "Auto-injector parts", "Inhaler assemblies", "Pump mechanism parts"],
+      image: drugDeliveryImg
+    },
+    {
+      title: "Life Support Equipment",
+      description: "Critical components for respiratory and life support systems",
+      features: ["Ventilator parts", "Oxygen delivery components", "Breathing circuit assemblies", "Monitor housings"],
+      image: lifeSupportImg
     }
   ];
 
@@ -198,7 +196,7 @@ export default function MedTech() {
     "Stainless Steel: Surgical and implant grades - ASTM F138 (316L Surgical Implant), ASTM F139 (316LVM), ASTM F55 (S31254), ASTM F899 (Stainless Steel Wire), 17-4PH (ASTM A564), 440C (High hardness surgical)",
     "PEEK Polymers: High-performance medical plastics - PEEK 450G (Natural, Medical Grade), PEEK-OPTIMA (Implant Grade), Carbon-Reinforced PEEK, Radiopaque PEEK, TECAPEEK MT (Biocompatible)",
     "Cobalt-Chrome Alloys: Orthopedic implant materials - ASTM F75 (CoCrMo Cast), ASTM F90 (CoCrMo Wrought), ASTM F562 (MP35N), ASTM F1537 (CoCrNiCrMo)",
-    "Biocompatible Polymers: Medical device plastics - PPSU (Polyphenylsulfone), ULTEM 1010 (PEI Medical), Polycarbonate (Medical Grade), Acetal Copolymer (Delrin Medical), UHMWPE (Ultra-High Molecular Weight PE)",
+    "Biocompatible Polymers: Healthcare and medtech plastics - PPSU (Polyphenylsulfone), ULTEM 1010 (PEI Medical), Polycarbonate (Medical Grade), Acetal Copolymer (Delrin Medical), UHMWPE (Ultra-High Molecular Weight PE)",
     "Precious Metals: Specialty medical applications - Platinum (ASTM B818), Platinum-Iridium Alloys, Gold (Medical Grade), Palladium Alloys, Nitinol (NiTi - Shape Memory, ASTM F2063)"
   ];
 
@@ -236,7 +234,7 @@ export default function MedTech() {
   const faqs = [
     {
       question: "How do you support FDA and ISO 13485 requirements?",
-      answer: "Our manufacturing processes are designed to support medical device regulatory requirements through our partner network. We work closely with ISO 13485-certified facilities and maintain processes aligned with FDA quality system regulations. This includes comprehensive documentation, material traceability, process controls, and quality management systems that help medical device manufacturers meet their compliance obligations."
+      answer: "Our manufacturing processes are designed to support healthcare and medtech regulatory requirements through our partner network. We work closely with ISO 13485-certified facilities and maintain processes aligned with FDA quality system regulations. This includes comprehensive documentation, material traceability, process controls, and quality management systems that help our clients meet their compliance obligations."
     },
     {
       question: "What biocompatible materials can you machine?",
@@ -247,7 +245,7 @@ export default function MedTech() {
       answer: "Yes. We provide complete material traceability including mill certificates, heat lot numbers, biocompatibility test reports (ISO 10993 where applicable), chemical composition analysis, and mechanical properties certification. Every component is traceable from raw material source through final inspection."
     },
     {
-      question: "What tolerances can you achieve for medical devices?",
+      question: "What tolerances can you achieve for healthcare components?",
       answer: "We routinely achieve tolerances of ±0.0005\" (±0.0127mm) and can reach ±0.0002\" (±0.005mm) for critical features. Our 5-axis CNC centers and precision inspection equipment (CMM, optical comparators) ensure repeatable accuracy for complex medical geometries and tight GD&T requirements."
     },
     {
@@ -255,12 +253,12 @@ export default function MedTech() {
       answer: "Yes. We provide electropolishing, passivation (citric or nitric acid), anodizing (Type II and Type III), and precision grinding to achieve surfaces compatible with autoclave, EtO gas, gamma radiation, and electron beam sterilization. Surface roughness is documented and verified to meet your specifications."
     },
     {
-      question: "What are typical lead times for medical device components?",
-      answer: "Prototype and first article runs: 2-3 weeks with full FAI documentation. Low-volume production (10-100 parts): 3-4 weeks. Production runs with established processes: 2-3 weeks depending on complexity. Rush programs available for urgent medical device development projects."
+      question: "What are typical lead times for healthcare & medtech components?",
+      answer: "Prototype and first article runs: 2-3 weeks with full FAI documentation. Low-volume production (10-100 parts): 3-4 weeks. Production runs with established processes: 2-3 weeks depending on complexity. Rush programs available for urgent healthcare and medtech development projects."
     },
     {
-      question: "Can you manufacture components for Class III medical devices?",
-      answer: "Yes. We have experience manufacturing precision components for Class II and Class III medical devices including implantables, surgical instruments, and life-sustaining equipment. We understand the heightened documentation, traceability, and quality requirements for higher-risk medical devices."
+      question: "Can you manufacture components used in Class III medical devices?",
+      answer: "Yes. We have experience manufacturing precision components used in Class II and Class III medical devices including implantables, surgical instruments, and life-sustaining equipment. We understand the heightened documentation, traceability, and quality requirements for components used in higher-risk applications."
     },
     {
       question: "Do you offer cleanroom manufacturing?",
@@ -302,7 +300,7 @@ export default function MedTech() {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
-              Medical Device <span className="gradient-text">Manufacturing</span>
+              Healthcare & MedTech <span className="gradient-text">Components</span>
             </h1>
             
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
@@ -343,7 +341,7 @@ export default function MedTech() {
               Medical <span className="gradient-text">Applications</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Precision-engineered components for life-critical medical devices
+              Precision-engineered components for life-critical healthcare applications
             </p>
           </motion.div>
 
@@ -382,119 +380,7 @@ export default function MedTech() {
         </div>
       </section>
 
-      {/* Medical Parts We Manufacture */}
-      <section className="py-20 bg-space-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
-              Parts We <span className="gradient-text">Manufacture</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Precision-engineered medical device components across all categories
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {[medicalParts1, medicalParts2, medicalParts3].map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="rounded-xl overflow-hidden border border-gray-700/50 hover:border-cyber-400/50 transition-all group"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={image} 
-                    alt={`Medical device parts ${index + 1}`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-space-800/60 to-space-700/40 rounded-2xl p-8 border border-gray-700/50"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Implantable Components</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Orthopedic implants</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Dental implants & abutments</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Spinal cages & rods</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Trauma plates & screws</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Cardiovascular stents</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Surgical Instruments</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Forceps & clamps</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Retractors & speculums</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Scalpel handles & blades</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Laparoscopic tools</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Arthroscopic instruments</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Diagnostic Equipment</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Endoscope components</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Imaging device housings</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Biopsy tools</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Sensor housings</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Fluid handling systems</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Disposable Components</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Syringe components</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />IV connectors & valves</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Catheter parts</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Luer locks & fittings</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Test kit housings</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Drug Delivery Systems</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Inhaler components</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Auto-injector parts</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Pump housings</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Nebulizer components</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Infusion system parts</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-cyber-400 mb-3">Life Support Equipment</h3>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Ventilator components</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Dialysis machine parts</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Oxygen delivery systems</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Monitoring device housings</li>
-                  <li className="flex items-start"><CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 mt-0.5 flex-shrink-0" />Critical care components</li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Trusted by Leading Medical Device Companies - Carousel */}
+      {/* Trusted by Leading Healthcare & MedTech Companies - Carousel */}
       <section className="py-16 bg-space-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -505,7 +391,7 @@ export default function MedTech() {
             className="text-center mb-12"
           >
             <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-white">
-              Trusted by <span className="gradient-text">Leading</span> Medical Device Companies
+              Trusted by <span className="gradient-text">Leading</span> Healthcare & MedTech Companies
             </h2>
             <p className="text-gray-400">Manufacturing partners to innovators in healthcare</p>
           </motion.div>
@@ -514,15 +400,15 @@ export default function MedTech() {
           <div className="relative">
             <div className="overflow-hidden">
               <motion.div
-                className="flex gap-12"
+                className="flex gap-16"
                 animate={{
-                  x: [0, -1920],
+                  x: [0, -2400],
                 }}
                 transition={{
                   x: {
                     repeat: Infinity,
                     repeatType: "loop",
-                    duration: 40,
+                    duration: 45,
                     ease: "linear",
                   },
                 }}
@@ -542,12 +428,12 @@ export default function MedTech() {
                 ].map((logo, index) => (
                   <div
                     key={`logo-1-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center bg-white/95 rounded-xl p-6 h-28 w-64 shadow-lg"
+                    className="flex-shrink-0 flex items-center justify-center p-4 h-24"
                   >
                     <img 
                       src={logo.src} 
                       alt={logo.alt}
-                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-110"
                     />
                   </div>
                 ))}
@@ -566,12 +452,12 @@ export default function MedTech() {
                 ].map((logo, index) => (
                   <div
                     key={`logo-2-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center bg-white/95 rounded-xl p-6 h-28 w-64 shadow-lg"
+                    className="flex-shrink-0 flex items-center justify-center p-4 h-24"
                   >
                     <img 
                       src={logo.src} 
                       alt={logo.alt}
-                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-110"
                     />
                   </div>
                 ))}
@@ -595,7 +481,7 @@ export default function MedTech() {
               Precision <span className="gradient-text">Matters</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Medical devices demand absolute precision - lives depend on it
+              Healthcare components demand absolute precision - lives depend on it
             </p>
           </motion.div>
 
@@ -692,10 +578,10 @@ export default function MedTech() {
             className="text-center mb-16"
           >
             <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="why-title">
-              Why <span className="gradient-text">Precilayer</span> for Medical Devices
+              Why <span className="gradient-text">Precilayer</span> for Healthcare & MedTech
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Specialized expertise in medical device manufacturing with regulatory-aligned processes
+              Specialized expertise in healthcare and medtech component manufacturing with regulatory-aligned processes
             </p>
           </motion.div>
 
@@ -729,8 +615,8 @@ export default function MedTech() {
         </div>
       </section>
 
-      {/* Capabilities Grid */}
-      <section id="capabilities" className="py-20 bg-space-900">
+      {/* Parts We Manufacture */}
+      <section id="parts" className="py-20 bg-space-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -739,37 +625,37 @@ export default function MedTech() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="capabilities-title">
-              Medical Manufacturing <span className="gradient-text">Capabilities</span>
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="parts-title">
+              Parts We <span className="gradient-text">Manufacture</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              CNC machining, 3D printing, injection molding, and finishing for medical devices
+              Precision-engineered components for healthcare and medical technology applications
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((capability, index) => (
+            {partsCategories.map((part, index) => (
               <motion.div
-                key={capability.title}
+                key={part.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-space-800/60 to-space-700/40 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all overflow-hidden group"
-                data-testid={`capability-${index}`}
+                data-testid={`part-${index}`}
               >
                 <div className="h-48 overflow-hidden">
                   <img 
-                    src={capability.image} 
-                    alt={capability.title}
+                    src={part.image} 
+                    alt={part.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-cyber-400 mb-2">{capability.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{capability.description}</p>
+                  <h3 className="text-lg font-bold text-cyber-400 mb-2">{part.title}</h3>
+                  <p className="text-sm text-gray-400 mb-4">{part.description}</p>
                   <ul className="space-y-2">
-                    {capability.features.map((feature, fIndex) => (
+                    {part.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start text-gray-300 text-sm">
                         <CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
@@ -873,7 +759,7 @@ export default function MedTech() {
               Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Common questions about medical device manufacturing
+              Common questions about healthcare & medtech component manufacturing
             </p>
           </motion.div>
 
