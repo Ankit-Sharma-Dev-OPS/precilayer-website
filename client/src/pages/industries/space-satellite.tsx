@@ -509,8 +509,11 @@ export default function SpaceSatellite() {
               <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white" data-testid="advantage-title">
                 Precilayer's <span className="gradient-text">Unique Advantage</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-6">
                 We combine the best of both <span className="text-cyber-400 font-semibold">additive and subtractive</span> metal and polymer solutions to make state-of-the-art components
+              </p>
+              <p className="text-lg md:text-xl font-semibold text-white">
+                Zero Defects. Unmatched Precision & Reliability. <span className="text-cyber-400">5X Faster Production.</span>
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <div className="px-6 py-3 bg-cyber-400/10 border border-cyber-400/30 rounded-lg backdrop-blur-sm">
