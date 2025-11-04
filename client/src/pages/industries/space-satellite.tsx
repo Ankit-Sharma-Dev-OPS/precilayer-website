@@ -245,62 +245,74 @@ export default function SpaceSatellite() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        {/* Background Image - Full brightness */}
-        <div 
-          className="absolute inset-0 bg-cover"
-          style={{ 
-            backgroundImage: `url(${rocketLaunchImg})`,
-            backgroundPosition: 'center 25%'
-          }}
-        />
-        {/* Radial gradient overlay focused on center text area */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-space-900" />
-        <div 
-          className="absolute inset-0" 
-          style={{ 
-            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' 
-          }}
-        />
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-20 bg-gradient-to-b from-space-900 via-space-900 to-space-800">
+        <SubtleBackground />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-cyber-400/20 rounded-2xl border border-cyber-400/30">
-                <Satellite className="h-16 w-16 text-cyber-400" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-cyber-400/20 rounded-xl border border-cyber-400/30">
+                  <Satellite className="h-12 w-12 text-cyber-400" />
+                </div>
               </div>
-            </div>
-            
-            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
-              Space and Satellite <span className="gradient-text">Manufacturing</span>
-            </h1>
-            
-            <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
-              Mission-critical components, high-reliability processes, flight-ready documentation
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
-                data-testid="cta-talk-engineering"
-              >
-                Talk to Engineering
-              </button>
-              <button 
-                onClick={() => scrollToSection('capabilities')}
-                className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
-                data-testid="cta-view-capabilities"
-              >
-                View Capabilities
-              </button>
-            </div>
-          </motion.div>
+              
+              <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold text-white" data-testid="hero-title">
+                Space and Satellite <span className="gradient-text">Manufacturing</span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 leading-relaxed" data-testid="hero-description">
+                Mission-critical components, high-reliability processes, flight-ready documentation
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
+                  data-testid="cta-talk-engineering"
+                >
+                  Talk to Engineering
+                </button>
+                <button 
+                  onClick={() => scrollToSection('capabilities')}
+                  className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
+                  data-testid="cta-view-capabilities"
+                >
+                  View Capabilities
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Right Column - Rocket Image in Glassmorphism Card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative h-[500px] lg:h-[600px] hidden lg:block"
+            >
+              {/* Glassmorphism Container */}
+              <div className="relative h-full rounded-3xl overflow-hidden border border-cyber-400/30 shadow-2xl">
+                {/* Rocket Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url(${rocketLaunchImg})` }}
+                />
+                {/* Gradient overlay for glass effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyber-400/10 via-transparent to-space-900/40 backdrop-blur-[1px]" />
+                {/* Glow effect */}
+                <div className="absolute inset-0 shadow-[inset_0_0_60px_rgba(0,247,255,0.15)]" />
+              </div>
+              
+              {/* Decorative glow behind card */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-cyber-400/20 to-transparent blur-3xl -z-10 rounded-3xl" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
