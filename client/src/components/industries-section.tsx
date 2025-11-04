@@ -47,15 +47,15 @@ export default function IndustriesSection() {
     {
       icon: Stethoscope,
       title: "Healthcare & MedTech",
-      description: "Medical device components with biocompatible materials, regulatory-aligned processes, and comprehensive quality standards.",
+      description: "Precision components for healthcare and medical technology with biocompatible materials, regulatory-aligned processes, and comprehensive quality standards.",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Medical device manufacturing",
+      alt: "Healthcare and medtech component manufacturing",
       link: "/industries/medtech",
       components: [
         "Surgical instrument parts",
         "Implant components",
-        "Diagnostic equipment housings",
-        "Sterilizable assemblies"
+        "Diagnostic equipment parts",
+        "Life support components"
       ]
     },
     {

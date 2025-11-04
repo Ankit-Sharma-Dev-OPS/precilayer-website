@@ -316,11 +316,11 @@ export default function MedTech() {
                 Discuss Your Project
               </button>
               <button 
-                onClick={() => scrollToSection('capabilities')}
+                onClick={() => scrollToSection('parts')}
                 className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
-                data-testid="cta-view-capabilities"
+                data-testid="cta-view-parts"
               >
-                View Capabilities
+                View Parts We Make
               </button>
             </div>
           </motion.div>
