@@ -115,24 +115,18 @@ export default function ComparisonSlider({
         className="absolute top-0 bottom-0 w-1 bg-white shadow-lg pointer-events-none"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-cyber-400 rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing border-4 border-white">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center cursor-grab active:cursor-grabbing border-4 border-cyber-400">
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6 text-cyber-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            strokeWidth={3}
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 19l7-7-7-7"
+              d="M8 9l4-4 4 4M8 15l4 4 4-4"
             />
           </svg>
         </div>
