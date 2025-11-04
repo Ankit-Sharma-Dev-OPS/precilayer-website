@@ -165,15 +165,17 @@ export default function SpaceSatellite() {
   ];
 
   const materials = [
-    "Aluminum: Industry standard for structural satellite components",
-    "Stainless Steel: Corrosion-resistant and machinable grades for fasteners and mechanisms",
-    "Titanium: High-strength, lightweight aerospace-grade material",
-    "Inconel: High-temperature and corrosion-resistant superalloy",
-    "Steel: Heat-treated alloy steel for high-strength requirements",
-    "High-Performance Polymers: Functional prototypes and non-structural components"
+    "Aluminum Alloys: Industry standard for structural satellite components - AMS-QQ-A-250, AMS-QQ-A-225",
+    "Titanium Alloys: High-strength, lightweight aerospace material - AMS 4911, AMS 4928, AMS 4935",
+    "Stainless Steel: Corrosion-resistant and machinable grades - AMS 5504, AMS 5643, AMS 5604",
+    "Nickel Superalloys: High-temperature and corrosion-resistant - AMS 5596, AMS 5662, AMS 5383",
+    "Copper Alloys: RF/waveguide and electrical applications - AMS 4500, AMS 4640",
+    "Alloy Steel: Heat-treated high-strength applications - AMS 6414, AMS 6382",
+    "Magnesium Alloys: Ultra-lightweight structural components - AMS 4375, AMS 4377",
+    "High-Performance Polymers: Functional prototypes and non-structural - PEEK, ULTEM, PA12"
   ];
 
-  const materialGrades = "Common grades: 6061-T6, 7075-T6 (Aluminum) | 410, 416, 17-4PH (Stainless) | Ti-6Al-4V, Ti-6Al-2Sn-4Zr-2Mo (Titanium) | 625, 718 (Inconel) | 4340 (Steel) | PA12, PC, PMMA (Polymers)";
+  const materialGrades = "Typical grades: 6061-T6, 7075-T6, 2024-T3 (Aluminum) | Ti-6Al-4V (Grade 5), Ti-6Al-2Sn-4Zr-2Mo (Titanium) | 304, 316, 17-4PH, 15-5PH (Stainless) | Inconel 625, 718 (Nickel) | C18000, C18200, C10100 (Copper) | 4340, 4130 (Steel) | AZ31B, ZK60A (Magnesium)";
 
   const qualityPoints = [
     "ISO-aligned workflows with FAI on request",
