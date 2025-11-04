@@ -38,6 +38,16 @@ import injectionImg from "@assets/stock_images/injection_molding_me_e11ce5bc.jpg
 import medicalParts1 from "@assets/stock_images/medical_device_compo_e5a57b23.jpg";
 import medicalParts2 from "@assets/stock_images/medical_device_compo_c6eddbcc.jpg";
 import medicalParts3 from "@assets/stock_images/medical_device_compo_14a1ba65.jpg";
+import teleflexLogo from "@assets/teleflex_1762299246744.png";
+import jnjVisionLogo from "@assets/Johnson_and_Johnson_Vision_Logo_1762299246747.jpg";
+import medtronicLogo from "@assets/Medtronic-Logo-Blue_1762299246746.jpg";
+import cookMedicalLogo from "@assets/cook medical logo_1762299246748.png";
+import meritMedicalLogo from "@assets/Merit-Medical-logo_1762299246742.jpg";
+import integerLogo from "@assets/Integer-Holdings-logo-2021_1762299246748.jpg";
+import aranLogo from "@assets/Aran Biomedical_1762299246745.png";
+import oxfordLogo from "@assets/Oxford endovascular_1762299246745.jpg";
+import edwardsLogo from "@assets/Edwards_1762299246746.png";
+import teConnectivityLogo from "@assets/Tecoonectivity_1762299246747.png";
 
 export default function MedTech() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -484,8 +494,8 @@ export default function MedTech() {
         </div>
       </section>
 
-      {/* Trusted by Leading Medical Device Companies */}
-      <section className="py-16 bg-space-800">
+      {/* Trusted by Leading Medical Device Companies - Carousel */}
+      <section className="py-16 bg-space-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -500,26 +510,74 @@ export default function MedTech() {
             <p className="text-gray-400">Manufacturing partners to innovators in healthcare</p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center"
-          >
-            {['Teleflex Medical', 'Johnson & Johnson Vision', 'Medtronic', 'Cook Medical', 'Merit Medical', 'Integer Holdings', 'Aran Biomedical', 'Oxford Endovascular', 'Edwards Lifesciences'].map((company, index) => (
+          {/* Infinite Scrolling Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden">
               <motion.div
-                key={company}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-center justify-center p-6 bg-gradient-to-br from-space-900/60 to-space-800/40 rounded-xl border border-gray-700/30 hover:border-cyber-400/50 transition-all"
+                className="flex gap-12"
+                animate={{
+                  x: [0, -1920],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 40,
+                    ease: "linear",
+                  },
+                }}
               >
-                <span className="text-gray-300 font-semibold text-center text-sm">{company}</span>
+                {/* First set of logos */}
+                {[
+                  { src: teleflexLogo, alt: 'Teleflex' },
+                  { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision' },
+                  { src: medtronicLogo, alt: 'Medtronic' },
+                  { src: cookMedicalLogo, alt: 'Cook Medical' },
+                  { src: meritMedicalLogo, alt: 'Merit Medical' },
+                  { src: integerLogo, alt: 'Integer Holdings' },
+                  { src: aranLogo, alt: 'Aran Biomedical' },
+                  { src: oxfordLogo, alt: 'Oxford Endovascular' },
+                  { src: edwardsLogo, alt: 'Edwards Lifesciences' },
+                  { src: teConnectivityLogo, alt: 'TE Connectivity' }
+                ].map((logo, index) => (
+                  <div
+                    key={`logo-1-${index}`}
+                    className="flex-shrink-0 flex items-center justify-center bg-white/95 rounded-xl p-6 h-28 w-64 shadow-lg"
+                  >
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt}
+                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                ))}
+                {/* Duplicate set for seamless loop */}
+                {[
+                  { src: teleflexLogo, alt: 'Teleflex' },
+                  { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision' },
+                  { src: medtronicLogo, alt: 'Medtronic' },
+                  { src: cookMedicalLogo, alt: 'Cook Medical' },
+                  { src: meritMedicalLogo, alt: 'Merit Medical' },
+                  { src: integerLogo, alt: 'Integer Holdings' },
+                  { src: aranLogo, alt: 'Aran Biomedical' },
+                  { src: oxfordLogo, alt: 'Oxford Endovascular' },
+                  { src: edwardsLogo, alt: 'Edwards Lifesciences' },
+                  { src: teConnectivityLogo, alt: 'TE Connectivity' }
+                ].map((logo, index) => (
+                  <div
+                    key={`logo-2-${index}`}
+                    className="flex-shrink-0 flex items-center justify-center bg-white/95 rounded-xl p-6 h-28 w-64 shadow-lg"
+                  >
+                    <img 
+                      src={logo.src} 
+                      alt={logo.alt}
+                      className="max-h-16 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                ))}
               </motion.div>
-            ))}
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
