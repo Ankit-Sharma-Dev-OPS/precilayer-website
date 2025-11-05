@@ -282,7 +282,7 @@ export default function SpaceSatellite() {
             </h1>
             
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
-              Mission-critical components with AS9100 D-aligned processes, high-reliability manufacturing, and flight-ready documentation
+              Mission-critical components with AS9100 D-compliant processes, high-reliability manufacturing, and flight-ready documentation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
