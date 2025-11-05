@@ -646,7 +646,7 @@ export default function MedTech() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto md:grid-rows-[auto_auto_auto]">
             {partsCategories.map((part, index) => (
               <motion.div
                 key={part.title}
@@ -654,20 +654,20 @@ export default function MedTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                className="rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col"
                 data-testid={`part-${index}`}
               >
-                <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-8">
+                <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-8 flex-shrink-0">
                   <img 
                     src={part.image} 
                     alt={part.title}
                     className="max-h-full max-w-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6 bg-gradient-to-br from-space-900 to-space-800">
+                <div className="p-6 bg-gradient-to-br from-space-900 to-space-800 flex-grow flex flex-col">
                   <h3 className="text-xl font-bold text-cyber-400 mb-3">{part.title}</h3>
                   <p className="text-sm text-gray-300 mb-5 leading-relaxed">{part.description}</p>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2.5 flex-grow">
                     {part.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start text-gray-200 text-sm">
                         <CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2.5 flex-shrink-0 mt-0.5" />
