@@ -417,26 +417,27 @@ export default function MedTech() {
                 >
                   {/* First set of logos */}
                   {[
-                    { src: teleflexLogo, alt: 'Teleflex', minHeight: 'h-16' },
-                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', minHeight: 'h-20' },
-                    { src: medtronicLogo, alt: 'Medtronic', minHeight: 'h-20' },
-                    { src: cookMedicalLogo, alt: 'Cook Medical', minHeight: 'h-20' },
-                    { src: meritMedicalLogo, alt: 'Merit Medical', minHeight: 'h-20' },
-                    { src: integerLogo, alt: 'Integer Holdings', minHeight: 'h-20' },
-                    { src: aranLogo, alt: 'Aran Biomedical', minHeight: 'h-16' },
-                    { src: oxfordLogo, alt: 'Oxford Endovascular', minHeight: 'h-16' },
-                    { src: edwardsLogo, alt: 'Edwards Lifesciences', minHeight: 'h-20' },
-                    { src: teConnectivityLogo, alt: 'TE Connectivity', minHeight: 'h-20' }
+                    { src: teleflexLogo, alt: 'Teleflex', maxHeight: '80px' },
+                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', maxHeight: '110px' },
+                    { src: medtronicLogo, alt: 'Medtronic', maxHeight: '80px' },
+                    { src: cookMedicalLogo, alt: 'Cook Medical', maxHeight: '110px' },
+                    { src: meritMedicalLogo, alt: 'Merit Medical', maxHeight: '110px' },
+                    { src: integerLogo, alt: 'Integer Holdings', maxHeight: '110px' },
+                    { src: aranLogo, alt: 'Aran Biomedical', maxHeight: '64px' },
+                    { src: oxfordLogo, alt: 'Oxford Endovascular', maxHeight: '110px' },
+                    { src: edwardsLogo, alt: 'Edwards Lifesciences', maxHeight: '80px' },
+                    { src: teConnectivityLogo, alt: 'TE Connectivity', maxHeight: '80px' }
                   ].map((logo, index) => (
                     <div
                       key={`logo-1-${index}`}
-                      className="flex-shrink-0 flex items-center justify-center w-52 h-24"
+                      className="flex-shrink-0 flex items-center justify-center w-52 h-28"
                     >
                       <img 
                         src={logo.src} 
                         alt={logo.alt}
-                        className="max-h-20 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                        className="max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
                         style={{ 
+                          maxHeight: logo.maxHeight,
                           objectFit: 'contain',
                           objectPosition: 'center'
                         }}
@@ -445,26 +446,27 @@ export default function MedTech() {
                   ))}
                   {/* Duplicate set for seamless loop */}
                   {[
-                    { src: teleflexLogo, alt: 'Teleflex', minHeight: 'h-16' },
-                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', minHeight: 'h-20' },
-                    { src: medtronicLogo, alt: 'Medtronic', minHeight: 'h-20' },
-                    { src: cookMedicalLogo, alt: 'Cook Medical', minHeight: 'h-20' },
-                    { src: meritMedicalLogo, alt: 'Merit Medical', minHeight: 'h-20' },
-                    { src: integerLogo, alt: 'Integer Holdings', minHeight: 'h-20' },
-                    { src: aranLogo, alt: 'Aran Biomedical', minHeight: 'h-16' },
-                    { src: oxfordLogo, alt: 'Oxford Endovascular', minHeight: 'h-16' },
-                    { src: edwardsLogo, alt: 'Edwards Lifesciences', minHeight: 'h-20' },
-                    { src: teConnectivityLogo, alt: 'TE Connectivity', minHeight: 'h-20' }
+                    { src: teleflexLogo, alt: 'Teleflex', maxHeight: '80px' },
+                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', maxHeight: '110px' },
+                    { src: medtronicLogo, alt: 'Medtronic', maxHeight: '80px' },
+                    { src: cookMedicalLogo, alt: 'Cook Medical', maxHeight: '110px' },
+                    { src: meritMedicalLogo, alt: 'Merit Medical', maxHeight: '110px' },
+                    { src: integerLogo, alt: 'Integer Holdings', maxHeight: '110px' },
+                    { src: aranLogo, alt: 'Aran Biomedical', maxHeight: '64px' },
+                    { src: oxfordLogo, alt: 'Oxford Endovascular', maxHeight: '110px' },
+                    { src: edwardsLogo, alt: 'Edwards Lifesciences', maxHeight: '80px' },
+                    { src: teConnectivityLogo, alt: 'TE Connectivity', maxHeight: '80px' }
                   ].map((logo, index) => (
                     <div
                       key={`logo-2-${index}`}
-                      className="flex-shrink-0 flex items-center justify-center w-52 h-24"
+                      className="flex-shrink-0 flex items-center justify-center w-52 h-28"
                     >
                       <img 
                         src={logo.src} 
                         alt={logo.alt}
-                        className="max-h-20 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                        className="max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
                         style={{ 
+                          maxHeight: logo.maxHeight,
                           objectFit: 'contain',
                           objectPosition: 'center'
                         }}
