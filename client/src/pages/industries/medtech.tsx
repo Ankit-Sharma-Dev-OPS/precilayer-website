@@ -31,11 +31,13 @@ import ComparisonSlider from "@/components/ComparisonSlider";
 
 import medicalHeroImg from "@assets/stock_images/surgical_robot_opera_49b0608d.jpg";
 import surgicalImg from "@assets/stock_images/surgical_instruments_e6588ae7.jpg";
-import implantImg from "@assets/stock_images/medical_implant_tita_6c3f09fe.jpg";
+import implantImg from "@assets/stock_images/cnc_machined_titaniu_1e475a2c.jpg";
 import deviceImg from "@assets/stock_images/diagnostic_medical_e_1b0ee435.jpg";
-import disposableImg from "@assets/stock_images/medical_catheter_tub_7ab5e4f3.jpg";
-import drugDeliveryImg from "@assets/stock_images/drug_delivery_system_7b7add01.jpg";
-import lifeSupportImg from "@assets/stock_images/medical_ventilator_r_7ab56de8.jpg";
+import surgicalToolsImg from "@assets/surgical-tools-new-bg-white_1762300495333.webp";
+import diagnosticEnclosuresImg from "@assets/Plastic-enclosures_1762300495332.webp";
+import drugDeliveryComponentsImg from "@assets/drug-delivery_1762300495335.webp";
+import orthoticInterfacesImg from "@assets/orthotic-new_1762300495335.webp";
+import endoscopicAccessoriesImg from "@assets/endoscopic-new_1762300495334.webp";
 import teleflexLogo from "@assets/teleflex_1762299246744.png";
 import jnjVisionLogo from "@assets/Johnson_and_Johnson_Vision_Logo_1762299246747.jpg";
 import medtronicLogo from "@assets/Medtronic-Logo-Blue_1762299246746.jpg";
@@ -154,40 +156,34 @@ export default function MedTech() {
 
   const partsCategories = [
     {
-      title: "Surgical Instruments",
-      description: "Precision-machined stainless steel surgical tools and components",
-      features: ["Forceps & clamps", "Scalpel handles & blades", "Retractors & spreaders", "Laparoscopic tool components"],
-      image: surgicalImg
+      title: "Surgical Tools & Precision Guides",
+      description: "High-precision surgical instruments and guidance components",
+      features: ["Forceps & clamps", "Scalpel handles & blades", "Retractors & spreaders", "Micro-surgical instruments", "Surgical guides & templates"],
+      image: surgicalToolsImg
     },
     {
-      title: "Implantable Components",
-      description: "Biocompatible orthopedic and dental implant parts",
-      features: ["Orthopedic implants", "Dental implants & abutments", "Spinal cages & rods", "Trauma plates & screws"],
-      image: implantImg
+      title: "Diagnostic Housings & Wearable Enclosures",
+      description: "Custom enclosures for diagnostic devices and wearable medical technology",
+      features: ["Diagnostic equipment housings", "Wearable monitor enclosures", "Sensor protective cases", "Medical device covers", "Portable instrument housings"],
+      image: diagnosticEnclosuresImg
     },
     {
-      title: "Diagnostic Equipment Parts",
-      description: "High-precision components for medical diagnostic devices",
-      features: ["Imaging device components", "Endoscope parts", "Sensor housings", "Fluid handling systems"],
-      image: deviceImg
+      title: "Drug Delivery Components",
+      description: "Precision components for pharmaceutical delivery systems including pumps and valves",
+      features: ["Injector components & assemblies", "Pump mechanism parts", "Valve bodies & actuators", "Auto-injector housings", "Dosing mechanism components"],
+      image: drugDeliveryComponentsImg
     },
     {
-      title: "Disposable Components",
-      description: "Single-use healthcare component parts and assemblies",
-      features: ["Catheter components", "Syringe parts", "IV connectors", "Fluid delivery systems"],
-      image: disposableImg
+      title: "Orthotic & Prosthetic Interfaces",
+      description: "Custom-machined components for orthotic and prosthetic devices",
+      features: ["Prosthetic joint components", "Orthotic frame elements", "Interface brackets & adapters", "Load-bearing structural parts", "Custom fitting components"],
+      image: orthoticInterfacesImg
     },
     {
-      title: "Drug Delivery Systems",
-      description: "Precision components for pharmaceutical delivery devices",
-      features: ["Injector components", "Auto-injector parts", "Inhaler assemblies", "Pump mechanism parts"],
-      image: drugDeliveryImg
-    },
-    {
-      title: "Life Support Equipment",
-      description: "Critical components for respiratory and life support systems",
-      features: ["Ventilator parts", "Oxygen delivery components", "Breathing circuit assemblies", "Monitor housings"],
-      image: lifeSupportImg
+      title: "Endoscopic Device Accessories & Covers",
+      description: "Specialized components for endoscopic and minimally invasive surgical devices",
+      features: ["Endoscope protective sheaths", "Device tip components", "Instrument channel covers", "Accessory connection parts", "Sterilization-compatible housings"],
+      image: endoscopicAccessoriesImg
     }
   ];
 
@@ -381,7 +377,7 @@ export default function MedTech() {
       </section>
 
       {/* Trusted by Leading Healthcare & MedTech Companies - Carousel */}
-      <section className="py-16 bg-space-800 overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -390,19 +386,19 @@ export default function MedTech() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-white">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-gray-900">
               Trusted by <span className="gradient-text">Leading</span> Healthcare & MedTech Companies
             </h2>
-            <p className="text-gray-400">Manufacturing partners to innovators in healthcare</p>
+            <p className="text-gray-600">Manufacturing partners to innovators in healthcare</p>
           </motion.div>
 
           {/* Infinite Scrolling Carousel */}
           <div className="relative">
             <div className="overflow-hidden">
               <motion.div
-                className="flex gap-16"
+                className="flex gap-12"
                 animate={{
-                  x: [0, -2400],
+                  x: [0, -2200],
                 }}
                 transition={{
                   x: {
@@ -428,12 +424,16 @@ export default function MedTech() {
                 ].map((logo, index) => (
                   <div
                     key={`logo-1-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 h-24"
+                    className="flex-shrink-0 flex items-center justify-center w-40 h-20"
                   >
                     <img 
                       src={logo.src} 
                       alt={logo.alt}
-                      className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-110"
+                      className="max-h-16 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                      style={{ 
+                        objectFit: 'contain',
+                        objectPosition: 'center'
+                      }}
                     />
                   </div>
                 ))}
@@ -452,12 +452,16 @@ export default function MedTech() {
                 ].map((logo, index) => (
                   <div
                     key={`logo-2-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center p-4 h-24"
+                    className="flex-shrink-0 flex items-center justify-center w-40 h-20"
                   >
                     <img 
                       src={logo.src} 
                       alt={logo.alt}
-                      className="h-20 w-auto object-contain transition-transform duration-300 hover:scale-110"
+                      className="max-h-16 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                      style={{ 
+                        objectFit: 'contain',
+                        objectPosition: 'center'
+                      }}
                     />
                   </div>
                 ))}
@@ -633,7 +637,7 @@ export default function MedTech() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {partsCategories.map((part, index) => (
               <motion.div
                 key={part.title}
@@ -641,23 +645,23 @@ export default function MedTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-space-800/60 to-space-700/40 rounded-xl border border-gray-700/50 hover:border-cyber-400/50 transition-all overflow-hidden group"
+                className="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
                 data-testid={`part-${index}`}
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-56 overflow-hidden bg-white">
                   <img 
                     src={part.image} 
                     alt={part.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-cyber-400 mb-2">{part.title}</h3>
-                  <p className="text-sm text-gray-400 mb-4">{part.description}</p>
-                  <ul className="space-y-2">
+                <div className="p-6 bg-gradient-to-br from-space-900 to-space-800">
+                  <h3 className="text-xl font-bold text-cyber-400 mb-3">{part.title}</h3>
+                  <p className="text-sm text-gray-300 mb-5 leading-relaxed">{part.description}</p>
+                  <ul className="space-y-2.5">
                     {part.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start text-gray-300 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2 flex-shrink-0 mt-0.5" />
+                      <li key={fIndex} className="flex items-start text-gray-200 text-sm">
+                        <CheckCircle2 className="h-4 w-4 text-cyber-400 mr-2.5 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -666,6 +670,18 @@ export default function MedTech() {
               </motion.div>
             ))}
           </div>
+          
+          {/* Center the last item if odd number */}
+          <style>{`
+            @media (min-width: 768px) {
+              .grid.grid-cols-1.md\\:grid-cols-2 > :last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 1rem);
+                margin-left: auto;
+                margin-right: auto;
+              }
+            }
+          `}</style>
         </div>
       </section>
 
