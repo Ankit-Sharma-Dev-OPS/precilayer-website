@@ -654,16 +654,15 @@ export default function MedTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
+                className="rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
                 data-testid={`part-${index}`}
               >
-                <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-8 relative">
+                <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-8">
                   <img 
                     src={part.image} 
                     alt={part.title}
                     className="max-h-full max-w-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-space-900 to-transparent"></div>
                 </div>
                 <div className="p-6 bg-gradient-to-br from-space-900 to-space-800">
                   <h3 className="text-xl font-bold text-cyber-400 mb-3">{part.title}</h3>
