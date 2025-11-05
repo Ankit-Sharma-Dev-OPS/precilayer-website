@@ -661,7 +661,10 @@ export default function MedTech() {
                   <img 
                     src={part.image} 
                     alt={part.title}
-                    className="max-h-full max-w-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                    className={index === 1 
+                      ? "max-h-full max-w-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                      : "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    }
                   />
                 </div>
                 <div className="p-6 bg-gradient-to-br from-space-900 to-space-800 flex-grow flex flex-col">
