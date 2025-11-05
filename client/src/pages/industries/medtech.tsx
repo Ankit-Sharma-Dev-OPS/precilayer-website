@@ -657,17 +657,14 @@ export default function MedTech() {
                 className="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300"
                 data-testid={`part-${index}`}
               >
-                <div className="h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center p-8">
+                <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-8">
                   <img 
                     src={part.image} 
                     alt={part.title}
                     className="max-h-full max-w-full w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                    style={{
-                      filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))'
-                    }}
                   />
                 </div>
-                <div className="p-6 bg-gradient-to-br from-space-900 to-space-800">
+                <div className="p-6 bg-gradient-to-br from-space-900 to-space-800 -mt-2">
                   <h3 className="text-xl font-bold text-cyber-400 mb-3">{part.title}</h3>
                   <p className="text-sm text-gray-300 mb-5 leading-relaxed">{part.description}</p>
                   <ul className="space-y-2.5">
