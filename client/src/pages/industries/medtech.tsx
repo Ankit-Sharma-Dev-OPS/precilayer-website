@@ -31,7 +31,7 @@ import ComparisonSlider from "@/components/ComparisonSlider";
 
 import medicalHeroImg from "@assets/stock_images/surgical_robot_opera_49b0608d.jpg";
 import surgicalImg from "@assets/stock_images/surgical_instruments_e6588ae7.jpg";
-import implantImg from "@assets/stock_images/cnc_machined_titaniu_1e475a2c.jpg";
+import implantImg from "@assets/Orthopedic implants_1762300803920.jpg";
 import deviceImg from "@assets/stock_images/diagnostic_medical_e_1b0ee435.jpg";
 import surgicalToolsImg from "@assets/surgical-tools-new-bg-white_1762300495333.webp";
 import diagnosticEnclosuresImg from "@assets/Plastic-enclosures_1762300495332.webp";
