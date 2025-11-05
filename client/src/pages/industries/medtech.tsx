@@ -377,95 +377,102 @@ export default function MedTech() {
       </section>
 
       {/* Trusted by Leading Healthcare & MedTech Companies - Carousel */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-gray-900">
-              Trusted by <span className="gradient-text">Leading</span> Healthcare & MedTech Companies
-            </h2>
-            <p className="text-gray-600">Manufacturing partners to innovators in healthcare</p>
-          </motion.div>
+      <section className="overflow-hidden">
+        {/* Title Section - Dark Background */}
+        <div className="bg-space-800 py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-white">
+                Trusted by <span className="gradient-text">Leading</span> Healthcare & MedTech Companies
+              </h2>
+              <p className="text-gray-400">Manufacturing partners to innovators in healthcare</p>
+            </motion.div>
+          </div>
+        </div>
 
-          {/* Infinite Scrolling Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden">
-              <motion.div
-                className="flex gap-12"
-                animate={{
-                  x: [0, -2200],
-                }}
-                transition={{
-                  x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: 45,
-                    ease: "linear",
-                  },
-                }}
-              >
-                {/* First set of logos */}
-                {[
-                  { src: teleflexLogo, alt: 'Teleflex' },
-                  { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision' },
-                  { src: medtronicLogo, alt: 'Medtronic' },
-                  { src: cookMedicalLogo, alt: 'Cook Medical' },
-                  { src: meritMedicalLogo, alt: 'Merit Medical' },
-                  { src: integerLogo, alt: 'Integer Holdings' },
-                  { src: aranLogo, alt: 'Aran Biomedical' },
-                  { src: oxfordLogo, alt: 'Oxford Endovascular' },
-                  { src: edwardsLogo, alt: 'Edwards Lifesciences' },
-                  { src: teConnectivityLogo, alt: 'TE Connectivity' }
-                ].map((logo, index) => (
-                  <div
-                    key={`logo-1-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center w-40 h-20"
-                  >
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt}
-                      className="max-h-16 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
-                      style={{ 
-                        objectFit: 'contain',
-                        objectPosition: 'center'
-                      }}
-                    />
-                  </div>
-                ))}
-                {/* Duplicate set for seamless loop */}
-                {[
-                  { src: teleflexLogo, alt: 'Teleflex' },
-                  { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision' },
-                  { src: medtronicLogo, alt: 'Medtronic' },
-                  { src: cookMedicalLogo, alt: 'Cook Medical' },
-                  { src: meritMedicalLogo, alt: 'Merit Medical' },
-                  { src: integerLogo, alt: 'Integer Holdings' },
-                  { src: aranLogo, alt: 'Aran Biomedical' },
-                  { src: oxfordLogo, alt: 'Oxford Endovascular' },
-                  { src: edwardsLogo, alt: 'Edwards Lifesciences' },
-                  { src: teConnectivityLogo, alt: 'TE Connectivity' }
-                ].map((logo, index) => (
-                  <div
-                    key={`logo-2-${index}`}
-                    className="flex-shrink-0 flex items-center justify-center w-40 h-20"
-                  >
-                    <img 
-                      src={logo.src} 
-                      alt={logo.alt}
-                      className="max-h-16 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
-                      style={{ 
-                        objectFit: 'contain',
-                        objectPosition: 'center'
-                      }}
-                    />
-                  </div>
-                ))}
-              </motion.div>
+        {/* Logo Carousel - White Background */}
+        <div className="bg-white py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="relative">
+              <div className="overflow-hidden">
+                <motion.div
+                  className="flex gap-16"
+                  animate={{
+                    x: [0, -2600],
+                  }}
+                  transition={{
+                    x: {
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      duration: 45,
+                      ease: "linear",
+                    },
+                  }}
+                >
+                  {/* First set of logos */}
+                  {[
+                    { src: teleflexLogo, alt: 'Teleflex', minHeight: 'h-16' },
+                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', minHeight: 'h-20' },
+                    { src: medtronicLogo, alt: 'Medtronic', minHeight: 'h-20' },
+                    { src: cookMedicalLogo, alt: 'Cook Medical', minHeight: 'h-20' },
+                    { src: meritMedicalLogo, alt: 'Merit Medical', minHeight: 'h-20' },
+                    { src: integerLogo, alt: 'Integer Holdings', minHeight: 'h-20' },
+                    { src: aranLogo, alt: 'Aran Biomedical', minHeight: 'h-16' },
+                    { src: oxfordLogo, alt: 'Oxford Endovascular', minHeight: 'h-16' },
+                    { src: edwardsLogo, alt: 'Edwards Lifesciences', minHeight: 'h-20' },
+                    { src: teConnectivityLogo, alt: 'TE Connectivity', minHeight: 'h-20' }
+                  ].map((logo, index) => (
+                    <div
+                      key={`logo-1-${index}`}
+                      className="flex-shrink-0 flex items-center justify-center w-52 h-24"
+                    >
+                      <img 
+                        src={logo.src} 
+                        alt={logo.alt}
+                        className="max-h-20 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                        style={{ 
+                          objectFit: 'contain',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  ))}
+                  {/* Duplicate set for seamless loop */}
+                  {[
+                    { src: teleflexLogo, alt: 'Teleflex', minHeight: 'h-16' },
+                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', minHeight: 'h-20' },
+                    { src: medtronicLogo, alt: 'Medtronic', minHeight: 'h-20' },
+                    { src: cookMedicalLogo, alt: 'Cook Medical', minHeight: 'h-20' },
+                    { src: meritMedicalLogo, alt: 'Merit Medical', minHeight: 'h-20' },
+                    { src: integerLogo, alt: 'Integer Holdings', minHeight: 'h-20' },
+                    { src: aranLogo, alt: 'Aran Biomedical', minHeight: 'h-16' },
+                    { src: oxfordLogo, alt: 'Oxford Endovascular', minHeight: 'h-16' },
+                    { src: edwardsLogo, alt: 'Edwards Lifesciences', minHeight: 'h-20' },
+                    { src: teConnectivityLogo, alt: 'TE Connectivity', minHeight: 'h-20' }
+                  ].map((logo, index) => (
+                    <div
+                      key={`logo-2-${index}`}
+                      className="flex-shrink-0 flex items-center justify-center w-52 h-24"
+                    >
+                      <img 
+                        src={logo.src} 
+                        alt={logo.alt}
+                        className="max-h-20 max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
+                        style={{ 
+                          objectFit: 'contain',
+                          objectPosition: 'center'
+                        }}
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
