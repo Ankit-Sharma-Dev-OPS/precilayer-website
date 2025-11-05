@@ -46,12 +46,13 @@ export default function SpaceSatellite() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Space and Satellite Manufacturing | Precilayer";
+    document.title = "Space & Satellite CNC Machining, 3D Printing & Vacuum Casting | Precilayer - Aerospace Manufacturing";
     
     const metaTags = [
-      { name: "description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." },
-      { property: "og:title", content: "Space and Satellite Manufacturing | Precilayer" },
-      { property: "og:description", content: "Flight-ready CNC components, inspection, and documentation for satellite and space programs. Tight tolerances, COC, and material traceability." }
+      { name: "description", content: "Precision CNC machining, 3D printing, and vacuum casting for space and satellite components. Flight-ready aerospace parts with AS9100 alignment, tight tolerances, material traceability, and full documentation. Structural brackets, RF waveguides, propulsion systems." },
+      { property: "og:title", content: "Space & Satellite CNC Machining & 3D Printing | Precilayer" },
+      { property: "og:description", content: "Flight-ready aerospace components via CNC machining, 3D printing, and vacuum casting for satellite and space programs. AS9100-aligned processes, tight tolerances, full traceability." },
+      { name: "keywords", content: "space CNC machining, satellite manufacturing, aerospace CNC machining, 3D printing aerospace, vacuum casting satellite components, precision machining space industry, AS9100 manufacturing, satellite structural brackets, RF waveguides, aerospace precision parts, space-grade materials, titanium aerospace machining, aluminum satellite components, spacecraft manufacturing, flight-ready components, aerospace contract manufacturing India, satellite propulsion systems, thermal management aerospace, CNC aerospace parts" }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];

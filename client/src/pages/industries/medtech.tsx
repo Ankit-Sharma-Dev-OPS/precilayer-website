@@ -54,13 +54,13 @@ export default function MedTech() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Healthcare & MedTech Component Manufacturing | Precilayer - Precision CNC & 3D Printing";
+    document.title = "Medical CNC Machining, 3D Printing & Vacuum Casting | Precilayer - Healthcare & MedTech Manufacturing";
     
     const metaTags = [
-      { name: "description", content: "Precision manufacturing of healthcare and medtech components with biocompatible materials, regulatory-aligned processes, and full traceability. CNC machining, 3D printing, and injection molding for surgical instruments, implants, and diagnostic equipment." },
-      { property: "og:title", content: "Healthcare & MedTech Component Manufacturing | Precilayer" },
-      { property: "og:description", content: "Precision manufacturing of healthcare and medtech components with biocompatible materials, regulatory-aligned processes, and full traceability." },
-      { name: "keywords", content: "healthcare component manufacturing, medtech parts, CNC machining, 3D printing medical, biocompatible materials, surgical instruments, medical implants, titanium machining, stainless steel medical parts, PEEK medical components, injection molding medical" }
+      { name: "description", content: "Precision CNC machining, 3D printing, vacuum casting, and injection molding for healthcare and medtech components. Biocompatible materials, ISO 13485-aligned processes, full traceability. Surgical instruments, orthopedic implants, diagnostic equipment, drug delivery systems." },
+      { property: "og:title", content: "Medical CNC Machining & 3D Printing | Precilayer - Healthcare Manufacturing" },
+      { property: "og:description", content: "Precision manufacturing of healthcare and medtech components with biocompatible materials, regulatory-aligned processes, and full traceability. CNC machining, 3D printing, vacuum casting for medical devices." },
+      { name: "keywords", content: "medical CNC machining, healthcare component manufacturing, medtech parts, 3D printing medical, vacuum casting medical devices, biocompatible materials, surgical instruments manufacturing, medical implants, orthopedic implants machining, titanium medical machining, stainless steel medical parts, PEEK medical components, injection molding medical, drug delivery components, diagnostic equipment parts, ISO 13485 manufacturing, FDA-aligned manufacturing India, medical device contract manufacturing, precision medical parts" }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];
