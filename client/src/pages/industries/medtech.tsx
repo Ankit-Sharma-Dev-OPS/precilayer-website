@@ -38,16 +38,6 @@ import diagnosticEnclosuresImg from "@assets/Plastic-enclosures_1762300495332.we
 import drugDeliveryComponentsImg from "@assets/drug-delivery_1762300495335.webp";
 import orthoticInterfacesImg from "@assets/orthotic-new_1762300495335.webp";
 import endoscopicAccessoriesImg from "@assets/endoscopic-new_1762300495334.webp";
-import teleflexLogo from "@assets/teleflex_1762299246744.png";
-import jnjVisionLogo from "@assets/Johnson_and_Johnson_Vision_Logo_1762299246747.jpg";
-import medtronicLogo from "@assets/Medtronic-Logo-Blue_1762299246746.jpg";
-import cookMedicalLogo from "@assets/cook medical logo_1762299246748.png";
-import meritMedicalLogo from "@assets/Merit-Medical-logo_1762299246742.jpg";
-import integerLogo from "@assets/Integer-Holdings-logo-2021_1762299246748.jpg";
-import aranLogo from "@assets/Aran Biomedical_1762299246745.png";
-import oxfordLogo from "@assets/Oxford endovascular_1762299246745.jpg";
-import edwardsLogo from "@assets/Edwards_1762299246746.png";
-import teConnectivityLogo from "@assets/Tecoonectivity_1762299246747.png";
 
 export default function MedTech() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -372,110 +362,6 @@ export default function MedTech() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trusted by Leading Healthcare & MedTech Companies - Carousel */}
-      <section className="overflow-hidden">
-        {/* Title Section - Dark Background */}
-        <div className="bg-space-800 py-12">
-          <div className="max-w-7xl mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="font-orbitron text-2xl md:text-3xl font-bold mb-3 text-white">
-                Trusted by <span className="gradient-text">Leading</span> Healthcare & MedTech Companies
-              </h2>
-              <p className="text-gray-400">Manufacturing partners to innovators in healthcare</p>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Logo Carousel - White Background */}
-        <div className="bg-white py-12">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="relative">
-              <div className="overflow-hidden">
-                <motion.div
-                  className="flex gap-16"
-                  animate={{
-                    x: [0, -2600],
-                  }}
-                  transition={{
-                    x: {
-                      repeat: Infinity,
-                      repeatType: "loop",
-                      duration: 45,
-                      ease: "linear",
-                    },
-                  }}
-                >
-                  {/* First set of logos */}
-                  {[
-                    { src: teleflexLogo, alt: 'Teleflex', maxHeight: '80px' },
-                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', maxHeight: '110px' },
-                    { src: medtronicLogo, alt: 'Medtronic', maxHeight: '80px' },
-                    { src: cookMedicalLogo, alt: 'Cook Medical', maxHeight: '110px' },
-                    { src: meritMedicalLogo, alt: 'Merit Medical', maxHeight: '110px' },
-                    { src: integerLogo, alt: 'Integer Holdings', maxHeight: '110px' },
-                    { src: aranLogo, alt: 'Aran Biomedical', maxHeight: '64px' },
-                    { src: oxfordLogo, alt: 'Oxford Endovascular', maxHeight: '110px' },
-                    { src: edwardsLogo, alt: 'Edwards Lifesciences', maxHeight: '80px' },
-                    { src: teConnectivityLogo, alt: 'TE Connectivity', maxHeight: '80px' }
-                  ].map((logo, index) => (
-                    <div
-                      key={`logo-1-${index}`}
-                      className="flex-shrink-0 flex items-center justify-center w-52 h-28"
-                    >
-                      <img 
-                        src={logo.src} 
-                        alt={logo.alt}
-                        className="max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
-                        style={{ 
-                          maxHeight: logo.maxHeight,
-                          objectFit: 'contain',
-                          objectPosition: 'center'
-                        }}
-                      />
-                    </div>
-                  ))}
-                  {/* Duplicate set for seamless loop */}
-                  {[
-                    { src: teleflexLogo, alt: 'Teleflex', maxHeight: '80px' },
-                    { src: jnjVisionLogo, alt: 'Johnson & Johnson Vision', maxHeight: '110px' },
-                    { src: medtronicLogo, alt: 'Medtronic', maxHeight: '80px' },
-                    { src: cookMedicalLogo, alt: 'Cook Medical', maxHeight: '110px' },
-                    { src: meritMedicalLogo, alt: 'Merit Medical', maxHeight: '110px' },
-                    { src: integerLogo, alt: 'Integer Holdings', maxHeight: '110px' },
-                    { src: aranLogo, alt: 'Aran Biomedical', maxHeight: '64px' },
-                    { src: oxfordLogo, alt: 'Oxford Endovascular', maxHeight: '110px' },
-                    { src: edwardsLogo, alt: 'Edwards Lifesciences', maxHeight: '80px' },
-                    { src: teConnectivityLogo, alt: 'TE Connectivity', maxHeight: '80px' }
-                  ].map((logo, index) => (
-                    <div
-                      key={`logo-2-${index}`}
-                      className="flex-shrink-0 flex items-center justify-center w-52 h-28"
-                    >
-                      <img 
-                        src={logo.src} 
-                        alt={logo.alt}
-                        className="max-w-full w-auto object-contain transition-transform duration-300 hover:scale-110"
-                        style={{ 
-                          maxHeight: logo.maxHeight,
-                          objectFit: 'contain',
-                          objectPosition: 'center'
-                        }}
-                      />
-                    </div>
-                  ))}
-                </motion.div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
