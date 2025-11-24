@@ -7,28 +7,51 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
-            <div className="font-orbitron text-2xl font-bold gradient-text mb-4" data-testid="footer-logo">
+            <div
+              className="font-orbitron text-2xl font-bold gradient-text mb-4"
+              data-testid="footer-logo"
+            >
               PRECILAYER
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Redefining Indian manufacturing for the future through precision, 
+              Redefining Indian manufacturing for the future through precision,
               innovation, and world-class quality.
             </p>
-            
+
             <div className="mb-6" data-testid="factory-address">
-              <div className="flex items-start space-x-3">
+              <div className="flex items-start space-x-3 mt-5">
                 <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 className="font-semibold text-white mb-2">Factory Address</h4>
+                  <h3 className="font-semibold text-white mb-1">Europe</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    Unit 1, Bhakti Platina, Sky Industrial Estate,<br />
-                    Opp: Apple Industrial Estate, NH48,<br />
+                    Dainsta,
+                    <br />
+                    Unit 2, Oola Enterprise Center,
+                    <br />
+                    Oola, Limerick, Ireland E34E161
+                    <br />
+                    +353-899786613
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3 mt-2">
+                <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-white mb-1">India</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Unit 1, Bhakti Platina, Sky Industrial Estate,
+                    <br />
+                    Opp: Apple Industrial Estate, NH48,
+                    <br />
                     Pelhar, Nallasopara (E), Palghar 401208
+                    <br />
+                    +91-9930903006
                   </p>
                 </div>
               </div>
             </div>
-            
+
             {/* Social Media Icons - Commented out
             <div className="flex space-x-4">
               <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer" data-testid="social-linkedin">
@@ -43,71 +66,128 @@ export default function Footer() {
             </div>
             */}
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-3 text-gray-400">
-              <li><span data-testid="service-cnc">CNC Machining</span></li>
-              <li><span data-testid="service-3d">3D Printing</span></li>
-              <li><span data-testid="service-prototyping">Rapid Prototyping</span></li>
-              <li><span data-testid="service-batch">Batch Production</span></li>
-              <li><span data-testid="service-volume">High Volume Production</span></li>
-              <li><span data-testid="service-qa">ISO Quality Assurance</span></li>
+              <li>
+                <span data-testid="service-cnc">CNC Machining</span>
+              </li>
+              <li>
+                <span data-testid="service-3d">3D Printing</span>
+              </li>
+              <li>
+                <span data-testid="service-prototyping">Rapid Prototyping</span>
+              </li>
+              <li>
+                <span data-testid="service-batch">Batch Production</span>
+              </li>
+              <li>
+                <span data-testid="service-volume">High Volume Production</span>
+              </li>
+              <li>
+                <span data-testid="service-qa">ISO Quality Assurance</span>
+              </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold text-white mb-4">Industries</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
                 <Link href="/industries/space-satellite">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="industry-space-satellite">Space & Satellite</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="industry-space-satellite"
+                  >
+                    Space & Satellite
+                  </span>
                 </Link>
               </li>
-              <li><span data-testid="industry-aerospace">Aerospace</span></li>
-              <li><span data-testid="industry-healthcare">Healthcare</span></li>
-              <li><span data-testid="industry-robotics">Robotics</span></li>
-              <li><span data-testid="industry-automotive">Automotive</span></li>
+              <li>
+                <span data-testid="industry-aerospace">Aerospace</span>
+              </li>
+              <li>
+                <span data-testid="industry-healthcare">Healthcare</span>
+              </li>
+              <li>
+                <span data-testid="industry-robotics">Robotics</span>
+              </li>
+              <li>
+                <span data-testid="industry-automotive">Automotive</span>
+              </li>
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="font-semibold text-white mb-4">Precilayer Policies</h3>
+            <h3 className="font-semibold text-white mb-4">
+              Precilayer Policies
+            </h3>
             <ul className="space-y-3 text-gray-400">
               <li>
                 <Link href="/privacy-policy">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-privacy">Privacy Policy</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-privacy"
+                  >
+                    Privacy Policy
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/terms-conditions">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-terms">Terms of Service</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-terms"
+                  >
+                    Terms of Service
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/responsible-sourcing">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-sourcing">Responsible Sourcing</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-sourcing"
+                  >
+                    Responsible Sourcing
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/purchasing-terms">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-purchasing">Purchasing Terms</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-purchasing"
+                  >
+                    Purchasing Terms
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/supplier-integrity-guide">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-supplier-integrity">Supplier Integrity Guide</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-supplier-integrity"
+                  >
+                    Supplier Integrity Guide
+                  </span>
                 </Link>
               </li>
               <li>
                 <Link href="/esg-csr-policy">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer" data-testid="policy-esg-csr">ESG & CSR Policy</span>
+                  <span
+                    className="hover:text-cyber-400 transition-colors cursor-pointer"
+                    data-testid="policy-esg-csr"
+                  >
+                    ESG & CSR Policy
+                  </span>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm" data-testid="copyright">
             © {new Date().getFullYear()} Precilayer. All rights reserved.
