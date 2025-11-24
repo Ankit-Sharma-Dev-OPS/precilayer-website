@@ -19,21 +19,6 @@ export default function Footer() {
             </p>
 
             <div className="mb-6" data-testid="factory-address">
-              <div className="flex items-start space-x-3 mt-5">
-                <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Europe</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Dainsta,
-                    <br />
-                    Unit 2, Oola Enterprise Center,
-                    <br />
-                    Oola, Limerick, Ireland E34E161
-                    <br />
-                    +353-899786613
-                  </p>
-                </div>
-              </div>
 
               <div className="flex items-start space-x-3 mt-2">
                 <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
@@ -50,6 +35,25 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
+
+              
+              <div className="flex items-start space-x-3 mt-5">
+                <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Europe</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Dainsta
+                    <br />
+                    Unit 2, Oola Enterprise Center,
+                    <br />
+                    Oola, Limerick, Ireland E34E161
+                    <br />
+                    +353-899786613
+                  </p>
+                </div>
+              </div>
+
+    
             </div>
 
             {/* Social Media Icons - Commented out
