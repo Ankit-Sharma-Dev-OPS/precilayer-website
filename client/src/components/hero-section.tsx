@@ -71,12 +71,12 @@ export default function HeroSection() {
         try {
           video.muted = true;
           video.playsInline = true;
-          video.playbackRate = 0.3; // 30% speed for balanced cinematic effect
+          video.playbackRate = 1.0; // Normal playback speed for smooth performance
           await video.play();
         } catch (error) {
           // Retry on user interaction
           const handleInteraction = () => {
-            video.playbackRate = 0.3; // Ensure balanced slow speed on retry
+            video.playbackRate = 1.0; // Normal speed on retry
             video.play().catch(() => {});
             document.removeEventListener('click', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
@@ -109,15 +109,15 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <SubtleBackground />
       {/* High-Quality CNC Machining Video Background */}
-      <div className="absolute inset-0" style={{ transform: 'translateZ(0)' }}>
-        <div className="absolute inset-0" style={{ willChange: 'auto' }}>
+      <div className="absolute inset-0" style={{ transform: 'translateZ(0)', backfaceVisibility: 'hidden' }}>
+        <div className="absolute inset-0" style={{ willChange: 'transform' }}>
           <video 
             ref={videoRef}
             autoPlay
             muted 
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             className="w-full h-full object-cover"
             onError={(e) => {
               console.error('Video error:', e);
