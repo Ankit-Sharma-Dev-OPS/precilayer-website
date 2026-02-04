@@ -24,6 +24,7 @@ export default function IndustriesSection() {
       description: "Defense-grade and commercial drone components manufactured to aerospace standards.",
       image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
       alt: "Professional drone in flight",
+      link: "/industries/drones-uav",
       components: [
         "Carbon fiber frames",
         "Precision motor mounts",

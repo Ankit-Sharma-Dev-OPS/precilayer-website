@@ -12,6 +12,7 @@ import SupplierIntegrityGuide from "@/pages/supplier-integrity-guide";
 import ESGCSRPolicy from "@/pages/esg-csr-policy";
 import SpaceSatellite from "@/pages/industries/space-satellite";
 import MedTech from "@/pages/industries/medtech";
+import DronesUAV from "@/pages/industries/drones-uav";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
       <Route path="/industries/space-satellite" component={SpaceSatellite} />
       <Route path="/industries/medtech" component={MedTech} />
+      <Route path="/industries/drones-uav" component={DronesUAV} />
       <Route component={NotFound} />
     </Switch>
   );
