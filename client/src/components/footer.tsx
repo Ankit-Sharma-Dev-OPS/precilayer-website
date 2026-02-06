@@ -24,7 +24,7 @@ export default function Footer() {
       />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-12 lg:pr-24">
           <div className="lg:col-span-2">
             <div
               className="font-orbitron text-2xl font-bold gradient-text mb-4"
