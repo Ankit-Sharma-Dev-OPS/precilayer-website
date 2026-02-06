@@ -98,7 +98,7 @@ ${formData.message}`;
         throw new Error('Webhook secret key is not configured. Please contact support directly.');
       }
 
-      const webhookUrl = `${backendUrl}/user/webhook-contact?secret=${encodeURIComponent(webhookSecret)}`;
+      const webhookUrl = `${backendUrl}/api/v2/user/masters/webhook-contact?secret=${encodeURIComponent(webhookSecret)}`;
 
       const response = await fetch(webhookUrl, {
         method: 'POST',
