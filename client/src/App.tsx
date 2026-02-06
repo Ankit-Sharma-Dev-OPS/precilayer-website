@@ -14,6 +14,7 @@ import SpaceSatellite from "@/pages/industries/space-satellite";
 import MedTech from "@/pages/industries/medtech";
 import DronesUAV from "@/pages/industries/drones-uav";
 import NotFound from "@/pages/not-found";
+import IsoBadge from "@/components/iso-badge";
 
 function Router() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <IsoBadge />
       </TooltipProvider>
     </QueryClientProvider>
   );
