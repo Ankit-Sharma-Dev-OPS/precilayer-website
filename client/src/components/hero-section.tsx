@@ -84,12 +84,12 @@ export default function HeroSection() {
         try {
           video.muted = true;
           video.playsInline = true;
-          video.playbackRate = 0.8; // Normal playback speed for smooth performance
+          video.playbackRate = 0.8; // Slowed to 0.8x speed
           await video.play();
         } catch (error) {
           // Retry on user interaction
           const handleInteraction = () => {
-            video.playbackRate = 0.8; // Normal speed on retry
+            video.playbackRate = 0.8; // Slowed to 0.8x speed on retry
             video.play().catch(() => {});
             document.removeEventListener("click", handleInteraction);
             document.removeEventListener("touchstart", handleInteraction);
