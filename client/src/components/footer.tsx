@@ -12,12 +12,14 @@ export default function Footer() {
   return (
     <footer className="bg-space-900 border-t border-gray-800 py-12 relative overflow-hidden">
       <div 
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: 'url(/images/building-lineart.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'right bottom',
-          backgroundSize: 'auto 90%',
+          backgroundSize: 'auto 85%',
+          opacity: 0.12,
+          filter: 'invert(1) brightness(1.5)',
         }}
       />
 
