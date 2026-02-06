@@ -1,10 +1,27 @@
-import { Linkedin, Twitter, Youtube, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <footer className="bg-space-900 border-t border-gray-800 py-12">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer className="bg-space-900 border-t border-gray-800 py-12 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: 'url(/images/building-lineart.png)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'right bottom',
+          backgroundSize: 'auto 90%',
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-5 md:grid-cols-2 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div
@@ -19,7 +36,6 @@ export default function Footer() {
             </p>
 
             <div className="mb-6" data-testid="factory-address">
-
               <div className="flex items-start space-x-3 mt-2">
                 <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
                 <div>
@@ -36,7 +52,6 @@ export default function Footer() {
                 </div>
               </div>
 
-              
               <div className="flex items-start space-x-3 mt-5">
                 <MapPin className="text-cyber-400 h-5 w-5 mt-1 flex-shrink-0" />
                 <div>
@@ -52,138 +67,126 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-
-    
             </div>
-
-            {/* Social Media Icons - Commented out
-            <div className="flex space-x-4">
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer" data-testid="social-linkedin">
-                <Linkedin className="h-6 w-6" />
-              </span>
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer" data-testid="social-twitter">
-                <Twitter className="h-6 w-6" />
-              </span>
-              <span className="text-gray-400 hover:text-cyber-400 transition-colors cursor-pointer" data-testid="social-youtube">
-                <Youtube className="h-6 w-6" />
-              </span>
-            </div>
-            */}
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Services</h3>
+            <h3 className="font-semibold text-white mb-4">Manufacturing</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <span data-testid="service-cnc">CNC Machining</span>
-              </li>
-              <li>
-                <span data-testid="service-3d">3D Printing</span>
-              </li>
-              <li>
-                <span data-testid="service-prototyping">Rapid Prototyping</span>
-              </li>
-              <li>
-                <span data-testid="service-batch">Batch Production</span>
-              </li>
-              <li>
-                <span data-testid="service-volume">High Volume Production</span>
-              </li>
-              <li>
-                <span data-testid="service-qa">ISO Quality Assurance</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-white mb-4">Industries</h3>
-            <ul className="space-y-3 text-gray-400">
-              <li>
-                <Link href="/industries/space-satellite">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="industry-space-satellite"
-                  >
-                    Space & Satellite
+                <Link href="/manufacturing/polymer-additive">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    Polymer Additive
                   </span>
                 </Link>
               </li>
               <li>
-                <span data-testid="industry-aerospace">Aerospace</span>
+                <Link href="/manufacturing/metal-additive">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    Metal Additive
+                  </span>
+                </Link>
               </li>
               <li>
-                <span data-testid="industry-healthcare">Healthcare</span>
+                <Link href="/manufacturing/cnc-milling">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    CNC Milling
+                  </span>
+                </Link>
               </li>
               <li>
-                <span data-testid="industry-robotics">Robotics</span>
+                <Link href="/manufacturing/cnc-turning">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    CNC Turning
+                  </span>
+                </Link>
               </li>
               <li>
-                <span data-testid="industry-automotive">Automotive</span>
+                <Link href="/manufacturing/materials">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    Materials
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/manufacturing/finishes">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    Finishes
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">
-              Precilayer Policies
-            </h3>
+            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <ul className="space-y-3 text-gray-400">
+              <li>
+                <button onClick={() => scrollToSection('about')} className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                  About
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('contact')} className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                  Contact
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('faq')} className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                  Quality
+                </button>
+              </li>
+              <li>
+                <Link href="/iso-9001-certificate.pdf" target="_blank">
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
+                    ISO 9001:2015 Certificate
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-white mb-4">Policies</h3>
             <ul className="space-y-3 text-gray-400">
               <li>
                 <Link href="/privacy-policy">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-privacy"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-privacy">
                     Privacy Policy
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/terms-conditions">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-terms"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-terms">
                     Terms of Service
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/responsible-sourcing">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-sourcing"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-sourcing">
                     Responsible Sourcing
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/purchasing-terms">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-purchasing"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-purchasing">
                     Purchasing Terms
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/supplier-integrity-guide">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-supplier-integrity"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-supplier-integrity">
                     Supplier Integrity Guide
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/esg-csr-policy">
-                  <span
-                    className="hover:text-cyber-400 transition-colors cursor-pointer"
-                    data-testid="policy-esg-csr"
-                  >
+                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm" data-testid="policy-esg-csr">
                     ESG & CSR Policy
                   </span>
                 </Link>
@@ -194,7 +197,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm" data-testid="copyright">
-            © {new Date().getFullYear()} Precilayer. All rights reserved.
+            &copy; {new Date().getFullYear()} Precilayer. All rights reserved.
           </p>
         </div>
       </div>
