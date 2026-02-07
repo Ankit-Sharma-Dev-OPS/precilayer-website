@@ -104,22 +104,22 @@ export default function RoboticsAutomation() {
     {
       title: "Precision Gears & Shafts",
       description: "High-accuracy spur, helical, and planetary gears with tight tooth profile tolerances for smooth robotic motion",
-      image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/robotics-gears.jpg"
     },
     {
       title: "Robot Arm Joints & Actuators",
       description: "CNC-machined joint housings and actuator components enabling precise multi-axis articulation",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/robotics-arm-joint.jpg"
     },
     {
       title: "End Effectors & Grippers",
       description: "Custom-designed gripping mechanisms and tool-changing interfaces for automated assembly and pick-and-place",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/robotics-gripper.jpg"
     },
     {
       title: "Sensor Housings & Mounts",
       description: "Precision-machined enclosures and mounting brackets for LiDAR, vision systems, and proximity sensors",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/robotics-sensor-housing.jpg"
     }
   ];
 
@@ -249,7 +249,7 @@ export default function RoboticsAutomation() {
         <div
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?auto=format&fit=crop&w=1920&q=80)`,
+            backgroundImage: `url(/images/industries/robotics-bg.jpg)`,
             backgroundPosition: 'center 40%'
           }}
         />

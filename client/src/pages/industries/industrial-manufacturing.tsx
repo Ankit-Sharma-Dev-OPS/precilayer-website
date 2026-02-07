@@ -104,22 +104,22 @@ export default function IndustrialManufacturing() {
     {
       title: "Valve Bodies & Fittings",
       description: "High-pressure valve bodies, manifolds, and precision fittings machined from stainless steel and exotic alloys with critical sealing surfaces",
-      image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/industrial-valve.jpg"
     },
     {
       title: "Precision Tooling",
       description: "Injection molds, die components, jigs, fixtures, and gauges manufactured from hardened tool steels to exacting specifications",
-      image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/industrial-tooling.jpg"
     },
     {
       title: "Heavy Machinery Parts",
       description: "Robust structural components, wear plates, shafts, and housings for mining, construction, and heavy industrial equipment",
-      image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/industrial-machinery.jpg"
     },
     {
       title: "Custom Industrial Assemblies",
       description: "Multi-component assemblies, specialized fixtures, and custom machinery sub-systems built to unique application requirements",
-      image: "https://images.unsplash.com/photo-1567789884554-0b308d79bc31?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/industrial-assemblies.jpg"
     }
   ];
 
@@ -250,7 +250,7 @@ export default function IndustrialManufacturing() {
         <div
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1504917595217-d4dc5ebb6571?auto=format&fit=crop&w=1920&q=80)`,
+            backgroundImage: `url(/images/industries/industrial-bg.jpg)`,
             backgroundPosition: 'center 40%'
           }}
         />

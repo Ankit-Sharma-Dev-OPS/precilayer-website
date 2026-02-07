@@ -104,22 +104,22 @@ export default function MobilityAutomotive() {
     {
       title: "Engine & Transmission Parts",
       description: "High-precision engine blocks, cylinder heads, transmission housings, and drivetrain components machined to exacting specifications",
-      image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/mobility-engine.jpg"
     },
     {
       title: "EV Battery Housings",
       description: "CNC-machined aluminum enclosures for battery packs with thermal management features and EMI shielding",
-      image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/mobility-ev-battery.jpg"
     },
     {
       title: "Suspension Components",
       description: "Lightweight, high-strength suspension arms, knuckles, and brackets engineered for performance and safety",
-      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/mobility-suspension.jpg"
     },
     {
       title: "Autonomous Sensor Mounts",
       description: "Precision mounting brackets and housings for LiDAR, radar, and camera systems in ADAS and autonomous vehicles",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=800&q=80"
+      image: "/images/industries/mobility-sensor-mount.jpg"
     }
   ];
 
@@ -248,7 +248,7 @@ export default function MobilityAutomotive() {
         <div
           className="absolute inset-0 bg-cover"
           style={{
-            backgroundImage: `url(https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80)`,
+            backgroundImage: `url(/images/industries/mobility-bg.jpg)`,
             backgroundPosition: 'center 40%'
           }}
         />
