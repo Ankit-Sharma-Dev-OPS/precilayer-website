@@ -1,32 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import {
-  Car,
-  FileCheck,
-  Gauge,
-  Shield,
-  Settings,
-  CheckCircle2,
-  ChevronDown,
-  ChevronUp,
-  Home,
-  Factory,
-  Zap,
-  Wrench
-} from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage
-} from "@/components/ui/breadcrumb";
+import { Car, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Zap, Settings, Cog, Disc, Frame, ArrowRight } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import SubtleBackground from "@/components/subtle-background";
 
 export default function MobilityAutomotive() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -56,24 +34,9 @@ export default function MobilityAutomotive() {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.precilayer.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Industries",
-          "item": "https://www.precilayer.com/#industries"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Mobility & Automotive",
-          "item": "https://www.precilayer.com/industries/mobility-automotive"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.precilayer.com" },
+        { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://www.precilayer.com/#industries" },
+        { "@type": "ListItem", "position": 3, "name": "Mobility & Automotive", "item": "https://www.precilayer.com/industries/mobility-automotive" }
       ]
     };
 
@@ -89,211 +52,50 @@ export default function MobilityAutomotive() {
     };
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const scrollToSection = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const toggleFaq = (i: number) => setOpenFaqIndex(openFaqIndex === i ? null : i);
 
-  const toggleFaq = (index: number) => {
-    setOpenFaqIndex(openFaqIndex === index ? null : index);
-  };
-
-  const componentShowcase = [
-    {
-      title: "Engine & Transmission Parts",
-      description: "High-precision engine blocks, cylinder heads, transmission housings, and drivetrain components machined to exacting specifications",
-      image: "/images/industries/mobility-engine.jpg"
-    },
-    {
-      title: "EV Battery Housings",
-      description: "CNC-machined aluminum enclosures for battery packs with thermal management features and EMI shielding",
-      image: "/images/industries/mobility-ev-battery.jpg"
-    },
-    {
-      title: "Suspension Components",
-      description: "Lightweight, high-strength suspension arms, knuckles, and brackets engineered for performance and safety",
-      image: "/images/industries/mobility-suspension.jpg"
-    },
-    {
-      title: "Autonomous Sensor Mounts",
-      description: "Precision mounting brackets and housings for LiDAR, radar, and camera systems in ADAS and autonomous vehicles",
-      image: "/images/industries/mobility-sensor-mount.jpg"
-    }
-  ];
-
-  const whyPrecilayerPoints = [
-    {
-      icon: Shield,
-      title: "ISO 9001:2015 Certified Quality",
-      description: "Our ISO 9001:2015 certified quality management system delivers consistent, reliable manufacturing for safety-critical automotive components."
-    },
-    {
-      icon: Gauge,
-      title: "Automotive-Grade Precision",
-      description: "Tight tolerances and validated process capability for engine, transmission, and safety-critical components meeting PPAP requirements."
-    },
-    {
-      icon: Zap,
-      title: "EV & Autonomous Systems Expertise",
-      description: "Specialized experience with electric vehicle battery housings, power electronics enclosures, and autonomous driving sensor mounting systems."
-    },
-    {
-      icon: Settings,
-      title: "Prototype to Production Scaling",
-      description: "Seamless scaling from single prototypes to batch production runs with consistent quality, supporting fast-paced automotive development cycles."
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: "CNC Milling & Turning",
-      description: "Multi-axis CNC machining for complex engine components, transmission housings, and structural automotive parts with tight tolerances.",
-      cta: "Speak to Manufacturing"
-    },
-    {
-      title: "Rapid Prototyping",
-      description: "Fast turnaround prototyping via CNC and 3D printing for design validation and testing of new automotive concepts.",
-      cta: "Speak to Manufacturing"
-    },
-    {
-      title: "Batch Production",
-      description: "Efficient small-to-medium batch production with consistent quality, ideal for specialty vehicles, motorsport, and aftermarket parts.",
-      cta: "Speak to Manufacturing"
-    },
-    {
-      title: "Surface Finishing",
-      description: "Anodizing, powder coating, plating, and precision surface treatments for corrosion resistance and aesthetic requirements.",
-      cta: "Speak to Manufacturing"
-    },
-    {
-      title: "CMM Inspection & PPAP",
-      description: "Full dimensional verification with CMM and Production Part Approval Process documentation for automotive quality standards.",
-      cta: "Speak to Manufacturing"
-    },
-    {
-      title: "Assembly & Integration",
-      description: "Multi-component assembly, press-fitting, and functional testing for complete automotive sub-assemblies.",
-      cta: "Speak to Manufacturing"
-    }
-  ];
-
-  const materials = [
-    "Aluminum Alloys (5000/6000/7000 series): Lightweight structural and thermal components - 5052, 6061-T6, 7075-T6 for housings, brackets, and heat sinks",
-    "Carbon Steel: High-strength drivetrain and structural components - 1018, 1045, 4140, 4340 for shafts, gears, and brackets",
-    "Stainless Steel: Corrosion-resistant exhaust, fastener, and sensor components - 304, 316L, 17-4PH for durability in harsh environments",
-    "Brass & Copper: Electrical connectors, terminals, and thermal management components - C360, C110 for EV power systems",
-    "Engineering Plastics: Lightweight interior and functional components - Nylon, Delrin, PEEK, ABS for housings, guides, and insulators"
-  ];
-
-  const qualityPoints = [
-    "ISO 9001:2015 certified quality management system",
-    "PPAP documentation for automotive production approval",
-    "First Article Inspection (FAI) reports available",
-    "Material certificates with full lot traceability",
-    "Dimensional inspection reports from calibrated CMM",
-    "Certificate of Conformance for every shipment"
-  ];
-
-  const caseStudies = [
-    {
-      title: "Supply Chain Relocation - Automotive Tooling",
-      specs: "Multiple tooling components, various materials",
-      finish: "Per OEM specification",
-      application: "Helped an automotive tooling customer relocate supply chain from China to India - saved 28% on import tariffs while maintaining quality and delivery schedules"
-    },
-    {
-      title: "EV Battery Enclosure Prototype",
-      specs: "6061-T6 Aluminum, multi-pocket CNC milling, ±0.05mm",
-      finish: "Hard anodize Type III, thermal interface prep",
-      application: "Electric vehicle startup - battery pack development program"
-    },
-    {
-      title: "Autonomous Sensor Bracket Assembly",
-      specs: "7075-T6 Aluminum, multi-angle mounting, GD&T controlled",
-      finish: "Black anodize, vibration-dampened mount points",
-      application: "ADAS development program - LiDAR and camera integration"
-    }
+  const whatWeMake = [
+    { icon: Cog, label: "Engine Blocks", detail: "Cast iron, aluminum alloys" },
+    { icon: Zap, label: "EV Battery Housings", detail: "Thermal management, EMI shielding" },
+    { icon: Frame, label: "Suspension Arms", detail: "High-strength, lightweight" },
+    { icon: Cpu, label: "Sensor Mounts (ADAS)", detail: "LiDAR, radar, camera brackets" },
+    { icon: Settings, label: "Transmission Parts", detail: "Gears, shafts, housings" },
+    { icon: Disc, label: "Brake Components", detail: "Calipers, rotors, brackets" },
+    { icon: Gauge, label: "Turbo Housings", detail: "Inconel, stainless steel" },
+    { icon: Box, label: "Chassis Brackets", detail: "Structural mounting points" },
   ];
 
   const faqs = [
-    {
-      question: "Can you support automotive PPAP requirements?",
-      answer: "Yes, we provide full Production Part Approval Process (PPAP) documentation including dimensional results, material certifications, process flow diagrams, control plans, and measurement system analysis. Our ISO 9001:2015 certified quality system supports automotive supply chain requirements."
-    },
-    {
-      question: "What experience do you have with EV components?",
-      answer: "We manufacture a range of EV-specific components including battery enclosures, power electronics housings, motor end-caps, thermal management plates, and charging connector components. Our experience spans aluminum, copper, and engineering plastics commonly used in EV applications."
-    },
-    {
-      question: "Can you help with supply chain relocation to India?",
-      answer: "Absolutely. We have successfully helped automotive and mobility companies relocate manufacturing from China and other regions to India, achieving significant cost savings on import tariffs (up to 28% in documented cases) while maintaining or improving quality and lead times."
-    },
-    {
-      question: "What are typical lead times for automotive components?",
-      answer: "Prototypes: 5-10 business days. First articles with PPAP documentation: 3-4 weeks. Batch production (50-500 pieces): 2-4 weeks depending on complexity. We maintain flexible scheduling to support urgent automotive development timelines."
-    },
-    {
-      question: "Do you work with aftermarket and motorsport customers?",
-      answer: "Yes, we serve aftermarket, motorsport, and specialty vehicle customers with custom one-off and small-batch components. From lightweight suspension parts to custom engine components, we offer the precision and material expertise required for high-performance applications."
-    }
+    { question: "Can you support automotive PPAP requirements?", answer: "Yes. Full PPAP documentation including dimensional results, material certs, control plans, and MSA. ISO 9001:2015 certified quality system." },
+    { question: "What experience do you have with EV components?", answer: "Battery enclosures, power electronics housings, motor end-caps, thermal plates, and charging connectors in aluminum, copper, and engineering plastics." },
+    { question: "What are typical lead times?", answer: "Prototypes: 5–10 days. First articles with PPAP: 3–4 weeks. Batch production (50–500 pcs): 2–4 weeks." },
+    { question: "Do you work with motorsport customers?", answer: "Yes. Custom one-off and small-batch components — lightweight suspension, engine parts, and high-performance brackets." },
   ];
 
   return (
     <div className="bg-space-900 text-white font-inter overflow-x-hidden">
       <Navigation />
 
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-        <div
-          className="absolute inset-0 bg-cover"
-          style={{
-            backgroundImage: `url(/images/industries/mobility-bg.jpg)`,
-            backgroundPosition: 'center 40%'
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-space-900" />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)'
-          }}
-        />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-cyber-400/20 rounded-2xl border border-cyber-400/30">
-                <Car className="h-16 w-16 text-cyber-400" />
-              </div>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(/images/industries/mobility-bg.jpg)`, backgroundPosition: 'center 40%' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-space-900" />
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-400/40 bg-cyber-400/10 text-cyber-400 text-sm font-medium mb-6">
+              <Car className="h-4 w-4" /> EV & Autonomous Systems
             </div>
-
-            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
+            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Mobility & Automotive <span className="gradient-text">Manufacturing</span>
             </h1>
-
-            <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
-              Delivering custom parts for electric vehicles, autonomous driving systems, and high-performance engines, focusing on efficiency and safety
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
+              Precision components for EV, autonomous, and performance vehicles
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
-                data-testid="cta-talk-engineering"
-              >
-                Talk to Engineering
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button onClick={() => scrollToSection('contact')} className="bg-cyber-400 text-space-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyber-500 transition-all">
+                Get a Quote
               </button>
-              <button
-                onClick={() => scrollToSection('capabilities')}
-                className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
-                data-testid="cta-view-capabilities"
-              >
+              <button onClick={() => scrollToSection('what-we-make')} className="border border-gray-500 text-gray-200 px-8 py-3 rounded-lg font-semibold hover:border-cyber-400 hover:text-cyber-400 transition-all">
                 View Capabilities
               </button>
             </div>
@@ -301,284 +103,194 @@ export default function MobilityAutomotive() {
         </div>
       </section>
 
-      <section className="py-20 bg-space-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white" data-testid="showcase-title">
-              Component <span className="gradient-text">Showcase</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Precision-engineered components for mobility and automotive applications
-            </p>
+      <section id="what-we-make" className="py-16 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">What We <span className="gradient-text">Make</span></h2>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {componentShowcase.map((component, index) => (
-              <motion.div
-                key={component.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
-                data-testid={`component-${index}`}
-              >
-                <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center overflow-hidden">
-                  <img
-                    src={component.image}
-                    alt={component.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {whatWeMake.map((item, i) => (
+              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.05 }} viewport={{ once: true }}
+                className="bg-space-700/50 border border-gray-700/50 rounded-xl p-5 text-center hover:border-cyber-400/40 transition-all group">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
+                  <item.icon className="h-6 w-6 text-cyber-400" />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg text-white mb-2">
-                    {component.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    {component.description}
-                  </p>
-                </div>
+                <h3 className="text-white font-semibold text-sm mb-1">{item.label}</h3>
+                <p className="text-gray-400 text-xs">{item.detail}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
-              Why <span className="gradient-text">Precilayer</span> for Automotive
-            </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Your trusted manufacturing partner for precision mobility and automotive components
-            </p>
+      <section className="py-16 bg-space-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">How We <span className="gradient-text">Make It</span></h2>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {whyPrecilayerPoints.map((point, index) => (
-              <motion.div
-                key={point.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-space-700/50 to-space-800/50 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-cyber-400/20 rounded-xl border border-cyber-400/30 flex-shrink-0">
-                    <point.icon className="h-6 w-6 text-cyber-400" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
+              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
+                  <Settings className="h-5 w-5 text-blue-400" />
+                </div>
+                <h3 className="font-orbitron text-lg font-bold text-white">CNC Machining</h3>
+              </div>
+              <div className="space-y-3">
+                {["5-Axis Milling", "CNC Turning", "EDM", "Surface Finishing"].map(cap => (
+                  <div key={cap} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                    <span className="text-gray-300">{cap}</span>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-white mb-2">{point.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{point.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="capabilities" className="py-20 bg-space-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
-              Manufacturing <span className="gradient-text">Capabilities</span>
-            </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Comprehensive manufacturing solutions for automotive and mobility components
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((cap, index) => (
-              <motion.div
-                key={cap.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-space-700/50 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all"
-              >
-                <h3 className="font-bold text-lg text-cyber-400 mb-3">{cap.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{cap.description}</p>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-cyber-400 text-sm font-semibold hover:underline"
-                >
-                  {cap.cta} →
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
-              Materials We <span className="gradient-text">Work With</span>
-            </h2>
-            <p className="text-gray-300 max-w-3xl mx-auto">
-              Automotive-grade materials for performance, safety, and durability
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {materials.map((material, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-start gap-3 bg-space-700/30 rounded-lg p-4"
-              >
-                <CheckCircle2 className="h-5 w-5 text-cyber-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 text-sm">{material}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-space-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 text-white">
-                Quality & <span className="gradient-text">Documentation</span>
-              </h2>
-              <p className="text-gray-300 mb-8">
-                Automotive-grade quality assurance and comprehensive documentation for mobility programs.
-              </p>
-
-              <div className="space-y-4">
-                {qualityPoints.map((point, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-2 h-2 bg-cyber-400 rounded-full" />
-                    <span className="text-gray-300">{point}</span>
-                  </motion.div>
                 ))}
               </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Aluminum", "Steel", "Titanium", "Cast Iron"].map(mat => (
+                  <span key={mat} className="px-2.5 py-1 text-xs bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300">{mat}</span>
+                ))}
+              </div>
+              <Link href="/manufacturing/cnc-milling" className="inline-flex items-center gap-1 mt-5 text-sm text-blue-400 hover:text-blue-300 font-medium">
+                Learn more <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-space-700/50 rounded-2xl p-8 border border-gray-700/50"
-            >
-              <h3 className="font-orbitron text-xl font-bold text-cyber-400 mb-6">Sample Case Studies</h3>
-              <div className="space-y-6">
-                {caseStudies.map((study, index) => (
-                  <div key={index} className="border-b border-gray-700/50 pb-4 last:border-0">
-                    <h4 className="font-semibold text-white mb-2">{study.title}</h4>
-                    <div className="text-sm text-gray-400 space-y-1">
-                      <p><span className="text-gray-500">Specs:</span> {study.specs}</p>
-                      <p><span className="text-gray-500">Finish:</span> {study.finish}</p>
-                      <p><span className="text-gray-500">Application:</span> {study.application}</p>
-                    </div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
+              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center">
+                  <Layers className="h-5 w-5 text-purple-400" />
+                </div>
+                <h3 className="font-orbitron text-lg font-bold text-white">Additive Manufacturing</h3>
+              </div>
+              <div className="space-y-3">
+                {["MJF & SLS", "Metal 3D Printing", "SLA Prototyping", "Rapid Tooling"].map(cap => (
+                  <div key={cap} className="flex items-center gap-2 text-sm">
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                    <span className="text-gray-300">{cap}</span>
                   </div>
                 ))}
               </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["PA12", "TPU", "Ti-6Al-4V", "AlSi10Mg"].map(mat => (
+                  <span key={mat} className="px-2.5 py-1 text-xs bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300">{mat}</span>
+                ))}
+              </div>
+              <Link href="/manufacturing/metal-additive" className="inline-flex items-center gap-1 mt-5 text-sm text-purple-400 hover:text-purple-300 font-medium">
+                Learn more <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
-              Frequently Asked <span className="gradient-text">Questions</span>
-            </h2>
+      <section className="py-16 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Why <span className="gradient-text">Precilayer</span></h2>
           </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: Gauge, value: "±0.02mm", label: "Tolerance", desc: "CMM-verified automotive-grade precision" },
+              { icon: Clock, value: "7 Days", label: "Lead Time", desc: "Prototype to production, rapid turnaround" },
+              { icon: Zap, value: "1–50K", label: "Scale", desc: "Prototype to high-volume batch production" },
+            ].map((card, i) => (
+              <motion.div key={card.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
+                className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6 text-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-cyber-400/10 border-2 border-cyber-400/40 flex items-center justify-center">
+                  <card.icon className="h-7 w-7 text-cyber-400" />
+                </div>
+                <div className="text-3xl font-bold text-cyber-400 mb-1">{card.value}</div>
+                <div className="text-white font-semibold mb-1">{card.label}</div>
+                <p className="text-gray-400 text-sm">{card.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-6">ISO 9001:2015 Certified Quality Management System</p>
+        </div>
+      </section>
 
-          <div className="space-y-4" data-testid="faq-list">
+      <section className="py-16 bg-space-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Our <span className="gradient-text">Process</span></h2>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { step: "01", title: "RFQ & DFM", desc: "Upload CAD, receive DFM feedback" },
+              { step: "02", title: "Manufacture", desc: "CNC + Additive production" },
+              { step: "03", title: "Inspect & Doc", desc: "CMM, PPAP, COC, material certs" },
+              { step: "04", title: "Ship & Scale", desc: "Clean pack, lot traceability" }
+            ].map((phase, i) => (
+              <motion.div key={phase.step} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
+                className="relative text-center p-5 bg-space-800/60 border border-gray-700/40 rounded-xl">
+                <div className="text-3xl font-bold text-cyber-400/30 font-orbitron mb-2">{phase.step}</div>
+                <h3 className="font-semibold text-white text-sm mb-1">{phase.title}</h3>
+                <p className="text-gray-400 text-xs">{phase.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <button onClick={() => scrollToSection('contact')} className="bg-cyber-400 text-space-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyber-500 transition-all">
+              Submit RFQ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-8">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Materials <span className="gradient-text">Available</span></h2>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: "Aluminum", grades: ["6061-T6", "7075-T6", "A380"] },
+              { name: "Steel", grades: ["4140", "4340", "8620"] },
+              { name: "Stainless Steel", grades: ["304", "316", "17-4PH"] },
+              { name: "Titanium", grades: ["Ti-6Al-4V"] },
+              { name: "Cast Iron", grades: ["Gray", "Ductile"] },
+              { name: "Engineering Plastics", grades: ["PA12", "TPU", "PEEK"] },
+            ].map(mat => (
+              <div key={mat.name} className="bg-space-700/50 border border-gray-700/40 rounded-xl p-4">
+                <h3 className="text-white font-semibold text-sm mb-2">{mat.name}</h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {mat.grades.map(g => (
+                    <span key={g} className="px-2 py-0.5 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded text-gray-300">{g}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+          <p className="text-center text-gray-500 text-sm mt-4">All materials with full certification and lot traceability</p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-space-900">
+        <div className="max-w-3xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-8">
+            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Common <span className="gradient-text">Questions</span></h2>
+          </motion.div>
+          <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-space-700/50 rounded-xl border border-gray-700/50 overflow-hidden"
-                data-testid={`faq-item-${index}`}
-              >
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-space-700/70 transition-colors"
-                  aria-expanded={openFaqIndex === index ? "true" : "false"}
-                  data-testid={`faq-question-${index}`}
-                >
-                  <span className="font-semibold text-white pr-4">{faq.question}</span>
-                  {openFaqIndex === index ? (
-                    <ChevronUp className="h-5 w-5 text-cyber-400 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
-                  )}
+              <div key={index} className="bg-space-800/60 border border-gray-700/40 rounded-xl overflow-hidden">
+                <button onClick={() => toggleFaq(index)} className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-space-700/30 transition-colors">
+                  <h3 className="text-sm font-semibold text-white pr-4">{faq.question}</h3>
+                  {openFaqIndex === index ? <ChevronUp className="h-4 w-4 text-cyber-400 flex-shrink-0" /> : <ChevronDown className="h-4 w-4 text-cyber-400 flex-shrink-0" />}
                 </button>
                 {openFaqIndex === index && (
-                  <div className="px-6 pb-6" data-testid={`faq-answer-${index}`}>
-                    <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+                  <div className="px-5 pb-4 border-t border-gray-700/30">
+                    <p className="text-gray-400 text-sm pt-3">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <div id="contact">
-        <ContactSection />
-      </div>
-
+      <ContactSection />
       <Footer />
     </div>
   );
