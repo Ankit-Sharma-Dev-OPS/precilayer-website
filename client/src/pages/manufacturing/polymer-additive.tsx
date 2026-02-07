@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
   Layers,
@@ -9,8 +8,6 @@ import {
   PackageCheck,
   ChevronDown,
   ChevronUp,
-  Home,
-  Factory,
   Gauge,
   Maximize,
   Box,
@@ -19,14 +16,6 @@ import {
   Activity,
   Shield
 } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage
-} from "@/components/ui/breadcrumb";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
@@ -129,22 +118,6 @@ export default function PolymerAdditive() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-space-800 to-space-900">
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Breadcrumb className="justify-center mb-6">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link href="/" className="text-gray-300 hover:text-cyber-400 flex items-center gap-1"><Home className="h-4 w-4" />Home</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-gray-500" />
-                <BreadcrumbItem>
-                  <BreadcrumbLink className="text-gray-300 flex items-center gap-1"><Factory className="h-4 w-4" />Manufacturing</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-gray-500" />
-                <BreadcrumbItem><BreadcrumbPage className="text-cyber-400">Polymer Additive</BreadcrumbPage></BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-400/40 bg-cyber-400/10 text-cyber-400 text-sm font-medium mb-6">
               <Shield className="h-4 w-4" /> ISO 9001:2015 Certified
             </div>
