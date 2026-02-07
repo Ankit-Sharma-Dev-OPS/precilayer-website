@@ -4,7 +4,7 @@ export default function ManufacturingMomentSection() {
   const stats = [
     {
       value: "$1000B+",
-      label: "Manufacturing GDP projected by 2025",
+      label: "Manufacturing GDP projected by 2027",
       icon: TrendingUp,
     },
     {

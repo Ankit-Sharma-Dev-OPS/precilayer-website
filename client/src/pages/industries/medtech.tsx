@@ -339,24 +339,24 @@ export default function MedTech() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+                className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
                 data-testid={`application-${index}`}
               >
-                <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center p-6">
+                <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                   <img 
                     src={app.image} 
                     alt={app.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-xl text-gray-900 mb-3">
+                  <h3 className="font-bold text-xl text-white mb-3">
                     {app.title}
                   </h3>
-                  <p className="text-gray-700 text-sm mb-3 leading-relaxed">
+                  <p className="text-gray-400 text-sm mb-3 leading-relaxed">
                     {app.examples}
                   </p>
-                  <div className="text-xs text-gray-600 bg-gray-100 px-3 py-2 rounded">
+                  <div className="text-xs text-gray-300 bg-space-900/50 px-3 py-2 rounded">
                     <span className="font-semibold">Materials:</span> {app.materials}
                   </div>
                 </div>

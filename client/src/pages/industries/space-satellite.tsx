@@ -330,14 +330,14 @@ export default function SpaceSatellite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
               data-testid="component-brackets"
             >
-              <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center p-8">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
                 <img 
                   src={bracketsImg} 
                   alt="Structural Brackets & Frames"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
                     filter: 'contrast(1.1) brightness(1.05)',
@@ -345,10 +345,10 @@ export default function SpaceSatellite() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl text-gray-900 mb-2">
+                <h3 className="font-bold text-xl text-white mb-2">
                   Structural Brackets & Frames
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   Lightweight, high-strength CNC-machined components
                 </p>
               </div>
@@ -359,14 +359,14 @@ export default function SpaceSatellite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
               data-testid="component-waveguides"
             >
-              <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center p-8">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
                 <img 
                   src={waveguideImg} 
                   alt="Waveguides & Antenna Components"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
                     filter: 'contrast(1.1) brightness(1.05)',
@@ -374,10 +374,10 @@ export default function SpaceSatellite() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl text-gray-900 mb-2">
+                <h3 className="font-bold text-xl text-white mb-2">
                   Waveguides & Antenna Components
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-400">
                   RF-optimized parts for satellite communication
                 </p>
               </div>
@@ -391,14 +391,14 @@ export default function SpaceSatellite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
               data-testid="component-propulsion"
             >
-              <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
                   src={propulsionImg} 
                   alt="Propulsion System Components"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
                     filter: 'contrast(1.1) brightness(1.05)',
@@ -406,10 +406,10 @@ export default function SpaceSatellite() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
+                <h3 className="font-bold text-lg text-white mb-2">
                   Propulsion System Components
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-400 text-sm">
                   Nozzles, thruster chambers, and fuel system parts
                 </p>
               </div>
@@ -420,14 +420,14 @@ export default function SpaceSatellite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
               data-testid="component-thermal"
             >
-              <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
                   src={thermalImg} 
                   alt="Thermal Management Systems"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
                     filter: 'contrast(1.1) brightness(1.05)',
@@ -435,10 +435,10 @@ export default function SpaceSatellite() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
+                <h3 className="font-bold text-lg text-white mb-2">
                   Thermal Management Systems
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-400 text-sm">
                   Custom heat sinks and radiators for space applications
                 </p>
               </div>
@@ -449,14 +449,14 @@ export default function SpaceSatellite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
               data-testid="component-housings"
             >
-              <div className="aspect-square bg-gray-100 flex items-center justify-center p-6">
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
                   src={housingImg} 
                   alt="Electronic Housings & Shielding"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
                     filter: 'contrast(1.1) brightness(1.05)',
@@ -464,10 +464,10 @@ export default function SpaceSatellite() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-gray-900 mb-2">
+                <h3 className="font-bold text-lg text-white mb-2">
                   Electronic Housings & Shielding
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-400 text-sm">
                   EMI-resistant enclosures for onboard electronics
                 </p>
               </div>

@@ -327,21 +327,21 @@ export default function RoboticsAutomation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow"
+                className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
                 data-testid={`component-${index}`}
               >
-                <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center">
+                <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center overflow-hidden">
                   <img
                     src={component.image}
                     alt={component.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold text-lg text-gray-900 mb-2">
+                  <h3 className="font-bold text-lg text-white mb-2">
                     {component.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-400 text-sm">
                     {component.description}
                   </p>
                 </div>
