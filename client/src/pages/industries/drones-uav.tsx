@@ -23,10 +23,6 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 
 import droneHeroImg from "@assets/stock_images/drone_uav_hero.jpg";
-import carbonFrameImg from "@assets/stock_images/drone_carbon_frame.jpg";
-import motorMountImg from "@assets/stock_images/drone_motor_mount.jpg";
-import gimbalImg from "@assets/stock_images/drone_gimbal.jpg";
-import landingGearImg from "@assets/stock_images/drone_landing_gear.jpg";
 
 export default function DronesUAV() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
