@@ -1,29 +1,30 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Satellite, Plane, Bot, Stethoscope, Car, Shield, Zap, Fuel, Cpu } from "lucide-react";
+import { Satellite, Plane, Bot, Stethoscope, Car, Factory } from "lucide-react";
 
 export default function IndustriesSection() {
   const industries = [
     {
       icon: Satellite,
-      title: "Space & Satellites",
-      description: "Precision components for satellites, space exploration, and aerospace applications. From ISRO to private space companies.",
-      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Satellite in space",
+      title: "Space & Aerospace",
+      description: "Producing lightweight, high-strength components critical for satellite systems, propulsion, and avionics.",
+      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      alt: "Space and aerospace satellite systems",
       link: "/industries/space-satellite",
       components: [
         "Satellite structural components",
-        "Propulsion system parts", 
-        "Communication equipment",
-        "Solar panel mechanisms"
+        "Propulsion system parts",
+        "Avionics housings",
+        "Thermal management systems"
       ]
     },
     {
       icon: Plane,
-      title: "Drones & UAV",
-      description: "Defense-grade and commercial drone components manufactured to aerospace standards.",
-      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      title: "Drones & UAVs",
+      description: "Manufacturing intricate, durable parts that enhance performance, reduce weight, and ensure reliability for aerial applications.",
+      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       alt: "Professional drone in flight",
+      link: "/industries/drones-uav",
       components: [
         "Carbon fiber frames",
         "Precision motor mounts",
@@ -34,103 +35,64 @@ export default function IndustriesSection() {
     {
       icon: Bot,
       title: "Robotics & Automation",
-      description: "High-precision mechanical components for industrial robots and automation systems.",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+      description: "Creating precise gears, housings, and end effectors for industrial robots and automated systems, enabling smooth and accurate motion.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       alt: "Industrial robot in manufacturing",
+      link: "/industries/robotics-automation",
       components: [
-        "Servo motor housings",
-        "Precision gears",
+        "Precision gears & shafts",
         "Robot arm joints",
-        "Sensor mounts"
+        "End effectors",
+        "Sensor housings"
+      ]
+    },
+    {
+      icon: Car,
+      title: "Mobility & Automotive",
+      description: "Delivering custom parts for electric vehicles, autonomous driving systems, and high-performance engines, focusing on efficiency and safety.",
+      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      alt: "Automotive manufacturing and mobility",
+      link: "/industries/mobility-automotive",
+      components: [
+        "Engine & transmission parts",
+        "EV battery housings",
+        "Suspension components",
+        "Autonomous sensor mounts"
       ]
     },
     {
       icon: Stethoscope,
-      title: "Healthcare & MedTech",
-      description: "Precision components for healthcare and medical technology with biocompatible materials, regulatory-aligned processes, and comprehensive quality standards.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Healthcare and medtech component manufacturing",
+      title: "Healthcare & Medical Devices",
+      description: "Fabricating biocompatible and precision-engineered components for surgical instruments, implants, and diagnostic equipment.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      alt: "Healthcare and medical device components",
       link: "/industries/medtech",
       components: [
         "Surgical instrument parts",
         "Implant components",
         "Diagnostic equipment parts",
-        "Life support components"
+        "Drug delivery device parts"
       ]
     },
     {
-      icon: Shield,
-      title: "Aerospace & Defense",
-      description: "AS9100D certified precision components for aerospace OEMs and defense contractors with full material traceability.",
-      image: "https://www.geaerospace.com/sites/default/files/Defense_1920x1080.jpg",
-      alt: "Aerospace and defense manufacturing",
+      icon: Factory,
+      title: "Industrial & Manufacturing",
+      description: "Supplying robust and precise components for heavy machinery, specialized tooling, and custom industrial applications.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      alt: "Industrial manufacturing equipment",
+      link: "/industries/industrial-manufacturing",
       components: [
-        "Aircraft fuselage components",
-        "Landing gear systems",
-        "Wing structural elements",
-        "Defense equipment housings"
-      ]
-    },
-    {
-      icon: Car,
-      title: "Automotive",
-      description: "High-precision automotive components manufactured with advanced CNC machining and quality control processes.",
-      image: "https://media.arcadis.com/-/media/project/arcadiscom/com/blogs/global/david-aimable-lina/2022/how-to-deliver-automotive-manufacturing-for-the-future/how-to-deliver-automotive-manufacturing-for-the-future-header.png?rev=-1",
-      alt: "Automotive manufacturing for the future",
-      components: [
-        "Engine components",
-        "Transmission parts",
-        "Suspension systems",
-        "Electronic housings"
-      ]
-    },
-    {
-      icon: Zap,
-      title: "Electric Mobility",
-      description: "Next-generation components for electric vehicles, charging infrastructure, and sustainable transportation solutions.",
-      image: "https://media.istockphoto.com/id/1404252573/vector/isometric-car-charger-electromobile-charging-station-car-bus-truck-van-motorcycle-on.jpg?s=612x612&w=0&k=20&c=VE8M7ZJZlMgWkkPK09FvnmUTuTu2CrEIHNpmO2t8VRU=",
-      alt: "Electric vehicle charging station infrastructure",
-      components: [
-        "Battery housing systems",
-        "Motor components",
-        "Charging station parts",
-        "Power electronics housings"
-      ]
-    },
-    {
-      icon: Fuel,
-      title: "Oil & Gas / Clean Tech Energy",
-      description: "Critical components for energy sector applications, from upstream exploration to downstream processing and clean technology solutions.",
-      image: "https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/9d498117-3179-4718-81f4-f1c7fe8e892b/Pillar%201%20Energy%20Transition%20wind%20energy%20solar%20panels%20dreamstime.png?auto=compress%2Cformat&w=1440",
-      alt: "Energy transition with wind and solar power",
-      components: [
-        "Valve components",
-        "Pipeline fittings",
-        "Pressure vessel parts",
-        "Renewable energy hardware"
-      ]
-    },
-    {
-      icon: Cpu,
-      title: "IoT & Electronics",
-      description: "Smart connected devices and electronic components for Internet of Things applications and modern electronics.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-      alt: "Component assembly line in electronics manufacturing",
-      components: [
-        "Sensor housings",
-        "Circuit board enclosures",
-        "IoT device casings",
-        "Smart device components"
+        "Valve bodies & fittings",
+        "Precision tooling",
+        "Heavy machinery parts",
+        "Custom industrial assemblies"
       ]
     }
   ];
 
   return (
     <section id="industries" className="py-20 bg-space-900 relative overflow-hidden">
-      {/* Industrial Night Scene Background */}
       <div className="absolute inset-0">
-        {/* Industrial night scene background image removed */}
-        {/* 80% Dark Overlay for readability */}
         <div className="absolute inset-0 bg-space-900/80" />
       </div>
       
@@ -146,8 +108,7 @@ export default function IndustriesSection() {
             Industries We <span className="gradient-text">Serve</span>
           </h2>
           <p className="text-white max-w-3xl mx-auto">
-            From aerospace to healthcare, we deliver precision components that power 
-            innovation across critical industries.
+            Precision without compromise — from aerospace to healthcare, we deliver components that power innovation across critical industries.
           </p>
         </motion.div>
         
@@ -195,16 +156,12 @@ export default function IndustriesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`group scroll-reveal h-full ${industry.link ? 'cursor-pointer' : 'cursor-default'}`}
-                data-testid={`industry-${industry.title.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group scroll-reveal h-full cursor-pointer"
+                data-testid={`industry-${industry.title.toLowerCase().replace(/[&\s]+/g, '-')}`}
               >
-                {industry.link ? (
-                  <Link href={industry.link}>
-                    {cardContent}
-                  </Link>
-                ) : (
-                  cardContent
-                )}
+                <Link href={industry.link}>
+                  {cardContent}
+                </Link>
               </motion.div>
             );
           })}

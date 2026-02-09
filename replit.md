@@ -6,6 +6,51 @@ This is a modern, futuristic website for Precilayer, a next-generation Indian ma
 
 Preferred communication style: Simple, everyday language.
 
+# Compliance Language Rules
+- "ISO 9001:2015 certified" — company IS certified (can say "certified")
+- "AS9100 D-compliant" — company is compliant but NOT certified (never say "AS9100 certified")
+- "ISO 13485-aligned" — company follows guidelines but NOT certified (never say "ISO 13485 certified")
+- Company manufactures COMPONENTS for medical devices, NOT medical devices themselves
+
+# Site Structure
+
+## Industry Pages (6 total, matching brochure)
+- /industries/space-satellite — Space & Aerospace
+- /industries/drones-uav — Drones & UAVs
+- /industries/robotics-automation — Robotics & Automation
+- /industries/mobility-automotive — Mobility & Automotive
+- /industries/medtech — Healthcare & Medical Devices
+- /industries/industrial-manufacturing — Industrial & Manufacturing
+
+## Manufacturing Pages
+### Additive Manufacturing
+- /manufacturing/polymer-additive — Polymer AM (MJF, SLS, SLA, DLP)
+- /manufacturing/metal-additive — Metal AM (DMLS, EBM)
+- /manufacturing/dfam — Design for Additive Manufacturing
+
+### CNC / Subtractive Manufacturing
+- /manufacturing/cnc-milling — CNC Milling (3, 4, 5-axis)
+- /manufacturing/cnc-turning — CNC Turning
+- /manufacturing/multi-axis-machining — Multi-Axis Precision Machining
+- /manufacturing/tooling-complex-machining — Tooling & Complex Machining (EDM)
+
+### Resources
+- /manufacturing/materials — Materials Available (tabbed UI)
+- /manufacturing/finishes — Surface Finishes & Post-Processing (grid layout)
+
+## Policy Pages
+- /privacy-policy, /terms-conditions, /responsible-sourcing, /purchasing-terms, /supplier-integrity-guide, /esg-csr-policy
+
+## Navigation
+- Top nav: Why, How, What, Vision, Industries, About, FAQ, Contact + Manufacturing dropdown
+- Manufacturing dropdown has 3 sections: Additive, CNC/Subtractive, Resources
+- Footer: Manufacturing links, Company (About/Contact/Quality/ISO cert), Policies
+- No industry links in footer
+
+## Key Components
+- ISO 9001:2015 badge: fixed bottom-right, links to /iso-9001-certificate.pdf
+- Building line-art: used as subtle footer background at 4% opacity
+
 # System Architecture
 
 ## Frontend Architecture
@@ -16,9 +61,6 @@ The UI is built with a comprehensive design system using shadcn/ui components, p
 
 ## Build System
 The project uses Vite as the build tool for fast development and optimized production builds. TypeScript is used throughout for type safety and better developer experience. The build process includes separate client and server compilation, with the client assets being served statically in production.
-
-## Development Environment
-The application is configured for both development and production environments with hot module replacement (HMR) support in development. Custom Vite plugins are integrated for Replit-specific features and error handling.
 
 # External Dependencies
 
@@ -39,15 +81,8 @@ The application is configured for both development and production environments w
 - **PostgreSQL**: Database system (configured for Neon Database)
 - **Express.js**: Backend web framework
 
-## State Management and Data Fetching
-- **React Query (TanStack Query)**: Server state management and data fetching
-- **React Hook Form**: Form state management and validation
-- **Zod**: Schema validation and type inference
-
 ## Routing and Navigation
 - **Wouter**: Lightweight client-side routing library
 
 ## Fonts and Typography
 - **Google Fonts**: Inter, Orbitron, and JetBrains Mono font families for futuristic typography
-
-The application is designed to be deployment-ready with proper SEO optimization, responsive design, and performance considerations for a production manufacturing company website.

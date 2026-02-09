@@ -23,11 +23,9 @@ export default function ContactSection() {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Only load Turnstile on production, not on localhost
-    const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('.replit.dev');
     
     if (isDev) {
-      // Skip Turnstile on development
       return;
     }
 
@@ -65,8 +63,7 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      // Get Turnstile token if available (production only)
-      const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+      const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.includes('.replit.dev');
       let captchaToken = '';
       
       if (!isDev && (window as any).turnstile) {
