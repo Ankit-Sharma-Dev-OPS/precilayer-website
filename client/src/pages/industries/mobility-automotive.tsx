@@ -5,6 +5,11 @@ import { Car, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Zap, Setti
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
+import evBatteryImg from "@assets/generated_images/automotive_ev_battery_housing.png";
+import suspensionImg from "@assets/generated_images/automotive_suspension_arm.png";
+import turboImg from "@assets/generated_images/automotive_turbo_housing.png";
+import adasImg from "@assets/generated_images/automotive_adas_sensor_mount.png";
+import brakeImg from "@assets/generated_images/automotive_brake_caliper.png";
 
 export default function MobilityAutomotive() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -296,28 +301,113 @@ export default function MobilityAutomotive() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {componentShowcase.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all group"
-              >
-                <div className="w-14 h-14 mb-4 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
-                  <item.icon className="h-7 w-7 text-cyber-400" />
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {item.materials.map(mat => (
-                    <span key={mat} className="px-2 py-0.5 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded text-gray-300">{mat}</span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={evBatteryImg} 
+                  alt="EV Battery Housings"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">EV Battery Housings</h3>
+                <p className="text-gray-400">Thermally optimized enclosures with integrated cooling channels and IP67 sealing</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={suspensionImg} 
+                  alt="Suspension Arms"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">Suspension Arms</h3>
+                <p className="text-gray-400">High-strength control arms and knuckles from forged or billet stock</p>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={turboImg} 
+                  alt="Turbo Housings"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Turbo Housings</h3>
+                <p className="text-gray-400 text-sm">Complex scroll profiles and volute geometries in high-temp alloys</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={adasImg} 
+                  alt="ADAS Sensor Mounts"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">ADAS Sensor Mounts</h3>
+                <p className="text-gray-400 text-sm">Precision brackets for LiDAR, radar, and camera modules</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={brakeImg} 
+                  alt="Brake Calipers"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Brake Calipers</h3>
+                <p className="text-gray-400 text-sm">Multi-piston calipers with consistent dimensional accuracy</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
