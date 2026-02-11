@@ -62,14 +62,9 @@ export default function Home() {
       <HeroSection />
       <ManufacturingMomentSection />
       <WhySection />
-      <HowSection />
-      <WhatSection />
       <VisionSection />
       <IndustriesSection />
-      <AboutSection />
       <ProcessesSection />
-      <CaseStudiesSection />
-      <FAQSection />
       <ContactSection />
       <Footer />
     </div>
