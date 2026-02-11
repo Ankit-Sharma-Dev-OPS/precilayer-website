@@ -51,6 +51,11 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const handlePageTransition = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     { label: "Why", href: "/why" },
     { label: "How", href: "/how" },
@@ -85,7 +90,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button 
-            onClick={() => setLocation("/")}
+            onClick={() => {
+              setLocation("/");
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="font-orbitron text-2xl font-bold text-white hover:text-cyber-400 transition-colors cursor-pointer" 
             style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} 
             data-testid="logo"
@@ -97,7 +105,11 @@ export default function Navigation() {
             {navItems.map((item) => (
               item.href ? (
                 <Link key={item.href} href={item.href}>
-                  <span className="text-white hover:text-cyber-400 transition-colors text-sm cursor-pointer" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>
+                  <span 
+                    onClick={handlePageTransition}
+                    className="text-white hover:text-cyber-400 transition-colors text-sm cursor-pointer" 
+                    style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
+                  >
                     {item.label}
                   </span>
                 </Link>
@@ -176,7 +188,7 @@ export default function Navigation() {
             <div className="px-6 py-4 space-y-3">
               {navItems.map((item) => (
                 item.href ? (
-                  <Link key={item.href} href={item.href} onClick={() => setIsMobileMenuOpen(false)}>
+                  <Link key={item.href} href={item.href} onClick={handlePageTransition}>
                     <span className="block w-full text-left text-white hover:text-cyber-400 transition-colors cursor-pointer" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>
                       {item.label}
                     </span>
