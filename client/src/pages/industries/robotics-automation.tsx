@@ -5,6 +5,11 @@ import { Bot, Cog, Settings, Layers, Gauge, Clock, Zap, Shield, Box, Cpu, Grip, 
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
+import gearsImg from "@assets/generated_images/robotics_precision_gears.png";
+import armJointImg from "@assets/generated_images/robotics_arm_joint.png";
+import endEffectorImg from "@assets/generated_images/robotics_end_effector.png";
+import sensorHousingImg from "@assets/generated_images/robotics_sensor_housing.png";
+import linearGuideImg from "@assets/generated_images/robotics_linear_guide.png";
 
 export default function RoboticsAutomation() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -336,28 +341,150 @@ export default function RoboticsAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {componentShowcase.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.06 }}
-                viewport={{ once: true }}
-                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all group"
-              >
-                <div className="w-14 h-14 mb-4 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
-                  <item.icon className="h-7 w-7 text-cyber-400" />
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {item.materials.map(m => (
-                    <span key={m} className="px-2.5 py-1 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded-full text-cyber-400/80">{m}</span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          {/* First Row - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={gearsImg} 
+                  alt="Precision Gears & Gearboxes"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">
+                  Precision Gears & Gearboxes
+                </h3>
+                <p className="text-gray-400">
+                  CNC-machined spur and planetary gears with precision ground teeth
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={armJointImg} 
+                  alt="Robotic Arm Joints"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">
+                  Robotic Arm Joints
+                </h3>
+                <p className="text-gray-400">
+                  Multi-axis articulated joint mechanisms with integrated motor mounts
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Second Row - 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={endEffectorImg} 
+                  alt="End Effectors & Grippers"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">
+                  End Effectors & Grippers
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Precision parallel gripper mechanisms for industrial automation
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={sensorHousingImg} 
+                  alt="Sensor Housings"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">
+                  Sensor Housings
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  IP-rated enclosures for LiDAR and vision sensor mounting
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={linearGuideImg} 
+                  alt="Linear Motion Guides"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    filter: 'contrast(1.1) brightness(1.05)',
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">
+                  Linear Motion Guides
+                </h3>
+                <p className="text-gray-400 text-sm">
+                  Precision ground hardened steel linear rails and carriages
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

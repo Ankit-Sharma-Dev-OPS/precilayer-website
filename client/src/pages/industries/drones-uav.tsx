@@ -6,6 +6,11 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import droneHeroImg from "@assets/stock_images/drone_uav_hero.jpg";
+import droneFrameImg from "@assets/generated_images/drone_carbon_fiber_frame.png";
+import droneMotorImg from "@assets/generated_images/drone_motor_mount_cnc.png";
+import droneGimbalImg from "@assets/generated_images/drone_gimbal_system.png";
+import droneLandingImg from "@assets/generated_images/drone_landing_gear_assembly.png";
+import droneAvionicsImg from "@assets/generated_images/drone_avionics_housing.png";
 
 export default function DronesUAV() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -287,28 +292,115 @@ export default function DronesUAV() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {componentShowcase.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.07 }}
-                viewport={{ once: true }}
-                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all group"
-              >
-                <div className="w-14 h-14 mb-4 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
-                  <item.icon className="h-7 w-7 text-cyber-400" />
-                </div>
-                <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {item.materials.map(mat => (
-                    <span key={mat} className="px-2.5 py-1 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded-full text-gray-300">{mat}</span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          {/* First Row - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={droneFrameImg} 
+                  alt="Carbon Fiber Frames"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">Carbon Fiber Frames</h3>
+                <p className="text-gray-400">Precision-machined CFRP airframe structures for maximum strength-to-weight ratio</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={droneMotorImg} 
+                  alt="Motor Mounts"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">Motor Mounts</h3>
+                <p className="text-gray-400">High-strength 7075-T6 aluminum motor brackets with vibration-dampened interfaces</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Second Row - 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneGimbalImg} 
+                  alt="Gimbal Systems"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Gimbal Systems</h3>
+                <p className="text-gray-400 text-sm">Ultra-precise gimbal assemblies for camera stabilization</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneLandingImg} 
+                  alt="Landing Gear"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Landing Gear</h3>
+                <p className="text-gray-400 text-sm">Impact-resistant assemblies with aluminum and carbon fiber</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneAvionicsImg} 
+                  alt="Avionics Housings"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Avionics Housings</h3>
+                <p className="text-gray-400 text-sm">EMI-shielded enclosures for flight controllers and electronics</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
