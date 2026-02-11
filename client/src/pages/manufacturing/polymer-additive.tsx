@@ -19,6 +19,8 @@ import {
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
+import polymerMjfImg from "@assets/generated_images/polymer_mjf_parts.png";
+import polymerSlaImg from "@assets/generated_images/polymer_sla_parts.png";
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 
@@ -163,8 +165,41 @@ export default function PolymerAdditive() {
         </div>
       </section>
 
+      <section className="py-16 bg-space-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.h2 {...fadeUp} transition={{ duration: 0.5 }} className="font-orbitron text-2xl md:text-3xl font-bold text-center mb-4">
+            Sample <span className="gradient-text">Parts</span>
+          </motion.h2>
+          <motion.p {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }} className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
+            Production-grade polymer components manufactured using our MJF, SLS, SLA, and DLP technologies
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div {...fadeUp} transition={{ duration: 0.6 }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img src={polymerMjfImg} alt="MJF 3D Printed Nylon Parts" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">MJF / SLS Production Parts</h3>
+                <p className="text-gray-400">Nylon PA12 enclosures, brackets, and structural components with isotropic mechanical properties</p>
+              </div>
+            </motion.div>
+            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img src={polymerSlaImg} alt="SLA Resin Printed Parts" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">SLA / DLP Precision Parts</h3>
+                <p className="text-gray-400">High-detail prototypes, medical models, and jigs in engineering resins with smooth surface finish</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Comparison Table */}
-      <section className="py-16 bg-space-900" id="comparison">
+      <section className="py-16 bg-space-800" id="comparison">
         <div className="max-w-5xl mx-auto px-6">
           <motion.h2 {...fadeUp} transition={{ duration: 0.5 }} className="font-orbitron text-2xl md:text-3xl font-bold text-center mb-10">
             Technology <span className="gradient-text">Comparison</span>

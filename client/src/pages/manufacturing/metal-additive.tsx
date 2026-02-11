@@ -8,6 +8,8 @@ import {
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
+import metalDmlsImg from "@assets/generated_images/metal_dmls_parts.png";
+import metalEbmImg from "@assets/generated_images/metal_ebm_parts.png";
 
 export default function MetalAdditive() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -164,8 +166,41 @@ export default function MetalAdditive() {
         </div>
       </section>
 
+      <section className="py-16 bg-space-900">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.h2 {...fadeUp} transition={{ duration: 0.5 }} className="font-orbitron text-2xl md:text-3xl font-bold text-center mb-4">
+            Sample <span className="gradient-text">Parts</span>
+          </motion.h2>
+          <motion.p {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }} className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
+            High-performance metal components manufactured using DMLS and EBM technologies
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div {...fadeUp} transition={{ duration: 0.6 }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img src={metalDmlsImg} alt="DMLS Metal 3D Printed Parts" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">DMLS Production Parts</h3>
+                <p className="text-gray-400">Stainless steel and Inconel components with complex internal channels and lattice structures</p>
+              </div>
+            </motion.div>
+            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group">
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img src={metalEbmImg} alt="EBM Titanium Printed Parts" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }} />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">EBM Titanium Parts</h3>
+                <p className="text-gray-400">Load-bearing titanium and CoCrMo components for aerospace and medical implant applications</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Comparison Table */}
-      <section className="py-16 bg-space-900" id="comparison">
+      <section className="py-16 bg-space-800" id="comparison">
         <div className="max-w-5xl mx-auto px-6">
           <motion.h2 {...fadeUp} transition={{ duration: 0.5 }} className="font-orbitron text-2xl md:text-3xl font-bold text-center mb-10">
             Technology <span className="gradient-text">Comparison</span>

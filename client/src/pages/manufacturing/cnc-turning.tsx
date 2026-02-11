@@ -31,6 +31,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
+import cncTurningImg from "@assets/generated_images/cnc_turning_parts.png";
 
 export default function CNCTurning() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -283,8 +284,43 @@ export default function CNCTurning() {
         </div>
       </section>
 
-      <section className="py-20 bg-space-800" id="capabilities">
+      <section className="py-20 bg-space-800">
         <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Sample <span className="gradient-text">Parts</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              High-precision cylindrical components from prototype to full-scale production
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto bg-space-900/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+          >
+            <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+              <img src={cncTurningImg} alt="CNC Turned Precision Components" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }} />
+            </div>
+            <div className="p-6 text-center">
+              <h3 className="font-bold text-xl text-white mb-2">Precision CNC Turned Components</h3>
+              <p className="text-gray-400">Shafts, pins, bushings, valve stems, and threaded fittings in stainless steel and aluminum with mirror-finish surfaces</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-900" id="capabilities">
+        <SubtleBackground />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
