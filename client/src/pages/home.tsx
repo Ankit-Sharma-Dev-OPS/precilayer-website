@@ -61,8 +61,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <ManufacturingMomentSection />
-      <WhySection />
-      <VisionSection />
       <IndustriesSection />
       <ProcessesSection />
       <ContactSection />
