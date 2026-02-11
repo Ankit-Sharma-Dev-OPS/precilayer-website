@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import {
-  Factory, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Shield,
-  Zap, Settings, Wrench, Hammer, HardHat, Cog, ArrowRight
-} from "lucide-react";
+import { Factory, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Shield, Zap, Settings, Wrench, Hammer, HardHat, Cog, ArrowRight, CheckCircle2, FileCheck } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
@@ -46,189 +43,281 @@ export default function IndustrialManufacturing() {
     return () => { createdMetaTags.forEach(meta => meta.remove()); script.remove(); };
   }, []);
 
-  const scrollToSection = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const toggleFaq = (i: number) => setOpenFaqIndex(openFaqIndex === i ? null : i);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
-  const whatWeMake = [
-    { icon: Cog, label: "Valve Bodies", detail: "High-pressure, tight-seal" },
-    { icon: Wrench, label: "Precision Tooling", detail: "Molds, dies, gauges" },
-    { icon: Settings, label: "Gearbox Components", detail: "Gears, shafts, housings" },
-    { icon: Box, label: "Pump Housings", detail: "Cast & machined" },
-    { icon: Layers, label: "Hydraulic Manifolds", detail: "Multi-port, leak-tested" },
-    { icon: HardHat, label: "Custom Fixtures", detail: "Jigs, clamps, holders" },
-    { icon: Shield, label: "Structural Parts", detail: "Load-bearing frames" },
-    { icon: Hammer, label: "Wear Components", detail: "Hardened, abrasion-resistant" },
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const componentShowcase = [
+    {
+      icon: Cog,
+      title: "Valve Bodies",
+      description: "High-pressure valve bodies machined to tight sealing tolerances for oil & gas, water treatment, and process control applications. Multi-port configurations with precision bore finishing and leak-tested assemblies.",
+      materials: ["4140 Steel", "316 SS", "Bronze C932"]
+    },
+    {
+      icon: Wrench,
+      title: "Precision Tooling (Molds/Dies/Gauges)",
+      description: "Custom molds, progressive dies, and inspection gauges machined from hardened tool steels. Wire EDM and sinker EDM for intricate geometries with surface finishes down to Ra 0.4μm for mold cavities.",
+      materials: ["D2", "H13", "S7", "A2"]
+    },
+    {
+      icon: Settings,
+      title: "Gearbox Components",
+      description: "Precision gears, shafts, and housings for power transmission systems. Profile grinding and gear hobbing with tight runout control, heat-treated to specification for extended service life under heavy loads.",
+      materials: ["4340 Steel", "8620", "17-4PH"]
+    },
+    {
+      icon: Box,
+      title: "Pump Housings",
+      description: "Cast and machined pump housings with concentricity control for impeller clearance. Multi-axis CNC machining ensures proper port alignment, sealing surfaces, and mounting interfaces across volute and centrifugal designs.",
+      materials: ["Cast Iron", "316 SS", "Bronze"]
+    },
+    {
+      icon: Layers,
+      title: "Hydraulic Manifolds",
+      description: "Multi-port hydraulic manifolds with cross-drilled passages, precision bored valve cavities, and leak-tested to operating pressure. CNC machined from solid billet with full port mapping documentation.",
+      materials: ["6061-T6 Al", "4140 Steel", "Ductile Iron"]
+    },
+    {
+      icon: HardHat,
+      title: "Custom Fixtures",
+      description: "Precision jigs, clamps, assembly fixtures, and workholding solutions designed for repeatable positioning. Hardened locating pins, ground datums, and modular designs for production line integration.",
+      materials: ["A2 Tool Steel", "4140", "6061-T6"]
+    },
+    {
+      icon: Shield,
+      title: "Structural Parts",
+      description: "Load-bearing frames, brackets, and mounting plates for heavy machinery and structural assemblies. Stress-relieved and heat-treated for dimensional stability under cyclic loading and harsh operating environments.",
+      materials: ["4340 Steel", "7075-T6 Al", "304 SS"]
+    },
+    {
+      icon: Hammer,
+      title: "Wear Components",
+      description: "Hardened wear plates, bushings, guide rails, and abrasion-resistant liners for demanding industrial environments. Heat-treated to 58–62 HRC with precision ground surfaces for extended component life.",
+      materials: ["D2 (62 HRC)", "H13", "420 SS"]
+    }
   ];
 
-  const faqs = [
-    { question: "What size components can you manufacture?", answer: "From 5mm precision inserts up to 1000mm structural components. Contact us for oversized parts — we coordinate with partner facilities." },
-    { question: "Can you machine hardened tool steels?", answer: "Yes — D2 up to 62 HRC, H13, A2, S7 via hard milling, Wire EDM, and sinker EDM with full dimensional accuracy." },
-    { question: "Do you coordinate heat treatment?", answer: "Complete management: hardening, tempering, case hardening, nitriding, plus certified documentation and hardness test reports." },
-    { question: "What are typical lead times?", answer: "Standard parts: 7–10 days. Complex tooling with EDM: 2–4 weeks. Rush programs available with advance coordination." },
+  const whyPrecilayerCards = [
+    {
+      icon: Shield,
+      title: "ISO 9001:2015 Certified Quality",
+      description: "Our ISO 9001:2015 certified quality management system ensures every component meets documented specifications with full process control. From incoming material inspection to final dimensional verification, our QMS drives consistency and continuous improvement across all production runs."
+    },
+    {
+      icon: Hammer,
+      title: "Hardened Material Expertise",
+      description: "Specialized machining of hardened tool steels including D2 up to 62 HRC, H13, S7, and A2 via hard milling, Wire EDM, and precision grinding. We maintain process capability even in fully hardened conditions where conventional machining approaches fail."
+    },
+    {
+      icon: Settings,
+      title: "Multi-Process Manufacturing",
+      description: "Integrated CNC milling, CNC turning, Wire EDM, sinker EDM, and surface grinding under one roof. This multi-process capability eliminates coordination delays between suppliers and ensures dimensional consistency across operations for complex industrial components."
+    },
+    {
+      icon: Zap,
+      title: "Complete Heat Treatment Coordination",
+      description: "Full management of hardening, tempering, case hardening, nitriding, and stress relieving through our certified partner network. We coordinate all thermal processing with certified documentation, hardness test reports, and post-heat-treatment dimensional verification."
+    },
+    {
+      icon: FileCheck,
+      title: "Comprehensive Documentation & Traceability",
+      description: "Every component ships with Certificate of Conformance, material certificates, dimensional inspection reports, and lot traceability documentation. Our documentation packages support audit compliance and provide full material-to-part linkage for quality assurance."
+    },
+    {
+      icon: Layers,
+      title: "Prototype to Production Scaling",
+      description: "Seamless transition from single prototypes through pilot batches to production volumes up to 50,000 units. We validate designs with DFM analysis, optimize manufacturing processes during prototyping, and maintain consistent quality as volumes scale."
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "5-Axis CNC Milling",
+      description: "Complex 3D geometries, multi-face machining, and deep cavity work for molds, dies, and structural components. Achieving ±0.02mm tolerances with superior surface finishes on hardened and exotic materials.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "CNC Turning",
+      description: "Precision turning for shafts, bushings, valve stems, and cylindrical components. Live tooling capability for milling features in a single setup, reducing handling and improving concentricity.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Wire EDM & Sinker EDM",
+      description: "Intricate profiles, sharp internal corners, and hardened material cutting with Wire EDM. Sinker EDM for complex cavities, textured surfaces, and features impossible to reach with conventional machining.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Surface Grinding",
+      description: "Precision flat, cylindrical, and profile grinding for tight flatness, parallelism, and surface finish requirements. Critical for tooling datums, sealing surfaces, and wear components.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "MJF/SLS Polymer Printing",
+      description: "Multi Jet Fusion and Selective Laser Sintering for functional prototypes, jigs, fixtures, and low-volume production parts in PA12, Nylon, and engineering-grade polymers.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Heat Treatment Coordination",
+      description: "Managed hardening, tempering, case hardening, nitriding, and stress relieving through certified partners. Full documentation including hardness test reports and thermal processing certificates.",
+      cta: "Speak to Manufacturing"
+    }
   ];
 
   const materialGroups = [
-    { label: "Tool Steel", items: ["D2", "H13", "S7", "A2"] },
-    { label: "Alloy Steel", items: ["4140", "4340", "8620"] },
+    { label: "Tool Steels", items: ["D2", "H13", "S7", "A2"] },
+    { label: "Alloy Steels", items: ["4140", "4340", "8620"] },
     { label: "Stainless Steel", items: ["304", "316", "17-4PH", "420"] },
     { label: "Aluminum", items: ["6061-T6", "7075-T6"] },
     { label: "Cast Iron", items: ["Gray", "Ductile", "SG"] },
     { label: "Bronze & Brass", items: ["C932", "C360"] },
+    { label: "Engineering Polymers", items: ["PEEK", "Delrin", "Nylon PA12"] }
+  ];
+
+  const qualityPoints = [
+    "Certificate of Conformance (COC) referencing PO and drawing revision",
+    "Material certificates with heat lot numbers and chemical composition",
+    "Dimensional inspection reports from calibrated CMM equipment",
+    "Hardness test reports for heat-treated components",
+    "Full lot traceability from raw material to finished part",
+    "First Article Inspection (FAI) reports available on request"
+  ];
+
+  const processSteps = [
+    { step: "01", title: "RFQ & DFM Review", description: "Upload your CAD files and receive detailed manufacturability feedback, material recommendations, and optimized pricing within 24 hours." },
+    { step: "02", title: "Manufacture", description: "Multi-process production combining CNC milling, turning, EDM, grinding, and additive manufacturing with real-time quality checks." },
+    { step: "03", title: "Inspect & Document", description: "CMM dimensional verification, hardness testing, surface finish measurement, and comprehensive documentation package preparation." },
+    { step: "04", title: "Ship & Scale", description: "Clean packaging with lot traceability, protective wrapping, and seamless scaling from prototype quantities to production volumes." }
+  ];
+
+  const faqs = [
+    {
+      question: "What size components can you manufacture?",
+      answer: "We manufacture components ranging from 5mm precision inserts and gauge pins up to 1000mm structural plates and large manifold blocks. Our 5-axis CNC mills handle workpieces up to 800mm × 500mm × 400mm, and our turning centers accommodate diameters up to 350mm. For oversized components, we coordinate with partner facilities and provide full project management."
+    },
+    {
+      question: "Can you machine hardened tool steels?",
+      answer: "Yes — we specialize in machining hardened tool steels including D2 up to 62 HRC, H13 at 48–52 HRC, A2, and S7. Our capabilities include hard milling with carbide and CBN tooling, Wire EDM for intricate profiles in fully hardened material, and sinker EDM for complex cavity work. All hardened components are verified with calibrated hardness testing equipment."
+    },
+    {
+      question: "Do you coordinate heat treatment?",
+      answer: "We provide complete heat treatment management through our network of certified processing partners. Services include through-hardening, tempering, case hardening (carburizing), nitriding, stress relieving, and cryogenic treatment. Every heat-treated component ships with certified documentation including hardness test reports, furnace charts, and thermal processing certificates."
+    },
+    {
+      question: "What are typical lead times?",
+      answer: "Standard machined components: 7–10 business days. Complex tooling with EDM and heat treatment: 2–4 weeks. Simple turned or milled parts: as fast as 5 days. Production runs are scheduled based on volume and complexity. Rush programs are available with advance coordination — contact us to discuss expedited timelines for urgent projects."
+    },
+    {
+      question: "What EDM capabilities do you offer?",
+      answer: "Our EDM department includes Wire EDM for precision contour cutting, slotting, and profile work in hardened materials with accuracy to ±0.005mm. Sinker EDM handles complex 3D cavities, textured surfaces, and blind features using custom copper and graphite electrodes. Both processes are ideal for mold making, die components, and intricate industrial parts that cannot be conventionally machined."
+    },
+    {
+      question: "Can you reverse-engineer existing components?",
+      answer: "Yes. We offer reverse engineering services for worn, damaged, or undocumented parts. Using CMM measurement, 3D scanning, and dimensional analysis, we create accurate CAD models and manufacturing drawings from physical samples. This is particularly valuable for legacy equipment where original drawings are unavailable, enabling us to reproduce critical spare parts with full dimensional accuracy."
+    }
   ];
 
   return (
     <div className="bg-space-900 text-white font-inter overflow-x-hidden">
       <Navigation />
 
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(/images/industries/industrial-bg.jpg)`, backgroundPosition: 'center 40%' }} />
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div
+          className="absolute inset-0 bg-cover"
+          style={{
+            backgroundImage: `url(/images/industries/industrial-bg.jpg)`,
+            backgroundPosition: 'center 40%'
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-space-900" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-400/40 bg-cyber-400/10 text-cyber-400 text-sm font-medium mb-6">
-              <Factory className="h-4 w-4" /> ISO 9001:2015 Certified
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)'
+          }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-cyber-400/20 rounded-2xl border border-cyber-400/30">
+                <Factory className="h-16 w-16 text-cyber-400" />
+              </div>
             </div>
-            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+
+            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Industrial & <span className="gradient-text">Manufacturing</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-              Robust precision components for heavy industry and specialized tooling
+
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Robust precision components for heavy industry, specialized tooling, and custom manufacturing applications — from hardened tool steel dies to multi-port hydraulic manifolds
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button onClick={() => scrollToSection('contact')} className="bg-cyber-400 text-space-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyber-500 transition-all">Get a Quote</button>
-              <button onClick={() => scrollToSection('what-we-make')} className="border border-gray-500 text-gray-200 px-8 py-3 rounded-lg font-semibold hover:border-cyber-400 hover:text-cyber-400 transition-all">View Capabilities</button>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
+              >
+                Get a Quote
+              </button>
+              <button
+                onClick={() => scrollToSection('components')}
+                className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
+              >
+                View Capabilities
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section id="what-we-make" className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">What We <span className="gradient-text">Make</span></h2>
+      <section id="components" className="py-20 bg-space-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Component <span className="gradient-text">Showcase</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Precision-engineered industrial components for demanding applications
+            </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {whatWeMake.map((item, i) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.05 }} viewport={{ once: true }}
-                className="bg-space-700/50 border border-gray-700/50 rounded-xl p-5 text-center hover:border-cyber-400/40 transition-all group">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
-                  <item.icon className="h-6 w-6 text-cyber-400" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {componentShowcase.map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all group"
+              >
+                <div className="w-14 h-14 mb-4 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
+                  <item.icon className="h-7 w-7 text-cyber-400" />
                 </div>
-                <h3 className="text-white font-semibold text-sm mb-1">{item.label}</h3>
-                <p className="text-gray-400 text-xs">{item.detail}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-900">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">How We <span className="gradient-text">Make It</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center"><Settings className="h-5 w-5 text-blue-400" /></div>
-                <h3 className="font-orbitron text-lg font-bold text-white">CNC Machining</h3>
-              </div>
-              <div className="space-y-3">
-                {["5-Axis Milling", "CNC Turning", "Wire EDM", "Surface Grinding"].map(c => (
-                  <div key={c} className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-blue-400" /><span className="text-gray-300">{c}</span></div>
-                ))}
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {["Tool Steel", "Stainless", "Aluminum", "Alloy Steel"].map(m => (
-                  <span key={m} className="px-2.5 py-1 text-xs bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300">{m}</span>
-                ))}
-              </div>
-              <Link href="/manufacturing/cnc-milling" className="inline-flex items-center gap-1 mt-5 text-sm text-blue-400 hover:text-blue-300 font-medium">Learn more <ArrowRight className="h-3.5 w-3.5" /></Link>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center"><Layers className="h-5 w-5 text-purple-400" /></div>
-                <h3 className="font-orbitron text-lg font-bold text-white">Additive Manufacturing</h3>
-              </div>
-              <div className="space-y-3">
-                {["MJF & SLS", "Metal 3D Printing", "Sand Casting Patterns", "Rapid Prototyping"].map(c => (
-                  <div key={c} className="flex items-center gap-2 text-sm"><div className="w-1.5 h-1.5 rounded-full bg-purple-400" /><span className="text-gray-300">{c}</span></div>
-                ))}
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {["PA12", "Inconel 718", "Stainless 316L", "Nylon"].map(m => (
-                  <span key={m} className="px-2.5 py-1 text-xs bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300">{m}</span>
-                ))}
-              </div>
-              <Link href="/manufacturing/metal-additive" className="inline-flex items-center gap-1 mt-5 text-sm text-purple-400 hover:text-purple-300 font-medium">Learn more <ArrowRight className="h-3.5 w-3.5" /></Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Why <span className="gradient-text">Precilayer</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: Gauge, value: "±0.02mm", label: "Tolerance", desc: "CMM-verified precision for critical industrial parts" },
-              { icon: Clock, value: "7 Days", label: "Lead Time", desc: "Prototype to production, rapid turnaround" },
-              { icon: Zap, value: "1–50K", label: "Scale", desc: "Single prototypes to medium-batch production" },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
-                className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6 text-center">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-cyber-400/10 border-2 border-cyber-400/40 flex items-center justify-center">
-                  <card.icon className="h-7 w-7 text-cyber-400" />
-                </div>
-                <div className="text-3xl font-bold text-cyber-400 mb-1">{card.value}</div>
-                <div className="text-white font-semibold mb-1">{card.label}</div>
-                <p className="text-gray-400 text-sm">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-900">
-        <div className="max-w-5xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Our <span className="gradient-text">Process</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { step: "01", title: "RFQ & DFM", desc: "Upload CAD, get manufacturability feedback" },
-              { step: "02", title: "Manufacture", desc: "CNC + Additive production" },
-              { step: "03", title: "Inspect & Doc", desc: "CMM, COC, material certs" },
-              { step: "04", title: "Ship & Scale", desc: "Clean pack, lot traceability" },
-            ].map((phase, i) => (
-              <motion.div key={phase.step} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
-                className="text-center p-5 bg-space-800/60 border border-gray-700/40 rounded-xl">
-                <div className="text-3xl font-bold text-cyber-400/30 font-orbitron mb-2">{phase.step}</div>
-                <h3 className="font-semibold text-white text-sm mb-1">{phase.title}</h3>
-                <p className="text-gray-400 text-xs">{phase.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Materials We <span className="gradient-text">Work With</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {materialGroups.map((group, i) => (
-              <motion.div key={group.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.05 }} viewport={{ once: true }}
-                className="bg-space-700/50 border border-gray-700/50 rounded-xl p-4">
-                <h3 className="text-white font-semibold text-sm mb-3">{group.label}</h3>
+                <h3 className="font-bold text-lg text-white mb-2">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
                 <div className="flex flex-wrap gap-2">
-                  {group.items.map(item => (
-                    <span key={item} className="px-2.5 py-1 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded-full text-cyber-300">{item}</span>
+                  {item.materials.map(mat => (
+                    <span key={mat} className="px-2.5 py-1 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded-full text-cyber-300">{mat}</span>
                   ))}
                 </div>
               </motion.div>
@@ -237,20 +326,333 @@ export default function IndustrialManufacturing() {
         </div>
       </section>
 
-      <section className="py-16 bg-space-900">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Frequently Asked <span className="gradient-text">Questions</span></h2>
+      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Precision <span className="gradient-text">Metrics</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Measurable performance standards for every industrial component
+            </p>
           </motion.div>
-          <div className="space-y-3">
-            {faqs.map((faq, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: i * 0.05 }} viewport={{ once: true }}
-                className="bg-space-800/60 border border-gray-700/40 rounded-xl overflow-hidden">
-                <button onClick={() => toggleFaq(i)} className="w-full flex items-center justify-between p-5 text-left">
-                  <span className="text-white font-medium text-sm">{faq.question}</span>
-                  {openFaqIndex === i ? <ChevronUp className="h-4 w-4 text-cyber-400 shrink-0" /> : <ChevronDown className="h-4 w-4 text-gray-400 shrink-0" />}
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">±0.02mm</div>
+              <div className="text-lg text-gray-300 mb-2">Tolerance Capability</div>
+              <div className="text-sm text-gray-400">CMM-verified precision for critical industrial parts</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">7-Day</div>
+              <div className="text-lg text-gray-300 mb-2">Standard Lead Time</div>
+              <div className="text-sm text-gray-400">Rapid turnaround from prototype to production</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">1–50K</div>
+              <div className="text-lg text-gray-300 mb-2">Production Scale</div>
+              <div className="text-sm text-gray-400">Single prototypes to medium-batch production runs</div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-space-800/50 border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h3 className="text-2xl font-bold text-center text-white mb-6">
+              Why Precision Matters in Industrial Manufacturing
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="text-cyber-400 h-6 w-6 flex-shrink-0 mt-1" />
+                <div>
+                  <div className="font-semibold text-white mb-1">Valve Sealing Surfaces</div>
+                  <div className="text-sm">Precision-ground sealing faces prevent leaks under high pressure, ensuring safety and operational reliability in process control systems</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="text-cyber-400 h-6 w-6 flex-shrink-0 mt-1" />
+                <div>
+                  <div className="font-semibold text-white mb-1">Tooling Accuracy for Part Consistency</div>
+                  <div className="text-sm">Tight tolerances on molds and dies directly determine the dimensional accuracy and repeatability of every downstream production part</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="text-cyber-400 h-6 w-6 flex-shrink-0 mt-1" />
+                <div>
+                  <div className="font-semibold text-white mb-1">Pump Housing Concentricity</div>
+                  <div className="text-sm">Precise bore alignment and concentricity control ensures optimal impeller clearance, maximizing pump efficiency and reducing vibration</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="text-cyber-400 h-6 w-6 flex-shrink-0 mt-1" />
+                <div>
+                  <div className="font-semibold text-white mb-1">Structural Load Distribution</div>
+                  <div className="text-sm">Accurate machining of mounting interfaces and load-bearing surfaces ensures even stress distribution, preventing premature failure under cyclic loading</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Why <span className="gradient-text">Precilayer</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Engineering-driven manufacturing with certified quality systems
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {whyPrecilayerCards.map((card, i) => (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center">
+                    <card.icon className="h-6 w-6 text-cyber-400" />
+                  </div>
+                  <h3 className="font-orbitron text-lg font-bold text-white">{card.title}</h3>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed">{card.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" className="py-20 bg-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Manufacturing <span className="gradient-text">Capabilities</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Multi-process capabilities under one roof for complex industrial components
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {capabilities.map((cap, i) => (
+              <motion.div
+                key={cap.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all flex flex-col"
+              >
+                <h3 className="font-orbitron text-lg font-bold text-white mb-3">{cap.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{cap.description}</p>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="inline-flex items-center gap-2 text-sm text-cyber-400 hover:text-cyber-300 font-medium transition-colors"
+                >
+                  {cap.cta} <ArrowRight className="h-4 w-4" />
                 </button>
-                {openFaqIndex === i && <div className="px-5 pb-5 text-gray-400 text-sm">{faq.answer}</div>}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Materials We <span className="gradient-text">Work With</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Extensive material expertise across metals, alloys, and engineering polymers
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {materialGroups.map((group, i) => (
+              <motion.div
+                key={group.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-3 bg-space-700/40 border border-gray-700/40 rounded-xl p-5"
+              >
+                <CheckCircle2 className="text-cyber-400 h-5 w-5 flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="font-semibold text-white">{group.label}:</span>
+                  <span className="text-gray-300 ml-2">{group.items.join(", ")}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Quality & <span className="gradient-text">Documentation</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              ISO 9001:2015 certified processes with comprehensive documentation for every shipment
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {qualityPoints.map((point, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-3 bg-space-800/60 border border-gray-700/40 rounded-xl p-5"
+              >
+                <CheckCircle2 className="text-cyber-400 h-5 w-5 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300 text-sm leading-relaxed">{point}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Our <span className="gradient-text">Process</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Streamlined workflow from initial inquiry to scaled production
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {processSteps.map((phase, i) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.12 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-space-700/50 border border-gray-700/40 rounded-xl"
+              >
+                <div className="text-4xl font-bold text-cyber-400/30 font-orbitron mb-3">{phase.step}</div>
+                <h3 className="font-orbitron font-semibold text-white text-lg mb-2">{phase.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{phase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-900">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
+                viewport={{ once: true }}
+                className="bg-space-800/60 border border-gray-700/40 rounded-xl overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(i)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <span className="text-white font-medium">{faq.question}</span>
+                  {openFaqIndex === i ? (
+                    <ChevronUp className="h-5 w-5 text-cyber-400 shrink-0 ml-4" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-400 shrink-0 ml-4" />
+                  )}
+                </button>
+                {openFaqIndex === i && (
+                  <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed">{faq.answer}</div>
+                )}
               </motion.div>
             ))}
           </div>
