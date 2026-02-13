@@ -23,9 +23,10 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
-  // IMPORTANT: GitHub Pages serves this at /precilayer-website/ (project repo)
-  // All assets must use this base path. Update if deploying to user page.
-  base: "/precilayer-website/",
+  // IMPORTANT: GitHub Pages with custom domain serves from root /
+  // If deploying to project repo (ankit-sharma-dev-ops.github.io/precilayer-website/),
+  // change base back to: "/precilayer-website/"
+  base: "/",
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
