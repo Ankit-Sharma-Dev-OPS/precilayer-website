@@ -31,7 +31,7 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
     // SEO & Performance optimizations
-    minify: "terser",
+    minify: "esbuild",
     cssCodeSplit: true,
     sourcemap: false,
     rollupOptions: {
