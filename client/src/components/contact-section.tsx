@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Clock, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ export default function ContactSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const turnstileRef = useRef<any>(null);
+  const turnstileContainerId = 'cf-turnstile-container';
 
   const { toast } = useToast();
 
@@ -29,19 +29,12 @@ export default function ContactSection() {
       return;
     }
 
-    // Load Cloudflare Turnstile script only on production
-    if ((window as any).turnstile) {
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
-    script.async = true;
-    script.onload = () => {
-      // Render widget after script loads
-      if (turnstileRef.current && (window as any).turnstile) {
+    // Wait a bit to ensure DOM is ready
+    const timeout = setTimeout(() => {
+      // Load Cloudflare Turnstile script only on production
+      if ((window as any).turnstile) {
         try {
-          (window as any).turnstile.render(turnstileRef.current, {
+          (window as any).turnstile.render(`#${turnstileContainerId}`, {
             sitekey: '0x4AAAAAACXpiXPgQedJSx48',
             theme: 'dark',
             size: 'normal',
@@ -49,13 +42,31 @@ export default function ContactSection() {
         } catch (err) {
           console.warn('Turnstile render failed:', err);
         }
+        return;
       }
-    };
-    document.body.appendChild(script);
 
-    return () => {
-      // Cleanup
-    };
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        // Render widget after script loads
+        if ((window as any).turnstile) {
+          try {
+            (window as any).turnstile.render(`#${turnstileContainerId}`, {
+              sitekey: '0x4AAAAAACXpiXPgQedJSx48',
+              theme: 'dark',
+              size: 'normal',
+            });
+          } catch (err) {
+            console.warn('Turnstile render failed:', err);
+          }
+        }
+      };
+      document.body.appendChild(script);
+    }, 100);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -67,7 +78,7 @@ export default function ContactSection() {
       let captchaToken = '';
       
       if (!isDev && (window as any).turnstile) {
-        captchaToken = (window as any).turnstile?.getResponse?.(turnstileRef.current) || '';
+        captchaToken = (window as any).turnstile?.getResponse?.() || '';
         if (!captchaToken) {
           throw new Error('Please complete the captcha verification.');
         }
@@ -129,7 +140,7 @@ ${formData.message}`;
       // Reset captcha
       if ((window as any).turnstile?.reset) {
         try {
-          (window as any).turnstile.reset(turnstileRef.current);
+          (window as any).turnstile.reset();
         } catch (err) {
           console.warn('Turnstile reset failed:', err);
         }
@@ -146,7 +157,7 @@ ${formData.message}`;
       // Reset captcha on error
       if ((window as any).turnstile?.reset) {
         try {
-          (window as any).turnstile.reset(turnstileRef.current);
+          (window as any).turnstile.reset();
         } catch (err) {
           console.warn('Turnstile reset failed:', err);
         }
@@ -341,7 +352,7 @@ ${formData.message}`;
 
                 {/* Cloudflare Turnstile */}
                 <div className="flex justify-center">
-                  <div ref={turnstileRef}></div>
+                  <div id={turnstileContainerId}></div>
                 </div>
 
                 <Button
