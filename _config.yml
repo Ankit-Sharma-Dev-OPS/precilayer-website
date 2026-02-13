@@ -1,0 +1,53 @@
+# GitHub Pages Jekyll Configuration
+# This config prevents Jekyll from processing files and overriding our Vite build
+
+# Disable Jekyll processing of dotfiles and certain assets
+exclude:
+  - node_modules
+  - dist
+  - server
+  - client/src
+  - ".*.yml"
+  - "*.ts"
+  - "*.tsx"
+  - "package.json"
+  - "package-lock.json"
+  - "tsconfig.json"
+  - "vite.config.ts"
+  - "drizzle.config.ts"
+  - "postcss.config.js"
+  - "tailwind.config.ts"
+  - "components.json"
+  - "replit.md"
+  - ".replit"
+  - ".env"
+
+# Keep dotfiles (like .htaccess) in the output
+include:
+  - .htaccess
+
+# Use the minimal remote theme
+theme: jekyll-theme-minimal
+
+# Set the encoding
+encoding: utf-8
+
+# GitHub Pages specific settings
+github: [metadata]
+
+# Disable incremental builds for consistency
+incremental: false
+
+# Set the output directory (GitHub Pages uses this by default)
+destination: dist/public
+
+# Set the input directory where Jekyll looks for files
+source: public
+
+# Prevent Jekyll from overriding our 404.html
+keep_files:
+  - 404.html
+  - index.html
+  - robots.txt
+  - sitemap.xml
+  - .htaccess

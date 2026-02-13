@@ -23,11 +23,26 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
-  base: "/",
+  // IMPORTANT: GitHub Pages serves this at /precilayer-website/ (project repo)
+  // All assets must use this base path. Update if deploying to user page.
+  base: "/precilayer-website/",
   root: path.resolve(import.meta.dirname, "client"),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    // SEO & Performance optimizations
+    minify: "terser",
+    cssCodeSplit: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': ['react', 'react-dom'],
+          'ui': ['@radix-ui/react-dialog', '@radix-ui/react-select', '@radix-ui/react-tooltip'],
+          'animation': ['framer-motion'],
+        }
+      }
+    }
   },
   server: {
     fs: {
