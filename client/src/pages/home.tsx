@@ -61,15 +61,8 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <ManufacturingMomentSection />
-      <WhySection />
-      <HowSection />
-      <WhatSection />
-      <VisionSection />
       <IndustriesSection />
-      <AboutSection />
       <ProcessesSection />
-      <CaseStudiesSection />
-      <FAQSection />
       <ContactSection />
       <Footer />
     </div>

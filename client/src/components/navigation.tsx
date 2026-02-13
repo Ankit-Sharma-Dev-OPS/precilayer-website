@@ -51,15 +51,20 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  const handlePageTransition = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
-    { label: "Why", id: "why" },
-    { label: "How", id: "how" },
-    { label: "What", id: "what" },
-    { label: "Vision", id: "vision" },
+    { label: "Why", href: "/why" },
+    { label: "How", href: "/how" },
+    { label: "What", href: "/what" },
+    { label: "Vision", href: "/vision" },
     { label: "Industries", id: "industries" },
-    { label: "About", id: "about" },
-    { label: "FAQ", id: "faq" },
-    { label: "Contact", id: "contact" }
+    { label: "About", href: "/about" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Contact", href: "/contact" }
   ];
 
   const manufacturingLinks = {
@@ -85,7 +90,10 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button 
-            onClick={() => setLocation("/")}
+            onClick={() => {
+              setLocation("/");
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="font-orbitron text-2xl font-bold text-white hover:text-cyber-400 transition-colors cursor-pointer" 
             style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}} 
             data-testid="logo"
@@ -95,15 +103,27 @@ export default function Navigation() {
           
           <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-cyber-400 transition-colors text-sm"
-                style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
-                data-testid={`nav-${item.id}`}
-              >
-                {item.label}
-              </button>
+              item.href ? (
+                <Link key={item.href} href={item.href}>
+                  <span 
+                    onClick={handlePageTransition}
+                    className="text-white hover:text-cyber-400 transition-colors text-sm cursor-pointer" 
+                    style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
+                  >
+                    {item.label}
+                  </span>
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id!)}
+                  className="text-white hover:text-cyber-400 transition-colors text-sm"
+                  style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
+                  data-testid={`nav-${item.id}`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
 
             <div ref={mfgRef} className="relative">
@@ -167,15 +187,23 @@ export default function Navigation() {
           <div className="lg:hidden absolute top-full left-0 w-full bg-space-900 border-b border-gray-800 max-h-[80vh] overflow-y-auto">
             <div className="px-6 py-4 space-y-3">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left text-white hover:text-cyber-400 transition-colors"
-                  style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
-                  data-testid={`mobile-nav-${item.id}`}
-                >
-                  {item.label}
-                </button>
+                item.href ? (
+                  <Link key={item.href} href={item.href} onClick={handlePageTransition}>
+                    <span className="block w-full text-left text-white hover:text-cyber-400 transition-colors cursor-pointer" style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}>
+                      {item.label}
+                    </span>
+                  </Link>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id!)}
+                    className="block w-full text-left text-white hover:text-cyber-400 transition-colors"
+                    style={{textShadow: '1px 1px 3px rgba(0,0,0,0.8)'}}
+                    data-testid={`mobile-nav-${item.id}`}
+                  >
+                    {item.label}
+                  </button>
+                )
               ))}
 
               <div className="border-t border-gray-700/50 pt-3 mt-3">

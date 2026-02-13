@@ -10,6 +10,13 @@ import ResponsibleSourcing from "@/pages/responsible-sourcing";
 import PurchasingTerms from "@/pages/purchasing-terms";
 import SupplierIntegrityGuide from "@/pages/supplier-integrity-guide";
 import ESGCSRPolicy from "@/pages/esg-csr-policy";
+import Why from "@/pages/why";
+import How from "@/pages/how";
+import What from "@/pages/what";
+import Vision from "@/pages/vision";
+import About from "@/pages/about";
+import FAQ from "@/pages/faq";
+import Contact from "@/pages/contact";
 import SpaceSatellite from "@/pages/industries/space-satellite";
 import MedTech from "@/pages/industries/medtech";
 import DronesUAV from "@/pages/industries/drones-uav";
@@ -41,6 +48,13 @@ function Router() {
         component={SupplierIntegrityGuide}
       />
       <Route path="/esg-csr-policy" component={ESGCSRPolicy} />
+      <Route path="/why" component={Why} />
+      <Route path="/how" component={How} />
+      <Route path="/what" component={What} />
+      <Route path="/vision" component={Vision} />
+      <Route path="/about" component={About} />
+      <Route path="/faq" component={FAQ} />
+      <Route path="/contact" component={Contact} />
       <Route path="/industries/space-satellite" component={SpaceSatellite} />
       <Route path="/industries/medtech" component={MedTech} />
       <Route path="/industries/drones-uav" component={DronesUAV} />

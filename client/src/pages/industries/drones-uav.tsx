@@ -1,31 +1,20 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import {
-  Plane,
-  ChevronDown,
-  ChevronUp,
-  Gauge,
-  Clock,
-  Layers,
-  Box,
-  Cpu,
-  Shield,
-  Zap,
-  Settings,
-  Wind,
-  Radio,
-  Target,
-  ArrowRight
-} from "lucide-react";
+import { Plane, FileCheck, Gauge, Shield, Cpu, Zap, Settings, CheckCircle2, ChevronDown, ChevronUp, Wind, Box, Layers, Radio, Target } from "lucide-react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-
 import droneHeroImg from "@assets/stock_images/drone_uav_hero.jpg";
+import droneFrameImg from "@assets/generated_images/drone_carbon_fiber_frame.png";
+import droneMotorImg from "@assets/generated_images/drone_motor_mount_cnc.png";
+import droneGimbalImg from "@assets/generated_images/drone_gimbal_system.png";
+import droneLandingImg from "@assets/generated_images/drone_landing_gear_assembly.png";
+import droneAvionicsImg from "@assets/generated_images/drone_avionics_housing.png";
 
 export default function DronesUAV() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Drones & UAV CNC Machining, 3D Printing & Manufacturing | Precilayer - Defense & Commercial UAV Components";
@@ -56,235 +45,672 @@ export default function DronesUAV() {
     document.head.appendChild(script);
     return () => { createdMetaTags.forEach(meta => meta.remove()); script.remove(); };
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
   const toggleFaq = (index: number) => setOpenFaqIndex(openFaqIndex === index ? null : index);
 
-  const whatWeMake = [
-    { icon: Box, label: "Carbon Fiber Frames", detail: "CFRP, lightweight structures" },
-    { icon: Settings, label: "Motor Mounts", detail: "7075-T6, vibration-damped" },
-    { icon: Target, label: "Gimbal Systems", detail: "6061-T6, precision bore" },
-    { icon: Shield, label: "Landing Gear", detail: "Aluminum, carbon fiber" },
-    { icon: Wind, label: "Propeller Hubs", detail: "7075-T6, tight concentricity" },
-    { icon: Cpu, label: "Avionics Housings", detail: "EMI-shielded enclosures" },
-    { icon: Layers, label: "Payload Mounts", detail: "Titanium, aluminum" },
-    { icon: Radio, label: "Antenna Brackets", detail: "Copper, aluminum alloy" },
+  const componentShowcase = [
+    {
+      icon: Box,
+      title: "Carbon Fiber Frames",
+      description: "Precision-machined CFRP airframe structures engineered for maximum strength-to-weight ratio. Multi-axis CNC profiling ensures exact geometry for aerodynamic performance and vibration damping in demanding flight conditions.",
+      materials: ["CFRP", "G10/FR4", "Kevlar Composite"]
+    },
+    {
+      icon: Settings,
+      title: "Motor Mounts",
+      description: "High-strength 7075-T6 aluminum motor mounting brackets with vibration-dampened interfaces. CNC-machined to tight concentricity tolerances ensuring balanced propulsion and extended motor life across all flight envelopes.",
+      materials: ["7075-T6", "6061-T6", "Ti-6Al-4V"]
+    },
+    {
+      icon: Target,
+      title: "Gimbal Systems",
+      description: "Ultra-precise gimbal mounting assemblies and bearing housings machined from 6061-T6 aluminum. Sub-thousandth bore tolerances deliver smooth, vibration-free camera stabilization for surveillance and cinematography payloads.",
+      materials: ["6061-T6", "Stainless 304", "PEEK"]
+    },
+    {
+      icon: Shield,
+      title: "Landing Gear",
+      description: "Impact-resistant landing gear assemblies combining CNC-machined aluminum structural members with carbon fiber struts. Designed for repeated hard landings on unprepared surfaces while minimizing weight impact on flight time.",
+      materials: ["Aluminum", "CFRP", "Nylon PA12"]
+    },
+    {
+      icon: Wind,
+      title: "Propeller Hubs",
+      description: "Dynamically balanced propeller hub assemblies machined from 7075-T6 aluminum with concentricity held to ±0.01mm. Precision thread profiles and interference fits ensure zero-play mounting for stable high-RPM operation.",
+      materials: ["7075-T6", "Ti-6Al-4V", "Stainless 17-4PH"]
+    },
+    {
+      icon: Cpu,
+      title: "Avionics Housings",
+      description: "EMI-shielded avionics enclosures with precision-machined cavities, gasket channels, and integrated heat dissipation features. Designed to protect sensitive flight controllers and communication electronics in harsh environments.",
+      materials: ["6061-T6", "7075-T6", "Magnesium AZ31B"]
+    },
+    {
+      icon: Layers,
+      title: "Payload Mounts",
+      description: "Multi-axis payload mounting platforms engineered for camera systems, LiDAR sensors, and mission-specific equipment. Quick-release interfaces and vibration isolation features machined from titanium and aluminum alloys.",
+      materials: ["Ti-6Al-4V", "6061-T6", "PEEK"]
+    },
+    {
+      icon: Radio,
+      title: "Antenna Brackets",
+      description: "RF-transparent antenna mounting brackets and waveguide interfaces machined from copper and aluminum alloys. Precision geometry ensures optimal signal propagation for telemetry, GPS, and datalink communication systems.",
+      materials: ["Copper C110", "C101", "6061-T6"]
+    }
+  ];
+
+  const whyPrecilayerPoints = [
+    {
+      icon: Shield,
+      title: "Defense-Grade Quality & Traceability",
+      description: "Every UAV component manufactured at Precilayer carries full material traceability and process documentation. Our quality management system ensures lot-level tracking from raw material sourcing through final inspection, meeting the stringent requirements of defense and government drone programs."
+    },
+    {
+      icon: Wind,
+      title: "Lightweight Material Expertise",
+      description: "Specialized experience machining advanced lightweight materials including carbon fiber composites, magnesium alloys, titanium, and high-performance polymers. Our processes are optimized to deliver maximum strength-to-weight ratios critical for extending UAV flight time and payload capacity."
+    },
+    {
+      icon: FileCheck,
+      title: "Complete Documentation Package",
+      description: "Every shipment includes Certificate of Conformance (COC) referencing your PO and drawing revision, material certificates with lot traceability, and dimensional inspection reports. First Article Inspection (FAI) reports are available for new programs to validate manufacturing processes."
+    },
+    {
+      icon: Gauge,
+      title: "DFM for Weight Optimization",
+      description: "Our engineering team provides comprehensive Design for Manufacturing analysis focused on weight reduction without compromising structural integrity. We recommend material substitutions, wall thickness optimization, and topology-aware machining strategies specific to UAV applications."
+    },
+    {
+      icon: Zap,
+      title: "Rapid Prototyping Capability",
+      description: "Accelerate your drone development cycle with 3–5 day prototype turnaround using MJF, SLS, and CNC machining. Functional prototypes in production-representative materials allow real-world flight testing before committing to full production tooling and volume runs."
+    },
+    {
+      icon: Settings,
+      title: "Multi-Process Manufacturing",
+      description: "Combine CNC milling, CNC turning, carbon fiber machining, additive manufacturing, and precision finishing in a single supply chain. Our integrated capabilities eliminate vendor coordination overhead and ensure consistent quality across all manufacturing processes for your UAV program."
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "CNC Milling 3–5 Axis",
+      description: "Multi-axis CNC milling for complex drone airframe components, structural brackets, and precision housings. 5-axis simultaneous machining enables undercut features, contoured surfaces, and tight-tolerance geometries in a single setup.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "CNC Turning",
+      description: "Precision turning for cylindrical UAV components including motor shafts, propeller hubs, bearing housings, and threaded fasteners. Live tooling capability for cross-drilled features and off-axis machining.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Carbon Fiber Machining",
+      description: "Specialized CNC profiling and trimming of CFRP panels, tubes, and molded composites. Diamond-coated tooling and optimized feeds prevent delamination while achieving clean, burr-free edges on carbon fiber structures.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "MJF/SLS Polymer Printing",
+      description: "Multi Jet Fusion and Selective Laser Sintering for functional drone parts in Nylon PA12, PA11, and glass-filled polymers. Ideal for complex internal ducting, aerodynamic fairings, and lightweight structural components.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Rapid Prototyping",
+      description: "3–5 day turnaround on functional prototypes using CNC machining and additive manufacturing. Iterate designs quickly with production-representative materials before committing to full-volume production runs.",
+      cta: "Speak to Manufacturing"
+    },
+    {
+      title: "Surface Finishing",
+      description: "Comprehensive finishing services including anodizing (Type II and III), bead blasting, passivation, powder coating, and chromate conversion for corrosion protection and aesthetic requirements on UAV components.",
+      cta: "Speak to Manufacturing"
+    }
+  ];
+
+  const materials = [
+    "Aluminum Alloys: Primary structural material for drone frames and housings — 6061-T6 (general structural), 7075-T6 (high-strength airframe brackets, motor mounts), 2024-T3 (fatigue-critical components)",
+    "Titanium Alloys: High-strength, lightweight material for critical fasteners and structural joints — Ti-6Al-4V (Grade 5) for payload mounts, landing gear pins, and high-stress interfaces",
+    "Carbon Fiber Composites: Ultra-lightweight structural material — CFRP panels, tubes, and custom-molded components for airframes, arms, and aerodynamic surfaces with precision CNC trimming",
+    "Stainless Steel: Corrosion-resistant grades for fasteners, hinges, and mechanisms — 304 (general purpose), 316 (marine/corrosive environments), 17-4PH (high-strength heat-treated components)",
+    "Magnesium Alloys: Ultra-lightweight structural components — AZ31B (sheet and plate for enclosures), ZK60A (high-strength extruded structural members) with significant weight savings over aluminum",
+    "Copper Alloys: Electrical and RF applications — C110 (ETP copper for grounding and electrical contacts), C101 (oxygen-free copper for high-conductivity RF antenna components and connectors)",
+    "Engineering Polymers: Functional prototypes and non-structural components — PEEK (high-temperature insulators), Delrin/Acetal (gears, bearings), Nylon PA12 (3D printed functional parts), ULTEM/PEI (flame-retardant enclosures)"
+  ];
+
+  const qualityPoints = [
+    "ISO 9001:2015 certified quality management system",
+    "Certificate of Conformance (COC) for every shipment referencing PO and drawing revision",
+    "Material certificates with full lot traceability from source to finished component",
+    "CMM inspection reports on request using calibrated coordinate measuring equipment",
+    "FAI reports for first articles to validate manufacturing processes on new programs",
+    "Full traceability documentation from raw material procurement through final delivery"
   ];
 
   const faqs = [
-    { question: "What types of drones do you manufacture components for?", answer: "Defense/military drones, commercial surveillance, agricultural sprayers, delivery platforms, cinematography systems, and industrial inspection UAVs — from quadcopters to fixed-wing." },
-    { question: "What are typical lead times?", answer: "Simple parts: 5–7 days. Complex multi-axis: 2–3 weeks. 3D printed prototypes: 3–5 days. Production runs scheduled by volume." },
-    { question: "Do you offer DFM support for drone designs?", answer: "Yes. Our engineering team provides DFM analysis to optimize weight, manufacturability, and cost — including material substitutions and tolerance adjustments." },
-    { question: "What quality certifications do you hold?", answer: "ISO 9001:2015 certified. We provide material certificates, CMM inspection reports, COC for every shipment, and FAI reports on request." },
+    {
+      question: "What types of drones do you manufacture components for?",
+      answer: "We manufacture precision components for the full spectrum of UAV platforms including defense and military drones (fixed-wing and multi-rotor), commercial surveillance and inspection systems, agricultural spraying drones, delivery and logistics platforms, cinematography and mapping systems, and industrial inspection UAVs. Our capabilities cover quadcopters, hexacopters, octocopters, and fixed-wing VTOL platforms from micro-UAVs to large tactical systems."
+    },
+    {
+      question: "What are typical lead times for drone components?",
+      answer: "Lead times vary by complexity and process. Simple CNC-machined parts (basic milling/turning): 5–7 business days. Complex multi-axis components with tight tolerances: 2–3 weeks. 3D printed prototypes (MJF/SLS): 3–5 business days. First articles with full FAI documentation: 2–3 weeks. Production batch runs are scheduled based on volume, complexity, and material availability. Rush programs can often be accommodated with advance notice."
+    },
+    {
+      question: "Do you offer DFM support for drone designs?",
+      answer: "Yes. Our engineering team provides comprehensive Design for Manufacturing analysis specifically optimized for UAV applications. This includes material substitution recommendations for weight reduction, wall thickness optimization, tolerance rationalization to reduce cost without compromising function, and manufacturing process selection guidance. We focus on maximizing strength-to-weight ratios while ensuring manufacturability and cost-effectiveness at your target production volumes."
+    },
+    {
+      question: "What quality certifications do you hold?",
+      answer: "We maintain ISO 9001:2015 certification for our quality management system. Every shipment includes a Certificate of Conformance (COC) referencing your purchase order and drawing revision, material certificates with lot traceability, and dimensional inspection data. CMM inspection reports and First Article Inspection (FAI) reports are available on request. Our documentation packages support defense and government UAV program audit requirements."
+    },
+    {
+      question: "Can you machine carbon fiber and composite materials?",
+      answer: "Yes. We have specialized capabilities for CNC machining carbon fiber reinforced polymers (CFRP) and other composite materials. Our process uses diamond-coated tooling, optimized cutting parameters, and dust extraction systems to prevent delamination and achieve clean, burr-free edges. We handle CFRP panels, tubes, molded components, and hybrid carbon fiber/aluminum assemblies commonly found in high-performance drone airframes."
+    },
+    {
+      question: "Do you support prototype-to-production scaling?",
+      answer: "Absolutely. Our process is designed for seamless scaling from prototype through pilot production to full volume. We begin with rapid prototypes (3–5 days) for design validation and flight testing, then transition to first article production with full FAI documentation, and finally scale to batch production runs of 1–10,000+ units with consistent quality, traceability, and competitive pricing maintained throughout all phases."
+    }
   ];
 
   return (
     <div className="bg-space-900 text-white font-inter overflow-x-hidden">
       <Navigation />
 
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-cover" style={{ backgroundImage: `url(${droneHeroImg})`, backgroundPosition: 'center 40%' }} />
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
+        <div
+          className="absolute inset-0 bg-cover"
+          style={{
+            backgroundImage: `url(${droneHeroImg})`,
+            backgroundPosition: 'center 40%'
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-space-900" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyber-400/40 bg-cyber-400/10 text-cyber-400 text-sm font-medium mb-6">
-              <Plane className="h-4 w-4" /> Defense & Commercial Grade
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)'
+          }}
+        />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-cyber-400/20 rounded-2xl border border-cyber-400/30">
+                <Plane className="h-16 w-16 text-cyber-400" />
+              </div>
             </div>
-            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+
+            <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Drones & UAV <span className="gradient-text">Manufacturing</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-8">
-              Defense-grade and commercial UAV components with full traceability
+
+            <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+              Defense-grade and commercial UAV components with precision CNC machining, carbon fiber processing, additive manufacturing, and full material traceability from prototype to production
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button onClick={() => scrollToSection('contact')} className="bg-cyber-400 text-space-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyber-500 transition-all">Get a Quote</button>
-              <button onClick={() => scrollToSection('what-we-make')} className="border border-gray-500 text-gray-200 px-8 py-3 rounded-lg font-semibold hover:border-cyber-400 hover:text-cyber-400 transition-all">View Capabilities</button>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
+              >
+                Get a Quote
+              </button>
+              <button
+                onClick={() => scrollToSection('capabilities')}
+                className="border border-cyber-400 text-cyber-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-400 hover:text-space-900 transition-all"
+              >
+                View Capabilities
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <section id="what-we-make" className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">What We <span className="gradient-text">Make</span></h2>
+      <section className="py-20 bg-space-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Component <span className="gradient-text">Showcase</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Precision-engineered UAV components for defense and commercial drone platforms
+            </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {whatWeMake.map((item, i) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.05 }} viewport={{ once: true }}
-                className="bg-space-700/50 border border-gray-700/50 rounded-xl p-5 text-center hover:border-cyber-400/40 transition-all group">
-                <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center group-hover:bg-cyber-400/20 transition-colors">
-                  <item.icon className="h-6 w-6 text-cyber-400" />
-                </div>
-                <h3 className="text-white font-semibold text-sm mb-1">{item.label}</h3>
-                <p className="text-gray-400 text-xs">{item.detail}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="py-16 bg-space-900">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">How We <span className="gradient-text">Make It</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                  <Settings className="h-5 w-5 text-blue-400" />
-                </div>
-                <h3 className="font-orbitron text-lg font-bold text-white">CNC Machining</h3>
+          {/* First Row - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={droneFrameImg} 
+                  alt="Carbon Fiber Frames"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
               </div>
-              <div className="space-y-3">
-                {["3–5-Axis Milling", "CNC Turning", "Carbon Fiber Machining", "Surface Finishing"].map(cap => (
-                  <div key={cap} className="flex items-center gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-                    <span className="text-gray-300">{cap}</span>
-                  </div>
-                ))}
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">Carbon Fiber Frames</h3>
+                <p className="text-gray-400">Precision-machined CFRP airframe structures for maximum strength-to-weight ratio</p>
               </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {["Aluminum", "Titanium", "Carbon Fiber", "Stainless Steel"].map(mat => (
-                  <span key={mat} className="px-2.5 py-1 text-xs bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300">{mat}</span>
-                ))}
-              </div>
-              <Link href="/manufacturing/cnc-milling" className="inline-flex items-center gap-1 mt-5 text-sm text-blue-400 hover:text-blue-300 font-medium">
-                Learn more <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
-              className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center">
-                  <Layers className="h-5 w-5 text-purple-400" />
-                </div>
-                <h3 className="font-orbitron text-lg font-bold text-white">Additive Manufacturing</h3>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
+                <img 
+                  src={droneMotorImg} 
+                  alt="Motor Mounts"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
               </div>
-              <div className="space-y-3">
-                {["MJF & SLS (Polymer)", "SLA & DLP (Resin)", "Metal 3D Printing", "Rapid Prototyping"].map(cap => (
-                  <div key={cap} className="flex items-center gap-2 text-sm">
-                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-                    <span className="text-gray-300">{cap}</span>
-                  </div>
-                ))}
+              <div className="p-6">
+                <h3 className="font-bold text-xl text-white mb-2">Motor Mounts</h3>
+                <p className="text-gray-400">High-strength 7075-T6 aluminum motor brackets with vibration-dampened interfaces</p>
               </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {["Nylon PA12", "PEEK", "ULTEM", "Engineering Resins"].map(mat => (
-                  <span key={mat} className="px-2.5 py-1 text-xs bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-300">{mat}</span>
-                ))}
-              </div>
-              <Link href="/manufacturing/polymer-additive" className="inline-flex items-center gap-1 mt-5 text-sm text-purple-400 hover:text-purple-300 font-medium">
-                Learn more <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
             </motion.div>
           </div>
-        </div>
-      </section>
 
-      <section className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Why <span className="gradient-text">Precilayer</span></h2>
-          </motion.div>
+          {/* Second Row - 3 columns */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: Gauge, metric: "±0.02mm", label: "Tolerance", desc: "CMM-verified precision for mission-critical UAV parts" },
-              { icon: Clock, metric: "7 Days", label: "Lead Time", desc: "Prototype to production, rapid turnaround" },
-              { icon: Zap, metric: "1–10K", label: "Scale", desc: "Prototype to batch production, seamless scaling" },
-            ].map((card, i) => (
-              <motion.div key={card.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
-                className="bg-gradient-to-br from-cyber-400/5 to-transparent border border-cyber-400/20 rounded-xl p-6 text-center">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-cyber-400/10 border-2 border-cyber-400/40 flex items-center justify-center">
-                  <card.icon className="h-7 w-7 text-cyber-400" />
-                </div>
-                <div className="text-3xl font-bold text-cyber-400 mb-1">{card.metric}</div>
-                <div className="text-white font-semibold mb-1">{card.label}</div>
-                <p className="text-gray-400 text-sm">{card.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-900">
-        <div className="max-w-5xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-10">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Our <span className="gradient-text">Process</span></h2>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { step: "01", title: "RFQ & Review", desc: "Upload CAD, receive DFM feedback" },
-              { step: "02", title: "Manufacture", desc: "CNC + Additive production" },
-              { step: "03", title: "Inspect & Doc", desc: "CMM, FAI, COC, material certs" },
-              { step: "04", title: "Ship & Scale", desc: "Clean pack, lot traceability" }
-            ].map((phase, i) => (
-              <motion.div key={phase.step} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}
-                className="relative text-center p-5 bg-space-800/60 border border-gray-700/40 rounded-xl">
-                <div className="text-3xl font-bold text-cyber-400/30 font-orbitron mb-2">{phase.step}</div>
-                <h3 className="font-semibold text-white text-sm mb-1">{phase.title}</h3>
-                <p className="text-gray-400 text-xs">{phase.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <button onClick={() => scrollToSection('contact')} className="bg-cyber-400 text-space-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyber-500 transition-all">Submit RFQ</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-space-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-8">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Materials <span className="gradient-text">Available</span></h2>
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { name: "Aluminum", grades: ["6061-T6", "7075-T6"] },
-              { name: "Titanium", grades: ["Ti-6Al-4V"] },
-              { name: "Carbon Fiber", grades: ["CFRP"] },
-              { name: "Engineering Plastics", grades: ["PEEK", "Delrin", "Nylon", "ULTEM"] },
-              { name: "Stainless Steel", grades: ["304", "316", "17-4PH"] },
-              { name: "Magnesium", grades: ["AZ31B", "ZK60A"] },
-              { name: "Copper", grades: ["C110", "C101"] },
-            ].map(mat => (
-              <div key={mat.name} className="bg-space-700/50 border border-gray-700/40 rounded-xl p-4">
-                <h3 className="text-white font-semibold text-sm mb-2">{mat.name}</h3>
-                <div className="flex flex-wrap gap-1.5">
-                  {mat.grades.map(g => (
-                    <span key={g} className="px-2 py-0.5 text-xs bg-cyber-400/10 border border-cyber-400/20 rounded text-gray-300">{g}</span>
-                  ))}
-                </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneGimbalImg} 
+                  alt="Gimbal Systems"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
               </div>
-            ))}
-          </motion.div>
-          <p className="text-center text-gray-500 text-sm mt-4">All materials with certification and full lot traceability</p>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Gimbal Systems</h3>
+                <p className="text-gray-400 text-sm">Ultra-precise gimbal assemblies for camera stabilization</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneLandingImg} 
+                  alt="Landing Gear"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Landing Gear</h3>
+                <p className="text-gray-400 text-sm">Impact-resistant assemblies with aluminum and carbon fiber</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-space-700/60 border border-gray-700/50 rounded-xl overflow-hidden hover:border-cyber-400/30 transition-all group"
+            >
+              <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
+                <img 
+                  src={droneAvionicsImg} 
+                  alt="Avionics Housings"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  style={{ imageRendering: '-webkit-optimize-contrast', filter: 'contrast(1.1) brightness(1.05)' }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-white mb-2">Avionics Housings</h3>
+                <p className="text-gray-400 text-sm">EMI-shielded enclosures for flight controllers and electronics</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="py-16 bg-space-900">
-        <div className="max-w-3xl mx-auto px-6">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-8">
-            <h2 className="font-orbitron text-2xl md:text-3xl font-bold text-white">Common <span className="gradient-text">Questions</span></h2>
+      <section className="py-20 bg-gradient-to-br from-space-900 via-space-800 to-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Precision <span className="gradient-text">Metrics</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Mission-critical UAV components demand absolute precision and rapid delivery
+            </p>
           </motion.div>
-          <div className="space-y-3">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">±0.02mm</div>
+              <div className="text-lg text-gray-300 mb-2">Tolerance Capability</div>
+              <div className="text-sm text-gray-400">CMM-verified precision for mission-critical UAV assemblies</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">5-Day</div>
+              <div className="text-lg text-gray-300 mb-2">Rapid Prototyping</div>
+              <div className="text-sm text-gray-400">Functional prototypes in production-representative materials</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
+            >
+              <div className="text-5xl font-bold text-cyber-400 mb-3">1–10K</div>
+              <div className="text-lg text-gray-300 mb-2">Production Scale</div>
+              <div className="text-sm text-gray-400">Seamless scaling from prototype to batch production</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Why <span className="gradient-text">Precilayer</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Purpose-built manufacturing capabilities for the UAV industry
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {whyPrecilayerPoints.map((point, i) => (
+              <motion.div
+                key={point.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-space-700/60 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-cyber-400/10 border border-cyber-400/20 flex items-center justify-center flex-shrink-0">
+                    <point.icon className="h-6 w-6 text-cyber-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-white mb-2">{point.title}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{point.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" className="py-20 bg-space-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Manufacturing <span className="gradient-text">Capabilities</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Integrated CNC machining, additive manufacturing, and finishing processes for UAV components
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {capabilities.map((cap, i) => (
+              <motion.div
+                key={cap.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true }}
+                className="bg-space-800/80 border border-gray-700/50 rounded-xl p-6 hover:border-cyber-400/30 transition-all flex flex-col"
+              >
+                <h3 className="font-bold text-lg text-white mb-3">{cap.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{cap.description}</p>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-sm text-cyber-400 hover:text-cyber-300 font-medium transition-colors self-start"
+                >
+                  {cap.cta} →
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Materials <span className="gradient-text">Available</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Aerospace-grade metals, composites, and engineering polymers with full certification
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-space-700/40 border border-gray-700/50 rounded-2xl p-8"
+          >
+            <div className="space-y-5">
+              {materials.map((material, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="text-cyber-400 h-5 w-5 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300 text-sm leading-relaxed">{material}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-900">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Quality & <span className="gradient-text">Documentation</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive quality management and documentation for defense and commercial UAV programs
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-space-800/50 border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <div className="space-y-5">
+              {qualityPoints.map((point, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="text-cyber-400 h-5 w-5 flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-300 text-sm leading-relaxed">{point}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Our <span className="gradient-text">Process</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From RFQ to delivery — a streamlined manufacturing workflow
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { step: "01", title: "RFQ & DFM Review", desc: "Upload your CAD files and receive detailed DFM feedback with material recommendations, tolerance analysis, and manufacturing process selection optimized for UAV applications." },
+              { step: "02", title: "Manufacture", desc: "Precision CNC machining, carbon fiber processing, and additive manufacturing executed under controlled conditions with in-process quality verification at every stage." },
+              { step: "03", title: "Inspect & Document", desc: "Comprehensive dimensional inspection, CMM verification for critical features, and complete documentation including COC, material certificates, and FAI reports." },
+              { step: "04", title: "Ship & Scale", desc: "Clean packaging with lot traceability, moisture protection where required, and seamless scaling from prototype to production volumes with maintained quality." }
+            ].map((phase, i) => (
+              <motion.div
+                key={phase.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative text-center p-6 bg-space-700/50 border border-gray-700/40 rounded-xl"
+              >
+                <div className="text-4xl font-bold text-cyber-400/30 font-orbitron mb-3">{phase.step}</div>
+                <h3 className="font-bold text-white text-lg mb-2">{phase.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{phase.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-cyber-400 text-space-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyber-500 transition-all transform hover:scale-105 hover:shadow-xl"
+            >
+              Submit RFQ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-space-900">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-4 text-white">
+              Frequently Asked <span className="gradient-text">Questions</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Common questions about our drone and UAV manufacturing capabilities
+            </p>
+          </motion.div>
+
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-space-800/60 border border-gray-700/40 rounded-xl overflow-hidden">
-                <button onClick={() => toggleFaq(index)} className="w-full px-5 py-4 text-left flex items-center justify-between hover:bg-space-700/30 transition-colors">
-                  <h3 className="text-sm font-semibold text-white pr-4">{faq.question}</h3>
-                  {openFaqIndex === index ? <ChevronUp className="h-4 w-4 text-cyber-400 flex-shrink-0" /> : <ChevronDown className="h-4 w-4 text-cyber-400 flex-shrink-0" />}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="bg-space-800/60 border border-gray-700/40 rounded-xl overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-space-700/30 transition-colors"
+                >
+                  <h3 className="text-base font-semibold text-white pr-4">{faq.question}</h3>
+                  {openFaqIndex === index ? (
+                    <ChevronUp className="h-5 w-5 text-cyber-400 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-cyber-400 flex-shrink-0" />
+                  )}
                 </button>
                 {openFaqIndex === index && (
-                  <div className="px-5 pb-4 border-t border-gray-700/30">
-                    <p className="text-gray-400 text-sm pt-3">{faq.answer}</p>
+                  <div className="px-6 pb-5 border-t border-gray-700/30">
+                    <p className="text-gray-400 text-sm leading-relaxed pt-4">{faq.answer}</p>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
