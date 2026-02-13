@@ -1,4 +1,28 @@
+# Precilayer Website Robots.txt
+# GitHub Pages Static Hosting Configuration
+
+# Default User-Agent Rules
 User-agent: *
 Allow: /
+Disallow: /
 
+# Disallow admin/auth routes (if any static content exists)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+
+# Allow query parameters for filtering/sorting (common for React SPA)
+Allow: /?
+Allow: /*?sort=
+Allow: /*?filter=
+Allow: /*?page=
+
+# Block JSON files from direct indexing (except manifest)
+Disallow: /*.json$
+
+# Sitemaps
 Sitemap: https://www.precilayer.com/sitemap.xml
+Sitemap: https://www.precilayer.com/sitemap-images.xml
+
+# Note: Crawl-delay and Request-rate are not supported by GitHub Pages (static hosting)
+# They are configured only for reference. Search engines will follow their own crawl rates.
