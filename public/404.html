@@ -6,41 +6,42 @@
   <title>Loading...</title>
   <script>
     // GitHub Pages SPA Routing Handler
-    // This file is served by GitHub Pages when a route doesn't exist as a static file.
-    // It redirects to index.html while preserving the requested route for React Router.
+    // Works with both custom domains and project repositories
     
     (function() {
       const pathname = window.location.pathname;
       const search = window.location.search;
       const hash = window.location.hash;
+      const hostname = window.location.hostname;
       
-      // Parse pathname segments
-      // e.g., /precilayer-website/industries/space-satellite -> ['precilayer-website', 'industries', 'space-satellite']
-      const segments = pathname.split('/').filter(Boolean);
+      // For custom domains (precilayer.com): use pathname as-is
+      // For project repos (github.io/precilayer-website): extract route after repo name
       
-      if (segments.length === 0) {
-        // Edge case: root path, just redirect to index.html
-        window.location.replace('/')
-        return;
+      let route = pathname;
+      let indexPath = '/index.html';
+      
+      // Check if this is a GitHub Pages project repo (contains .github.io domain)
+      if (hostname.includes('github.io')) {
+        const segments = pathname.split('/').filter(Boolean);
+        
+        if (segments.length === 0) {
+          window.location.replace('/');
+          return;
+        }
+        
+        // First segment is repo name for GitHub Pages project repo
+        const repoName = segments[0];
+        route = segments.length > 1 
+          ? '/' + segments.slice(1).join('/')
+          : '/';
+        indexPath = '/' + repoName + '/index.html';
       }
       
-      // First segment should be the repository name
-      const repoName = segments[0];
-      
-      // Everything after the repo name is the route
-      // e.g., /industries/space-satellite
-      const route = segments.length > 1 
-        ? '/' + segments.slice(1).join('/')
-        : '/';
-      
-      // Store the intended route in sessionStorage for React Router to use
-      // Include search and hash if present
+      // Store the intended route in sessionStorage for React Router
       const fullRoute = route + search + hash;
       sessionStorage.setItem('spaRedirect', fullRoute);
       
-      // Redirect to the root index.html
-      // This will load the React app which will check sessionStorage and route accordingly
-      const indexPath = '/' + repoName + '/index.html';
+      // Redirect to index.html
       window.location.replace(indexPath);
     })();
   </script>
