@@ -514,7 +514,7 @@ export default function RoboticsAutomation() {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-cyber-400/10 to-transparent border border-cyber-400/30 rounded-2xl p-8 text-center"
             >
-              <div className="text-5xl font-bold text-cyber-400 mb-3">±0.01mm</div>
+              <div className="text-5xl font-bold text-cyber-400 mb-3">±0.05mm</div>
               <div className="text-lg text-gray-300 mb-2">Tolerance Capability</div>
               <div className="text-sm text-gray-400">CMM-verified precision for robotic motion components and gear profiles</div>
             </motion.div>
