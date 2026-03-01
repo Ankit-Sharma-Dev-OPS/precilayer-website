@@ -42,7 +42,7 @@ export default function Finishes() {
       { name: "description", content: "Surface finishes and post-processing options for CNC machined and 3D printed parts. Anodizing, electropolishing, powder coating, media blasting, and more. Precilayer India." },
       { property: "og:title", content: "Surface Finishes & Post-Processing | Precilayer" },
       { property: "og:description", content: "Complete range of surface finishing and post-processing services for precision-machined and additively manufactured components." },
-      { name: "keywords", content: "surface finishing, anodizing, electropolishing, powder coating, media blasting, metal polishing, metal grinding, passivation, tumbling, Tufram, Nedox, CNC finishing, 3D print post-processing, Precilayer" }
+      { name: "keywords", content: "surface finishing, anodizing, electropolishing, powder coating, media blasting, metal polishing, metal grinding, passivation, tumbling, High Performance Coating, CNC finishing, 3D print post-processing, Precilayer" }
     ];
 
     const createdMetaTags: HTMLMetaElement[] = [];
@@ -151,7 +151,7 @@ export default function Finishes() {
     },
     {
       icon: Layers,
-      title: "Tufram & Nedox (SF2)",
+      title: "High Performance Coating",
       description: "Specialized hard coat treatments for aluminum providing enhanced surface hardness, wear resistance, and low-friction properties. Superior performance over standard anodizing.",
       materials: "Aluminum alloys",
       applications: "Aerospace actuators, hydraulic cylinders, valve bodies, high-wear aluminum components",

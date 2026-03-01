@@ -16,10 +16,10 @@ export default function Footer() {
         style={{
           backgroundImage: 'url(/images/building-lineart.png)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right bottom',
+          backgroundPosition: 'left bottom',
           backgroundSize: 'auto 85%',
           opacity: 0.12,
-          filter: 'invert(1) brightness(1.5)',
+          filter: 'invert(1) brightness(2.5)',
         }}
       />
 

@@ -33,7 +33,6 @@ import ToolingComplexMachining from "@/pages/manufacturing/tooling-complex-machi
 import Materials from "@/pages/manufacturing/materials";
 import Finishes from "@/pages/manufacturing/finishes";
 import NotFound from "@/pages/not-found";
-import IsoBadge from "@/components/iso-badge";
 
 function Router() {
   return (
@@ -81,7 +80,6 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
-        <IsoBadge />
       </TooltipProvider>
     </QueryClientProvider>
   );

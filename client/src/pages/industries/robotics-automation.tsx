@@ -64,7 +64,7 @@ export default function RoboticsAutomation() {
     {
       icon: Cog,
       title: "Precision Gears",
-      description: "Spur, helical, and planetary gear sets machined to AGMA 10–12 quality grades. Tooth profiles held to ±0.01 mm with ground finishes for silent, high-torque transmission in robotic drivetrains. Wire EDM and precision grinding ensure gear mesh accuracy across the full load range.",
+      description: "Spur, helical, and planetary gear sets machined to AGMA 10–12 quality grades. Tooth profiles held to ±0.05 mm with ground finishes for silent, high-torque transmission in robotic drivetrains. Wire EDM and precision grinding ensure gear mesh accuracy across the full load range.",
       materials: ["Tool Steel D2", "4140", "Brass C360"]
     },
     {
@@ -241,7 +241,7 @@ export default function RoboticsAutomation() {
   const faqs = [
     {
       question: "What tolerances can you achieve for precision gears and drivetrain components?",
-      answer: "We routinely achieve AGMA 10–12 quality grades with tooth profile tolerances to ±0.01 mm. Planetary gears are held to ±0.005 mm concentricity via precision grinding and Wire EDM. For critical mating surfaces, we validate Cpk values exceeding 1.33 to demonstrate sustained process capability across production runs. All gear dimensions are verified using CMM with GD&T reporting against your drawing specifications."
+      answer: "We routinely achieve AGMA 10–12 quality grades with tooth profile tolerances to ±0.05 mm. Planetary gears are held to ±0.005 mm concentricity via precision grinding and Wire EDM. For critical mating surfaces, we validate Cpk values exceeding 1.33 to demonstrate sustained process capability across production runs. All gear dimensions are verified using CMM with GD&T reporting against your drawing specifications."
     },
     {
       question: "Can you build complete sub-assemblies, not just individual parts?",
