@@ -5,11 +5,11 @@ import { Bot, Cog, Settings, Layers, Gauge, Clock, Zap, Shield, Box, Cpu, Grip, 
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import gearsImg from "@assets/generated_images/robotics_precision_gears.png";
-import armJointImg from "@assets/generated_images/robotics_arm_joint.png";
-import endEffectorImg from "@assets/generated_images/robotics_end_effector.png";
-import sensorHousingImg from "@assets/generated_images/robotics_sensor_housing.png";
-import linearGuideImg from "@assets/generated_images/robotics_linear_guide.png";
+const gearsImg = "/images/3D-robotics-auto-8xParts-gears.png";
+const armJointImg = "/images/3D-robotics-auto-8xParts-actuator.png";
+const endEffectorImg = "/images/3D-robotics-auto-8xParts-effectors.jpg";
+const sensorHousingImg = "/images/3D-robotics-auto-8xParts-housing.png";
+const linearGuideImg = "/images/3D-robotics-auto-8xParts-frames.png";
 
 export default function RoboticsAutomation() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -113,34 +113,34 @@ export default function RoboticsAutomation() {
 
   const whyPrecilayerPoints = [
     {
-      icon: Crosshair,
-      title: "Sub-Micron Precision & Repeatability",
-      description: "Our CNC centers deliver positioning accuracy within ±0.005 mm with validated Cpk values exceeding 1.33. Every dimension is CMM-verified against your GD&T callouts, ensuring part-to-part consistency across prototype and production volumes."
+      icon: Zap,
+      title: "Fast Lead Times",
+      description: "Expedited prototyping and production runs to match your development and delivery schedule. We streamline production processes and deliver reliable parts that accelerate innovation from concept to market."
     },
     {
-      icon: Settings,
-      title: "Multi-Process Manufacturing",
-      description: "Combine 5-axis CNC milling, CNC turning, Wire EDM, and precision grinding in a single production flow. This integrated approach eliminates inter-vendor tolerance stack-up and reduces lead times by keeping all critical operations under one roof."
+      icon: Crosshair,
+      title: "Industry-Leading Accuracy",
+      description: "±0.005mm tolerances across CNC machining, additive manufacturing, and precision grinding. Every dimension is CMM-verified, ensuring part-to-part consistency across prototype and production volumes."
     },
     {
       icon: Wrench,
-      title: "Complete Sub-Assembly Capability",
-      description: "Beyond individual components, we deliver fully assembled joint modules, gripper sub-assemblies, and actuator units with bearing press-fits, dowel pinning, and functional testing — ready for direct installation into your robotic systems."
+      title: "Engineering Support",
+      description: "DFM analysis and material recommendations from our team of manufacturing engineers. We empower robotics companies with precision-engineered components optimized for performance and manufacturability."
+    },
+    {
+      icon: Settings,
+      title: "CNC Machining",
+      description: "5-axis milling and turning for tight tolerance robotic components. Our multi-process approach keeps all critical operations under one roof, eliminating tolerance stack-up and reducing lead times."
     },
     {
       icon: Layers,
-      title: "Material Selection Expertise",
-      description: "Our engineers help you navigate material trade-offs for robotics applications — balancing stiffness-to-weight ratios, wear resistance, thermal stability, and machinability to select the optimal alloy or polymer for each component's operating environment."
-    },
-    {
-      icon: Zap,
-      title: "Rapid Prototyping to Production",
-      description: "Start with rapid prototypes in 5 business days, iterate through DFM feedback, then seamlessly scale to production volumes up to 50,000 units. Your validated toolpaths and inspection plans carry forward, ensuring consistent quality at every stage."
+      title: "Additive Manufacturing",
+      description: "Metal and polymer 3D printing for complex geometries and lightweight designs. Ideal for end effectors, sensor enclosures, and custom assemblies that would require multi-part construction if conventionally machined."
     },
     {
       icon: Shield,
       title: "ISO 9001:2015 Certified Quality",
-      description: "Our ISO 9001:2015 certified quality management system ensures documented processes, calibrated equipment traceability, and continuous improvement across every manufacturing operation. Full COC, FAI, and material certificates accompany each shipment."
+      description: "Our ISO 9001:2015 certified quality management system ensures documented processes, calibrated equipment traceability, and continuous improvement. Full COC, FAI, and material certificates accompany each shipment."
     }
   ];
 
@@ -303,7 +303,7 @@ export default function RoboticsAutomation() {
             </h1>
 
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-              Precision-engineered components for industrial robots, cobots, and automated production lines — from prototype gears and gripper assemblies to production-volume drivetrain parts with full traceability
+              From rapid prototyping to full-scale production, we manufacture precision-engineered parts using CNC machining, additive manufacturing, and advanced processes for robotics and automation.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -352,8 +352,8 @@ export default function RoboticsAutomation() {
             >
               <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
                 <img 
-                  src={gearsImg} 
-                  alt="Precision Gears & Gearboxes"
+                  src={endEffectorImg} 
+                  alt="End Effectors & Grippers"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
@@ -363,10 +363,10 @@ export default function RoboticsAutomation() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-xl text-white mb-2">
-                  Precision Gears & Gearboxes
+                  End Effectors & Grippers
                 </h3>
                 <p className="text-gray-400">
-                  CNC-machined spur and planetary gears with precision ground teeth
+                  Custom 3D-printed or machined solutions for pick-and-place automation
                 </p>
               </div>
             </motion.div>
@@ -381,7 +381,7 @@ export default function RoboticsAutomation() {
               <div className="aspect-[4/3] bg-space-900/50 flex items-center justify-center p-8 overflow-hidden">
                 <img 
                   src={armJointImg} 
-                  alt="Robotic Arm Joints"
+                  alt="Robotic Actuators"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
@@ -391,10 +391,10 @@ export default function RoboticsAutomation() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-xl text-white mb-2">
-                  Robotic Arm Joints
+                  Robotic Actuators
                 </h3>
                 <p className="text-gray-400">
-                  Multi-axis articulated joint mechanisms with integrated motor mounts
+                  High-precision moving components for robotic drive systems
                 </p>
               </div>
             </motion.div>
@@ -411,8 +411,8 @@ export default function RoboticsAutomation() {
             >
               <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
-                  src={endEffectorImg} 
-                  alt="End Effectors & Grippers"
+                  src={sensorHousingImg} 
+                  alt="Sensor & Camera Housings"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
@@ -422,10 +422,10 @@ export default function RoboticsAutomation() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-lg text-white mb-2">
-                  End Effectors & Grippers
+                  Sensor & Camera Housings
                 </h3>
                 <p className="text-gray-400 text-sm">
-                  Precision parallel gripper mechanisms for industrial automation
+                  Lightweight and durable enclosures for sensors and vision systems
                 </p>
               </div>
             </motion.div>
@@ -439,8 +439,8 @@ export default function RoboticsAutomation() {
             >
               <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
-                  src={sensorHousingImg} 
-                  alt="Sensor Housings"
+                  src={linearGuideImg} 
+                  alt="Structural Components"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
@@ -450,10 +450,10 @@ export default function RoboticsAutomation() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-lg text-white mb-2">
-                  Sensor Housings
+                  Structural Components
                 </h3>
                 <p className="text-gray-400 text-sm">
-                  IP-rated enclosures for LiDAR and vision sensor mounting
+                  Strong, lightweight parts for robotic frames and assemblies
                 </p>
               </div>
             </motion.div>
@@ -467,8 +467,8 @@ export default function RoboticsAutomation() {
             >
               <div className="aspect-square bg-space-900/50 flex items-center justify-center p-6 overflow-hidden">
                 <img 
-                  src={linearGuideImg} 
-                  alt="Linear Motion Guides"
+                  src={gearsImg} 
+                  alt="Gear & Drive Components"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   style={{ 
                     imageRendering: '-webkit-optimize-contrast',
@@ -478,10 +478,10 @@ export default function RoboticsAutomation() {
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-lg text-white mb-2">
-                  Linear Motion Guides
+                  Gear & Drive Components
                 </h3>
                 <p className="text-gray-400 text-sm">
-                  Precision ground hardened steel linear rails and carriages
+                  High-tolerance mechanical parts for robotic drivetrains
                 </p>
               </div>
             </motion.div>

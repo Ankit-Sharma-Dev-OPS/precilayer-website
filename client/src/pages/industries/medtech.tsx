@@ -13,7 +13,8 @@ import {
   Home,
   Factory,
   ClipboardCheck,
-  Beaker
+  Beaker,
+  Zap
 } from "lucide-react";
 import { 
   Breadcrumb, 
@@ -29,15 +30,15 @@ import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
 import ComparisonSlider from "@/components/ComparisonSlider";
 
-import medicalHeroImg from "@assets/stock_images/surgical_robot_opera_49b0608d.jpg";
-import surgicalImg from "@assets/stock_images/surgical_instruments_e6588ae7.jpg";
-import implantImg from "@assets/Orthopedic implants_1762300803920.jpg";
-import deviceImg from "@assets/stock_images/diagnostic_medical_e_1b0ee435.jpg";
-import surgicalToolsImg from "@assets/surgical-tools-new-bg-white_1762300495333.webp";
-import diagnosticEnclosuresImg from "@assets/Plastic-enclosures_1762300495332.webp";
-import drugDeliveryComponentsImg from "@assets/drug-delivery_1762300495335.webp";
-import orthoticInterfacesImg from "@assets/orthotic-new_1762300495335.webp";
-import endoscopicAccessoriesImg from "@assets/endoscopic-new_1762300495334.webp";
+const medicalHeroImg = "/images/hero-medical-devices.jpeg";
+const surgicalImg = "/images/surgical-tools-new-bg-white.jpg";
+const implantImg = "/images/orthotic-new.png";
+const deviceImg = "/images/Plastic-enclosures.jpg";
+const surgicalToolsImg = "/images/surgical-tools-new-bg-white.jpg";
+const diagnosticEnclosuresImg = "/images/Plastic-enclosures.jpg";
+const drugDeliveryComponentsImg = "/images/drug-delivery.jpg";
+const orthoticInterfacesImg = "/images/orthotic-new.png";
+const endoscopicAccessoriesImg = "/images/endoscopic-new.jpg";
 
 export default function MedTech() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -113,34 +114,34 @@ export default function MedTech() {
 
   const whyPrecilayerPoints = [
     {
-      icon: Shield,
-      title: "Regulatory-Aligned Processes",
-      description: "Manufacturing processes designed to support FDA regulatory requirements and ISO 13485 quality management standards through our partner network, ensuring consistent, traceable production for healthcare and medtech companies."
-    },
-    {
       icon: Microscope,
-      title: "Biocompatible Materials Expertise",
-      description: "Specialized experience with medical-grade titanium, stainless steel, PEEK, and other biocompatible materials certified for implantable and surgical applications."
-    },
-    {
-      icon: FileCheck,
-      title: "Complete Documentation & Traceability",
-      description: "Full material certificates, dimensional inspection reports, biocompatibility documentation, and lot traceability for regulatory compliance and audit readiness."
-    },
-    {
-      icon: Activity,
-      title: "Precision for Critical Applications",
-      description: "Sub-micron tolerances and validated process capability for life-critical healthcare applications requiring absolute precision and reliability."
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Sterilization-Compatible Finishes",
-      description: "Surface treatments and finishes compatible with autoclave, EtO, gamma radiation, and other medical sterilization methods without degradation."
+      title: "Tight Tolerances",
+      description: "±0.01mm precision across CNC machining, additive manufacturing, and precision finishing — ensuring every component meets the exacting requirements of medical device manufacturers."
     },
     {
       icon: Beaker,
-      title: "Cleanroom Manufacturing Available",
-      description: "Controlled manufacturing environments meeting ISO Class 7 and Class 8 cleanroom standards for contamination-sensitive medical components."
+      title: "Biocompatible Materials",
+      description: "Extensive experience with PEEK, Ultem, medical-grade titanium, LCP, and stainless steel — all certifiable for biocompatibility and suitable for Class I and Class II device components."
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Cleanroom-Compatible Finishes",
+      description: "Surface treatments and finishes compatible with autoclave, EtO, and gamma radiation sterilisation. Parts are packaged to support cleanroom handling and regulatory inspection requirements."
+    },
+    {
+      icon: Zap,
+      title: "Scalable Production",
+      description: "From first-article prototypes to low-volume production runs, our flexible manufacturing workflows scale with your product development stage and clinical pipeline."
+    },
+    {
+      icon: Shield,
+      title: "Zero China Dependency",
+      description: "Mitigate supply chain risk with a trusted Indian manufacturing partner. Full lot traceability, regulatory documentation, and geopolitical supply independence for every component."
+    },
+    {
+      icon: FileCheck,
+      title: "ISO 13485-Aligned Quality",
+      description: "ISO 13485-aligned processes with full material certificates, dimensional inspection reports, and lot traceability — audit-ready documentation for your regulatory submissions."
     }
   ];
 
@@ -286,11 +287,11 @@ export default function MedTech() {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
-              Healthcare & MedTech <span className="gradient-text">Components</span>
+              Engineering trust, <span className="gradient-text">one component at a time</span>
             </h1>
             
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
-              Precision CNC machining, 3D printing, and injection molding with biocompatible materials, regulatory-aligned processes, and full traceability
+              We support medical innovators with ultra-precise components, cleanroom-ready finishes, and biocompatible materials — all manufactured to global standards.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
