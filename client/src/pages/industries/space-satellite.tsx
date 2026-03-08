@@ -28,12 +28,13 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
 
-import traditionalImg from "@assets/Traditional Machining_1762293149835.png";
-import precilayerImg from "@assets/Precilayer Finish_1762293149833.png";
-import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
-import actuatorShaftImg from "@assets/Precision-Ground-Machine-Electric-Motor-Long-304-Stainless-Steel-Spline-Shaft_1762295542107.avif";
-import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
 import ComparisonSlider from "@/components/ComparisonSlider";
+
+const traditionalImg = "/images/traditional-machining.png";
+const precilayerImg = "/images/precilayer-finish.png";
+const satelliteBracketImg = "/images/satellite-structural-bracket.png";
+const actuatorShaftImg = "/images/precision-ground-spline-shaft.avif";
+const rfEnclosureImg = "/images/rf-enclosure-housing.png";
 
 const bracketsImg = "/images/satellite-space-brackets.jpg";
 const waveguideImg = "/images/waveguide.png";

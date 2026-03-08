@@ -8,8 +8,8 @@ import {
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import metalDmlsImg from "@assets/generated_images/metal_dmls_parts.png";
-import metalEbmImg from "@assets/generated_images/metal_ebm_parts.png";
+const metalDmlsImg = "/images/metal-dmls-parts.png";
+const metalEbmImg = "/images/metal-ebm-parts.png";
 
 export default function MetalAdditive() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

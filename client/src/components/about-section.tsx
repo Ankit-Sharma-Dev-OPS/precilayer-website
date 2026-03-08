@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Award, Globe, Leaf } from "lucide-react";
 import { Link } from "wouter";
-import roshanPhoto from "@assets/Roshan Kolhe- Precilayer_1756162128162.png";
-import priyeshPhoto from "@assets/Priyesh Mehta-Precilayer_1756162128160.png";
-import globalNetworkImage from "@assets/global-network-connection_41981-527_1756206836623.jpg";
+const roshanPhoto = "/images/roshan-kolhe.png";
+const priyeshPhoto = "/images/priyesh-mehta.png";
+const globalNetworkImage = "/images/global-network-connection.jpg";
 
 export default function AboutSection() {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import engineeringCadImage from "@assets/engineering-designer-design-3d-cad-260nw-2182781589_1756206040954.jpg";
 import { 
   Cpu, 
   Wifi, 
@@ -11,6 +10,8 @@ import {
   CircuitBoard,
   Zap
 } from "lucide-react";
+
+const engineeringCadImage = "/images/engineering-designer-cad.jpg";
 
 export default function HowSection() {
   const corePoints = [

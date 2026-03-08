@@ -31,7 +31,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
-import cncTurningImg from "@assets/generated_images/cnc_turning_parts.png";
+const cncTurningImg = "/images/cnc-turning-parts.png";
 
 export default function CNCTurning() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
