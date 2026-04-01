@@ -24,6 +24,16 @@ function handleSpaRedirect() {
 // Handle SPA redirect before rendering (must happen before App renders)
 handleSpaRedirect();
 
+// Suppress cross-origin "Script error." events before the Vite dev overlay intercepts them.
+// These originate from Replit dev tooling (cartographer worker), not our code.
+// The error is harmless but causes a false error modal to appear every ~12 seconds in dev.
+window.addEventListener('error', (evt) => {
+  if (evt.message === 'Script error.' && evt.error === null && evt.filename === '') {
+    evt.stopImmediatePropagation();
+    evt.preventDefault();
+  }
+}, true);
+
 // Initialize Web Vitals tracking
 reportWebVitals();
 
