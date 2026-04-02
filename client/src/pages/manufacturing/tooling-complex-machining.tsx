@@ -33,7 +33,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
-import edmToolingImg from "@assets/generated_images/edm_tooling_parts.png";
+const edmToolingImg = "/images/edm-tooling-parts.png";
 
 export default function ToolingComplexMachining() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

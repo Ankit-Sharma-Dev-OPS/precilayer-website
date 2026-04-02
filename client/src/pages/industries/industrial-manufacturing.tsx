@@ -5,11 +5,11 @@ import { Factory, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Shield
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import valveBodyImg from "@assets/generated_images/industrial_valve_body.png";
-import toolingImg from "@assets/generated_images/industrial_precision_tooling.png";
-import manifoldImg from "@assets/generated_images/industrial_hydraulic_manifold.png";
-import pumpImg from "@assets/generated_images/industrial_pump_housing.png";
-import gearboxImg from "@assets/generated_images/industrial_gearbox_components.png";
+const valveBodyImg = "/images/industrial-valve-body.png";
+const toolingImg = "/images/industrial-precision-tooling.png";
+const manifoldImg = "/images/industrial-hydraulic-manifold.png";
+const pumpImg = "/images/industrial-pump-housing.png";
+const gearboxImg = "/images/industrial-gearbox-components.png";
 
 export default function IndustrialManufacturing() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

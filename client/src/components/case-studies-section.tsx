@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane, Heart, Bot } from "lucide-react";
-import provenExcellenceImage from "@assets/engineering-designer-design-3d-cad-260nw-2182781589_1756206261353.jpg";
+const provenExcellenceImage = "/images/engineering-designer-cad-2.jpg";
 
 export default function CaseStudiesSection() {
   const caseStudies = [

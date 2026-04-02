@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, DollarSign, Clock } from "lucide-react";
-import spaceRocketImage from "@assets/space-rocket-taking-off-from-earth-3d-rendering_924070-1555_1756207824177.jpg";
+const spaceRocketImage = "/images/space-rocket-launch.jpg";
 
 export default function WhatSection() {
   return (

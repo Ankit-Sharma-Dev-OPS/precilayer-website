@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import SubtleBackground from "./subtle-background";
-import precilayerVideo from "@assets/Precilayer CNC machining video_1756244731089.mp4";
+const precilayerVideo = "/videos/precilayer-cnc-machining.mp4";
 
 const AnimatedCounter = ({
   target,

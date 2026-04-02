@@ -33,7 +33,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
-import multiAxisImg from "@assets/generated_images/multi_axis_complex_part.png";
+const multiAxisImg = "/images/multi-axis-complex-part.png";
 
 export default function MultiAxisMachining() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

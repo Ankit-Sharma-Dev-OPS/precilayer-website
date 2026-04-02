@@ -13,6 +13,21 @@ Key pages include:
 - Legal/policy pages: Privacy Policy, Terms & Conditions, Responsible Sourcing, Purchasing Terms, Supplier Integrity Guide, ESG/CSR Policy
 - Standalone pages: Why, How, What, Vision, About, FAQ, Contact
 
+### Industry Pages — Content Notes (8xparts migration)
+All 4 core industry pages now use content and images sourced from the 8xparts.com codebase:
+- **Robotics & Automation**: Parts = End Effectors & Grippers, Robotic Actuators, Sensor & Camera Housings, Structural Components, Gear & Drive Components; Why = Fast Lead Times / Industry-Leading Accuracy (±0.005mm) / Engineering Support
+- **Space & Satellite**: Parts = Structural Brackets & Frames, Waveguides & Antenna, Propulsion System, Thermal Management, Electronic Housings; Why = Certified for Aerospace (AS9100 D-compliant) / High-Precision Low-Volume / Engineering Support
+- **MedTech**: Parts = Surgical Tools, Diagnostic Housings, Drug Delivery, Orthotic Interfaces, Endoscopic Accessories; Why = Tight Tolerances (±0.01mm) / Biocompatible Materials (PEEK/Ultem/Ti) / Cleanroom-Compatible Finishes / Scalable / Zero China Dependency / ISO 13485-Aligned
+- **Drones & UAV**: Parts = Rotor & Impeller Housings, Battery Trays, Flight Control Brackets, Sensor & LiDAR Mounts, Air Duct & Cooling Parts; Why = Flight-Ready Precision / Drone & eVTOL Ready Materials / Agile Turnarounds / Made Outside China
+
+All product images are stored in `client/public/images/` and referenced as `/images/filename` (URL strings, not @assets imports).
+
+### Compliance Rules
+- ISO 9001:2015: CERTIFIED ✓
+- AS9100: D-COMPLIANT only (never "certified")  
+- ISO 13485: ALIGNED only (never "certified")
+- Precilayer manufactures COMPONENTS for medical devices — NOT medical devices themselves
+
 ---
 
 ## User Preferences

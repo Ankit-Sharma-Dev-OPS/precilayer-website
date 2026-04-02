@@ -5,11 +5,11 @@ import { Car, ChevronDown, ChevronUp, Gauge, Clock, Layers, Box, Cpu, Zap, Setti
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import evBatteryImg from "@assets/generated_images/automotive_ev_battery_housing.png";
-import suspensionImg from "@assets/generated_images/automotive_suspension_arm.png";
-import turboImg from "@assets/generated_images/automotive_turbo_housing.png";
-import adasImg from "@assets/generated_images/automotive_adas_sensor_mount.png";
-import brakeImg from "@assets/generated_images/automotive_brake_caliper.png";
+const evBatteryImg = "/images/automotive-ev-battery-housing.png";
+const suspensionImg = "/images/automotive-suspension-arm.png";
+const turboImg = "/images/automotive-turbo-housing.png";
+const adasImg = "/images/automotive-adas-sensor-mount.png";
+const brakeImg = "/images/automotive-brake-caliper.png";
 
 export default function MobilityAutomotive() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

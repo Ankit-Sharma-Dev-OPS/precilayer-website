@@ -31,7 +31,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
-import cncMillingImg from "@assets/generated_images/cnc_milling_parts.png";
+const cncMillingImg = "/images/cnc-milling-parts.png";
 
 export default function CNCMilling() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);

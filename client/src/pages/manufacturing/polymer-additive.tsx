@@ -19,8 +19,8 @@ import {
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import polymerMjfImg from "@assets/generated_images/polymer_mjf_parts.png";
-import polymerSlaImg from "@assets/generated_images/polymer_sla_parts.png";
+const polymerMjfImg = "/images/polymer-mjf-parts.png";
+const polymerSlaImg = "/images/polymer-sla-parts.png";
 
 const fadeUp = { initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true } };
 

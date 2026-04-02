@@ -5,12 +5,12 @@ import { Plane, FileCheck, Gauge, Shield, Cpu, Zap, Settings, CheckCircle2, Chev
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
-import droneHeroImg from "@assets/stock_images/drone_uav_hero.jpg";
-import droneFrameImg from "@assets/generated_images/drone_carbon_fiber_frame.png";
-import droneMotorImg from "@assets/generated_images/drone_motor_mount_cnc.png";
-import droneGimbalImg from "@assets/generated_images/drone_gimbal_system.png";
-import droneLandingImg from "@assets/generated_images/drone_landing_gear_assembly.png";
-import droneAvionicsImg from "@assets/generated_images/drone_avionics_housing.png";
+const droneHeroImg = "/images/AI_Video_Edge_-Computing.jpg";
+const droneFrameImg = "/images/router-image.png";
+const droneMotorImg = "/images/Battery-tray.png";
+const droneGimbalImg = "/images/Flight-control.png";
+const droneLandingImg = "/images/Sendor-mount.png";
+const droneAvionicsImg = "/images/air-duct-last.png";
 
 export default function DronesUAV() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -106,34 +106,34 @@ export default function DronesUAV() {
 
   const whyPrecilayerPoints = [
     {
-      icon: Shield,
-      title: "Defense-Grade Quality & Traceability",
-      description: "Every UAV component manufactured at Precilayer carries full material traceability and process documentation. Our quality management system ensures lot-level tracking from raw material sourcing through final inspection, meeting the stringent requirements of defense and government drone programs."
+      icon: Gauge,
+      title: "Flight-Ready Precision",
+      description: "Tight tolerances and rigorous quality control ensure every component meets the demanding performance standards required for flight-critical drone and eVTOL applications."
     },
     {
       icon: Wind,
-      title: "Lightweight Material Expertise",
-      description: "Specialized experience machining advanced lightweight materials including carbon fiber composites, magnesium alloys, titanium, and high-performance polymers. Our processes are optimized to deliver maximum strength-to-weight ratios critical for extending UAV flight time and payload capacity."
-    },
-    {
-      icon: FileCheck,
-      title: "Complete Documentation Package",
-      description: "Every shipment includes Certificate of Conformance (COC) referencing your PO and drawing revision, material certificates with lot traceability, and dimensional inspection reports. First Article Inspection (FAI) reports are available for new programs to validate manufacturing processes."
-    },
-    {
-      icon: Gauge,
-      title: "DFM for Weight Optimization",
-      description: "Our engineering team provides comprehensive Design for Manufacturing analysis focused on weight reduction without compromising structural integrity. We recommend material substitutions, wall thickness optimization, and topology-aware machining strategies specific to UAV applications."
+      title: "Drone & eVTOL Ready Materials",
+      description: "Expertise in lightweight structural materials including 7075-T6 aluminium, titanium, PEEK, and carbon fibre composites — engineered to maximise strength-to-weight ratio for extended flight endurance."
     },
     {
       icon: Zap,
-      title: "Rapid Prototyping Capability",
-      description: "Accelerate your drone development cycle with 3–5 day prototype turnaround using MJF, SLS, and CNC machining. Functional prototypes in production-representative materials allow real-world flight testing before committing to full production tooling and volume runs."
+      title: "Agile Turnarounds",
+      description: "Fast prototyping to production runs that keep pace with your development cycle. We streamline manufacturing to accelerate innovation from concept to certified flight hardware."
+    },
+    {
+      icon: Shield,
+      title: "Made Outside China",
+      description: "Reduce supply chain risk with a trusted manufacturing partner in India. Full material traceability, geopolitical supply chain independence, and transparent documentation for every shipment."
     },
     {
       icon: Settings,
-      title: "Multi-Process Manufacturing",
-      description: "Combine CNC milling, CNC turning, carbon fiber machining, additive manufacturing, and precision finishing in a single supply chain. Our integrated capabilities eliminate vendor coordination overhead and ensure consistent quality across all manufacturing processes for your UAV program."
+      title: "Multi-Process Capability",
+      description: "CNC milling, CNC turning, additive manufacturing, and surface finishing under one roof — eliminating vendor coordination and ensuring consistent quality across all parts of your UAV program."
+    },
+    {
+      icon: FileCheck,
+      title: "ISO 9001:2015 Quality",
+      description: "Every component ships with Certificate of Conformance, material certificates with lot traceability, and dimensional inspection reports — ready for audit and regulatory review."
     }
   ];
 
@@ -250,11 +250,11 @@ export default function DronesUAV() {
             </div>
 
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-              Drones & UAV <span className="gradient-text">Manufacturing</span>
+              Manufacturing Tomorrow's Skies, <span className="gradient-text">Today.</span>
             </h1>
 
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
-              Defense-grade and commercial UAV components with precision CNC machining, carbon fiber processing, additive manufacturing, and full material traceability from prototype to production
+              From eVTOLs to autonomous drones, we accelerate the future of flight with high-precision parts for AAM innovators — built to fly, built to scale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -310,8 +310,8 @@ export default function DronesUAV() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl text-white mb-2">Carbon Fiber Frames</h3>
-                <p className="text-gray-400">Precision-machined CFRP airframe structures for maximum strength-to-weight ratio</p>
+                <h3 className="font-bold text-xl text-white mb-2">Rotor & Impeller Housings</h3>
+                <p className="text-gray-400">Aerodynamically optimised enclosures for rotors and impellers in eVTOL and drone platforms</p>
               </div>
             </motion.div>
 
@@ -331,8 +331,8 @@ export default function DronesUAV() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl text-white mb-2">Motor Mounts</h3>
-                <p className="text-gray-400">High-strength 7075-T6 aluminum motor brackets with vibration-dampened interfaces</p>
+                <h3 className="font-bold text-xl text-white mb-2">Battery Trays & Enclosures</h3>
+                <p className="text-gray-400">Lightweight, structural enclosures that protect battery packs while minimising airframe weight</p>
               </div>
             </motion.div>
           </div>
@@ -355,8 +355,8 @@ export default function DronesUAV() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-white mb-2">Gimbal Systems</h3>
-                <p className="text-gray-400 text-sm">Ultra-precise gimbal assemblies for camera stabilization</p>
+                <h3 className="font-bold text-lg text-white mb-2">Flight Control Brackets</h3>
+                <p className="text-gray-400 text-sm">Rigid, vibration-resistant mounts for flight controllers and autopilot systems</p>
               </div>
             </motion.div>
 
@@ -376,8 +376,8 @@ export default function DronesUAV() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-white mb-2">Landing Gear</h3>
-                <p className="text-gray-400 text-sm">Impact-resistant assemblies with aluminum and carbon fiber</p>
+                <h3 className="font-bold text-lg text-white mb-2">Sensor & LiDAR Mounts</h3>
+                <p className="text-gray-400 text-sm">Precision mounts for LiDAR, cameras, and environmental sensors</p>
               </div>
             </motion.div>
 
@@ -397,8 +397,8 @@ export default function DronesUAV() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg text-white mb-2">Avionics Housings</h3>
-                <p className="text-gray-400 text-sm">EMI-shielded enclosures for flight controllers and electronics</p>
+                <h3 className="font-bold text-lg text-white mb-2">Air Duct & Cooling Parts</h3>
+                <p className="text-gray-400 text-sm">Precision air ducts and thermal management parts for eVTOL and high-performance drone systems</p>
               </div>
             </motion.div>
           </div>

@@ -28,18 +28,20 @@ import Footer from "@/components/footer";
 import ContactSection from "@/components/contact-section";
 import SubtleBackground from "@/components/subtle-background";
 
-import bracketsImg from "@assets/generated_images/Aluminum_aerospace_structural_bracket_fc5c18c2.png";
-import waveguideImg from "@assets/generated_images/RF_waveguide_antenna_component_4fdaecdc.png";
-import propulsionImg from "@assets/satellite-space-propulsion-system-components_1762273257346.webp";
-import thermalImg from "@assets/satellite-space-thermal-management-system_1762273257350.webp";
-import housingImg from "@assets/satelite-space-housing-and-shielding_1762273257338.webp";
-import traditionalImg from "@assets/Traditional Machining_1762293149835.png";
-import precilayerImg from "@assets/Precilayer Finish_1762293149833.png";
-import satelliteBracketImg from "@assets/generated_images/Satellite_structural_bracket_b3356629.png";
-import actuatorShaftImg from "@assets/Precision-Ground-Machine-Electric-Motor-Long-304-Stainless-Steel-Spline-Shaft_1762295542107.avif";
-import rfEnclosureImg from "@assets/generated_images/RF_enclosure_housing_80137d8a.png";
-import rocketLaunchImg from "@assets/stock_images/rocket_launch_spaces_b16c2286.jpg";
 import ComparisonSlider from "@/components/ComparisonSlider";
+
+const traditionalImg = "/images/traditional-machining.png";
+const precilayerImg = "/images/precilayer-finish.png";
+const satelliteBracketImg = "/images/satellite-structural-bracket.png";
+const actuatorShaftImg = "/images/precision-ground-spline-shaft.avif";
+const rfEnclosureImg = "/images/rf-enclosure-housing.png";
+
+const bracketsImg = "/images/satellite-space-brackets.jpg";
+const waveguideImg = "/images/waveguide.png";
+const propulsionImg = "/images/satellite-space-propulsion-system-components.jpg";
+const thermalImg = "/images/satellite-space-thermal-management-system.jpg";
+const housingImg = "/images/satelite-space-housing-and-shielding.jpg";
+const rocketLaunchImg = "/images/satellite-space.jpg";
 
 export default function SpaceSatellite() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -116,23 +118,23 @@ export default function SpaceSatellite() {
   const whyPrecilayerPoints = [
     {
       icon: Shield,
-      title: "Space-Grade Materials & Traceability",
-      description: "Full material certification and lot linkage for every component, ensuring complete traceability from source to deployment."
+      title: "Certified for Aerospace",
+      description: "AS9100 D-compliant manufacturing with full material certification and lot linkage for every component, ensuring complete traceability from source to deployment."
     },
     {
       icon: Gauge,
-      title: "Tight Tolerances & Process Capability",
-      description: "Advanced CNC machining achieving ±0.001mm precision with validated process capability for mission-critical applications."
+      title: "High-Precision, Low-Volume Production",
+      description: "±0.005mm tolerances — ideal for space applications. Advanced CNC machining with validated process capability for mission-critical components."
     },
     {
       icon: FileCheck,
-      title: "PPAP, FAI, COC Documentation",
-      description: "Comprehensive documentation including Production Part Approval Process, First Article Inspection, and Certificates of Conformance with material lot linkage."
+      title: "Engineering Support",
+      description: "DFM analysis to optimize parts for launch conditions. Expert guidance on materials, tolerances, and manufacturing processes for extreme aerospace environments."
     },
     {
       icon: Settings,
-      title: "Fast Iteration with DFM Feedback",
-      description: "Expert Design for Manufacturing analysis to optimize designs for space-grade production and reduce time to flight-ready status."
+      title: "Exotic Materials Expertise",
+      description: "Extensive experience with titanium, Inconel, carbon fiber, and ceramic composites, all engineered to perform in the extreme conditions of space."
     }
   ];
 
@@ -278,11 +280,11 @@ export default function SpaceSatellite() {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" data-testid="hero-title">
-              Space and Satellite <span className="gradient-text">Manufacturing</span>
+              High-Precision Manufacturing for <span className="gradient-text">Satellites & Spacecraft</span>
             </h1>
             
             <p className="text-xl text-gray-100 mb-8 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-testid="hero-description">
-              Mission-critical components with AS9100 D-compliant processes, high-reliability manufacturing, and flight-ready documentation
+              Advanced CNC machining and additive manufacturing for aerospace-grade satellite components, built for extreme environments.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
