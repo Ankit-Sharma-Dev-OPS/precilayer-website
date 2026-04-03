@@ -139,11 +139,9 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <Link href="/iso-9001-certificate.pdf" target="_blank">
-                  <span className="hover:text-cyber-400 transition-colors cursor-pointer text-sm">
-                    ISO 9001:2015 Certificate
-                  </span>
-                </Link>
+                <a href="/iso-9001-certificate.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-400 transition-colors text-sm text-gray-400">
+                  ISO 9001:2015 Certificate
+                </a>
               </li>
             </ul>
           </div>
