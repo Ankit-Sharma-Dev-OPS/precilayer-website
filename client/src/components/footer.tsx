@@ -195,10 +195,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm" data-testid="copyright">
             &copy; {new Date().getFullYear()} Precilayer. All rights reserved.
           </p>
+          <a
+            href="https://www.startupindia.gov.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="DPIIT Recognised Startup — Startup India"
+          >
+            <img
+              src="/images/startup-india-dpiit.png"
+              alt="DPIIT Recognised Startup — Startup India"
+              className="h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </a>
         </div>
       </div>
     </footer>
