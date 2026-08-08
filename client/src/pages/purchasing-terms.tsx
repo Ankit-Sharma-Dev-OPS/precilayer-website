@@ -231,7 +231,7 @@ export default function PurchasingTerms() {
             </div>
           </motion.div>
 
-          {/* Counterfeit Parts Prevention */}
+          {/* Supplier Personnel Awareness */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -240,9 +240,32 @@ export default function PurchasingTerms() {
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
+                <Users className="text-cyber-400 h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-white">9. Supplier Personnel Awareness</h2>
+            </div>
+            <div className="text-gray-300 space-y-4">
+              <p>Supplier shall ensure that its personnel are fully aware of:</p>
+              <div className="bg-cyber-400/10 p-4 rounded-lg space-y-3">
+                <p>• <strong className="text-cyber-400">Product & Service Conformity</strong> – Their contribution to product and/or service conformity, ensuring that all specified requirements are consistently met.</p>
+                <p>• <strong className="text-cyber-400">Product Safety</strong> – Their contribution to product safety by performing activities in a manner that prevents the introduction of defects or conditions that could affect the safety and reliability of the product.</p>
+                <p>• <strong className="text-cyber-400">Ethical Behaviour</strong> – The importance of ethical behaviour, including honesty, integrity, compliance with applicable laws and regulations, and the prompt reporting of any actual or suspected nonconformity, counterfeit parts, or unethical practices that may affect product or service quality.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Counterfeit Parts Prevention */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
+          >
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">9. Counterfeit Parts Prevention</h2>
+              <h2 className="text-2xl font-bold text-white">10. Counterfeit Parts Prevention</h2>
             </div>
             <div className="text-gray-300">
               <p>Supplier shall establish and maintain processes to ensure counterfeit, fraudulent, or suspect parts are not delivered. Suspected counterfeit parts will be quarantined, reported, and replaced at Supplier's sole cost.</p>
@@ -253,14 +276,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <FileText className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">10. Intellectual Property</h2>
+              <h2 className="text-2xl font-bold text-white">11. Intellectual Property</h2>
             </div>
             <div className="text-gray-300 space-y-4">
               <p>• Any Precilayer drawings, specifications, or confidential information remain Precilayer property.</p>
@@ -273,14 +296,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Settings className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">11. Change Management</h2>
+              <h2 className="text-2xl font-bold text-white">12. Change Management</h2>
             </div>
             <div className="text-gray-300 space-y-4">
               <p>• Precilayer reserves the right to modify or cancel a PO at any time before shipment, with equitable adjustment for completed work.</p>
@@ -292,14 +315,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Zap className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">12. Force Majeure</h2>
+              <h2 className="text-2xl font-bold text-white">13. Force Majeure</h2>
             </div>
             <div className="text-gray-300">
               <p>Neither party shall be liable for delays beyond reasonable control (e.g., natural disasters, war, government restrictions). Supplier must notify Precilayer within 5 business days of such events. Precilayer may cancel the PO without liability if delays exceed 15 days.</p>
@@ -310,14 +333,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Shield className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">13. Indemnity</h2>
+              <h2 className="text-2xl font-bold text-white">14. Indemnity</h2>
             </div>
             <div className="text-gray-300">
               <p>Supplier shall indemnify, defend, and hold harmless Precilayer from all claims, damages, losses, or expenses arising from Supplier's breach, negligence, defective goods, IP infringement, or regulatory non-compliance.</p>
@@ -328,14 +351,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.8, delay: 1.5 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <AlertTriangle className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">14. Termination</h2>
+              <h2 className="text-2xl font-bold text-white">15. Termination</h2>
             </div>
             <div className="text-gray-300 space-y-4">
               <p>• Precilayer may terminate for convenience upon notice, compensating only for conforming goods already delivered.</p>
@@ -347,14 +370,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <Scale className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">15. Dispute Resolution</h2>
+              <h2 className="text-2xl font-bold text-white">16. Dispute Resolution</h2>
             </div>
             <div className="text-gray-300 space-y-4">
               <p>• Any disputes shall be resolved under Indian law, with jurisdiction vested exclusively in Mumbai courts.</p>
@@ -366,14 +389,14 @@ export default function PurchasingTerms() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.6 }}
+            transition={{ duration: 0.8, delay: 1.7 }}
             className="bg-space-700/30 backdrop-blur-sm p-8 rounded-xl border border-gray-700"
           >
             <div className="flex items-center space-x-4 mb-6">
               <div className="w-12 h-12 bg-cyber-400/20 rounded-lg flex items-center justify-center">
                 <BookOpen className="text-cyber-400 h-6 w-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">16. Entire Agreement</h2>
+              <h2 className="text-2xl font-bold text-white">17. Entire Agreement</h2>
             </div>
             <div className="text-gray-300">
               <p>This document and the PO constitute the complete agreement between the parties. Any conflicting Supplier terms are expressly rejected.</p>
